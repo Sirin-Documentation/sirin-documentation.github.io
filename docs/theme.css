@@ -55,6 +55,9 @@ span.emoji {
   font-style: normal;
   font-weight: bold;
 }
+.search {
+  border-bottom:1px solid rgb(94, 94, 94) !important;
+}
 html,
 body {
   height: 100%;
@@ -841,7 +844,7 @@ pre::after {
   color: #657b83;
 }
 input[type='search'] {
-  background: #4f4f4f;
+  background: #202020;
   border-color: #4f4f4f;
   color: #c8c8c8;
 }
