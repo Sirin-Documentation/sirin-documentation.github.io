@@ -13,9 +13,19 @@ Sirin works with both GU and AoP. [Download](quickstart#download)  the version t
 - Copy the server files into your Server folder  (Replace any files that already exist)
 - Copy the client files into your client folder  (Replace any files that already exist)
 
+#
+# Remove Login and Account Servers
+> Sirin uses its own login and account system
 
+Original Account and Login servers are no longer used and can be removed
+> With Sirin you need to only launch the ZoneServer and your server is running
+
+Account management can be done directly in the server console [Account Creation](accountcreate.md)
+
+#
 # Launch the Server Console
-Startup the server console by running the `ZoneServer.exe` 
+Startup the server console by running the `ZoneServer.exe` \
+You will get an error informing you to create your server password salts _this is normal_
 
 ```server console
 ====================================================
@@ -28,9 +38,30 @@ Core ver: 3.0.25
 Core type: AoP 2016 Shrinked
 Getting modules info...
 Loading files...
-StartDatabase (RF_User)
-StartDatabase (RF_User) Success
-StartDatabase (RF_WORLD_AoP)
-StartDatabase (RF_WORLD_AoP) Success
+Salt for password hashes not set! check file ./sirin-scripts/config-core/sirin-private-settings.lua
 ...
 ```
+#
+# Set your Server salt
+Used for securely encrypting database passwords, this has to be set by the server owner \
+File `./sirin-scripts/config-core/sirin-private-settings.lua` will be created on the very first server launch.
+
+Edit this file and type in any unique string of characters that will be used when encrypting users passwords.
+
+> For best results use a completely random set of characters upto 64 characters
+
+```lua
+-- Do not remove these lines
+local config = {}
+local serverAuth = {}
+--------------------------
+ 
+-- Configuration BEGIN
+ 
+config.PasswordSalt = "Rvq2#w9[2/RfbeaS"
+config.SecondFactorSalt = "9u0&-9EM[I[=(uZZ"
+```
+
+>>  Once set restart your server
+
+> For any further errors view [Common Errors](errors.md)

@@ -1,6 +1,6 @@
 <img width="100px" style="margin-left:18px; margin-bottom:10px" src="sirin-logo.svg"/>
 
-- [Feature List](featurelist.md)
+- [Список функций](ru/featurelist.md)
 
 - Server Installation
     - [Getting Started](quickstart.md)

@@ -22,16 +22,29 @@
   <meta name="description" content="Description">
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-  <link rel="stylesheet" href="theme.css" />
-  <link rel="stylesheet" href="custom.css"/>
+  <link rel="stylesheet" type="text/css" href="/theme.css" />
+  <link rel="stylesheet" type="text/css" href="/custom.css"/>
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css" />
-  
+  <link rel="icon" href="/favicon.ico">
 
 </head>
 <body>
   <div id="app"></div>
   <script>
     window.$docsify = {
+      alias: {
+        "/ru/(.*)" : "/ru/$1"
+      },
+      fallbackLanguages: ["ru", "zh-cn"],
+      namespaces: [
+        {
+          id: "lang",
+          values: ["ru", "zh-cn"],
+          optional: true,
+          selector: "#lang-selector",
+        },
+      ],
+
       loadSidebar: true,
       logo: '/sirin-logo.svg',
       themeColor: '#eba834',
@@ -53,14 +66,64 @@
         depth: 6,
         hideOtherSidebarContent: false, // whether or not to hide other sidebar content
      },
+     plugins: [
+        titlePlugin({
+          suffix: ' | Sirin Docs'
+        })
+      ]
+    }
+    function titlePlugin(config) {
+      return (hook, vm) => {
+        hook.doneEach((content) => {
+          document.title += config.suffix
+        });
+      }
     }
   </script>
   <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
   <script src="//unpkg.com/docsify/lib/plugins/search.min.js"></script>
-  <script src="docsify.js"></script>
+  <script src="/docsify.js"></script>
   <script src="//unpkg.com/prismjs/components/prism-c.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-cpp.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-lua.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-csharp.min.js"></script>
+  <style>
+    .translations {
+      position:fixed; 
+      top:5px;
+      right:20px;
+    }
+
+    .translations > ul
+    {
+      display:flex;
+      list-style:none;
+      background-color:#171717;
+      padding:5px;
+      border-radius:5px;
+      margin-bottom:5px;
+    }
+
+    .translations li {
+      padding:5px;
+    }
+
+    .translations a {
+      text-decoration: none;
+      color:white;
+      padding:0;
+    }
+  </style>
+  <div class="translations">
+      <ul>
+        <li><a href="#/" title=" English"><img
+              src="https://github.githubassets.com/images/icons/emoji/unicode/1f1ec-1f1e7.png?v8.png" alt="uk" class="emoji"
+              loading="lazy"> English</a></li>
+        <li><a href="#/ru/" title=" Русский" class="active"><img
+              src="https://github.githubassets.com/images/icons/emoji/unicode/1f1f7-1f1fa.png?v8.png" alt="ru" class="emoji"
+              loading="lazy"> Русский</a></li>
+      </ul>
+      <small style="margin-top:0;">Translations under construction</small>
+    </div>
 </body>
 </html>
