@@ -12,6 +12,7 @@
     - [Database Connection Errors](errors.md#database-connection-errors)
     - [Server Launch Errors](errors.md#server-launch-errors)
 
+
 - Client Installation
   - [Client](client.md)
   - [Account Creation](accountcreate.md)
