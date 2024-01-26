@@ -185,7 +185,7 @@ config.PotionList = {
 
 ***
 
-# PotionMessage
+# Potion Message
 
 Each potion effect can have its own potion message when used
 
@@ -209,4 +209,45 @@ config.PotionMessage[0].EN = "%d Race currency obtained" -- English. Default.
 config.PotionMessage[5] = {}
 config.PotionMessage[5].EN = "%d days %d hours %d minutes %d seconds of Premium service obtained"
 ```
+
+***
+
+# Cure Potions
+
+As of update `0.23`  Cure potion have 3 behaviours: 
+- Default
+- Reduce % of remain time
+- Reduce fixed amount of seconds
+
+Effect value set in `PotionItemEffect.dat / PotionItemEffect.xlsx (Using the parser)`
+
+### Default (Reduces planned duration)
+
+Effect value `0.0` -> `1.0`
+
+Time passed with debuff taken into account \
+If debuff time is `100 seconds` and `25 seconds` passed you have `75 seconds` remaining \
+`0.5` Cure potion will reduce remain time by `100 * 0.5 = 50` `75 - 50 = 25 -> debuff planned time adjusted to 50` \
+Next use when `20 seconds remaining` will do `50 * 0.5 = 25. 20 - 25 = -5` Debuff removed
+
+### Reduce time by percent of current debuff
+
+Effect value from `-0.0` to `-1.0` Minus symbol to indicate behaviour type
+
+Reduces current debuff time by percent \
+If debuff time is `100 seconds` and `25 seconds` passed you have `75 seconds` remaining \
+`-0.5` Cure potion will reduce remain time by `50%` -> `75 * 0.5 = 37.5 seconds` \
+Next use when `20 seconds remaining` will do `30 * 0.5 = 15`
+
+### Fixed amount reduce
+
+Effect value greater `1.0`
+
+Reduces debuff remain time by absolute value \
+If debuff time is `100 seconds` and `25 seconds` passed you have `75 seconds` remaining \
+`10.0` cure potion will reduce remain time by `10 seconds`
+Next use when `20 seconds remaining` will do 30 - 10 = 20
+
+> When debuff remain time is less than 0 debuff will be removed
+
 
