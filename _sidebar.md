@@ -48,3 +48,4 @@
   - [Loot Boxes (BoxItemOut)](lootboxes.md)
   - [Server Portals (Rifts)](portals.md)
   - [Client File Encryption](cencrypt.md)
+  - [Error Logs](loglocations.md)
