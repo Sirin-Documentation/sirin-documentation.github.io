@@ -2,15 +2,17 @@
 
 ### Sirin Logs
 
-| <div style="width:25vw">File Location</div>   | <div style="width:25vw">Description</div>   |
+| <div style="width:25vw">Server File Location</div>   | <div style="width:25vw">Description</div>   |
 |---|---|
 |sirin-log\core\ModAccountLoginService.log|Log for Sirin Account Server|
 |sirin-log\core\ModGMComm_ABUSE.log |Log for used GM commands |
-|sirin-log\core\ModGMComm_DEBUG.log |Log for all loaded GM commands |
+|sirin-log\core\ModGMComm_DEBUG.log |Log for all loaded [GM commands](gmcommands.md) |
 |sirin-log\core\ModWindowControl.log |Log for dual client restrictions |
 |sirin-log\core\UserDB.log |Log for the connection of Sirin to its RF_User database |
-|sirin-log\guard\ModReturnGate.log |Log for dynamic portals (Rifts)  |
+|sirin-log\guard\ModReturnGate.log |Log for [Server Portals](portals.md) (Rifts)  |
+|sirin-log\guard\ModBoxOpen.log| Log for [Loot Boxes](lootboxes.md) |
 |sirin-log\guard\ModScriptMgr.log |Log for reloading scripts (%reload GM command) |
+|sirin-log\guard\FixMakeTowerRequest.log| Log for Guard Tower glitching during placement|
 |InternalCrash_12-05-2023_xx-xx-xx.log|Log generated when an internal Zone Server crash happens| 
 
 ### (Default) Logs
