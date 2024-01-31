@@ -57,6 +57,8 @@ Adds premium service in minutes instantly when used - no logout required
 
 > 6 | add/sub pvp cash potion.
 
+Player must be at least level 40 with a class change to earn PVP cash points
+
 ```ipcsa06 = { 6, 999 },```
 
 > 7 | add/sub race currency potion.
