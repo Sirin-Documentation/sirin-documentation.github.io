@@ -22,7 +22,7 @@ Ensure there are 12 rows. Use economy_history.sql script if there isn’t to pop
 ```
 Users who setup Russian MSSQL and set default connection language Russian
 When you try to execute script to fill 12 record it will fail on 12th. 
-Install English version of MSSQL
+Set your MSSQL Login `Default Language` to English
 ```
 
 ***
@@ -63,7 +63,7 @@ ensure this is installed before launching the Zone Server
 > CFileWriter::VAWriteA: Failed! 'C:\Game Servers\AOP Server\Server\History\
 
 The path set in `Zoneserver\WorldInfo\worldinfo.ini` is too long for the ZoneServer to write to \
-Instead use a patch such as `D:/History` or `C:/History` 
+Instead use a path such as `D:/History` or `C:/History` 
 
 ```ini
 [System]

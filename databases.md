@@ -22,15 +22,18 @@ Create the tables for RF_World either restore the RF_World.bak or build the data
 
 ### SQL logins to access database 
 Create a new SQL login.  
-`Security → Logins` (Right click)  New Login…  _Uncheck “Enforce Password Policy”_
+`Security → Logins` (Right click) -> New Login 
 
-Login details for the databases are changed in  `sirin-core-config\sirin-core-config.lua` do this for increased security on the server.
+- Uncheck `Enforce Password Policy`
+- Set `Default Language` to `English` If not set by default
 
 | Default RF_User | Default RF_World |
 | ------- |----------|
 | SQL Server Authentication | SQL Server Authentication |
 | rfrusaccount | rfrusworld |
 | #rf%rusaccount | #rf%rusworld |
+
+> Login details for the databases are changed in  `sirin-core-config\sirin-core-config.lua` do this for increased security on the server.
 
 ### User Mapping
 `Security -> Logins -> (Right click user) -> Login Properties -> User Mapping`
@@ -40,8 +43,6 @@ Login details for the databases are changed in  `sirin-core-config\sirin-core-co
 `rfrusworld` to `RF_World`
 
 Enable the permissions on both
-- db_datareader
-- db_datawriter 
 - db_owner
 
 ### Migrating Databases
