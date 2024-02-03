@@ -42,6 +42,7 @@
     - [Spawn Monster](gmcommandsadv.md#spawn-monsters-at-coords)
   - [Guard Config](serverconfigs.md)
   - [Potion Effects](potions.md)
+    - [Potion Types](potions.md#potion-types)
     - [Infinite Potions](potions.md#infinite-potions)
     - [Potion Message](potions.md#potion-message)
     - [Cure Potion](potions.md#cure-potions)

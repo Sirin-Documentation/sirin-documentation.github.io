@@ -19,6 +19,23 @@ ipcsa03 = { 2, 7 }, -- premium potion 7 days
 ipcsa04 = { 4, { "00000", false, true, true, true } }, -- spawn flem, exp loss on player death, exp gained on kill
 ipcsa05 = { 5, 999 }, -- add 999 contribution points
 ```
+***
+
+### Potion types to add your effects to
+Do _not_ use potion types that require specific conditions to be present eg.
+
+- HP potions require you to not have full health
+- SP potions require you to not have full SP
+- FP potions require you to not have full FP
+- Gold Pills require the Gold event to be active on the server `Initialize\ActionPointSystem.ini` / `Initialize\GoldenBox_Item.ini`
+- Cure potions require a debuff to be applied
+
+Trying to use a potion that is one of these types will result in `Failed to use Potion` if conditions aren't met
+
+#### Potions you should use
+
+- Re-Usable potions like attack/defence burst potions that don't expect conditions to be present before use
+- Potions that have short cooldowns if you expect them to be used frequently (currency gain)
 
 *** 
 
