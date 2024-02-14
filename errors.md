@@ -9,7 +9,13 @@ Indicates there is a problem connecting your server to the database.
     - `sirin-scripts\config-core\sirin-core-config.lua` -> `userDB.ServerIP = "127.0.0.1"`
     - `sirin-scripts\config-core\sirin-core-config.lua` -> `worldDB.ServerIP = "127.0.0.1"`
 4) Ensure your MS SQL Database was installed with `SQL Server and Windows Authentication mode`
-    - MSSQL Management Studio `Server Properties` -> `Security` -> `Server Authentication`
+    - Verfiy in MSSQL Management Studio `Server Properties` -> `Security` -> `Server Authentication`
+5) Enable IP `127.0.0.1`/`192.168.0.x` for MSSQL via `SQL Server Configuration Manager`
+    1) SQL Server Network Configuration -> Protocols for MSSQLSERVER
+    2) TCP/IP  (Right click -> Enable)
+    3) TCP/IP  (Right click -> Properties) -> IP Addresses
+    4) Enable `127.0.0.1` -> `Enabled` = `True`
+    5) Enable `192.168.0.x` -> `Enabled` = `True`
 
 ### Server Console stops after StartDatabase (RF_User)
 
