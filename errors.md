@@ -8,6 +8,8 @@ Indicates there is a problem connecting your server to the database.
 3) If your on window 10/11  Test using 192.168.x.x  instead of 127.0.0.1  for your SQL connection
     - `sirin-scripts\config-core\sirin-core-config.lua` -> `userDB.ServerIP = "127.0.0.1"`
     - `sirin-scripts\config-core\sirin-core-config.lua` -> `worldDB.ServerIP = "127.0.0.1"`
+4) Ensure your MS SQL Database was installed with `SQL Server and Windows Authentication mode`
+    - MSSQL Management Studio `Server Properties` -> `Security` -> `Server Authentication`
 
 ### Server Console stops after StartDatabase (RF_User)
 
