@@ -44,9 +44,13 @@
   - [Potion Effects](potions.md)
     - [Potion Types](potions.md#potion-types)
     - [Infinite Potions](potions.md#infinite-potions)
-    - [Potion Message](potions.md#potion-message)
     - [Cure Potion](potions.md#cure-potions)
   - [Loot Boxes (BoxItemOut)](lootboxes.md)
   - [Server Portals (Rifts)](portals.md)
+  - [NPC Buttons](npcbuttons.md)
   - [Client File Encryption](cencrypt.md)
   - [Error Logs](loglocations.md)
+
+- Localization
+  - [Sirin Scripts](scriptlocal.md#localization)
+  - [Interface](uilocal.md#localization)

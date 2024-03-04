@@ -204,33 +204,6 @@ config.PotionList = {
 
 ***
 
-# Potion Message
-
-Each potion effect can have its own potion message when used
-
-Configured in `sirin-scripts\config-guard\ModPotionEffect.lua`
-
-```lua
--- array. Template strings that will be displayed in chat message for potion use operations. English string is default and must present.
-config.PotionMessage = {}
-
--- array.
-config.PotionMessage[0] = {}
-config.PotionMessage[0].EN = "%d Race currency obtained" -- English. Default.
--- config.PotionMessage[0].KR = "" -- Korean
--- config.PotionMessage[0].CN = "" -- Chinese
--- config.PotionMessage[0].JP = "" -- Japanese
--- config.PotionMessage[0].RU = "" -- Russian
--- config.PotionMessage[0].TW = "" -- Chinese (Taiwan)
--- config.PotionMessage[0].TH = "" -- Thai
--- config.PotionMessage[0].TR = "" -- Turkish
-
-config.PotionMessage[5] = {}
-config.PotionMessage[5].EN = "%d days %d hours %d minutes %d seconds of Premium service obtained"
-```
-
-***
-
 # Cure Potions
 
 As of update `0.23`  Cure potion have 3 behaviours: 

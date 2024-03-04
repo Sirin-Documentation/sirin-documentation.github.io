@@ -17,10 +17,10 @@ test_portal = { -- Any unique name. Do not use '-' in names!
 		{-8627, 1124, -5481, 0}, -- Coordinates x, y, z, layer (layer is reserverd for future purposes.)
 	},
 	buttonName = {
-			strEN = "Text For Button"
+			default = "Text For Button"
 	},
 	description = {
-			strEN = "Description"
+			default = "Description"
 	},
 
 	... -- Extra options
@@ -36,7 +36,7 @@ Above is the minimum required to open a Portal,  but many extra options can be a
 ```lua
 announceMsg = { -- Global chat announce
 	onOpen = { -- Announce on open.
-		strEN = "Portal Opened", -- If section exists you must provide default english description.
+		default = "Portal Opened", -- If section exists you must provide default english description.
 		-- strKR = "", -- Korean
 		-- strCN = "", -- Chinese
 		-- strJP = "", -- Japanese
@@ -46,11 +46,11 @@ announceMsg = { -- Global chat announce
 		-- strTR = "", -- Turkish
 	},
 	onClose = { -- Announce on close.
-		strEN = "Portal closed", -- If section exists you must provide default english description.
+		default = "Portal closed", -- If section exists you must provide default english description.
 	},
 },
 ```
-
+`String` -- Text that is displayed on the button  [Additional languages can be set](scriptlocal)
 
 
 Annouces to the whole server when a portal opens or closes
