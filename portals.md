@@ -31,6 +31,34 @@ test_portal = { -- Any unique name. Do not use '-' in names!
 
 Above is the minimum required to open a Portal,  but many extra options can be added
 
+> buttonName
+
+```lua
+	buttonName = {
+		default = "Text For Button"
+		-- strRU = "", -- Russian
+		-- strCN = "", -- Chinese
+		-- strJP = "", -- Japanese
+	},
+```
+
+`String` -- Text that is displayed on the button  [Additional languages can be set](scriptlocal) [Sirin 0.26+]
+
+> description
+
+```lua
+	description = {
+		default = "Description Line 1\nDescription Line 2 "
+		-- strRU = "", -- Russian
+		-- strCN = "", -- Chinese
+		-- strJP = "", -- Japanese
+	},
+```
+
+`String` -- Description of the portal displayed in the ui  [Additional languages can be set](scriptlocal) [Sirin 0.26+]
+
+Long description lines can be split using \n
+
 > announceMsg
 
 ```lua
@@ -50,10 +78,10 @@ announceMsg = { -- Global chat announce
 	},
 },
 ```
-`String` -- Text that is displayed on the button  [Additional languages can be set](scriptlocal)
+`String` -- Text that is displayed  [Additional languages can be set](scriptlocal) [Sirin 0.26+]
 
 
-Annouces to the whole server when a portal opens or closes
+Annouces to the server when a portal opens or closes
 
 > probability
 
