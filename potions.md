@@ -13,7 +13,7 @@ Each file will contain a list of potions with effect codes `Make sure there is a
 - Value for Effect Code `see below, some potion effect use multiple values`
 
 ```lua
-ipcsa01 = {1, 999}, -- add cash potion 999
+ipcsa01 = { 1, 999}, -- add cash potion 999
 ipcsa02 = { 1, 200 }, -- add cash potion 200
 ipcsa03 = { 2, 7 }, -- premium potion 7 days
 ipcsa04 = { 4, { "00000", false, true, true, true } }, -- spawn flem, exp loss on player death, exp gained on kill
@@ -39,25 +39,25 @@ Trying to use a potion that is one of these types will result in `Failed to use 
 
 *** 
 
-> 1 | add 999 cash potion
+> add 999 cash potion
 
 ```ipcsa01 = { 1, 999 }, ```
 
 Gives cash points when potion is used
 
-> 2 | add premium potion 7 days.
+> add premium potion 7 days.
 
 ```ipcsa02 = { 2, 7 },```
 
 Adds premium service days instantly when used - no logout required
 
-> 3 | add premium potion 300 seconds (5 minutes).
+> add premium potion 300 seconds (5 minutes).
 
 ```ipcsa03 = { 3, 300 },```
 
 Adds premium service in minutes instantly when used - no logout required
 
-> 4 | summon monster potion.
+> summon monster potion.
 
 ```ipcsa04 = { 4, { "00000", false, true, true, true } },```
 
@@ -68,32 +68,32 @@ Adds premium service in minutes instantly when used - no logout required
 5) `true`/`false` -- Reward exp. If true then this monster gives exp
 
 
-> 5 | add/sub contribution points potion.
+> add/sub contribution points potion.
 
 ```ipcsa05 = { 5, 999 },```
 
-> 6 | add/sub pvp cash potion.
+> add/sub pvp cash potion.
 
 Player must be at least level 40 with a class change to earn PVP cash points
 
 ```ipcsa06 = { 6, 999 },```
 
-> 7 | add/sub race currency potion.
+> add/sub race currency potion.
 
 ```ipcsa07 = { 7, 999 },```
 
-> 8 | add/sub gold currency potion,
+> add/sub gold currency potion,
 
 ```ipcsa08 = { 8, 999 },```
 
-> 9 | add/sub level potion
+> add/sub level potion
 
 ```ipcsa09 = { 9, { 15, true } },```
 
 1) `number` -- level adjust value can be negative.
 2) `true`/`false` -- ignore max level (break cap)
 
-> 3 | set level potion.
+> set level potion.
 
 ```ipcsa10 = { 10, { 55, true, false } },``` 
 
