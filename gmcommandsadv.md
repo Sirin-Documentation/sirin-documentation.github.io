@@ -223,15 +223,11 @@ You can mix values: A binary to Decimal converter can aid with this [Binary to D
 ## Teleport player(s)
 
 ```gm command
-%player to arg1 arg2 arg3 arg4 arg5
+%player to arg1 arg2 arg3 arg4 arg5 arg6
 ```
-`%player to` - GM Command \
-`arg1` `MapName` - Valid Map Name `NeutralC` or `Platform01` etc \
-`arg2` `x` - x coordinate \
-`arg3` `y` - y coordinate \
-`arg4` `z` - z coordinate 
+`%player to` - GM Command
 
-> arg5 any one of the following
+> arg1 any one of the following
 
 - `*` - Target yourself
 - `all` - Target everyone that is online
@@ -242,6 +238,14 @@ You can mix values: A binary to Decimal converter can aid with this [Binary to D
 - `MapName` - Target everyone on that map. Can be any valid name name `NeutralC` or `Platform01` etc.
 - `PlayerName` - Target player by name  `If player used name bellato (key word), then put it in braces [bellato]`
 
+`arg2` `MapName` - Valid Map Name `NeutralC` or `Platform01` etc \
+`arg3` `x` - x coordinate \
+`arg4` `y` - y coordinate \
+`arg5` `z` - z coordinate \
+`arg6` `Layer` - (Optional) Layer of the map. Functions like a dungeon 1 map multiple layers
+
+>> To be able use layers on maps you need to activate them. Use gm command  'layer set'
+>> `
 
 ## Spawn Monster(s) at Coords
 
@@ -256,3 +260,27 @@ You can mix values: A binary to Decimal converter can aid with this [Binary to D
 `arg4` `z` - z coordinate \
 `arg5` `MonsterCode` - Monster spawn code `00000 - Flym`
 `arg6` `Number` - Number of monsters to spawn
+
+## Create new Map Layers
+
+>> Experimental feature that will be expanded upon
+
+Activate New Map Layer
+```gm command
+%layer set arg1 arg2
+```
+
+`%layer set` - GM Command \
+`arg1` `MapName` - Valid Map Name `NeutralC` or `Platform01` etc \
+`arg2` `Number` - Index for the new layer.. Default layer is 0
+
+
+Remove Existing Map Layer
+```gm command
+%layer set arg1 arg2 arg3
+```
+
+`%layer set` - GM Command \
+`arg1` `MapName` - Valid Map Name `NeutralC` or `Platform01` etc \
+`arg2` `Number` - Index for the layer \
+`arg3` `0` - Remove the layer

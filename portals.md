@@ -6,7 +6,7 @@ All files with the `.lua` file extension will be read as `Loot Box Scripts` in t
 >> Using the GM command `%rift reload`
 
 ```lua
-test_portal = { -- Any unique name. Do not use '-' in names!
+test_portal = { -- Any unique name. Do not use spaces in names!
 	portalType = 0, -- 0 Rift (map to map)
 	srcMap = "NeutralA", -- Portal Entrance map
 	srcPos = {

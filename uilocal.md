@@ -1,8 +1,6 @@
 # Interface Localization [Sirin 0.26+]
 
->> Language strings for the custom ui are set in `Client/Lang/en-words.htm`
-
-Future updates will include the language pairs from [script localization](scriptlocal) for multiple concurrent interface languages 
+>> Language strings for the custom ui are set in `Client/LangPair/UITranslation.htm` language pairs from [script localization](scriptlocal)
 
 ```html
 <!ENTITY chat-filters "Chat Filters">
@@ -22,7 +20,7 @@ Future updates will include the language pairs from [script localization](script
 <!ENTITY chat-pt "PT">
 ```
 
-> Without `en-words.htm` loaded, interface strings will appear as `&chat-party;` indicating a locale sting can't be found
+> Without `UITranslation.htm` loaded, interface strings will appear as `&chat-party;` indicating a locale sting can't be found
 
 #### Breakdown ####
 
@@ -30,3 +28,5 @@ Future updates will include the language pairs from [script localization](script
 
 `string` : `chat-local` String used by the interface that is to be replaced\
 `string` : `Local` String that is seen when the localization is loaded, `change this to anything for your language`
+
+>> Save your `UITranslation.htm` file as UTF-8 if you are using non latin characters

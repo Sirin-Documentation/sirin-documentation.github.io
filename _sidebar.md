@@ -32,7 +32,7 @@
   - [Enable/Disable Features](plugins.md)
 
 - Server
-  - [GM Commands](gmcommands.md)
+  - [GM Commands (Default)](gmcommands.md)
     - [Modding Gm Commands](gmcommands.md#modding-gm-commands)
   - [GM Commands (Extended)](gmcommandsadv.md)
     - [Item Give](gmcommandsadv.md#item-give-command)
@@ -40,6 +40,7 @@
     - [Remove/replace items](gmcommandsadv.md#removereplace-items)
     - [Teleport Player(s)](gmcommandsadv.md#teleport-players)
     - [Spawn Monster](gmcommandsadv.md#spawn-monsters-at-coords)
+  - [GM Commands (Scripted)](gmcommandsscripted.md)
   - [Guard Config](serverconfigs.md)
   - [Potion Effects](potions.md)
     - [Potion Types](potions.md#potion-types)
@@ -51,6 +52,28 @@
   - [Client File Encryption](cencrypt.md)
   - [Error Logs](loglocations.md)
 
+- Lua
+  - [Lua Scripting](lua/luascripting.md)
+  - [Common Formulas](lua/formulas.md)
+    - [Upgrade String](lua/formulas.md#upgrade-value)
+    - [Durability Value](lua/formulas.md#durability-value)
+    - [Storage Mask](lua/formulas.md#storage-mask)
+  - Globals
+    - mainThread
+      - [teleportPlayer](lua/mainThread.md#teleportPlayer)
+      - [giveItemByName](lua/mainThread.md#giveitembyname)
+      - [giveItemBySerial](lua/mainThread.md#giveitembyserial)
+      - [takeItemBySerial](lua/mainThread.md#takeitembyserial)
+      - [getPlayerBySerial](lua/mainThread.md#getPlayerBySerial)
+      - [objectToPlayer](lua/mainThread.md#objectToPlayer)
+      - [createMonster](lua/mainThread.md#createmonster)
+      - [createItemBox](lua/mainThread.md#createitembox)
+  - Classes
+    - [CMapData](lua/cmapdata.md)
+    - [CPlayer](lua/cplayer.md)
+    - [CMapOperation](lua/cmapoperation.md)
+
 - Localization
   - [Sirin Scripts](scriptlocal.md#localization)
   - [Interface](uilocal.md#localization)
+  - [(Parser) ND Files](ndlocal.md#localization)
