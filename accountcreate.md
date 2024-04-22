@@ -11,6 +11,8 @@ Sirin account capture: Enables a GM to login as another user account without kno
 >password *******
 ```
 
+> Login with the launcher using `!username` / `password` - `!` signals this is a GM account login
+
 # Player Account
 
 In the server console use the command
