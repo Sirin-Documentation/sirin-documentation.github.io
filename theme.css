@@ -336,7 +336,7 @@ body.sticky .sidebar-toggle {
 }
 .markdown-section hr {
   border: none;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #404040;
   margin: 2em 0;
 }
 .markdown-section iframe {
