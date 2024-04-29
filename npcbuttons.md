@@ -15,6 +15,19 @@ All files with the `.lua` file extension will be read as `NPC Buttons` in the `s
 }, -- dont forget separating comma
 ```
 
+> [168] = is the button index from `NPCharacter.xlsx` / `StoreList`. Each store has a maximum of 10 buttons
+
+| Column  | Button Index   |
+|---|---|
+| NPCClass1  | 168 |
+| NPCClass2  | 0 |
+| ...  |  |
+| NPCClass10  | 0 |
+
+- First button index that does not exist in `GU is 164` and `AoP - 167`
+- Highest button index that can be used is 255  
+- Same button can be re-used on multiple npcs
+
 > actionType
 ```lua
 actionType = 1,
