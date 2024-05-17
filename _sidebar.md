@@ -25,6 +25,10 @@
     - [C++ SDK](launchersdk.md#c-sdk)
     - [C# Wrapper](launchersdk.md#c-wrapper)
 
+- Login Server
+  - [Account Creation (GameCP)](loginserver/loginserver.md#account-creation-game-cp)
+  - [Two Factor Verification](loginserver/loginserver.md#two-factor-verification)
+
 - Server Console
   - [Commands](consolebasics.md)
   - [Register/Bind](bind.md)
