@@ -2,8 +2,12 @@
 
 All files with the `.lua` file extension will be read as `Rift Scripts` in the `sirin-lua\Rifts` folder
 
+<img style="border:1px solid black" src="img/sirin_rift.jpg"/>
+
 >> rifts can be reloaded in game without restarting of the ZoneServer \
 >> Using the GM command `%rift reload`
+
+
 
 ```lua
 simpleRift = {
