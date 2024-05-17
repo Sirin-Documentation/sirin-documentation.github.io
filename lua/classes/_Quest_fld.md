@@ -47,7 +47,7 @@
  
 > `int` m_nConsForceCnt
  
-> `const` `char` m_m_strLinkQuest_get(`int`)
+> `const` `char`* m_strLinkQuest_get(`int`)
  
 > `int` m_nLinkQuestGroupID
  

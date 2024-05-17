@@ -2,7 +2,7 @@
  
 ## Functions
  
-> `static` `class` [CLuaSendBuffer](lua/classes/CLuaSendBuffer.md)* Instance(`void`)
+> `static` `class` `LuaClassHelpers__CLuaSendBuffer`* Instance(`void`)
  
 > `void` PushString(`const` `char` *,`unsigned int`)
  

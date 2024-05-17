@@ -43,7 +43,7 @@
  
 > `struct` [_monster_fld](lua/classes/_monster_fld.md)* m_pMonRec
  
-> `struct` `_dummy_position`* m_pDumPosition
+> `struct` [_dummy_position](lua/classes/_dummy_position.md)* m_pDumPosition
  
 > `int` m_nHP
  

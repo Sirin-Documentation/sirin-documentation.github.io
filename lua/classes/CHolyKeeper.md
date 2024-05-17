@@ -9,11 +9,11 @@
  
 > `struct` [_monster_fld](lua/classes/_monster_fld.md)* m_pRec
  
-> `struct` `_dummy_position`* m_pPosCreate
+> `struct` [_dummy_position](lua/classes/_dummy_position.md)* m_pPosCreate
  
-> `struct` `_dummy_position`* m_pPosActive
+> `struct` [_dummy_position](lua/classes/_dummy_position.md)* m_pPosActive
  
-> `struct` `_dummy_position`* m_pPosCenter
+> `struct` [_dummy_position](lua/classes/_dummy_position.md)* m_pPosCenter
  
 > `int` m_nMasterRace
  

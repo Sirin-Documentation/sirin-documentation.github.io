@@ -85,7 +85,7 @@
  
 > `int` m_nContAreaType
  
-> `struct` [_cont_param_list](lua/classes/_cont_param_list.md) m_ContParamList_get(`int`)
+> `struct` [_cont_param_list](lua/classes/_cont_param_list.md)* m_ContParamList_get(`int`)
  
 > `int` m_nContEffectSec_get(`int`)
  

@@ -67,7 +67,7 @@ math.random(10, 50) -- random number between x and y
 
 # Example Scripts
 
-> View the Lua Docs to see all available options for your own scripts
+> View the Lua API to see all available options for your own scripts
 
 #### Scripted GM Command example : Spawning between 10 and 30 flems
 

@@ -16,7 +16,7 @@
  
 > `struct` `_GLBID` m_gidGlobal
  
-> `struct` `_CLID` m_idWorld
+> `struct` [_CLID](lua/classes/_CLID.md) m_idWorld
  
 > `unsigned int` m_dwIP
  

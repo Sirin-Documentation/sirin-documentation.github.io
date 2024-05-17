@@ -12,6 +12,8 @@
  
 > `unsigned int` GetGold(`void`)
  
+> `unsigned short` GetNewItemSerial(`void`)
+ 
 ## Members
  
 > `unsigned char` m_byPvPGrade
@@ -40,7 +42,7 @@
  
 > `struct` `_SFCONT_DB_BASE` m_SFContDB
  
-> `struct` `_ITEMCOMBINE_DB_BASE` m_ItemCombineDB
+> `struct` [_ITEMCOMBINE_DB_BASE](lua/classes/_ITEMCOMBINE_DB_BASE.md) m_ItemCombineDB
  
 > `class` `CPostStorage` m_PostStorage
  
@@ -64,7 +66,7 @@
  
 > `struct` [_class_fld](lua/classes/_class_fld.md)* m_ppHistoryEffect_get(`int`)
  
-> `struct` `_quick_link` m_QLink_get(`int`)
+> `struct` `_quick_link`* m_QLink_get(`int`)
  
 > `class` `CGuild`* m_pGuild
  

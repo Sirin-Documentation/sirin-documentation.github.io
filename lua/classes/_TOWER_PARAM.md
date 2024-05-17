@@ -4,5 +4,5 @@
  
 > `int` m_nCount
  
-> `struct` [_TOWER_PARAM___list](lua/classes/_TOWER_PARAM___list.md) m_List_get(`int`)
+> `struct` [_TOWER_PARAM___list](lua/classes/_TOWER_PARAM___list.md)* m_List_get(`int`)
  

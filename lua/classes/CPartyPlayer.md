@@ -14,7 +14,7 @@
  
 > `bool` m_bLogin
  
-> `struct` `_CLID` m_id
+> `struct` [_CLID](lua/classes/_CLID.md) m_id
  
 > `const` `char`* m_wszName
  

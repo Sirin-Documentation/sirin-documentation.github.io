@@ -5,6 +5,10 @@
  
 > `bool` IsApplyPcbangPrimium(`void`)
  
+> `bool` IsChaosMode(`void`)
+ 
+> `bool` IsPunished(`unsigned char`,`bool`)
+ 
 > `int` GetMaxFP(`void`)
  
 > `int` GetFP(`void`)
@@ -62,6 +66,14 @@
 > `unsigned long` _check_mastery_cum_lim(`unsigned char`,`unsigned char`)
  
 > `int` _GetPartyMemberInCircle(`struct` `lua_State` *)
+ 
+> `int` OutOfMap(`struct` `lua_State` *)
+ 
+> `void` SendMsg_CombineItemExResult(`struct` [_combine_ex_item_result_zocl](lua/classes/_combine_ex_item_result_zocl.md) *)
+ 
+> `void` SendMsg_RewardAddItem(`struct` [_STORAGE_LIST___db_con](lua/classes/_STORAGE_LIST___db_con.md) *,`unsigned char`)
+ 
+> `void` SendMsg_AlterItemDurInform(`unsigned char`,`unsigned short`,`unsigned __int64`)
  
 ## Members
  
@@ -147,7 +159,7 @@
  
 > `class` [CPlayerDB](lua/classes/CPlayerDB.md) m_Param
  
-> `struct` `_CLID` m_id
+> `struct` [_CLID](lua/classes/_CLID.md) m_id
  
 > `unsigned char` m_byMoveType
  
@@ -171,7 +183,7 @@
  
 > `class` `CQuestMgr` m_QuestMgr
  
-> `class` `ItemCombineMgr` m_ItemCombineMgr
+> `class` [ItemCombineMgr](lua/classes/ItemCombineMgr.md) m_ItemCombineMgr
  
 > `unsigned char` m_byMapInModeBuffer
  
@@ -333,7 +345,7 @@
  
 > `class` [CMapData](lua/classes/CMapData.md)* m_pBindMapData
  
-> `struct` `_dummy_position`* m_pBindDummyData
+> `struct` [_dummy_position](lua/classes/_dummy_position.md)* m_pBindDummyData
  
 > `unsigned int` m_dwNextTimeDungeonDie
  

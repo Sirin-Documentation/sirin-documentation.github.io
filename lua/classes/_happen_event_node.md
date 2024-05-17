@@ -16,5 +16,5 @@
  
 > `struct` [_happen_event_condition_node](lua/classes/_happen_event_condition_node.md)* m_CondNode_get(`int`)
  
-> `char` m_strLinkQuest_get(`int`)
+> `const` `char`* m_strLinkQuest_get(`int`)
  

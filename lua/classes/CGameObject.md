@@ -2,6 +2,8 @@
  
 ## Functions
  
+> `bool` __eq(`const` `class` [CGameObject](lua/classes/CGameObject.md) *,`const` `class` [CGameObject](lua/classes/CGameObject.md) *)
+ 
 > `void` SetStun(`bool`)
  
 > `unsigned short` CalcCurHPRate(`void`)
@@ -166,6 +168,12 @@
  
 > `bool` Is_Battle_Mode(`void`)
  
+> `bool` Create(`struct` [_object_create_setdata](lua/classes/_object_create_setdata.md) *)
+ 
+> `int` CircleReport(`struct` `lua_State` *)
+ 
+> `unsigned int` GetCurSecNum(`void`)
+ 
 ## Members
  
 > `struct` [_base_fld](lua/classes/_base_fld.md)* m_pRecordSet
@@ -218,9 +226,9 @@
  
 > `unsigned short` m_wMapLayerIndex
  
-> `struct` `_object_list_point` m_SectorPoint
+> `struct` [_object_list_point](lua/classes/_object_list_point.md) m_SectorPoint
  
-> `struct` `_object_list_point` m_SectorNetPoint
+> `struct` [_object_list_point](lua/classes/_object_list_point.md) m_SectorNetPoint
  
 > `unsigned int` m_dwNextFreeStunTime
  

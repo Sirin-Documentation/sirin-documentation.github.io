@@ -2,7 +2,13 @@
  
 ## Functions
  
+> `bool` __eq(`const` `class` [CMapData](lua/classes/CMapData.md) *,`const` `class` [CMapData](lua/classes/CMapData.md) *)
+ 
 > `int` GetRandPosInRange(`struct` `lua_State` *)
+ 
+> `int` IsMapIn(`struct` `lua_State` *)
+ 
+> `int` GetRectInRadius(`struct` `lua_State` *)
  
 ## Members
  
@@ -12,11 +18,11 @@
  
 > `int` m_nMapIndex
  
-> `class` `CLevel` m_Level
+> `class` [CLevel](lua/classes/CLevel.md) m_Level
  
 > `int` m_nMapCode
  
-> `struct` `_LAYER_SET`* m_ls
+> `struct` [_LAYER_SET](lua/classes/_LAYER_SET.md)* m_ls_get(`int`)
  
 > `struct` `_MULTI_BLOCK`* m_mb
  
@@ -34,7 +40,7 @@
  
 > `int` m_nPortalNum
  
-> `struct` `_portal_dummy`* m_pPortal
+> `struct` [_portal_dummy](lua/classes/_portal_dummy.md)* m_pPortal
  
 > `int` m_nItemStoreDumNum
  
@@ -90,7 +96,7 @@
  
 > `struct` `_bsp_info` m_BspInfo
  
-> `struct` `_sec_info` m_SecInfo
+> `struct` [_sec_info](lua/classes/_sec_info.md) m_SecInfo
  
 > `class` `CMyTimer` m_tmrMineGradeReSet
  

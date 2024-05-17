@@ -13,7 +13,7 @@
  
 > `struct` [_monster_fld](lua/classes/_monster_fld.md)* m_pRec
  
-> `struct` `_dummy_position`* m_pDum
+> `struct` [_dummy_position](lua/classes/_dummy_position.md)* m_pDum
  
 > `unsigned char` m_byMasterRaceCode
  

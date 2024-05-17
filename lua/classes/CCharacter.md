@@ -13,6 +13,8 @@
  
 > `int` AssistSkill(`struct` `lua_State` *)
  
+> `bool` GetStealth(`bool`)
+ 
 ## Members
  
 > `float` m_fTarPos_x

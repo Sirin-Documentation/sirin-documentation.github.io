@@ -24,7 +24,7 @@ Example scripted command to teleport the user to the map start location of Bella
 
 
 > Each scripted GM command will use [Lua Scripting](lua/luascripting.md) to define how the command functions \
-> View the Lua Docs to see all available options
+> View the Lua API to see all available options
 
 
 `commandName` - Any unique name. Do not use spaces in names \

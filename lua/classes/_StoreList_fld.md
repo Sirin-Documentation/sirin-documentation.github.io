@@ -29,5 +29,5 @@
  
 > `const` `char`* m_strItemlist_get(`int`)
  
-> `struct` [sell_info](lua/classes/sell_info.md) m_sellLimitList_get(`int`)
+> `struct` [sell_info](lua/classes/sell_info.md)* m_sellLimitList_get(`int`)
  
