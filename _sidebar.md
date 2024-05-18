@@ -72,6 +72,8 @@
       - [onUse](lua/features/rifts.md#onuse)
     - [GM Commands](gmcommandsscripted.md)
   - API
+    - Native
+      - [NetMgr](lua/native/sirinNetworking.md)
     - Threads
       - [CoreCfg](lua/threads/initCoreCfg.md)
         - [sirin](lua/threads/initCoreCfg.md#sirin)
