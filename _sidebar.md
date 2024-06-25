@@ -58,6 +58,7 @@
 
 - Lua
   - [Lua Scripting](lua/luascripting.md)
+  - [Code Highlighting/Completion](lua/luacodehighlight.md)
   - [Common Formulas](lua/formulas.md)
     - [Upgrade String](lua/formulas.md#upgrade-value)
     - [Durability Value](lua/formulas.md#durability-value)
