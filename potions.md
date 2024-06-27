@@ -1,10 +1,10 @@
 # Potion Effects
 
 
-All files with the `.lua` file extension will be read as `Potion Scripts` in the `sirin-scripts\PotionEffect` folder
+All files with the `.lua` file extension will be read as `Potion Scripts` in the `sirin-lua\PotionEffect` folder
 
 >> Potion Effects can be reloaded in game without restarting of the ZoneServer \
->> Using the GM command `%potioneff reload`
+>> Using the GM command `%potion reload`
 
 Each file will contain a list of potions with effect codes `Make sure there is a comma at the end of each line `
 
@@ -21,7 +21,7 @@ ipcsa05 = { 5, 999 }, -- add 999 contribution points
 ```
 ***
 
-### Potion types to add your effects to
+## Potion types to add your effects to
 Do _not_ use potion types that require specific conditions to be present eg.
 
 - HP potions require you to not have full health
@@ -38,6 +38,48 @@ Trying to use a potion that is one of these types will result in `Failed to use 
 - Potions that have short cooldowns if you expect them to be used frequently (currency gain)
 
 *** 
+
+
+## Scripted Potion Effect Handlers [Sirin 0.29+]
+
+The following potion effects are purely examples - All potion effect handles are defined in `sirin-lua\_init\mgr\potion\potion.lua`
+
+You can expand this and add in your own potion effect handlers to `PotionManager.handlers` - to cover all types of potion effects
+
+```lua
+		---18. Alter action point
+		---@param pActChar CCharacter
+		---@param pTargetChar CCharacter
+		---@param effect AlterActionPointPotionParam
+		---@return boolean
+		---@return integer
+		function (pActChar, pTargetChar, effect)
+			if pTargetChar.m_ObjID.m_byID > 0 or pTargetChar.m_ObjID.m_byKind > 0 then
+				return false, 1
+			end
+
+			if not PlayerMgr.alterActionPoint(Sirin.mainThread.objectToPlayer(pTargetChar), effect[2], effect[1]) then
+				return false, 2
+			end
+
+			return true, 0
+		end,
+        --- Add your own new handlers below
+		--- 19. Example
+		function(pActChar, pTargetChar, effect)
+			if pTargetChar.m_ObjID.m_byID > 0 or pTargetChar.m_ObjID.m_byKind > 0 then
+				return false, 1
+			end
+
+			--- Logic goes here
+		end,
+    },
+```
+
+> Each scripted potion handler uses [Lua Scripting](lua/luascripting.md) to define how the handler functions \
+> View the Lua API to see all available options
+
+## Example Handlers
 
 > add 999 cash potion
 
