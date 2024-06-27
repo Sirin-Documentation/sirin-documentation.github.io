@@ -60,6 +60,7 @@
     - [Durability Value](lua/formulas.md#durability-value)
     - [Storage Mask](lua/formulas.md#storage-mask)
   - Lua Features
+    - [Event Hooks](lua/features/hooks.md#event-hooks)
     - [Potions](potions.md)
       - [Potion Types](potions.md#potion-types)
       - [Scripted Handlers](potions.md#scripted-potion-effect-handlers-sirin-029)
