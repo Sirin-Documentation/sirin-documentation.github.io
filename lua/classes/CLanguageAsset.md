@@ -4,7 +4,7 @@
  
 > `static` `class` [CLanguageAsset](lua/classes/CLanguageAsset.md)* instance(`void`)
  
-> `void` addLanguage(`unsigned char`,`const` `char` *,`const` `char` *)
+> `void` addLanguage(`unsigned char`,`const` `char` *,`const` `char` *,`unsigned int`)
  
 > `void` setDefaultLanguage(`unsigned char`)
  

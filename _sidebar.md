@@ -79,6 +79,8 @@
     - Threads
       - [CoreCfg](lua/threads/initCoreCfg.md)
         - [sirin](lua/threads/initCoreCfg.md#sirin)
+        - [console](lua/threads/CoreCfg.md#Sirinconsole)
+        - [luaThreadManager](lua/threads/CoreCfg.md#SirinluaThreadManager)
       - [GuardCfg](lua/threads/initGuardCfg.md)
         - [sirin](lua/threads/initGuardCfg.md#sirin)
           - [nats](lua/threads/initGuardCfg.md#sirinnats)
@@ -269,6 +271,9 @@
       - [_player_fld](lua/classes/_player_fld.md)
       - [_portal_fld](lua/classes/_portal_fld.md)
       - [_skill_fld](lua/classes/_skill_fld.md)
+      - [ILuaContext](lua/classes/ILuaContext.md)
+      - [UUIDv4](lua/classes/UUIDv4.md)
+      - [VoidPtr](lua/classes/VoidPtr.md)
 
 
 
