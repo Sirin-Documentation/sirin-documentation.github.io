@@ -1,7 +1,6 @@
 # _Exttrunk_db_load
-: public [_STORAGE_LIST](lua/classes/_STORAGE_LIST.md)
- 
-## Members
+
+---@class (exact) _Exttrunk_db_load: _STORAGE_LIST
  
 > `unsigned char` m_byItemSlotRace_get(`int`)
  

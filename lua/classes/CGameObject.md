@@ -220,7 +220,7 @@
  
 > `class` [CMapData](lua/classes/CMapData.md)* m_pCurMap
  
-> `struct` `_100_per_random_table` m_rtPer100
+> `struct` [_100_per_random_table](lua/classes/_100_per_random_table.md) m_rtPer100
  
 > `int` m_nCirclePlayerNum
  

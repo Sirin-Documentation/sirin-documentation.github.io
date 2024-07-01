@@ -1,9 +1,12 @@
 # _STORAGE_LIST___db_con
-: public [_STORAGE_LIST___storage_con](lua/classes/_STORAGE_LIST___storage_con.md)
+
+---@class (exact) _STORAGE_LIST___db_con: _STORAGE_LIST___storage_con
  
 ## Functions
  
 > `void` _STORAGE_LIST___db_con(`void`) - Constructor\
+ 
+> `void` _STORAGE_LIST___db_con(`const` `struct` `_STORAGE_LIST___db_con &`) - Constructor\
  
 ## Members
  

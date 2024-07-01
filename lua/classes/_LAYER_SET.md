@@ -1,7 +1,5 @@
 # _LAYER_SET
  
-## Functions
- 
 > `bool` IsActiveLayer(`void`)
  
 ## Members

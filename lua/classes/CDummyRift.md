@@ -1,7 +1,8 @@
 # CDummyRift
-: public [CReturnGate](lua/classes/CReturnGate.md)
+
+---@class (exact) CDummyRift: CReturnGate
  
 ## Members
  
-> `class` `std__basic_string<char,struct std__char_traits<char>,class std__allocator<char> >` m_strScriptID
+> `class` `std__basic_string<char,struct std__char_traits<char>,class std__allocator<char> >` m_strObjectUUID
  

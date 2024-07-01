@@ -1,16 +1,10 @@
 # CUserDB
  
-## Functions
- 
-> `const` `struct` `_REGED`* m_RegedList(`const` `class` [CUserDB](lua/classes/CUserDB.md) *,`int`)
- 
-> `const` `struct` `_NOT_ARRANGED_AVATOR_DB`* m_NotArrangedChar(`const` `class` [CUserDB](lua/classes/CUserDB.md) *,`int`)
- 
-> `const` `unsigned int`* m_dwArrangePassCase0(`const` `class` [CUserDB](lua/classes/CUserDB.md) *,`int`)
- 
 > `unsigned int` GetActPoint(`unsigned char`)
  
 > `bool` Update_User_Action_Point(`unsigned char`,`unsigned long`)
+ 
+> `void` Update_MaxLevel(`unsigned char`)
  
 ## Members
  
@@ -40,9 +34,15 @@
  
 > `unsigned char` m_byNameLen
  
+> `const` `struct` `_REGED`* m_RegedList_get(`int`)
+ 
 > `struct` `_AVATOR_DATA` m_AvatorData
  
 > `struct` `_AVATOR_DATA` m_AvatorData_bk
+ 
+> `const` `struct` `_NOT_ARRANGED_AVATOR_DB`* m_NotArrangedChar_get(`int`)
+ 
+> `const` `unsigned int`* m_dwArrangePassCase0_get(`int`)
  
 > `bool` m_bActive
  

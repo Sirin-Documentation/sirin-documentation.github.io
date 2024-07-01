@@ -1,5 +1,6 @@
 # _npc_fld
-: public [_base_fld](lua/classes/_base_fld.md)
+
+---@class (exact) _npc_fld: _base_fld
  
 ## Members
  

@@ -1,5 +1,6 @@
 # _CloakItem_fld
-: public [_DfnEquipItem_fld](lua/classes/_DfnEquipItem_fld.md)
+
+---@class (exact) _CloakItem_fld: _DfnEquipItem_fld
  
 ## Members
  

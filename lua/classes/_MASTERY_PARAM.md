@@ -1,7 +1,5 @@
 # _MASTERY_PARAM
  
-## Functions
- 
 > `int` GetMasteryPerMast(`unsigned char`,`unsigned char`)
  
 > `int` GetSkillLv(`unsigned char`)

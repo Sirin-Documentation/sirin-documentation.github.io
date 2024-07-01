@@ -1,5 +1,6 @@
 # _RadarItem_fld
-: public [_base_fld](lua/classes/_base_fld.md)
+
+---@class (exact) _RadarItem_fld: _base_fld
  
 ## Members
  

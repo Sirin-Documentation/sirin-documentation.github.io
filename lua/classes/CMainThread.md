@@ -128,13 +128,13 @@
  
 > `class` [CRecordData](lua/classes/CRecordData.md) m_tblItemExchangeData
  
-> `class` `CItemUpgradeTable` m_tblItemUpgrade
+> `class` [CItemUpgradeTable](lua/classes/CItemUpgradeTable.md) m_tblItemUpgrade
  
-> `class` [CRecordData](lua/classes/CRecordData.md)* m_tblItemData_get(`int`)
+> `class` [CRecordData](lua/classes/CRecordData.md)* m_tblItemData_get(`enum TBL_CODE`)
  
-> `class` [CRecordData](lua/classes/CRecordData.md)* m_tblEffectData_get(`int`)
+> `class` [CRecordData](lua/classes/CRecordData.md)* m_tblEffectData_get(`enum EFF_CODE`)
  
-> `class` [CRecordData](lua/classes/CRecordData.md)* m_tblUnitPart_get(`int`)
+> `class` [CRecordData](lua/classes/CRecordData.md)* m_tblUnitPart_get(`enum UNIT_PART`)
  
 > `class` [CRecordData](lua/classes/CRecordData.md) m_tblUnitBullet
  

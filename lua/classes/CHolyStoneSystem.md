@@ -1,7 +1,5 @@
 # CHolyStoneSystem
  
-## Functions
- 
 > `int` GetDestroyerState(`void`)
  
 > `unsigned int` GetDestroyerSerial(`void`)

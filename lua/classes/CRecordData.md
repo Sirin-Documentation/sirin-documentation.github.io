@@ -8,6 +8,8 @@
  
 > `struct` [_base_fld](lua/classes/_base_fld.md)* GetRecord(`int`)
  
+> `struct` [_base_fld](lua/classes/_base_fld.md)* GetRecordByHash(`const` `char` *,`int`,`int`)
+ 
 ## Members
  
 > `bool` m_bLoad

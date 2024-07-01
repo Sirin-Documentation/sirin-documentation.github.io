@@ -1,7 +1,5 @@
 # _ITEMCOMBINE_DB_BASE
  
-## Functions
- 
 > `bool` IsCombineData(`struct` [_ITEMCOMBINE_DB_BASE](lua/classes/_ITEMCOMBINE_DB_BASE.md) *)
  
 ## Members

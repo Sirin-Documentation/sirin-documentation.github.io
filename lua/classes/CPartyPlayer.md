@@ -1,7 +1,5 @@
 # CPartyPlayer
  
-## Functions
- 
 > `bool` IsPartyBoss(`void`)
  
 > `bool` IsPartyMode(`void`)

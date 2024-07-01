@@ -1,7 +1,5 @@
 # effect_parameter____param_data
  
-## Members
- 
 > `float` m_fEff_Rate_get(`int`)
  
 > `void` m_fEff_Rate_set(`int`,`float`)

@@ -1,7 +1,5 @@
 # CPlayerDB
  
-## Functions
- 
 > `unsigned int` GetCharSerial(`void`)
  
 > `double` GetPvPPoint(`void`)

@@ -1,5 +1,6 @@
 # CNuclearBomb
-: public [CCharacter](lua/classes/CCharacter.md)
+
+---@class (exact) CNuclearBomb: CCharacter
  
 ## Members
  

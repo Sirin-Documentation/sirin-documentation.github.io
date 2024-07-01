@@ -1,5 +1,6 @@
 # CItemBox
-: public [CGameObject](lua/classes/CGameObject.md)
+
+---@class (exact) CItemBox: CGameObject
  
 ## Functions
  

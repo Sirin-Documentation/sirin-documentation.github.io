@@ -2,16 +2,34 @@
  
 #### Namespaces
  
-> [sirin](lua/threads/MainThread.md#sirin)
+> [Sirin](lua/threads/MainThread.md#Sirin)
  
 ---
-# sirin
+# Sirin
  
 #### Namespaces
  
-> [mainThread](lua/threads/MainThread.md#sirinmainThread)
+> [console](lua/threads/MainThread.md#Sirinconsole)
  
-> [nats](lua/threads/MainThread.md#sirinnats)
+> [luaThreadManager](lua/threads/MainThread.md#SirinluaThreadManager)
+ 
+> [mainThread](lua/threads/MainThread.md#SirinmainThread)
+ 
+#### Functions
+ 
+> `static` `unsigned int` GetPrivateProfileIntA(`const` `char` *,`const` `char` *,`int`,`const` `char` *)
+ 
+> `static` `int` GetPrivateProfileStringA(`struct` `lua_State` *)
+ 
+> `static` `void` WriteA(`const` `char` *,`const` `char` *,`bool`,`bool`)
+ 
+> `static` `void` WritePrivateProfileStringA(`const` `char` *,`const` `char` *,`const` `char` *,`const` `char` *)
+ 
+> `static` `class` `luabridge__LuaRef` getFileList(`const` `char` *,`struct` `lua_State` *)
+ 
+> `static` `class` `std__basic_string<char,struct std__char_traits<char>,class std__allocator<char> >` getUUIDv4(`void`)
+ 
+> `static` `void` processAsyncCallback(`class` `std__basic_string<char`,`struct` `std__char_traits<char>`,`class` `std__allocator<char> >`,`class` `std__basic_string<char`,`struct` `std__char_traits<char>`,`class` `std__allocator<char> >`,`class` `std__basic_string<char`,`struct` `std__char_traits<char>`,`class` `std__allocator<char> >`,`class` `std__basic_string<char`,`struct` `std__char_traits<char>`,`class` `std__allocator<char> >`,`unsigned __int64`)
  
 #### Classes
  
@@ -21,14 +39,106 @@
  
 > [CTranslationAsset](lua/classes/CTranslationAsset.md)
  
+> [UUIDv4](lua/classes/UUIDv4.md)
+ 
+> [VoidPtr](lua/classes/VoidPtr.md)
+ 
 ---
-# sirin.mainThread
+# Sirin.console
+ 
+#### Functions
+ 
+> `static` `void` LogEx(`enum ConsoleForeground`,`enum ConsoleBackground`,`const` `char` *)
+ 
+> `static` `void` LogEx_NoFile(`enum ConsoleForeground`,`enum ConsoleBackground`,`const` `char` *)
+ 
+---
+# Sirin.luaThreadManager
+ 
+#### Functions
+ 
+> `static` `int` CopyFromContext(`struct` `lua_State` *)
+ 
+> `static` `int` CopyToContext(`struct` `lua_State` *)
+ 
+> `static` `void` DeleteGlobal(`class` [ILuaContext](lua/classes/ILuaContext.md) *,`const` `char` *)
+ 
+> `static` `bool` IsExistGlobal(`class` [ILuaContext](lua/classes/ILuaContext.md) *,`const` `char` *)
+ 
+> `static` `class` [ILuaContext](lua/classes/ILuaContext.md)* LuaGetThread(`const` `char` *)
+ 
+> `static` `class` [ILuaContext](lua/classes/ILuaContext.md)* LuaGetThread(`unsigned int`)
+ 
+#### Classes
+ 
+> [ILuaContext](lua/classes/ILuaContext.md)
+ 
+---
+# Sirin.mainThread
  
 #### Namespaces
  
-> [modContEffect](lua/threads/MainThread.md#sirinmainThreadmodContEffect)
+> [modButtonExt](lua/threads/MainThread.md#SirinmainThreadmodButtonExt)
+ 
+> [modChargeItem](lua/threads/MainThread.md#SirinmainThreadmodChargeItem)
+ 
+> [modContEffect](lua/threads/MainThread.md#SirinmainThreadmodContEffect)
+ 
+> [modItemPropertySkin](lua/threads/MainThread.md#SirinmainThreadmodItemPropertySkin)
+ 
+> [modPotionEffect](lua/threads/MainThread.md#SirinmainThreadmodPotionEffect)
+ 
+> [modReturnGate](lua/threads/MainThread.md#SirinmainThreadmodReturnGate)
  
 #### Members
+ 
+> `float`* ANIMUS_EXP_RATE
+ 
+> `float`* FORCE_LIVER_ACCUM_RATE
+ 
+> `float`* ITEM_ROOT_RATE
+ 
+> `float`* MASTERY_GET_RATE
+ 
+> `float`* MINE_SPEED_RATE
+ 
+> `unsigned char`* Major_Add_Character
+ 
+> `unsigned char`* Major_Bind_HQ
+ 
+> `unsigned char`* Major_Cash_Item
+ 
+> `unsigned char`* Major_Scroll_Item
+ 
+> `unsigned char`* Major_Sette_Mine_Elan_Map
+ 
+> `float`* PCBANG_PRIMIUM_FAVOR__ANIMUS_EXP
+ 
+> `float`* PCBANG_PRIMIUM_FAVOR__BASE_MASTERY
+ 
+> `float`* PCBANG_PRIMIUM_FAVOR__ITEM_DROP
+ 
+> `float`* PCBANG_PRIMIUM_FAVOR__MINING_SPEED
+ 
+> `float`* PCBANG_PRIMIUM_FAVOR__PLAYER_EXP
+ 
+> `float`* PCBANG_PRIMIUM_FAVOR__PLAYER_LOST_EXP
+ 
+> `float`* PCBANG_PRIMIUM_FAVOR__PVP_RATE
+ 
+> `float`* PCBANG_PRIMIUM_FAVOR__SKILL_FORCE_MASTERY
+ 
+> `float`* PLAYER_EXP_RATE
+ 
+> `float`* PLAYER_LOST_EXP
+ 
+> `float`* TSVR_ADD_DARKHOLE_REWARD_RATE
+ 
+> `float`* UNIT_HIT_EXP
+ 
+> `class` [CGameStatistics](lua/classes/CGameStatistics.md)* g_GameStatistics
+ 
+> `class` [CHolyStoneSystem](lua/classes/CHolyStoneSystem.md)* g_HolySys
  
 > `class` [CMainThread](lua/classes/CMainThread.md)* g_Main
  
@@ -37,8 +147,6 @@
 > `class` [CPotionMgr](lua/classes/CPotionMgr.md)* g_PotionMgr
  
 > `unsigned int`* g_dwCurTime
- 
-> `class` [CAttack](lua/classes/CAttack.md)* g_pAttack
  
 #### Functions
  
@@ -66,6 +174,8 @@
  
 > `static` `int` GetItemEquipGrade(`int`,`const` `char` *)
  
+> `static` `int` GetItemEquipLevel(`int`,`int`)
+ 
 > `static` `unsigned char` GetItemGrade(`int`,`int`)
  
 > `static` `int` GetItemTableCode(`const` `char` *)
@@ -77,6 +187,8 @@
 > `static` `unsigned int` GetLoopTime(`void`)
  
 > `static` `unsigned long` GetMaxParamFromExp(`int`,`unsigned __int64`)
+ 
+> `static` `bool` IsAddAbleTalikToItem(`unsigned char`,`unsigned short`,`unsigned long`,`struct` [_ItemUpgrade_fld](lua/classes/_ItemUpgrade_fld.md) *)
  
 > `static` `bool` IsOverLapItem(`int`)
  
@@ -210,21 +322,19 @@
  
 > `static` `int` getCheatWordNum(`void`)
  
+> `static` `class` [CMapData](lua/classes/CMapData.md)* getMapData(`const` `char` *)
+ 
 > `static` `class` [CMapData](lua/classes/CMapData.md)* getMapData(`unsigned int`)
  
 > `static` `class` [CPlayer](lua/classes/CPlayer.md)* getPlayerBySerial(`unsigned int`)
- 
-> `static` `class` `std__basic_string<char,struct std__char_traits<char>,class std__allocator<char> >` getUUIDv4(`void`)
- 
-> `static` `unsigned __int64` giveItemByName(`const` `char` *,`const` `char` *,`unsigned __int64`,`unsigned int`,`unsigned int`,`bool`)
- 
-> `static` `unsigned __int64` giveItemBySerial(`unsigned int`,`const` `char` *,`unsigned __int64`,`unsigned int`,`unsigned int`,`bool`)
  
 > `static` `class` [AutominePersonal](lua/classes/AutominePersonal.md)* objectToAMP(`class` [CGameObject](lua/classes/CGameObject.md) *)
  
 > `static` `class` [CAnimus](lua/classes/CAnimus.md)* objectToAnimus(`class` [CGameObject](lua/classes/CGameObject.md) *)
  
 > `static` `class` [CCharacter](lua/classes/CCharacter.md)* objectToCharacter(`class` [CGameObject](lua/classes/CGameObject.md) *)
+ 
+> `static` `class` [CDummyRift](lua/classes/CDummyRift.md)* objectToDummyRift(`class` [CGameObject](lua/classes/CGameObject.md) *)
  
 > `static` `class` [CHolyKeeper](lua/classes/CHolyKeeper.md)* objectToHolyKeeper(`class` [CGameObject](lua/classes/CGameObject.md) *)
  
@@ -238,17 +348,27 @@
  
 > `static` `class` [CPlayer](lua/classes/CPlayer.md)* objectToPlayer(`class` [CGameObject](lua/classes/CGameObject.md) *)
  
+> `static` `class` [CReturnGate](lua/classes/CReturnGate.md)* objectToReturnGate(`class` [CGameObject](lua/classes/CGameObject.md) *)
+ 
 > `static` `class` [CGuardTower](lua/classes/CGuardTower.md)* objectToTower(`class` [CGameObject](lua/classes/CGameObject.md) *)
  
 > `static` `class` [CTrap](lua/classes/CTrap.md)* objectToTrap(`class` [CGameObject](lua/classes/CGameObject.md) *)
  
+> `static` `class` [VoidPtr](lua/classes/VoidPtr.md)* objectToVoid(`class` [CGameObject](lua/classes/CGameObject.md) *)
+ 
+> `static` `bool` processAsyncCheatCommand(`class` [CPlayer](lua/classes/CPlayer.md) *,`const` `char` *)
+ 
 > `static` `bool` processCheatCommand(`class` [CPlayer](lua/classes/CPlayer.md) *,`const` `char` *)
  
-> `static` `int` takeItemBySerial(`unsigned int`,`const` `char` *,`unsigned int`,`unsigned __int64`,`unsigned int`,`int`)
+> `static` `bool` registCheat(`const` `char` *,`const` `char` *,`const` `char` *)
  
 > `static` `int` teleportPlayer(`unsigned int`,`unsigned int`,`float`,`float`,`float`,`unsigned short`)
  
 > `static` `int` teleportPlayer(`class` [CPlayer](lua/classes/CPlayer.md) *,`class` [CMapData](lua/classes/CMapData.md) *,`float`,`float`,`float`,`unsigned short`)
+ 
+> `static` `bool` unregistCheat(`const` `char` *)
+ 
+> `static` `class` [CGameObject](lua/classes/CGameObject.md)* voidToObject(`class` [VoidPtr](lua/classes/VoidPtr.md) *)
  
 #### Classes
  
@@ -260,17 +380,39 @@
  
 > [CAttack](lua/classes/CAttack.md)
  
+> [CBsp](lua/classes/CBsp.md)
+ 
 > [CCharacter](lua/classes/CCharacter.md)
  
+> [CDummyRift](lua/classes/CDummyRift.md)
+ 
 > [CGameObject](lua/classes/CGameObject.md)
+ 
+> [CGameStatistics](lua/classes/CGameStatistics.md)
+ 
+> [CGameStatistics___DAY](lua/classes/CGameStatistics___DAY.md)
+ 
+> [CGameStatistics___map](lua/classes/CGameStatistics___map.md)
  
 > [CGuardTower](lua/classes/CGuardTower.md)
  
 > [CHolyKeeper](lua/classes/CHolyKeeper.md)
  
+> [CHolyScheduleData](lua/classes/CHolyScheduleData.md)
+ 
+> [CHolyScheduleData____HolyScheduleNode](lua/classes/CHolyScheduleData____HolyScheduleNode.md)
+ 
 > [CHolyStone](lua/classes/CHolyStone.md)
  
+> [CHolyStoneSaveData](lua/classes/CHolyStoneSaveData.md)
+ 
+> [CHolyStoneSystem](lua/classes/CHolyStoneSystem.md)
+ 
 > [CItemBox](lua/classes/CItemBox.md)
+ 
+> [CItemUpgradeTable](lua/classes/CItemUpgradeTable.md)
+ 
+> [CLevel](lua/classes/CLevel.md)
  
 > [CLuaSendBuffer](lua/classes/CLuaSendBuffer.md)
  
@@ -280,9 +422,13 @@
  
 > [CMapOperation](lua/classes/CMapOperation.md)
  
+> [CMgrAvatorItemHistory](lua/classes/CMgrAvatorItemHistory.md)
+ 
 > [CMonster](lua/classes/CMonster.md)
  
 > [CNuclearBomb](lua/classes/CNuclearBomb.md)
+ 
+> [CObjectList](lua/classes/CObjectList.md)
  
 > [CPartyPlayer](lua/classes/CPartyPlayer.md)
  
@@ -300,11 +446,19 @@
  
 > [CRecordData](lua/classes/CRecordData.md)
  
+> [CReturnGate](lua/classes/CReturnGate.md)
+ 
+> [CReturnGateCreateParam](lua/classes/CReturnGateCreateParam.md)
+ 
 > [CTrap](lua/classes/CTrap.md)
  
 > [CUserDB](lua/classes/CUserDB.md)
  
 > [EffectData](lua/classes/EffectData.md)
+ 
+> [ItemCombineMgr](lua/classes/ItemCombineMgr.md)
+ 
+> [_100_per_random_table](lua/classes/_100_per_random_table.md)
  
 > [_AmuletItem_fld](lua/classes/_AmuletItem_fld.md)
  
@@ -321,6 +475,10 @@
 > [_BoxItem_fld](lua/classes/_BoxItem_fld.md)
  
 > [_BulletItem_fld](lua/classes/_BulletItem_fld.md)
+ 
+> [_CLID](lua/classes/_CLID.md)
+ 
+> [_COMBINEKEY](lua/classes/_COMBINEKEY.md)
  
 > [_CheckPotion_fld](lua/classes/_CheckPotion_fld.md)
  
@@ -348,9 +506,15 @@
  
 > [_GuardTowerItem_fld____material](lua/classes/_GuardTowerItem_fld____material.md)
  
+> [_ITEMCOMBINE_DB_BASE](lua/classes/_ITEMCOMBINE_DB_BASE.md)
+ 
+> [_ITEMCOMBINE_DB_BASE___LIST](lua/classes/_ITEMCOMBINE_DB_BASE___LIST.md)
+ 
 > [_ItemLooting_fld](lua/classes/_ItemLooting_fld.md)
  
 > [_ItemUpgrade_fld](lua/classes/_ItemUpgrade_fld.md)
+ 
+> [_LAYER_SET](lua/classes/_LAYER_SET.md)
  
 > [_MASTERY_PARAM](lua/classes/_MASTERY_PARAM.md)
  
@@ -365,6 +529,10 @@
 > [_OreItem_fld](lua/classes/_OreItem_fld.md)
  
 > [_PotionItem_fld](lua/classes/_PotionItem_fld.md)
+ 
+> [_QUEST_CASH](lua/classes/_QUEST_CASH.md)
+ 
+> [_QUEST_CASH_OTHER](lua/classes/_QUEST_CASH_OTHER.md)
  
 > [_QuestHappenEvent_fld](lua/classes/_QuestHappenEvent_fld.md)
  
@@ -385,6 +553,10 @@
 > [_STORAGE_LIST___db_con](lua/classes/_STORAGE_LIST___db_con.md)
  
 > [_STORAGE_LIST___storage_con](lua/classes/_STORAGE_LIST___storage_con.md)
+ 
+> [_STORAGE_POS](lua/classes/_STORAGE_POS.md)
+ 
+> [_STORAGE_POS_INDIV](lua/classes/_STORAGE_POS_INDIV.md)
  
 > [_SetItemEff_fld](lua/classes/_SetItemEff_fld.md)
  
@@ -426,7 +598,13 @@
  
 > [_WeaponItem_fld](lua/classes/_WeaponItem_fld.md)
  
+> [__holy_keeper_data](lua/classes/__holy_keeper_data.md)
+ 
+> [__holy_stone_data](lua/classes/__holy_stone_data.md)
+ 
 > [_action_node](lua/classes/_action_node.md)
+ 
+> [_animus_create_setdata](lua/classes/_animus_create_setdata.md)
  
 > [_animus_db_load](lua/classes/_animus_db_load.md)
  
@@ -442,15 +620,29 @@
  
 > [_be_damaged_player](lua/classes/_be_damaged_player.md)
  
+> [_character_create_setdata](lua/classes/_character_create_setdata.md)
+ 
 > [_character_db_load](lua/classes/_character_db_load.md)
  
 > [_class_fld](lua/classes/_class_fld.md)
  
 > [_class_fld___bns_item](lua/classes/_class_fld___bns_item.md)
  
+> [_combine_ex_item_request_clzo](lua/classes/_combine_ex_item_request_clzo.md)
+ 
+> [_combine_ex_item_request_clzo___list](lua/classes/_combine_ex_item_request_clzo___list.md)
+ 
+> [_combine_ex_item_result_zocl](lua/classes/_combine_ex_item_result_zocl.md)
+ 
+> [_combine_ex_item_result_zocl___Result_ItemList_Buff](lua/classes/_combine_ex_item_result_zocl___Result_ItemList_Buff.md)
+ 
+> [_combine_ex_item_result_zocl____item](lua/classes/_combine_ex_item_result_zocl____item.md)
+ 
 > [_consume_item_list](lua/classes/_consume_item_list.md)
  
 > [_cont_param_list](lua/classes/_cont_param_list.md)
+ 
+> [_dummy_position](lua/classes/_dummy_position.md)
  
 > [_effect_parameter](lua/classes/_effect_parameter.md)
  
@@ -465,6 +657,8 @@
 > [_happen_event_condition_node](lua/classes/_happen_event_condition_node.md)
  
 > [_happen_event_node](lua/classes/_happen_event_node.md)
+ 
+> [_keeper_create_setdata](lua/classes/_keeper_create_setdata.md)
  
 > [_map_fld](lua/classes/_map_fld.md)
  
@@ -486,11 +680,19 @@
  
 > [_npc_fld](lua/classes/_npc_fld.md)
  
+> [_nuclear_create_setdata](lua/classes/_nuclear_create_setdata.md)
+ 
+> [_object_create_setdata](lua/classes/_object_create_setdata.md)
+ 
 > [_object_id](lua/classes/_object_id.md)
+ 
+> [_object_list_point](lua/classes/_object_list_point.md)
  
 > [_personal_amine_inven_db_load](lua/classes/_personal_amine_inven_db_load.md)
  
 > [_player_fld](lua/classes/_player_fld.md)
+ 
+> [_portal_dummy](lua/classes/_portal_dummy.md)
  
 > [_portal_fld](lua/classes/_portal_fld.md)
  
@@ -502,11 +704,17 @@
  
 > [_record_bin_header](lua/classes/_record_bin_header.md)
  
+> [_sec_info](lua/classes/_sec_info.md)
+ 
 > [_sf_continous](lua/classes/_sf_continous.md)
  
 > [_skill_fld](lua/classes/_skill_fld.md)
  
 > [_skill_lv_up_data](lua/classes/_skill_lv_up_data.md)
+ 
+> [_tower_create_setdata](lua/classes/_tower_create_setdata.md)
+ 
+> [_trap_create_setdata](lua/classes/_trap_create_setdata.md)
  
 > [_trunk_db_load](lua/classes/_trunk_db_load.md)
  
@@ -517,9 +725,35 @@
 > [sell_info](lua/classes/sell_info.md)
  
 ---
-# sirin.mainThread.modContEffect
+# Sirin.mainThread.modButtonExt
  
 #### Functions
+ 
+> `static` `bool` IsBeNearButton(`class` [CPlayer](lua/classes/CPlayer.md) *,`unsigned short`)
+ 
+> `static` `bool` IsBeNearExchangeButton(`class` [CPlayer](lua/classes/CPlayer.md) *,`unsigned short`)
+ 
+> `static` `void` RegisterButtons(`void`)
+ 
+---
+# Sirin.mainThread.modChargeItem
+ 
+#### Functions
+ 
+> `static` `unsigned __int64` giveItemByName(`const` `char` *,`const` `char` *,`unsigned __int64`,`unsigned int`,`unsigned int`,`bool`)
+ 
+> `static` `unsigned __int64` giveItemBySerial(`unsigned int`,`const` `char` *,`unsigned __int64`,`unsigned int`,`unsigned int`,`bool`)
+ 
+> `static` `void` pushChargeItem(`class` [CPlayer](lua/classes/CPlayer.md) *,`const` `char` *,`unsigned __int64`,`unsigned int`,`unsigned int`)
+ 
+> `static` `int` takeItemBySerial(`unsigned int`,`const` `char` *,`unsigned int`,`unsigned __int64`,`unsigned int`,`int`)
+ 
+---
+# Sirin.mainThread.modContEffect
+ 
+#### Functions
+ 
+> `static` `unsigned int` getMaxPotionNum(`void`)
  
 > `static` `unsigned int` getMaxSFNum(`unsigned int`)
  
@@ -536,9 +770,35 @@
 > [_sf_continous_ex](lua/classes/_sf_continous_ex.md)
  
 ---
-# sirin.nats
+# Sirin.mainThread.modItemPropertySkin
  
 #### Functions
  
-> `static` `void` publish(`const` `char` *,`const` `char` *)
+> `static` `void` applySkinToItem(`unsigned int`,`unsigned __int64`,`unsigned char`,`unsigned short`)
+ 
+> `static` `void` deleteProperty(`unsigned __int64`)
+ 
+> `static` `void` insertProperty(`unsigned __int64`,`unsigned int`,`unsigned int`)
+ 
+> `static` `bool` isSkinItem(`unsigned __int64`)
+ 
+> `static` `void` updateOwner(`unsigned __int64`,`unsigned int`)
+ 
+> `static` `void` updateProperty(`unsigned __int64`,`unsigned int`)
+ 
+---
+# Sirin.mainThread.modPotionEffect
+ 
+#### Functions
+ 
+> `static` `bool` addHandler(`unsigned int`)
+ 
+> `static` `bool` removeHandler(`unsigned int`)
+ 
+---
+# Sirin.mainThread.modReturnGate
+ 
+#### Functions
+ 
+> `static` `class` [CDummyRift](lua/classes/CDummyRift.md)* CreateDummyRift(`void`)
  

@@ -1,7 +1,5 @@
 # CLevel
  
-## Functions
- 
 > `int` GetNextYposForServerFar(`struct` `lua_State` *)
  
 > `int` GetNextYposFarProgress(`struct` `lua_State` *)

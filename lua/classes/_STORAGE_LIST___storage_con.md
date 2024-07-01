@@ -4,6 +4,8 @@
  
 > `void` _STORAGE_LIST___storage_con(`void`) - Constructor\
  
+> `void` _STORAGE_LIST___storage_con(`const` `struct` `_STORAGE_LIST___storage_con &`) - Constructor\
+ 
 ## Members
  
 > `unsigned char` m_bLoad

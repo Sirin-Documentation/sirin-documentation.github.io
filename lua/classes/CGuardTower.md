@@ -1,5 +1,6 @@
 # CGuardTower
-: public [CCharacter](lua/classes/CCharacter.md)
+
+---@class (exact) CGuardTower: CCharacter
  
 ## Members
  

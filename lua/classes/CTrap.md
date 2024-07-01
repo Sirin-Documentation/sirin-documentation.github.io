@@ -1,5 +1,6 @@
 # CTrap
-: public [CCharacter](lua/classes/CCharacter.md)
+
+---@class (exact) CTrap: CCharacter
  
 ## Members
  

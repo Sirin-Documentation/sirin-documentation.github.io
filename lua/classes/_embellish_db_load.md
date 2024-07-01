@@ -1,7 +1,6 @@
 # _embellish_db_load
-: public [_STORAGE_LIST](lua/classes/_STORAGE_LIST.md)
- 
-## Members
+
+---@class (exact) _embellish_db_load: _STORAGE_LIST
  
 > `struct` [_STORAGE_LIST___db_con](lua/classes/_STORAGE_LIST___db_con.md)* m_List_get(`int`)
  

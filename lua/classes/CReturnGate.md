@@ -1,5 +1,6 @@
 # CReturnGate
-: public [CGameObject](lua/classes/CGameObject.md)
+
+---@class (exact) CReturnGate: CGameObject
  
 ## Functions
  

@@ -1,5 +1,6 @@
 # CAnimus
-: public [CCharacter](lua/classes/CCharacter.md)
+
+---@class (exact) CAnimus: CCharacter
  
 ## Members
  

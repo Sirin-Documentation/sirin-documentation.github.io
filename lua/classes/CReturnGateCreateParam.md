@@ -1,5 +1,6 @@
 # CReturnGateCreateParam
-: public [_object_create_setdata](lua/classes/_object_create_setdata.md)
+
+---@class (exact) CReturnGateCreateParam: _object_create_setdata
  
 ## Functions
  

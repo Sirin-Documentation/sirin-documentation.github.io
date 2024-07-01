@@ -1,7 +1,6 @@
 # CCharacter
-: public [CGameObject](lua/classes/CGameObject.md)
- 
-## Functions
+
+---@class (exact) CCharacter: CGameObject
  
 > `int` InsertSFContEffect(`struct` `lua_State` *)
  

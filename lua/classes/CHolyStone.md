@@ -1,5 +1,6 @@
 # CHolyStone
-: public [CCharacter](lua/classes/CCharacter.md)
+
+---@class (exact) CHolyStone: CCharacter
  
 ## Members
  

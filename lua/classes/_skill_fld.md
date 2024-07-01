@@ -1,5 +1,6 @@
 # _skill_fld
-: public [_base_fld](lua/classes/_base_fld.md)
+
+---@class (exact) _skill_fld: _base_fld
  
 ## Members
  
@@ -88,6 +89,8 @@
 > `struct` [_cont_param_list](lua/classes/_cont_param_list.md)* m_ContParamList_get(`int`)
  
 > `int` m_nContEffectSec_get(`int`)
+ 
+> `void` m_nContEffectSec_set(`int`,`int`)
  
 > `int` m_nEtc
  

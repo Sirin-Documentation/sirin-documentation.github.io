@@ -1,5 +1,6 @@
 # AutominePersonal
-: public [CCharacter](lua/classes/CCharacter.md)
+
+---@class (exact) AutominePersonal: CCharacter
  
 ## Members
  

@@ -1,5 +1,6 @@
 # _monster_fld
-: public [_base_fld](lua/classes/_base_fld.md)
+
+---@class (exact) _monster_fld: _base_fld
  
 ## Members
  

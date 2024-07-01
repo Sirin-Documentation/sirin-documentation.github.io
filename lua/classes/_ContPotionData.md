@@ -1,5 +1,13 @@
 # _ContPotionData
  
+## Functions
+ 
+> `void` _ContPotionData(`void`) - Constructor\
+ 
+> `bool` IsLive(`void`)
+ 
+> `unsigned int` GetEffectIndex(`void`)
+ 
 ## Members
  
 > `unsigned int` m_dwPotionEffectIndex

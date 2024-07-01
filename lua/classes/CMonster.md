@@ -1,7 +1,6 @@
 # CMonster
-: public [CCharacter](lua/classes/CCharacter.md)
- 
-## Functions
+
+---@class (exact) CMonster: CCharacter
  
 > `int` GetCritical_Exception_Rate(`void`)
  

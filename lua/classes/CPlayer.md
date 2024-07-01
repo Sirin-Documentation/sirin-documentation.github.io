@@ -1,7 +1,6 @@
 # CPlayer
-: public [CCharacter](lua/classes/CCharacter.md)
- 
-## Functions
+
+---@class (exact) CPlayer: CCharacter
  
 > `bool` IsApplyPcbangPrimium(`void`)
  
@@ -74,6 +73,22 @@
 > `void` SendMsg_RewardAddItem(`struct` [_STORAGE_LIST___db_con](lua/classes/_STORAGE_LIST___db_con.md) *,`unsigned char`)
  
 > `void` SendMsg_AlterItemDurInform(`unsigned char`,`unsigned short`,`unsigned __int64`)
+ 
+> `void` Emb_ItemUpgrade(`unsigned char`,`unsigned char`,`unsigned char`,`unsigned long`)
+ 
+> `void` SendMsg_FanfareItem(`unsigned char`,`struct` [_STORAGE_LIST___db_con](lua/classes/_STORAGE_LIST___db_con.md) *,`class` [CItemBox](lua/classes/CItemBox.md) *)
+ 
+> `bool` Emb_CheckActForQuest(`class` [CPlayer](lua/classes/CPlayer.md) *,`int`,`const` `char` *,`unsigned short`,`bool`)
+ 
+> `void` SendMsg_InsertItemInform(`unsigned char`,`struct` [_STORAGE_LIST___db_con](lua/classes/_STORAGE_LIST___db_con.md) *)
+ 
+> `void` Emb_AlterStat(`unsigned char`,`unsigned char`,`unsigned long`,`unsigned char`,`const` `char` *,`bool`)
+ 
+> `void` _TrapReturn(`class` [CTrap](lua/classes/CTrap.md) *,`unsigned short`)
+ 
+> `unsigned short` _TowerReturn(`struct` [_STORAGE_LIST___db_con](lua/classes/_STORAGE_LIST___db_con.md) *)
+ 
+> `void` SendMsg_BackTowerResult(`unsigned char`,`unsigned short`,`unsigned short`)
  
 ## Members
  
@@ -341,7 +356,7 @@
  
 > `unsigned char` m_byDefMatCount
  
-> `struct` `_100_per_random_table` m_MakeRandTable
+> `struct` [_100_per_random_table](lua/classes/_100_per_random_table.md) m_MakeRandTable
  
 > `class` [CMapData](lua/classes/CMapData.md)* m_pBindMapData
  
