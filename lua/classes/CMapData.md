@@ -10,6 +10,8 @@
  
 > `int` GetRectInRadius(`struct` `lua_State` *)
  
+> `class` [CObjectList](lua/classes/CObjectList.md)* GetSectorListObj(`unsigned short`,`unsigned int`)
+ 
 ## Members
  
 > `bool` m_bUse

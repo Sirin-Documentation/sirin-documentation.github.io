@@ -1,6 +1,6 @@
 # Server Portals
 
-All files with the `.lua` file extension will be read as `Loot Box Scripts` in the `sirin-scripts\DynamicPortals` folder
+All files with the `.lua` file extension will be read as `Loot Box Scripts` in the `sirin-lua\DynamicPortals` folder
 
 >> Portals can be reloaded in game without restarting of the ZoneServer \
 >> Using the GM command `%rift reload`

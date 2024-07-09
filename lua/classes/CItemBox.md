@@ -6,6 +6,8 @@
  
 > `bool` IsTakeRight(`class` [CPlayer](lua/classes/CPlayer.md) *)
  
+> `bool` Destroy(`void`)
+ 
 ## Members
  
 > `unsigned int` m_dwOwnerSerial

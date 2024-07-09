@@ -90,6 +90,16 @@
  
 > `void` SendMsg_BackTowerResult(`unsigned char`,`unsigned short`,`unsigned short`)
  
+> `bool` DecHalfSFContDam(`float`)
+ 
+> `void` HideNameEffect(`bool`)
+ 
+> `void` SetMstPt(`int`,`float`,`bool`,`int`)
+ 
+> `void` SetEquipJadeEffect(`int`,`float`,`bool`)
+ 
+> `void` ForcePullUnit(`bool`)
+ 
 ## Members
  
 > `bool` m_bLoad

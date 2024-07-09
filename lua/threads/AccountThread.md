@@ -9,6 +9,8 @@
  
 #### Namespaces
  
+> [NATS](lua/threads/AccountThread.md#SirinNATS)
+ 
 > [accountThread](lua/threads/AccountThread.md#SirinaccountThread)
  
 > [console](lua/threads/AccountThread.md#Sirinconsole)
@@ -42,6 +44,13 @@
 > [UUIDv4](lua/classes/UUIDv4.md)
  
 > [VoidPtr](lua/classes/VoidPtr.md)
+ 
+---
+# Sirin.NATS
+ 
+#### Functions
+ 
+> `static` `void` publish(`const` `char` *,`const` `char` *)
  
 ---
 # Sirin.accountThread

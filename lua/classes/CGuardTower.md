@@ -2,6 +2,10 @@
 
 ---@class (exact) CGuardTower: CCharacter
  
+## Functions
+ 
+> `bool` Destroy(`unsigned char`,`bool`)
+ 
 ## Members
  
 > `int` m_nHP

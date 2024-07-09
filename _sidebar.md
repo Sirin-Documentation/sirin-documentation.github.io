@@ -48,7 +48,6 @@
     - [Spawn Monster](gmcommandsadv.md#spawn-monsters-at-coords)
   - [Guard Config](serverconfigs.md)
   - [Loot Boxes (BoxItemOut)](lootboxes.md)
-  - [NPC Buttons](npcbuttons.md)
   - [Client File Encryption](cencrypt.md)
   - [Error Logs](loglocations.md)
 
@@ -73,6 +72,8 @@
       - [onClose](lua/features/rifts.md#onclose)
       - [onCheckUseConditions](lua/features/rifts.md#oncheckuseconditions)
       - [onUse](lua/features/rifts.md#onuse)
+    - [NPC Buttons](npcbuttons.md)
+      - [Buff Selection UI](npcbuttons.md#npc-buff-selection-ui-sirin-30)
     - [GM Commands](gmcommandsscripted.md)
   - API
     - Native
@@ -84,15 +85,23 @@
           - [luaThreadManager](lua/threads/CoreCfg.md#SirinluaThreadManager)
       - [GuardCfg](lua/threads/GuardCfg.md)
         - [Sirin](lua/threads/GuardCfg.md#Sirin)
+          - [NATS](lua/threads/GuardCfg.md#SirinNATS)
           - [console](lua/threads/GuardCfg.md#Sirinconsole)
           - [luaThreadManager](lua/threads/GuardCfg.md#SirinluaThreadManager)
       - [AccountThread](lua/threads/AccountThread.md)
         - [Sirin](lua/threads/AccountThread.md#Sirin)
+          - [NATS](lua/threads/AccountThread.md#SirinNATS)
           - [accountThread](lua/threads/AccountThread.md#SirinaccountThread)
           - [console](lua/threads/AccountThread.md#Sirinconsole)
           - [luaThreadManager](lua/threads/AccountThread.md#SirinluaThreadManager)
+      - [NATS](lua/threads/NATS.md)
+        - [Sirin](lua/threads/NATS.md#Sirin)
+          - [NATS](lua/threads/NATS.md#SirinNATS)
+          - [console](lua/threads/NATS.md#Sirinconsole)
+          - [luaThreadManager](lua/threads/NATS.md#SirinluaThreadManager)
       - [MainThread](lua/threads/MainThread.md)
         - [Sirin](lua/threads/MainThread.md#Sirin)
+          - [NATS](lua/threads/MainThread.md#SirinNATS)
           - [console](lua/threads/MainThread.md#Sirinconsole)
           - [luaThreadManager](lua/threads/MainThread.md#SirinluaThreadManager)
           - [mainThread](lua/threads/MainThread.md#SirinmainThread)
@@ -102,6 +111,7 @@
           - [mainThread.modItemPropertySkin](lua/threads/MainThread.md#SirinmainThreadmodItemPropertySkin)
           - [mainThread.modPotionEffect](lua/threads/MainThread.md#SirinmainThreadmodPotionEffect)
           - [mainThread.modReturnGate](lua/threads/MainThread.md#SirinmainThreadmodReturnGate)
+          - [mainThread.modStackExt](lua/threads/MainThread.md#SirinmainThreadmodStackExt)
     - Classes
       - [AutominePersonal](lua/classes/AutominePersonal.md)
       - [CActionPointSystemMgr](lua/classes/CActionPointSystemMgr.md)
@@ -245,6 +255,9 @@
       - [_GuardTowerItem_fld](lua/classes/_GuardTowerItem_fld.md)
       - [_GuardTowerItem_fld____material](lua/classes/_GuardTowerItem_fld____material.md)
       - [_ItemLooting_fld](lua/classes/_ItemLooting_fld.md)
+      - [_ItemMakeData_fld](lua/classes/_ItemMakeData_fld.md)
+      - [_ItemMakeData_fld___material_list](lua/classes/_ItemMakeData_fld___material_list.md)
+      - [_ItemMakeData_fld___output_list](lua/classes/_ItemMakeData_fld___output_list.md)
       - [_ItemUpgrade_fld](lua/classes/_ItemUpgrade_fld.md)
       - [_MakeToolItem_fld](lua/classes/_MakeToolItem_fld.md)
       - [_MapItem_fld](lua/classes/_MapItem_fld.md)
@@ -287,6 +300,7 @@
       - [_player_fld](lua/classes/_player_fld.md)
       - [_portal_fld](lua/classes/_portal_fld.md)
       - [_skill_fld](lua/classes/_skill_fld.md)
+
 
 
 

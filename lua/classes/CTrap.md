@@ -2,6 +2,10 @@
 
 ---@class (exact) CTrap: CCharacter
  
+## Functions
+ 
+> `bool` Destroy(`unsigned char`)
+ 
 ## Members
  
 > `int` m_nHP

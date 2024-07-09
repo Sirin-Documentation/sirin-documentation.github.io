@@ -9,6 +9,8 @@
  
 #### Namespaces
  
+> [NATS](lua/threads/GuardCfg.md#SirinNATS)
+ 
 > [console](lua/threads/GuardCfg.md#Sirinconsole)
  
 > [luaThreadManager](lua/threads/GuardCfg.md#SirinluaThreadManager)
@@ -40,6 +42,13 @@
 > [UUIDv4](lua/classes/UUIDv4.md)
  
 > [VoidPtr](lua/classes/VoidPtr.md)
+ 
+---
+# Sirin.NATS
+ 
+#### Functions
+ 
+> `static` `void` publish(`const` `char` *,`const` `char` *)
  
 ---
 # Sirin.console

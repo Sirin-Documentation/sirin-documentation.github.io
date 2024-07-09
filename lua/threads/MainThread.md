@@ -9,6 +9,8 @@
  
 #### Namespaces
  
+> [NATS](lua/threads/MainThread.md#SirinNATS)
+ 
 > [console](lua/threads/MainThread.md#Sirinconsole)
  
 > [luaThreadManager](lua/threads/MainThread.md#SirinluaThreadManager)
@@ -42,6 +44,13 @@
 > [UUIDv4](lua/classes/UUIDv4.md)
  
 > [VoidPtr](lua/classes/VoidPtr.md)
+ 
+---
+# Sirin.NATS
+ 
+#### Functions
+ 
+> `static` `void` publish(`const` `char` *,`const` `char` *)
  
 ---
 # Sirin.console
@@ -89,6 +98,8 @@
 > [modPotionEffect](lua/threads/MainThread.md#SirinmainThreadmodPotionEffect)
  
 > [modReturnGate](lua/threads/MainThread.md#SirinmainThreadmodReturnGate)
+ 
+> [modStackExt](lua/threads/MainThread.md#SirinmainThreadmodStackExt)
  
 #### Members
  
@@ -147,6 +158,8 @@
 > `class` [CPotionMgr](lua/classes/CPotionMgr.md)* g_PotionMgr
  
 > `unsigned int`* g_dwCurTime
+ 
+> `class` [CAttack](lua/classes/CAttack.md)** g_pAttack
  
 #### Functions
  
@@ -239,6 +252,8 @@
 > `static` `struct` [_GuardTowerItem_fld](lua/classes/_GuardTowerItem_fld.md)* baseToGuardTowerItem(`struct` [_base_fld](lua/classes/_base_fld.md) *)
  
 > `static` `struct` [_ItemLooting_fld](lua/classes/_ItemLooting_fld.md)* baseToItemLooting(`struct` [_base_fld](lua/classes/_base_fld.md) *)
+ 
+> `static` `struct` [_ItemMakeData_fld](lua/classes/_ItemMakeData_fld.md)* baseToItemMakeData(`struct` [_base_fld](lua/classes/_base_fld.md) *)
  
 > `static` `struct` [_ItemUpgrade_fld](lua/classes/_ItemUpgrade_fld.md)* baseToItemUpgrade(`struct` [_base_fld](lua/classes/_base_fld.md) *)
  
@@ -511,6 +526,12 @@
 > [_ITEMCOMBINE_DB_BASE___LIST](lua/classes/_ITEMCOMBINE_DB_BASE___LIST.md)
  
 > [_ItemLooting_fld](lua/classes/_ItemLooting_fld.md)
+ 
+> [_ItemMakeData_fld](lua/classes/_ItemMakeData_fld.md)
+ 
+> [_ItemMakeData_fld___material_list](lua/classes/_ItemMakeData_fld___material_list.md)
+ 
+> [_ItemMakeData_fld___output_list](lua/classes/_ItemMakeData_fld___output_list.md)
  
 > [_ItemUpgrade_fld](lua/classes/_ItemUpgrade_fld.md)
  
@@ -801,4 +822,11 @@
 #### Functions
  
 > `static` `class` [CDummyRift](lua/classes/CDummyRift.md)* CreateDummyRift(`void`)
+ 
+---
+# Sirin.mainThread.modStackExt
+ 
+#### Functions
+ 
+> `static` `unsigned int` GetStackSize(`void`)
  

@@ -6,6 +6,8 @@
  
 > `int` GetViewAngleCap(`struct` `lua_State` *)
  
+> `bool` Destroy(`unsigned char`,`class` [CGameObject](lua/classes/CGameObject.md) *)
+ 
 ## Members
  
 > `bool` m_bOper
