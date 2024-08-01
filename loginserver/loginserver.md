@@ -1,6 +1,6 @@
 # Login Server
 
-### Account Creation (Game CP)
+### Account Creation (3rd Party Use)
 
 > Used for creating new accounts directly on the Sirin RF_User table
 
@@ -55,3 +55,32 @@ $code %= 1000000;
 echo $code;
 ?>
 ```
+
+### Sirin  RF_User Database (3rd Party Use)
+
+> Use the stored procedures to modify. _Don't directly modify the database_
+
+#### tbl_Sirin_Account_Player
+
+* Serial:  Account serial
+* B64Login: right padded base64 encoded login
+* Password: Encypted password hash
+* CreateDate: Account create date
+* LastConnDate: Account last connect date (connect via launcher)
+* BanEndDate: Account block end date
+* ChatLockEndDate: Chat block end date
+* BillingEndDate: Billing end date. 
+> For Pay2Play mode
+> If BillingType = 1 and BillingEndDate < current date - account expired and cant enter game.
+* PremiumEndDate: Premium status end date
+* BillingType:
+    * 0 - normal
+    * 1 - Pay2Play (additional check on BillingEndDate)
+* CashCoin: Cash balance for ingame cash shop
+* Use2ndFactor: 2 factor authentication status. If enabled, require code to login game
+* SharedSecret: Shared secret. Sha1(2fa salt + secret)
+
+### RF_User Stored Procedues (3rd Party Use)
+
+> Full Documentation for stored procedures is included `/mssql/Sirin_Proc_description.txt`
+

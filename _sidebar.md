@@ -26,8 +26,10 @@
     - [C# Wrapper](launchersdk.md#c-wrapper)
 
 - Login Server
-  - [Account Creation (GameCP)](loginserver/loginserver.md#account-creation-game-cp)
+  - [Account Creation (3rd Party)](loginserver/loginserver.md#account-creation-3rd-party-use)
   - [Two Factor Verification](loginserver/loginserver.md#two-factor-verification)
+  - [User Database (3rd Party)](loginserver/loginserver.md#sirin-rf_user-database-3rd-party-use)
+  - [Stored Procedures (3rd Party)](loginserver/loginserver.md#rf_user-stored-procedues-3rd-party-use)
 
 - Server Console
   - [Commands](consolebasics.md)
