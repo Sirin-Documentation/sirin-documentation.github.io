@@ -1,9 +1,9 @@
 # GM Commands (Scripted) [Sirin 0.27+]
 
-All files with the `.lua` file extension will be read as `GM Commands` in the `sirin-scripts\GMCommands` folder
+All files with the `.lua` file extension will be read as `GM Commands` in the `sirin-lua\GMCommands` folder
 
 >> GM Commands can be reloaded in game without restarting of the ZoneServer \
->> Using the GM command `%gmcommands reload`
+>> Using the GM command `%gmc reload`
 
 ```lua
 {
