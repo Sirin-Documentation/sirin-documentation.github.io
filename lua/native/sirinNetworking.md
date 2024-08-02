@@ -106,9 +106,9 @@ Example using Lua scripted GM commands
 }, -- dont forget separating comma
 ```
 
-> Use %gmc reload to reload your scripted GM Commands without needing to restart the server
+> Use `%gmc reload` to reload your scripted GM Commands without needing to restart the server
 
-> %test  to run the GM command
+> `%test`  to run the GM command
 
 `Result` "Test Message" will appear middle on the screen in green along with "Test Message" in system chat
 
