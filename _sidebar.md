@@ -49,6 +49,7 @@
     - [Teleport Player(s)](gmcommandsadv.md#teleport-players)
     - [Spawn Monster](gmcommandsadv.md#spawn-monsters-at-coords)
   - [Guard Config](serverconfigs.md)
+  - [Discord Integration](discordintegration.md)
   - [Loot Boxes (BoxItemOut)](lootboxes.md)
   - [Client File Encryption](cencrypt.md)
   - [Error Logs](loglocations.md)
