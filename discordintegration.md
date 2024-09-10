@@ -30,11 +30,8 @@ config.id = 0
 config.details = "Info for server"
 
 -- Rich Presence -> Art Assets
--- string. Asset Key for small icon. Max len 64 bytes.
-config.smallIcon = "small_icon"
-
--- string. Asset Key for large icon. Max len 64 bytes.
-config.largeIcon = "large_icon"
+-- string. Asset Key for icon. Max len 64 bytes.
+config.icon = "icon"
 
 -- Configuration END
 
@@ -45,6 +42,6 @@ config.largeIcon = "large_icon"
 To add custom assets navigate to your [app settings](https://discord.com/developers/applications) and click Rich Presence on the left-hand sidebar
 
 1) Add Image(s) - Select an image from your pc
-2) Assign a name for the asset - name is used for `config.smallIcon` and `config.largeIcon`
+2) Assign a name for the asset - name is used for `config.icon`
 
 > Minimum size for assets `512px x 512px` recommended size `1024px x 1024px`
