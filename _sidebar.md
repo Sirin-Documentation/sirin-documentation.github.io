@@ -7,7 +7,7 @@
     - [Requirements](requirements.md)
     - [Database](databases.md)
       - [User Mapping](databases.md#user-mapping)
-      - [Verify Logins](databases.md#verify-your-database-sql--logins)
+      - [Verify Logins](databases.md#verify-your-database-sql-amp-logins)
       - [Migrating Database](databases.md#migrating-databases)
   - [Startup](copyfiles.md)
   - [Common Errors](errors.md)
