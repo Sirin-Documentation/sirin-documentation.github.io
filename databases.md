@@ -45,6 +45,26 @@ Create a new SQL login.
 Enable the permissions on both
 - db_owner
 
+### Verify your database SQL & Logins
+
+> If Sirin cannot find your database the server console will stop after StartDatabase (RF_User)
+
+Verify you can connect to them locally using the logins created above. 
+This ensures Sirin can find your database when it launches.
+
+<img style="border:1px solid black" src="img/db_verifysql.png"/>
+
+If you cannot connect via the `127.0.0.1 or localhost` then you need to resolve your connection issue between localhost and MSSQL
+
+* Firewall rules
+* MSSQL Pipe Configuration
+    * SQL Server Configuration Manager.
+    * Expand SQL Server Network Configuration for the server instance in question.
+    * Double-click "TCP/IP".
+    * "Protocol" section, set "Enabled" to "Yes".
+    * "IP Addresses" section, set the TCP port under "IP All" (which is 1433 by default).
+    * "IP Addresses" section, find subsections with IP address 127.0.0.1 (for IPv4) and ::1 (for IPv6) and set both "Enabled" and "Active" to "Yes", and TCP port to 1433.
+
 ### Migrating Databases
 Used to migrate an existing server to be compatible with Sirin
 
