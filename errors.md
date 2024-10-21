@@ -37,6 +37,12 @@ Set your MSSQL Login `Default Language` to English
 
 # Server Launch Errors
 
+### Sirin-core.dll load failed. Uknown. Code 0x0000045A
+
+> Install the Microsoft C++ (x64) redistributables 
+
+[https://aka.ms/vs/17/release/vc_redist.x64.exe](https://aka.ms/vs/17/release/vc_redist.x64.exe)
+
 ### Salt for password hashes not set
 > Salt for password hashes not set! check file `./sirin-scripts/config-core/sirin-private-settings.lua` \
 > Salt for second factor shared key not set! check file `./sirin-scripts/config-core/sirin-private-settings.lua`
