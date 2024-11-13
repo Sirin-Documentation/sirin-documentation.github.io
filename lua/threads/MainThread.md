@@ -93,6 +93,8 @@
  
 > [modContEffect](lua/threads/MainThread.md#SirinmainThreadmodContEffect)
  
+> [modGuardTowerController](lua/threads/MainThread.md#SirinmainThreadmodGuardTowerController)
+ 
 > [modItemPropertySkin](lua/threads/MainThread.md#SirinmainThreadmodItemPropertySkin)
  
 > [modPotionEffect](lua/threads/MainThread.md#SirinmainThreadmodPotionEffect)
@@ -157,6 +159,8 @@
  
 > `class` [CPotionMgr](lua/classes/CPotionMgr.md)* g_PotionMgr
  
+> `unsigned int`* g_dwAttType
+ 
 > `unsigned int`* g_dwCurTime
  
 > `class` [CAttack](lua/classes/CAttack.md)** g_pAttack
@@ -210,6 +214,10 @@
 > `static` `class` [CUserDB](lua/classes/CUserDB.md)* SearchAvatorWithName(`const` `char` *)
  
 > `static` `int` activateLayer(`unsigned int`,`unsigned short`,`bool`)
+ 
+> `static` `class` [CMonsterAttack](lua/classes/CMonsterAttack.md)* attackToMonsterAttack(`class` [CAttack](lua/classes/CAttack.md) *)
+ 
+> `static` `class` [CPlayerAttack](lua/classes/CPlayerAttack.md)* attackToPlayerAttack(`class` [CAttack](lua/classes/CAttack.md) *)
  
 > `static` `struct` [_AmuletItem_fld](lua/classes/_AmuletItem_fld.md)* baseToAmuletItem(`struct` [_base_fld](lua/classes/_base_fld.md) *)
  
@@ -325,7 +333,11 @@
  
 > `static` `class` [CItemBox](lua/classes/CItemBox.md)* createItemBox(`const` `char` *,`unsigned int`,`unsigned __int64`,`unsigned int`,`unsigned char`,`class` [CMapData](lua/classes/CMapData.md) *,`unsigned short`,`float`,`float`,`float`,`unsigned int`,`bool`,`class` [CPlayer](lua/classes/CPlayer.md) *,`bool`,`class` [CCharacter](lua/classes/CCharacter.md) *,`class` [CPlayer](lua/classes/CPlayer.md) *,`unsigned char`,`bool`)
  
+> `static` `int` createItemBoxForAutoLoot(`struct` `lua_State` *)
+ 
 > `static` `class` [CMonster](lua/classes/CMonster.md)* createMonster(`class` [CMapData](lua/classes/CMapData.md) *,`unsigned short`,`float`,`float`,`float`,`const` `char` *,`bool`,`bool`,`bool`)
+ 
+> `static` `class` [CGuild](lua/classes/CGuild.md)* g_Guild_get(`class` [CGuild](lua/classes/CGuild.md)*(__cdecl *)(unsigned int))
  
 > `static` `class` [CItemBox](lua/classes/CItemBox.md)* g_ItemBox_get(`class` [CItemBox](lua/classes/CItemBox.md)*(__cdecl *)(int))
  
@@ -342,6 +354,8 @@
 > `static` `class` [CMapData](lua/classes/CMapData.md)* getMapData(`unsigned int`)
  
 > `static` `class` [CPlayer](lua/classes/CPlayer.md)* getPlayerBySerial(`unsigned int`)
+ 
+> `static` `struct` [_STORAGE_LIST___db_con](lua/classes/_STORAGE_LIST___db_con.md)* makeLoot(`unsigned char`,`unsigned short`)
  
 > `static` `class` [AutominePersonal](lua/classes/AutominePersonal.md)* objectToAMP(`class` [CGameObject](lua/classes/CGameObject.md) *)
  
@@ -401,6 +415,10 @@
  
 > [CDummyRift](lua/classes/CDummyRift.md)
  
+> [CExpInfo](lua/classes/CExpInfo.md)
+ 
+> [CExtPotionBuf](lua/classes/CExtPotionBuf.md)
+ 
 > [CGameObject](lua/classes/CGameObject.md)
  
 > [CGameStatistics](lua/classes/CGameStatistics.md)
@@ -410,6 +428,8 @@
 > [CGameStatistics___map](lua/classes/CGameStatistics___map.md)
  
 > [CGuardTower](lua/classes/CGuardTower.md)
+ 
+> [CGuild](lua/classes/CGuild.md)
  
 > [CHolyKeeper](lua/classes/CHolyKeeper.md)
  
@@ -429,6 +449,10 @@
  
 > [CLevel](lua/classes/CLevel.md)
  
+> [CLootingMgr](lua/classes/CLootingMgr.md)
+ 
+> [CLootingMgr___list](lua/classes/CLootingMgr___list.md)
+ 
 > [CLuaSendBuffer](lua/classes/CLuaSendBuffer.md)
  
 > [CMainThread](lua/classes/CMainThread.md)
@@ -441,15 +465,23 @@
  
 > [CMonster](lua/classes/CMonster.md)
  
+> [CMonsterAttack](lua/classes/CMonsterAttack.md)
+ 
 > [CNuclearBomb](lua/classes/CNuclearBomb.md)
  
 > [CObjectList](lua/classes/CObjectList.md)
+ 
+> [CPartyModeKillMonsterExpNotify](lua/classes/CPartyModeKillMonsterExpNotify.md)
  
 > [CPartyPlayer](lua/classes/CPartyPlayer.md)
  
 > [CPlayer](lua/classes/CPlayer.md)
  
+> [CPlayerAttack](lua/classes/CPlayerAttack.md)
+ 
 > [CPlayerDB](lua/classes/CPlayerDB.md)
+ 
+> [CPlayer____target](lua/classes/CPlayer____target.md)
  
 > [CPotionMgr](lua/classes/CPotionMgr.md)
  
@@ -675,9 +707,17 @@
  
 > [_force_fld](lua/classes/_force_fld.md)
  
+> [_guild_applier_info](lua/classes/_guild_applier_info.md)
+ 
+> [_guild_master_info](lua/classes/_guild_master_info.md)
+ 
+> [_guild_member_info](lua/classes/_guild_member_info.md)
+ 
 > [_happen_event_condition_node](lua/classes/_happen_event_condition_node.md)
  
 > [_happen_event_node](lua/classes/_happen_event_node.md)
+ 
+> [_io_money_data](lua/classes/_io_money_data.md)
  
 > [_keeper_create_setdata](lua/classes/_keeper_create_setdata.md)
  
@@ -789,6 +829,17 @@
 #### Classes
  
 > [_sf_continous_ex](lua/classes/_sf_continous_ex.md)
+ 
+---
+# Sirin.mainThread.modGuardTowerController
+ 
+#### Functions
+ 
+> `static` `class` [CGuardTower](lua/classes/CGuardTower.md)* createGuardTower(`class` [CMapData](lua/classes/CMapData.md) *,`unsigned short`,`float`,`float`,`float`,`struct` [_STORAGE_LIST___db_con](lua/classes/_STORAGE_LIST___db_con.md) *,`class` [CPlayer](lua/classes/CPlayer.md) *,`unsigned char`,`bool`)
+ 
+> `static` `class` [CGuardTower](lua/classes/CGuardTower.md)* createSystemTower(`class` [CMapData](lua/classes/CMapData.md) *,`unsigned short`,`float`,`float`,`float`,`int`,`unsigned char`,`int`)
+ 
+> `static` `class` [CGuardTower](lua/classes/CGuardTower.md)* getTowerByIndex(`int`)
  
 ---
 # Sirin.mainThread.modItemPropertySkin

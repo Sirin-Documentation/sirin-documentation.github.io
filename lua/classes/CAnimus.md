@@ -2,6 +2,8 @@
 
 ---@class (exact) CAnimus: CCharacter
  
+> `void` AlterExp(`__int64`)
+ 
 ## Members
  
 > `unsigned char` m_byClassCode

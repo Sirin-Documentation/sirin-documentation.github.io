@@ -6,6 +6,10 @@
  
 > `void` Update_MaxLevel(`unsigned char`)
  
+> `bool` Update_ItemDur(`unsigned char`,`unsigned char`,`unsigned __int64`,`bool`)
+ 
+> `bool` Update_ItemUpgrade(`unsigned char`,`unsigned char`,`unsigned long`,`bool`)
+ 
 ## Members
  
 > `struct` `_GLBID` m_gidGlobal

@@ -66,13 +66,13 @@
  
 > `struct` `_quick_link`* m_QLink_get(`int`)
  
-> `class` `CGuild`* m_pGuild
+> `class` [CGuild](lua/classes/CGuild.md)* m_pGuild
  
-> `struct` `_guild_member_info`* m_pGuildMemPtr
+> `struct` [_guild_member_info](lua/classes/_guild_member_info.md)* m_pGuildMemPtr
  
 > `unsigned char` m_byClassInGuild
  
-> `class` `CGuild`* m_pApplyGuild
+> `class` [CGuild](lua/classes/CGuild.md)* m_pApplyGuild
  
 > `bool` m_bGuildLock
  

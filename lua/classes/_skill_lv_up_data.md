@@ -2,5 +2,9 @@
  
 ## Members
  
-> `bool` m_nCount
+> `bool` bUpdate
+ 
+> `unsigned short` wIndex
+ 
+> `unsigned char` byLv
  

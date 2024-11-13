@@ -12,6 +12,10 @@
  
 > `class` [CObjectList](lua/classes/CObjectList.md)* GetSectorListObj(`unsigned short`,`unsigned int`)
  
+> `int` GetObjectListInRadius(`struct` `lua_State` *)
+ 
+> `int` GetPlayerListInRadius(`struct` `lua_State` *)
+ 
 ## Members
  
 > `bool` m_bUse

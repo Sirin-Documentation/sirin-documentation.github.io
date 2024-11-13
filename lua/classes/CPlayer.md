@@ -100,6 +100,10 @@
  
 > `void` ForcePullUnit(`bool`)
  
+> `void` _AnimusReturn(`unsigned char`)
+ 
+> `void` AlterExp(`double`,`bool`,`bool`,`bool`)
+ 
 ## Members
  
 > `bool` m_bLoad
@@ -422,7 +426,7 @@
  
 > `class` [CPotionParam](lua/classes/CPotionParam.md) m_PotionParam
  
-> `class` `CExtPotionBuf` m_PotionBufUse
+> `class` [CExtPotionBuf](lua/classes/CExtPotionBuf.md) m_PotionBufUse
  
 > `int` m_bCntEnable
  
@@ -446,9 +450,9 @@
  
 > `float` m_fBeforeTownCheckPos_y
  
-> `struct` `CPlayer____target` m_TargetObject
+> `struct` [CPlayer____target](lua/classes/CPlayer____target.md) m_TargetObject
  
-> `struct` `CPlayer____target`* m_GroupTargetObject_get(`int`)
+> `struct` [CPlayer____target](lua/classes/CPlayer____target.md)* m_GroupTargetObject_get(`int`)
  
 > `class` `CMyTimer` m_tmrGroupTargeting
  

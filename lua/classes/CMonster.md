@@ -48,7 +48,7 @@
  
 > `int` m_nHP
  
-> `class` `CLootingMgr` m_LootMgr
+> `class` [CLootingMgr](lua/classes/CLootingMgr.md) m_LootMgr
  
 > `class` `CMonsterAggroMgr` m_AggroMgr
  

@@ -2,5 +2,11 @@
  
 ## Members
  
-> `bool` m_nCount
+> `bool` bUpdate
+ 
+> `unsigned char` byCode
+ 
+> `unsigned char` byIndex
+ 
+> `unsigned char` byMastery
  
