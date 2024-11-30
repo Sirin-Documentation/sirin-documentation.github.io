@@ -115,7 +115,7 @@ Alters the currency of the player(s) targeted by `arg1` affects `dalant`, `gold`
 ```gm command
 %altp * dalant 999999
 ```
-`%**` - GM Spawn command \
+`%altp` - GM Alter Currency command \
 `*` - Target (Self) \
 `dalant` - Alter race currency
 `Number` - value to alter by (999999)
@@ -124,7 +124,7 @@ Alters the currency of the player(s) targeted by `arg1` affects `dalant`, `gold`
 ```gm command
 %altp all cash 500
 ```
-`%**` - GM Spawn command \
+`%altp` - GM Alter Currency command \
 `all` - Target (everyone online) \
 `cash` - Alter cashshop cash
 `Number` - value to alter by (500)
