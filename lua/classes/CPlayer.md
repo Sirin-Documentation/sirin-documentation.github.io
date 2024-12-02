@@ -104,6 +104,18 @@
  
 > `void` AlterExp(`double`,`bool`,`bool`,`bool`)
  
+> `bool` Emb_StartQuest(`unsigned char`,`struct` [_happen_event_cont](lua/classes/_happen_event_cont.md) *)
+ 
+> `void` Emb_CompleteQuest(`unsigned char`,`unsigned char`,`unsigned char`)
+ 
+> `void` SendMsg_InsertNextQuest(`unsigned char`,`struct` [_QUEST_DB_BASE___LIST](lua/classes/_QUEST_DB_BASE___LIST.md) *)
+ 
+> `void` SendMsg_QuestFailure(`unsigned char`,`unsigned char`)
+ 
+> `bool` Emb_CreateNPCQuest(`const` `char` *,`unsigned long`)
+ 
+> `void` SendMsg_NpcQuestListResult(`struct` [_NPCQuestIndexTempData](lua/classes/_NPCQuestIndexTempData.md) *)
+ 
 ## Members
  
 > `bool` m_bLoad
@@ -210,7 +222,7 @@
  
 > `struct` `_BUDDY_LIST` m_pmBuddy
  
-> `class` `CQuestMgr` m_QuestMgr
+> `class` [CQuestMgr](lua/classes/CQuestMgr.md) m_QuestMgr
  
 > `class` [ItemCombineMgr](lua/classes/ItemCombineMgr.md) m_ItemCombineMgr
  
@@ -308,7 +320,7 @@
  
 > `union CPlayer__CashChangeStateFlag` m_CashChangeStateFlag
  
-> `struct` `_NPCQuestIndexTempData` m_NPCQuestIndexTempData
+> `struct` [_NPCQuestIndexTempData](lua/classes/_NPCQuestIndexTempData.md) m_NPCQuestIndexTempData
  
 > `unsigned short` m_wVisualVer
  

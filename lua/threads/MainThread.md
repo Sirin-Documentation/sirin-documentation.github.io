@@ -99,6 +99,8 @@
  
 > [modPotionEffect](lua/threads/MainThread.md#SirinmainThreadmodPotionEffect)
  
+> [modQuestHistory](lua/threads/MainThread.md#SirinmainThreadmodQuestHistory)
+ 
 > [modReturnGate](lua/threads/MainThread.md#SirinmainThreadmodReturnGate)
  
 > [modStackExt](lua/threads/MainThread.md#SirinmainThreadmodStackExt)
@@ -172,6 +174,8 @@
 > `static` `void` AddPremSeconds(`class` [CPlayer](lua/classes/CPlayer.md) *,`unsigned int`)
  
 > `static` `void` AlterCash(`class` [CPlayer](lua/classes/CPlayer.md) *,`int`)
+ 
+> `static` `class` [CRecordData](lua/classes/CRecordData.md)* CQuestMgr__s_tblQuest(`void`)
  
 > `static` `class` [CRecordData](lua/classes/CRecordData.md)* CQuestMgr__s_tblQuestHappenEvent_get(`class` [CRecordData](lua/classes/CRecordData.md)*(__cdecl *)(int))
  
@@ -491,6 +495,8 @@
  
 > [CPvpUserAndGuildRankingSystem](lua/classes/CPvpUserAndGuildRankingSystem.md)
  
+> [CQuestMgr](lua/classes/CQuestMgr.md)
+ 
 > [CRecordData](lua/classes/CRecordData.md)
  
 > [CReturnGate](lua/classes/CReturnGate.md)
@@ -577,6 +583,8 @@
  
 > [_NPCLink_fld](lua/classes/_NPCLink_fld.md)
  
+> [_NPCQuestIndexTempData](lua/classes/_NPCQuestIndexTempData.md)
+ 
 > [_OreCutting_fld](lua/classes/_OreCutting_fld.md)
  
 > [_OreItem_fld](lua/classes/_OreItem_fld.md)
@@ -586,6 +594,14 @@
 > [_QUEST_CASH](lua/classes/_QUEST_CASH.md)
  
 > [_QUEST_CASH_OTHER](lua/classes/_QUEST_CASH_OTHER.md)
+ 
+> [_QUEST_DB_BASE](lua/classes/_QUEST_DB_BASE.md)
+ 
+> [_QUEST_DB_BASE___LIST](lua/classes/_QUEST_DB_BASE___LIST.md)
+ 
+> [_QUEST_DB_BASE___NPC_QUEST_HISTORY](lua/classes/_QUEST_DB_BASE___NPC_QUEST_HISTORY.md)
+ 
+> [_QUEST_DB_BASE___START_NPC_QUEST_HISTORY](lua/classes/_QUEST_DB_BASE___START_NPC_QUEST_HISTORY.md)
  
 > [_QuestHappenEvent_fld](lua/classes/_QuestHappenEvent_fld.md)
  
@@ -715,6 +731,8 @@
  
 > [_happen_event_condition_node](lua/classes/_happen_event_condition_node.md)
  
+> [_happen_event_cont](lua/classes/_happen_event_cont.md)
+ 
 > [_happen_event_node](lua/classes/_happen_event_node.md)
  
 > [_io_money_data](lua/classes/_io_money_data.md)
@@ -807,6 +825,8 @@
  
 > `static` `void` pushChargeItem(`class` [CPlayer](lua/classes/CPlayer.md) *,`const` `char` *,`unsigned __int64`,`unsigned int`,`unsigned int`)
  
+> `static` `void` pushChargeItemBySerial(`unsigned int`,`const` `char` *,`unsigned __int64`,`unsigned int`,`unsigned int`)
+ 
 > `static` `int` takeItemBySerial(`unsigned int`,`const` `char` *,`unsigned int`,`unsigned __int64`,`unsigned int`,`int`)
  
 ---
@@ -866,6 +886,17 @@
 > `static` `bool` addHandler(`unsigned int`)
  
 > `static` `bool` removeHandler(`unsigned int`)
+ 
+---
+# Sirin.mainThread.modQuestHistory
+ 
+#### Functions
+ 
+> `static` `void` setDailyReset(`unsigned int`,`unsigned int`)
+ 
+> `static` `void` setMonthlyReset(`unsigned int`,`unsigned int`,`unsigned int`)
+ 
+> `static` `void` setWeeklyReset(`unsigned int`,`unsigned int`,`unsigned int`)
  
 ---
 # Sirin.mainThread.modReturnGate

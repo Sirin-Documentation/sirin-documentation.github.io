@@ -10,6 +10,12 @@
  
 > `bool` Update_ItemUpgrade(`unsigned char`,`unsigned char`,`unsigned long`,`bool`)
  
+> `bool` Update_QuestDelete(`unsigned char`)
+ 
+> `bool` Update_QuestInsert(`unsigned char`,`struct` [_QUEST_DB_BASE___LIST](lua/classes/_QUEST_DB_BASE___LIST.md) *)
+ 
+> `bool` Update_QuestUpdate(`unsigned char`,`struct` [_QUEST_DB_BASE___LIST](lua/classes/_QUEST_DB_BASE___LIST.md) *,`bool`)
+ 
 ## Members
  
 > `struct` `_GLBID` m_gidGlobal
