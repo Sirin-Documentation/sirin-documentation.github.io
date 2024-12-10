@@ -16,6 +16,8 @@
  
 > `bool` Update_QuestUpdate(`unsigned char`,`struct` [_QUEST_DB_BASE___LIST](lua/classes/_QUEST_DB_BASE___LIST.md) *,`bool`)
  
+> `bool` Update_StartNPCQuestHistory(`class` [CUserDB](lua/classes/CUserDB.md) *,`struct` [_QUEST_DB_BASE___START_NPC_QUEST_HISTORY](lua/classes/_QUEST_DB_BASE___START_NPC_QUEST_HISTORY.md) *)
+ 
 ## Members
  
 > `struct` `_GLBID` m_gidGlobal

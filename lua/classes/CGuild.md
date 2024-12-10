@@ -1,5 +1,9 @@
 # CGuild
  
+> `int` GetGuildMemberList(`struct` `lua_State` *)
+ 
+> `int` GetGuildApplierList(`struct` `lua_State` *)
+ 
 ## Members
  
 > `int` m_nIndex

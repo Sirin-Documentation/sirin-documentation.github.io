@@ -6,6 +6,8 @@
  
 > `int` GetIndexEmptyCon(`void`)
  
+> `int` GetUseList(`struct` `lua_State` *)
+ 
 ## Members
  
 > `int` m_nListNum

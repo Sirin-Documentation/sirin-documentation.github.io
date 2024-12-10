@@ -6,6 +6,8 @@
  
 > `unsigned char` GetBossType(`unsigned char`,`unsigned long`)
  
+> `int` GetBossListByRace(`struct` `lua_State` *)
+ 
 ## Members
  
 > `class` `CLogFile`* m_pkLogger

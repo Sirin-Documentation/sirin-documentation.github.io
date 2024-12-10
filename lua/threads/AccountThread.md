@@ -50,6 +50,8 @@
  
 #### Functions
  
+> `static` `void` initNATS(`void`)
+ 
 > `static` `void` publish(`const` `char` *,`const` `char` *)
  
 ---

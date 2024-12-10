@@ -114,7 +114,9 @@
  
 > `bool` Emb_CreateNPCQuest(`const` `char` *,`unsigned long`)
  
-> `void` SendMsg_NpcQuestListResult(`struct` [_NPCQuestIndexTempData](lua/classes/_NPCQuestIndexTempData.md) *)
+> `void` SendMsg_NpcQuestListResult(`class` [CPlayer](lua/classes/CPlayer.md) *)
+ 
+> `void` SendMsg_InsertNewQuest(`class` [CPlayer](lua/classes/CPlayer.md) *,`unsigned char`)
  
 ## Members
  

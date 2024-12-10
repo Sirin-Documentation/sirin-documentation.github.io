@@ -50,6 +50,8 @@
  
 #### Functions
  
+> `static` `void` initNATS(`void`)
+ 
 > `static` `void` publish(`const` `char` *,`const` `char` *)
  
 ---
@@ -169,15 +171,19 @@
  
 #### Functions
  
+> `static` `void` AddCash(`class` [CPlayer](lua/classes/CPlayer.md) *,`int`)
+ 
 > `static` `void` AddPremDays(`class` [CPlayer](lua/classes/CPlayer.md) *,`unsigned int`)
  
 > `static` `void` AddPremSeconds(`class` [CPlayer](lua/classes/CPlayer.md) *,`unsigned int`)
  
-> `static` `void` AlterCash(`class` [CPlayer](lua/classes/CPlayer.md) *,`int`)
+> `static` `void` AlterCashAsync(`unsigned int`,`int`,`const` `char` *)
  
 > `static` `class` [CRecordData](lua/classes/CRecordData.md)* CQuestMgr__s_tblQuest(`void`)
  
 > `static` `class` [CRecordData](lua/classes/CRecordData.md)* CQuestMgr__s_tblQuestHappenEvent_get(`class` [CRecordData](lua/classes/CRecordData.md)*(__cdecl *)(int))
+ 
+> `static` `int` GetActiveGuildList(`struct` `lua_State` *)
  
 > `static` `struct` [_animus_fld](lua/classes/_animus_fld.md)* GetAnimusFldFromExp(`int`,`unsigned __int64`)
  
@@ -188,6 +194,8 @@
 > `static` `unsigned long` GetBitAfterUpgrade(`unsigned long`,`unsigned long`,`unsigned char`)
  
 > `static` `unsigned char` GetDefItemUpgSocketNum(`int`,`int`)
+ 
+> `static` `class` [CGuild](lua/classes/CGuild.md)* GetGuildBySerial(`unsigned int`)
  
 > `static` `int` GetItemDurPoint(`int`,`int`)
  
@@ -209,6 +217,10 @@
  
 > `static` `unsigned long` GetMaxParamFromExp(`int`,`unsigned __int64`)
  
+> `static` `bool` GuildPopMoney(`class` [CGuild](lua/classes/CGuild.md) *,`unsigned int`,`unsigned int`,`unsigned char`,`unsigned int`,`const` `char` *)
+ 
+> `static` `bool` GuildPushMoney(`class` [CGuild](lua/classes/CGuild.md) *,`unsigned int`,`unsigned int`,`unsigned char`,`unsigned int`,`const` `char` *)
+ 
 > `static` `bool` IsAddAbleTalikToItem(`unsigned char`,`unsigned short`,`unsigned long`,`struct` [_ItemUpgrade_fld](lua/classes/_ItemUpgrade_fld.md) *)
  
 > `static` `bool` IsOverLapItem(`int`)
@@ -216,6 +228,8 @@
 > `static` `bool` IsProtectItem(`int`)
  
 > `static` `class` [CUserDB](lua/classes/CUserDB.md)* SearchAvatorWithName(`const` `char` *)
+ 
+> `static` `struct` [_TimeItem_fld](lua/classes/_TimeItem_fld.md)* TimeItem__FindTimeRec(`int`,`int`)
  
 > `static` `int` activateLayer(`unsigned int`,`unsigned short`,`bool`)
  
@@ -449,6 +463,8 @@
  
 > [CItemBox](lua/classes/CItemBox.md)
  
+> [CItemStore](lua/classes/CItemStore.md)
+ 
 > [CItemUpgradeTable](lua/classes/CItemUpgradeTable.md)
  
 > [CLevel](lua/classes/CLevel.md)
@@ -559,6 +575,8 @@
  
 > [_GuardTowerItem_fld____material](lua/classes/_GuardTowerItem_fld____material.md)
  
+> [_INVENKEY](lua/classes/_INVENKEY.md)
+ 
 > [_ITEMCOMBINE_DB_BASE](lua/classes/_ITEMCOMBINE_DB_BASE.md)
  
 > [_ITEMCOMBINE_DB_BASE___LIST](lua/classes/_ITEMCOMBINE_DB_BASE___LIST.md)
@@ -627,6 +645,8 @@
  
 > [_STORAGE_POS_INDIV](lua/classes/_STORAGE_POS_INDIV.md)
  
+> [_Select_ItemList_buff](lua/classes/_Select_ItemList_buff.md)
+ 
 > [_SetItemEff_fld](lua/classes/_SetItemEff_fld.md)
  
 > [_SiegeKitItem_fld](lua/classes/_SiegeKitItem_fld.md)
@@ -689,6 +709,8 @@
  
 > [_be_damaged_player](lua/classes/_be_damaged_player.md)
  
+> [_buy_offer](lua/classes/_buy_offer.md)
+ 
 > [_character_create_setdata](lua/classes/_character_create_setdata.md)
  
 > [_character_db_load](lua/classes/_character_db_load.md)
@@ -696,6 +718,10 @@
 > [_class_fld](lua/classes/_class_fld.md)
  
 > [_class_fld___bns_item](lua/classes/_class_fld___bns_item.md)
+ 
+> [_combine_ex_item_accept_request_clzo](lua/classes/_combine_ex_item_accept_request_clzo.md)
+ 
+> [_combine_ex_item_accept_result_zocl](lua/classes/_combine_ex_item_accept_result_zocl.md)
  
 > [_combine_ex_item_request_clzo](lua/classes/_combine_ex_item_request_clzo.md)
  
@@ -723,6 +749,8 @@
  
 > [_force_fld](lua/classes/_force_fld.md)
  
+> [_good_storage_info](lua/classes/_good_storage_info.md)
+ 
 > [_guild_applier_info](lua/classes/_guild_applier_info.md)
  
 > [_guild_master_info](lua/classes/_guild_master_info.md)
@@ -738,6 +766,8 @@
 > [_io_money_data](lua/classes/_io_money_data.md)
  
 > [_keeper_create_setdata](lua/classes/_keeper_create_setdata.md)
+ 
+> [_limit_item_info](lua/classes/_limit_item_info.md)
  
 > [_map_fld](lua/classes/_map_fld.md)
  
@@ -784,6 +814,8 @@
 > [_record_bin_header](lua/classes/_record_bin_header.md)
  
 > [_sec_info](lua/classes/_sec_info.md)
+ 
+> [_sell_offer](lua/classes/_sell_offer.md)
  
 > [_sf_continous](lua/classes/_sf_continous.md)
  
