@@ -34,7 +34,10 @@ Quests are setup as a repeatable quest Quest.xlsx (Using the parser)
 * `IsRepeat` = `1`
 * `RepeatTime` = `Waiting Time Between completing quest and re-taking it`
 
-Set the `RepeatTime` exactly to one of the following values
+> If a quest is using the global reset ~ Then completing a daily quest at 22:30 (with a global reset of 00:00) \
+> The quest can be taken again at 00:00
+
+Set the `RepeatTime` __exactly__ to one of the following values to use the global reset
 
 * `24 hours * 60 mins * 60 secs` = `86400` Seconds in 24 hours - Daily Reset
 
