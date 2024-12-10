@@ -51,6 +51,7 @@
     - [Spawn Monster](gmcommandsadv.md#spawn-monsters-at-coords)
   - [GM Commands (Scripted/Custom)](gmcommandsscripted.md)
   - [Event Hooks](lua/features/hooks.md#event-hooks)
+  - [Quests](quests.md#quests)
   - [Potions](potions.md)
     - [Potion Types](potions.md#potion-types)
     - [Scripted Handlers](potions.md#scripted-potion-effect-handlers-sirin-029)
