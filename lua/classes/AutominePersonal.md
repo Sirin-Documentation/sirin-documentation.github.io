@@ -54,7 +54,7 @@
  
 > `struct` `_qry_case_update_mineore` m_update_mineore_new
  
-> `class` `CLogFile` m_logProcess
+> `class` [CLogFile](lua/classes/CLogFile.md) m_logProcess
  
-> `class` `CLogFile` m_logSysErr
+> `class` [CLogFile](lua/classes/CLogFile.md) m_logSysErr
  

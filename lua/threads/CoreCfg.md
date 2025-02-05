@@ -17,6 +17,8 @@
  
 > `static` `class` `luabridge__LuaRef` getFileList(`const` `char` *,`struct` `lua_State` *)
  
+> `static` `unsigned char` getZoneVersion(`void`)
+ 
 > `static` `void` processAsyncCallback(`class` `std__basic_string<char`,`struct` `std__char_traits<char>`,`class` `std__allocator<char> >`,`class` `std__basic_string<char`,`struct` `std__char_traits<char>`,`class` `std__allocator<char> >`,`class` `std__basic_string<char`,`struct` `std__char_traits<char>`,`class` `std__allocator<char> >`,`class` `std__basic_string<char`,`struct` `std__char_traits<char>`,`class` `std__allocator<char> >`,`unsigned __int64`)
  
 #### Classes

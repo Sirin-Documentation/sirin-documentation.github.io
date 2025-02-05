@@ -29,6 +29,8 @@
  
 > `static` `class` `std__basic_string<char,struct std__char_traits<char>,class std__allocator<char> >` getUUIDv4(`void`)
  
+> `static` `unsigned char` getZoneVersion(`void`)
+ 
 > `static` `void` processAsyncCallback(`class` `std__basic_string<char`,`struct` `std__char_traits<char>`,`class` `std__allocator<char> >`,`class` `std__basic_string<char`,`struct` `std__char_traits<char>`,`class` `std__allocator<char> >`,`class` `std__basic_string<char`,`struct` `std__char_traits<char>`,`class` `std__allocator<char> >`,`class` `std__basic_string<char`,`struct` `std__char_traits<char>`,`class` `std__allocator<char> >`,`unsigned __int64`)
  
 #### Classes
@@ -50,7 +52,7 @@
  
 > `static` `void` initNATS(`void`)
  
-> `static` `void` publish(`const` `char` *,`const` `char` *)
+> `static` `int` publish(`struct` `lua_State` *)
  
 ---
 # Sirin.console

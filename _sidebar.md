@@ -111,13 +111,17 @@
         - [console](lua/threads/MainThread.md#Sirinconsole)
         - [luaThreadManager](lua/threads/MainThread.md#SirinluaThreadManager)
         - [mainThread](lua/threads/MainThread.md#SirinmainThread)
+        - [mainThread.modBoxOpen](lua/threads/MainThread.md#SirinmainThreadmodBoxOpen)
         - [mainThread.modButtonExt](lua/threads/MainThread.md#SirinmainThreadmodButtonExt)
         - [mainThread.modChargeItem](lua/threads/MainThread.md#SirinmainThreadmodChargeItem)
         - [mainThread.modContEffect](lua/threads/MainThread.md#SirinmainThreadmodContEffect)
+        - [mainThread.modForceLogoutAfterUsePotion](lua/threads/MainThread.md#SirinmainThreadmodForceLogoutAfterUsePotion)
         - [mainThread.modGuardTowerController](lua/threads/MainThread.md#SirinmainThreadmodGuardTowerController)
+        - [mainThread.modInfinitePotion](lua/threads/MainThread.md#SirinmainThreadmodInfinitePotion)
         - [mainThread.modItemPropertySkin](lua/threads/MainThread.md#SirinmainThreadmodItemPropertySkin)
         - [mainThread.modPotionEffect](lua/threads/MainThread.md#SirinmainThreadmodPotionEffect)
         - [mainThread.modQuestHistory](lua/threads/MainThread.md#SirinmainThreadmodQuestHistory)
+        - [mainThread.modRaceSexClassChange](lua/threads/MainThread.md#SirinmainThreadmodRaceSexClassChange)
         - [mainThread.modReturnGate](lua/threads/MainThread.md#SirinmainThreadmodReturnGate)
         - [mainThread.modStackExt](lua/threads/MainThread.md#SirinmainThreadmodStackExt)
   - Classes
@@ -148,6 +152,7 @@
     - [CItemUpgradeTable](lua/classes/CItemUpgradeTable.md)
     - [CLanguageAsset](lua/classes/CLanguageAsset.md)
     - [CLevel](lua/classes/CLevel.md)
+    - [CLogFile](lua/classes/CLogFile.md)
     - [CLootingMgr](lua/classes/CLootingMgr.md)
     - [CLootingMgr___list](lua/classes/CLootingMgr___list.md)
     - [CLuaSendBuffer](lua/classes/CLuaSendBuffer.md)
@@ -192,6 +197,7 @@
     - [_LAYER_SET](lua/classes/_LAYER_SET.md)
     - [_MASTERY_PARAM](lua/classes/_MASTERY_PARAM.md)
     - [_NPCQuestIndexTempData](lua/classes/_NPCQuestIndexTempData.md)
+    - [_NPCQuestIndexTempData___IndexData](lua/classes/_NPCQuestIndexTempData___IndexData.md)
     - [_QUEST_CASH](lua/classes/_QUEST_CASH.md)
     - [_QUEST_CASH_OTHER](lua/classes/_QUEST_CASH_OTHER.md)
     - [_QUEST_DB_BASE](lua/classes/_QUEST_DB_BASE.md)
@@ -265,6 +271,7 @@
     - [_sf_continous](lua/classes/_sf_continous.md)
     - [_sf_continous_ex](lua/classes/_sf_continous_ex.md)
     - [_skill_lv_up_data](lua/classes/_skill_lv_up_data.md)
+    - [_store_dummy](lua/classes/_store_dummy.md)
     - [_tower_create_setdata](lua/classes/_tower_create_setdata.md)
     - [_trap_create_setdata](lua/classes/_trap_create_setdata.md)
     - [_trunk_db_load](lua/classes/_trunk_db_load.md)
@@ -337,6 +344,7 @@
     - [_player_fld](lua/classes/_player_fld.md)
     - [_portal_fld](lua/classes/_portal_fld.md)
     - [_skill_fld](lua/classes/_skill_fld.md)
+
 
 
 

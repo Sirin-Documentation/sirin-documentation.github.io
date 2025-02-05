@@ -118,6 +118,10 @@
  
 > `void` SendMsg_InsertNewQuest(`class` [CPlayer](lua/classes/CPlayer.md) *,`unsigned char`)
  
+> `void` SendMsg_ExchangeItemResult(`unsigned char`,`struct` [_STORAGE_LIST___db_con](lua/classes/_STORAGE_LIST___db_con.md) *)
+ 
+> `void` SendMsg_ExchangeLendItemResult(`unsigned char`,`struct` [_STORAGE_LIST___db_con](lua/classes/_STORAGE_LIST___db_con.md) *)
+ 
 ## Members
  
 > `bool` m_bLoad

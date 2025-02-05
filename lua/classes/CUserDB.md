@@ -18,6 +18,14 @@
  
 > `bool` Update_StartNPCQuestHistory(`class` [CUserDB](lua/classes/CUserDB.md) *,`struct` [_QUEST_DB_BASE___START_NPC_QUEST_HISTORY](lua/classes/_QUEST_DB_BASE___START_NPC_QUEST_HISTORY.md) *)
  
+> `bool` Update_TrunkSlotNum(`unsigned char`)
+ 
+> `bool` Update_ExtTrunkSlotNum(`unsigned char`)
+ 
+> `void` ForceCloseCommand(`unsigned char`,`unsigned long`,`bool`,`const` `char` *)
+ 
+> `bool` Lobby_Char_Request(`void`)
+ 
 ## Members
  
 > `struct` `_GLBID` m_gidGlobal

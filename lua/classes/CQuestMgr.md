@@ -1,10 +1,18 @@
 # CQuestMgr
  
+> `bool` IsProcNpcQuest(`const` `char` *)
+ 
 > `bool` IsProcLinkNpcQuest(`class` [CQuestMgr](lua/classes/CQuestMgr.md) *,`int`)
  
 > `void` DeleteQuestData(`unsigned char`)
  
 > `void` CheckNPCQuestList(`const` `char` *,`unsigned char`,`struct` [_NPCQuestIndexTempData](lua/classes/_NPCQuestIndexTempData.md) *)
+ 
+> `bool` IsPossibleRepeatNpcQuest(`const` `char` *,`int`)
+ 
+> `bool` CanGiveupQuest(`unsigned char`)
+ 
+> `bool` _CheckCondition(`struct` [_happen_event_condition_node](lua/classes/_happen_event_condition_node.md) *)
  
 ## Members
  

@@ -10,6 +10,8 @@
  
 > `const` `char`* szQuestCode
  
+> `struct` [_Quest_fld](lua/classes/_Quest_fld.md)* pQuestFld
+ 
 > `unsigned char` byLevel
  
 > `__int64` nEndTime

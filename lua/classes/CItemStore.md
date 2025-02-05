@@ -16,7 +16,7 @@
  
 > `class` [CMapData](lua/classes/CMapData.md)* m_pExistMap
  
-> `struct` `_store_dummy`* m_pDum
+> `struct` [_store_dummy](lua/classes/_store_dummy.md)* m_pDum
  
 > `struct` [_StoreList_fld](lua/classes/_StoreList_fld.md)* m_pRec
  

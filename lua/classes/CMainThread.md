@@ -146,45 +146,45 @@
  
 > `class` `CMonsterSPGroupTable` m_MonsterSPGroupTable
  
-> `class` `CLogFile` m_logBillCheck
+> `class` [CLogFile](lua/classes/CLogFile.md) m_logBillCheck
  
-> `class` `CLogFile` m_logSystemError
+> `class` [CLogFile](lua/classes/CLogFile.md) m_logSystemError
  
-> `class` `CLogFile` m_logLoadingError
+> `class` [CLogFile](lua/classes/CLogFile.md) m_logLoadingError
  
-> `class` `CLogFile` m_logDungeon
+> `class` [CLogFile](lua/classes/CLogFile.md) m_logDungeon
  
-> `class` `CLogFile` m_logKillMon
+> `class` [CLogFile](lua/classes/CLogFile.md) m_logKillMon
  
-> `class` `CLogFile` m_logServerState
+> `class` [CLogFile](lua/classes/CLogFile.md) m_logServerState
  
-> `class` `CLogFile` m_logDTrade
+> `class` [CLogFile](lua/classes/CLogFile.md) m_logDTrade
  
-> `class` `CLogFile` m_logGuild
+> `class` [CLogFile](lua/classes/CLogFile.md) m_logGuild
  
-> `class` `CLogFile` m_logDQS
+> `class` [CLogFile](lua/classes/CLogFile.md) m_logDQS
  
-> `class` `CLogFile` m_logRename
+> `class` [CLogFile](lua/classes/CLogFile.md) m_logRename
  
-> `class` `CLogFile` m_logAutoTrade
+> `class` [CLogFile](lua/classes/CLogFile.md) m_logAutoTrade
  
-> `class` `CLogFile` m_logEvent
+> `class` [CLogFile](lua/classes/CLogFile.md) m_logEvent
  
-> `class` `CLogFile` m_logMove
+> `class` [CLogFile](lua/classes/CLogFile.md) m_logMove
  
-> `class` `CLogFile` m_logSave
+> `class` [CLogFile](lua/classes/CLogFile.md) m_logSave
  
-> `class` `CLogFile` m_logReturnGate
+> `class` [CLogFile](lua/classes/CLogFile.md) m_logReturnGate
  
-> `class` `CLogFile` m_logHack
+> `class` [CLogFile](lua/classes/CLogFile.md) m_logHack
  
-> `class` `CLogFile` m_logPvP
+> `class` [CLogFile](lua/classes/CLogFile.md) m_logPvP
  
-> `class` `CLogFile` m_logMonNum
+> `class` [CLogFile](lua/classes/CLogFile.md) m_logMonNum
  
-> `class` `CLogFile` m_logAPIBilling
+> `class` [CLogFile](lua/classes/CLogFile.md) m_logAPIBilling
  
-> `class` `CLogFile` m_logRenewalData
+> `class` [CLogFile](lua/classes/CLogFile.md) m_logRenewalData
  
 > `class` `CMyTimer` m_tmForceUserExit
  

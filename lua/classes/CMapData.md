@@ -16,6 +16,8 @@
  
 > `int` GetPlayerListInRadius(`struct` `lua_State` *)
  
+> `int` GetSectorIndex(`class` [CMapData](lua/classes/CMapData.md) *,`float`,`float`)
+ 
 ## Members
  
 > `bool` m_bUse
@@ -50,7 +52,7 @@
  
 > `int` m_nItemStoreDumNum
  
-> `struct` `_store_dummy`* m_pItemStoreDummy
+> `struct` [_store_dummy](lua/classes/_store_dummy.md)* m_pItemStoreDummy
  
 > `int` m_nStartDumNum
  

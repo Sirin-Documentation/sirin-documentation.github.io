@@ -2,9 +2,9 @@
  
 ## Members
  
-> `int` m_Header
+> `int` m_nRecordNum
  
-> `int` m_nLowNum
+> `int` m_nFieldNum
  
-> `int` m_ppsRecord
+> `int` m_nRecordSize
  

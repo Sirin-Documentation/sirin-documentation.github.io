@@ -10,7 +10,7 @@
  
 ## Members
  
-> `class` `CLogFile`* m_pkLogger
+> `class` [CLogFile](lua/classes/CLogFile.md)* m_pkLogger
  
 > `bool` m_bInit
  

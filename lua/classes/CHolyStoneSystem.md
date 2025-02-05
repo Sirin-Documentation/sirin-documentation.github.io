@@ -16,11 +16,11 @@
  
 > `class` [CRecordData](lua/classes/CRecordData.md) m_tblQuest
  
-> `class` `CLogFile` m_logQuest
+> `class` [CLogFile](lua/classes/CLogFile.md) m_logQuest
  
-> `class` `CLogFile` m_logQuestDestroy
+> `class` [CLogFile](lua/classes/CLogFile.md) m_logQuestDestroy
  
-> `class` `CLogFile` m_logPer10Min
+> `class` [CLogFile](lua/classes/CLogFile.md) m_logPer10Min
  
 > `class` `CMyTimer` m_tmrHSKSystem
  
