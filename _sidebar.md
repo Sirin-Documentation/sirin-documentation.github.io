@@ -66,7 +66,7 @@
     - [onUse](lua/features/rifts.md#onuse)
   - [NPC Buttons](npcbuttons.md)
     - [Buff Selection UI](npcbuttons.md#npc-buff-selection-ui-sirin-30)
-
+  - [Debugging](debugging.md)
   - [Guard Config](serverconfigs.md)
   - [Discord Integration](discordintegration.md)
   - [Loot Boxes (BoxItemOut)](lootboxes.md)
