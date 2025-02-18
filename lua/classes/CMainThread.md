@@ -98,7 +98,7 @@
  
 > `class` `CMyTimer` m_tmrCheckRadarDelay
  
-> `int` m_bFreeServer
+> `int` m_nFreeServer
  
 > `bool` m_bRuleThread
  
@@ -236,7 +236,7 @@
  
 > `struct` `_mob_message`* m_MobMessage
  
-> `int` m_bLimitPlayerLevel
+> `int` m_nLimitPlayerLevel
  
 > `unsigned char` m_byLimitPlayerLevel
  

@@ -10,9 +10,15 @@
  
 > `unsigned char` byPart_get(`int`)
  
+> `void` byPart_set(`int`,`unsigned char`)
+ 
 > `unsigned int` dwBullet_get(`int`)
  
+> `void` dwBullet_set(`int`,`unsigned int`)
+ 
 > `unsigned int` dwSpare_get(`int`)
+ 
+> `void` dwSpare_set(`int`,`unsigned int`)
  
 > `int` nPullingFee
  

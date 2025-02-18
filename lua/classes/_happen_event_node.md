@@ -2,13 +2,13 @@
  
 ## Members
  
-> `int` m_bUse
+> `int` m_nUse
  
-> `int` m_bQuestRepeat
+> `int` m_nQuestRepeat
  
 > `int` m_nQuestType
  
-> `int` m_bSelectQuestManual
+> `int` m_nSelectQuestManual
  
 > `int` m_nAcepProNum
  

@@ -36,5 +36,5 @@
  
 > `bool` m_bDamaged
  
-> `struct` `_PVP_ORDER_VIEW_DB_BASE`* m_pkInfo
+> `struct` [_PVP_ORDER_VIEW_DB_BASE](lua/classes/_PVP_ORDER_VIEW_DB_BASE.md)* m_pkInfo
  

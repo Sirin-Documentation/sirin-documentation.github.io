@@ -54,11 +54,11 @@
  
 > `unsigned char` m_byNameLen
  
-> `const` `struct` `_REGED`* m_RegedList_get(`int`)
+> `const` `struct` [_REGED](lua/classes/_REGED.md)* m_RegedList_get(`int`)
  
-> `struct` `_AVATOR_DATA` m_AvatorData
+> `struct` [_AVATOR_DATA](lua/classes/_AVATOR_DATA.md) m_AvatorData
  
-> `struct` `_AVATOR_DATA` m_AvatorData_bk
+> `struct` [_AVATOR_DATA](lua/classes/_AVATOR_DATA.md) m_AvatorData_bk
  
 > `const` `struct` `_NOT_ARRANGED_AVATOR_DB`* m_NotArrangedChar_get(`int`)
  

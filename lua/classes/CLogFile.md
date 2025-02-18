@@ -12,7 +12,7 @@
  
 > `unsigned int` m_dwLogCount
  
-> `int` m_bWriteAble
+> `int` m_nWriteAble
  
 > `bool` m_bAddCount
  

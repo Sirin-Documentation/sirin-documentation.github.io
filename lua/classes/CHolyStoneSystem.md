@@ -52,7 +52,7 @@
  
 > `float` m_fFirstKeeperHPRate
  
-> `int` m_bScheduleCodePre
+> `int` m_nScheduleCodePre
  
 > `struct` [_QUEST_CASH_OTHER](lua/classes/_QUEST_CASH_OTHER.md)* m_cashQuestOther_get(`int`)
  

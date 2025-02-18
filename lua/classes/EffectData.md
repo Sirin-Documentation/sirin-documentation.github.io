@@ -2,5 +2,9 @@
  
 ## Members
  
-> `int` m_bExist
+> `int` nEffCode
+ 
+> `float` fEffUnit
+ 
+> `float` fEffUnitMax
  

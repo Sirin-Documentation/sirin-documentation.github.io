@@ -38,7 +38,7 @@
  
 > `struct` [_QUEST_DB_BASE](lua/classes/_QUEST_DB_BASE.md) m_QuestDB
  
-> `struct` `_SFCONT_DB_BASE` m_SFContDB
+> `struct` [_SFCONT_DB_BASE](lua/classes/_SFCONT_DB_BASE.md) m_SFContDB
  
 > `struct` [_ITEMCOMBINE_DB_BASE](lua/classes/_ITEMCOMBINE_DB_BASE.md) m_ItemCombineDB
  

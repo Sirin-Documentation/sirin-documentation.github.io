@@ -377,9 +377,13 @@
  
 > `static` `class` [CItemBox](lua/classes/CItemBox.md)* g_ItemBox_get(`class` [CItemBox](lua/classes/CItemBox.md)*(__cdecl *)(int))
  
+> `static` `class` [CMonster](lua/classes/CMonster.md)* g_Monster_get(`class` [CMonster](lua/classes/CMonster.md)*(__cdecl *)(unsigned int))
+ 
 > `static` `class` [CPlayer](lua/classes/CPlayer.md)* g_Player_get(`class` [CPlayer](lua/classes/CPlayer.md)*(__cdecl *)(unsigned int))
  
 > `static` `class` [CUserDB](lua/classes/CUserDB.md)* g_UserDB_get(`class` [CUserDB](lua/classes/CUserDB.md)*(__cdecl *)(unsigned int))
+ 
+> `static` `int` getActiveMonsters(`struct` `lua_State` *)
  
 > `static` `int` getActivePlayers(`struct` `lua_State` *)
  
@@ -563,9 +567,31 @@
  
 > [_100_per_random_table](lua/classes/_100_per_random_table.md)
  
+> [_AIOC_A_MACRODATA](lua/classes/_AIOC_A_MACRODATA.md)
+ 
+> [_AIOC_A_MACRODATA__MACRO_ACTIONDATA](lua/classes/_AIOC_A_MACRODATA__MACRO_ACTIONDATA.md)
+ 
+> [_AIOC_A_MACRODATA__MACRO_CHATDATA](lua/classes/_AIOC_A_MACRODATA__MACRO_CHATDATA.md)
+ 
+> [_AIOC_A_MACRODATA__MACRO_POTIONDATA](lua/classes/_AIOC_A_MACRODATA__MACRO_POTIONDATA.md)
+ 
+> [_ANIMUSKEY](lua/classes/_ANIMUSKEY.md)
+ 
+> [_ANIMUS_DB_BASE](lua/classes/_ANIMUS_DB_BASE.md)
+ 
+> [_ANIMUS_DB_BASE___LIST](lua/classes/_ANIMUS_DB_BASE___LIST.md)
+ 
+> [_AVATOR_DATA](lua/classes/_AVATOR_DATA.md)
+ 
+> [_AVATOR_DB_BASE](lua/classes/_AVATOR_DB_BASE.md)
+ 
 > [_AmuletItem_fld](lua/classes/_AmuletItem_fld.md)
  
 > [_AnimusItem_fld](lua/classes/_AnimusItem_fld.md)
+ 
+> [_BUDDY_DB_BASE](lua/classes/_BUDDY_DB_BASE.md)
+ 
+> [_BUDDY_DB_BASE___LIST](lua/classes/_BUDDY_DB_BASE___LIST.md)
  
 > [_BagItem_fld](lua/classes/_BagItem_fld.md)
  
@@ -583,6 +609,14 @@
  
 > [_COMBINEKEY](lua/classes/_COMBINEKEY.md)
  
+> [_CRYMSG_DB_BASE](lua/classes/_CRYMSG_DB_BASE.md)
+ 
+> [_CRYMSG_DB_BASE___LIST](lua/classes/_CRYMSG_DB_BASE___LIST.md)
+ 
+> [_CUTTING_DB_BASE](lua/classes/_CUTTING_DB_BASE.md)
+ 
+> [_CUTTING_DB_BASE___LIST](lua/classes/_CUTTING_DB_BASE___LIST.md)
+ 
 > [_CheckPotion_fld](lua/classes/_CheckPotion_fld.md)
  
 > [_CheckPotion_fld___CheckEffectCode](lua/classes/_CheckPotion_fld___CheckEffectCode.md)
@@ -593,13 +627,31 @@
  
 > [_CouponItem_fld](lua/classes/_CouponItem_fld.md)
  
+> [_DELPOST_DB_BASE](lua/classes/_DELPOST_DB_BASE.md)
+ 
+> [_DELPOST_DB_BASE____list](lua/classes/_DELPOST_DB_BASE____list.md)
+ 
 > [_DfnEquipItem_fld](lua/classes/_DfnEquipItem_fld.md)
+ 
+> [_EMBELLKEY](lua/classes/_EMBELLKEY.md)
+ 
+> [_EQUIPKEY](lua/classes/_EQUIPKEY.md)
+ 
+> [_EQUIP_DB_BASE](lua/classes/_EQUIP_DB_BASE.md)
+ 
+> [_EQUIP_DB_BASE___EMBELLISH_LIST](lua/classes/_EQUIP_DB_BASE___EMBELLISH_LIST.md)
  
 > [_EventItem_fld](lua/classes/_EventItem_fld.md)
  
 > [_Exttrunk_db_load](lua/classes/_Exttrunk_db_load.md)
  
 > [_FIRECRACKER_fld](lua/classes/_FIRECRACKER_fld.md)
+ 
+> [_FORCEKEY](lua/classes/_FORCEKEY.md)
+ 
+> [_FORCE_DB_BASE](lua/classes/_FORCE_DB_BASE.md)
+ 
+> [_FORCE_DB_BASE___LIST](lua/classes/_FORCE_DB_BASE___LIST.md)
  
 > [_FaceItem_fld](lua/classes/_FaceItem_fld.md)
  
@@ -610,6 +662,10 @@
 > [_GuardTowerItem_fld____material](lua/classes/_GuardTowerItem_fld____material.md)
  
 > [_INVENKEY](lua/classes/_INVENKEY.md)
+ 
+> [_INVEN_DB_BASE](lua/classes/_INVEN_DB_BASE.md)
+ 
+> [_INVEN_DB_BASE___LIST](lua/classes/_INVEN_DB_BASE___LIST.md)
  
 > [_ITEMCOMBINE_DB_BASE](lua/classes/_ITEMCOMBINE_DB_BASE.md)
  
@@ -627,6 +683,12 @@
  
 > [_LAYER_SET](lua/classes/_LAYER_SET.md)
  
+> [_LINKKEY](lua/classes/_LINKKEY.md)
+ 
+> [_LINK_DB_BASE](lua/classes/_LINK_DB_BASE.md)
+ 
+> [_LINK_DB_BASE___LIST](lua/classes/_LINK_DB_BASE___LIST.md)
+ 
 > [_MASTERY_PARAM](lua/classes/_MASTERY_PARAM.md)
  
 > [_MakeToolItem_fld](lua/classes/_MakeToolItem_fld.md)
@@ -642,6 +704,26 @@
 > [_OreCutting_fld](lua/classes/_OreCutting_fld.md)
  
 > [_OreItem_fld](lua/classes/_OreItem_fld.md)
+ 
+> [_PCBANG_FAVOR_ITEM_DB_BASE](lua/classes/_PCBANG_FAVOR_ITEM_DB_BASE.md)
+ 
+> [_PCBANG_PLAY_TIME](lua/classes/_PCBANG_PLAY_TIME.md)
+ 
+> [_PERSONALAMINE_INVEN_DB_BASE](lua/classes/_PERSONALAMINE_INVEN_DB_BASE.md)
+ 
+> [_PERSONALAMINE_INVEN_DB_BASE___LIST](lua/classes/_PERSONALAMINE_INVEN_DB_BASE___LIST.md)
+ 
+> [_POSTDATA_DB_BASE](lua/classes/_POSTDATA_DB_BASE.md)
+ 
+> [_POSTSTORAGE_DB_BASE](lua/classes/_POSTSTORAGE_DB_BASE.md)
+ 
+> [_POSTSTORAGE_DB_BASE____list](lua/classes/_POSTSTORAGE_DB_BASE____list.md)
+ 
+> [_POTION_NEXT_USE_TIME_DB_BASE](lua/classes/_POTION_NEXT_USE_TIME_DB_BASE.md)
+ 
+> [_PVPPOINT_LIMIT_DB_BASE](lua/classes/_PVPPOINT_LIMIT_DB_BASE.md)
+ 
+> [_PVP_ORDER_VIEW_DB_BASE](lua/classes/_PVP_ORDER_VIEW_DB_BASE.md)
  
 > [_PotionItem_fld](lua/classes/_PotionItem_fld.md)
  
@@ -661,6 +743,12 @@
  
 > [_Quest_fld](lua/classes/_Quest_fld.md)
  
+> [_REGED](lua/classes/_REGED.md)
+ 
+> [_REGED_AVATOR_DB](lua/classes/_REGED_AVATOR_DB.md)
+ 
+> [_RETURNPOST_DB_BASE](lua/classes/_RETURNPOST_DB_BASE.md)
+ 
 > [_RadarItem_fld](lua/classes/_RadarItem_fld.md)
  
 > [_RecoveryItem_fld](lua/classes/_RecoveryItem_fld.md)
@@ -668,6 +756,10 @@
 > [_ResourceItem_fld](lua/classes/_ResourceItem_fld.md)
  
 > [_RingItem_fld](lua/classes/_RingItem_fld.md)
+ 
+> [_SFCONT_DB_BASE](lua/classes/_SFCONT_DB_BASE.md)
+ 
+> [_SFCONT_DB_BASE___LIST](lua/classes/_SFCONT_DB_BASE___LIST.md)
  
 > [_STAT_DB_BASE](lua/classes/_STAT_DB_BASE.md)
  
@@ -681,6 +773,8 @@
  
 > [_STORAGE_POS_INDIV](lua/classes/_STORAGE_POS_INDIV.md)
  
+> [_SUPPLEMENT_DB_BASE](lua/classes/_SUPPLEMENT_DB_BASE.md)
+ 
 > [_Select_ItemList_buff](lua/classes/_Select_ItemList_buff.md)
  
 > [_SetItemEff_fld](lua/classes/_SetItemEff_fld.md)
@@ -689,15 +783,25 @@
  
 > [_StoreList_fld](lua/classes/_StoreList_fld.md)
  
+> [_TIMELIMITINFO_DB_BASE](lua/classes/_TIMELIMITINFO_DB_BASE.md)
+ 
 > [_TOWER_PARAM](lua/classes/_TOWER_PARAM.md)
  
 > [_TOWER_PARAM___list](lua/classes/_TOWER_PARAM___list.md)
  
 > [_TOWNItem_fld](lua/classes/_TOWNItem_fld.md)
  
+> [_TRADE_DB_BASE](lua/classes/_TRADE_DB_BASE.md)
+ 
+> [_TRADE_DB_BASE___LIST](lua/classes/_TRADE_DB_BASE___LIST.md)
+ 
 > [_TRAP_PARAM](lua/classes/_TRAP_PARAM.md)
  
 > [_TRAP_PARAM___param](lua/classes/_TRAP_PARAM___param.md)
+ 
+> [_TRUNK_DB_BASE](lua/classes/_TRUNK_DB_BASE.md)
+ 
+> [_TRUNK_DB_BASE___LIST](lua/classes/_TRUNK_DB_BASE___LIST.md)
  
 > [_TicketItem_fld](lua/classes/_TicketItem_fld.md)
  
@@ -866,6 +970,12 @@
 > [_trap_create_setdata](lua/classes/_trap_create_setdata.md)
  
 > [_trunk_db_load](lua/classes/_trunk_db_load.md)
+ 
+> [_worlddb_sf_delay_info](lua/classes/_worlddb_sf_delay_info.md)
+ 
+> [_worlddb_sf_delay_info___eff_list](lua/classes/_worlddb_sf_delay_info___eff_list.md)
+ 
+> [_worlddb_sf_delay_info___mas_list](lua/classes/_worlddb_sf_delay_info___mas_list.md)
  
 > [cStaticMember_Player](lua/classes/cStaticMember_Player.md)
  

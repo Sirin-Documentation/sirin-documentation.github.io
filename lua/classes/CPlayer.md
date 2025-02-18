@@ -446,7 +446,7 @@
  
 > `class` [CExtPotionBuf](lua/classes/CExtPotionBuf.md) m_PotionBufUse
  
-> `int` m_bCntEnable
+> `int` m_nCntEnable
  
 > `struct` `_SYSTEMTIME` m_tmLoginTime
  

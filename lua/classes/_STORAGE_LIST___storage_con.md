@@ -8,7 +8,7 @@
  
 ## Members
  
-> `unsigned char` m_bLoad
+> `unsigned char` m_byLoad
  
 > `unsigned char` m_byTableCode
  

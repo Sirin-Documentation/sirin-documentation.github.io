@@ -60,7 +60,7 @@
  
 > `unsigned char` m_byEventLootAuth
  
-> `int` m_bHolyScanner
+> `int` m_nHolyScanner
  
 > `struct` [_STORAGE_LIST___db_con](lua/classes/_STORAGE_LIST___db_con.md) m_Item
  
