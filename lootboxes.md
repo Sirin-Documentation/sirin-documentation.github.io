@@ -58,7 +58,81 @@ bxgem01 = {
 	}
 }
 ```
-### Simple Example
+
+## Calculating Lootbox Percentages
+
+<img style="border:1px solid black" src="img/sirin_boxcalc.png"/>
+
+> If all rows of a loot box don't fill whole 1.0 range	
+> Remaining chance will give no reward or produce error if `isAllowEmptyBox` is set to false
+
+Example above
+
+```lua
+bxgem02 = { false, true, -- isSameRaceDrop, isAllowEmptyBox
+{
+	{ 0.5, false, {"ipbhp08"} }, -- HP Potion   50% chance
+	{ 0.7, false, {"ipbdx03"} }, -- Protect Potion  20% chance
+	{ 0.8, false, {"ipbax01"} }, -- Burst Potion  10% chance
+}},
+```
+
+### Lowest Percent Chance
+
+> Lowest possible value for a row is `0.0000305176` or  `0.00305%` chance
+
+But this can be reduced by using 1 item in a row with 5 (or more) `junk items` 
+
+* See below for using multiple items per row
+
+```lua
+bxgem02 = { false, true, -- isSameRaceDrop, isAllowEmptyBox
+{
+	-- { rate, multidrop, { items } },
+	{ 0.0000305176, false, {{"ipbhp08"}, {"iybox01"}, {"iybox01"}, {"iybox01"}, {"iybox01"} },
+}},
+```
+
+* 0.00061035% chance of rolling reward row
+* 99.9993896% chance of getting nothing
+* If row rolled - either `ipbhp08` or `iybox01` is given with equal chance
+
+Overall Probability of getting `ipbhp08`  1 / (32768 x 5)  =  0.0006103515625%
+
+### Multiple items per row
+
+> `multiDrop = false` Item is selected from the row with equal chance
+
+```lua
+bxgem02 = { false, true, -- isSameRaceDrop, isAllowEmptyBox
+{
+	-- { rate, multidrop, { items } },
+	{ 0.5, false, { {"ipbhp08"}, {"ipbdx03"} } }, -- 50% chance for row, multidrop = false
+}},
+```
+
+* 50% chance of rolling reward row
+* 50% chance of getting nothing  `isAllowEmptyBox = true`
+* If row rolled - either `ipbhp08` or `ipbdx03` is given with equal chance
+
+
+
+> `multiDrop = true`
+Every item in the row is given
+
+```lua
+bxgem02 = { false, true, -- isSameRaceDrop, isAllowEmptyBox
+{
+	-- { rate, multidrop, { items } },
+	{ 0.5, true, { {"ipbhp08"}, {"ipbdx03"} } }, -- 50% chance for row, multidrop = true
+}},
+```
+
+* 50% chance of rolling reward row
+* 50% chance of getting nothing
+* If row rolled - All items `ipbhp08` and `ipbdx03` are given
+
+### Combined Example (with extra features)
 
 ```lua
 bxgem02 = { false, true, {
@@ -73,7 +147,7 @@ bxgem02 = { false, true, {
 2) `false` - `isSameRaceDrop` Disabled so items can given from another race
 3) `false` - `isAllowEmptyBox` Send error if no items are given from box (incorrect % rates)
 
-##### 3 loot drop sections
+#### 3 Rows
 ```lua
 { 0.5, true, { {"sklu001"}, {"sklu002"}, {"sklu005", 10000} } },
 ```
