@@ -35,6 +35,19 @@ Set your MSSQL Login `Default Language` to English
 
 ***
 
+# Client Launch Errors
+
+### LangPack Reading failure
+
+Error is because the client used is using non packed datatable files
+
+Check your Client/DataTable and make sure your files are packed `.edf`
+
+`Client/DataTable/Item.edf` _not_ `Client/DataTable/Item.dat`
+`Client/DataTable/en-ph/NDLanguage.edf` _not_ `Client/DataTable/en-ph/NDLanguage.dat`
+
+If you files are `.dat` pack your files into the `.edf` format using EDF-DAT.exe
+
 # Server Launch Errors
 
 ### Sirin-core.dll load failed. Uknown. Code 0x0000045A
