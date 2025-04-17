@@ -92,7 +92,7 @@
     - [onClose](lua/features/rifts.md#onclose)
     - [onOpen](lua/features/rifts.md#onopen)
     - [onUse](lua/features/rifts.md#onuse)
-  - [Spawn Schedule](lua/features/spawnsched.md)
+  - [Spawn Schedule](lua/features/spawnsched.md#monster-spawning-schedule-sirin-040)
 
 - Lua (Info)
   - [Lua Scripting](lua/luascripting.md)
