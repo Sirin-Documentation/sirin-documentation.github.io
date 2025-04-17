@@ -1,6 +1,14 @@
-# Loot Boxes Config
+# Loot Boxes [Sirin 0.40+]
 
-Basic configuration is set in `sirin-scripts\config-guard\ModBoxOpen.lua`
+Handles the reloadable scripted results of lootbox items - these loot boxes can contain other items with random chance
+
+***
+
+## Basic Operation 
+
+### Enable
+
+Enable using configuration at `sirin-scripts\config-guard\ModBoxOpen.lua`
 
 ```lua
 config.BoxOpenMode = 0
@@ -15,12 +23,12 @@ config.UseExistingStack = false
 ```
 `true`/`false` If true then try to fill existing stack first otherwise put item to empty slot every time
 
-# Loot Boxes (BoxItemOut)
+### Configure
 
 >> Loot boxes can be reloaded in game without restarting of the ZoneServer \
 >> Using the GM command `%boxout reload`
 
-All files with the `.lua` file extension will be read as `Loot Box Scripts` in the `sirin-scripts\BoxItemOut` folder
+All files with the `.lua` file extension will be read as `Loot Box Scripts` in the `sirin-lua\threads\main\ReloadableScripts\BoxItemOut` folder
 
 ```lua
 bxgem01 = {
@@ -28,38 +36,30 @@ bxgem01 = {
 }, <- necessary comma between sections 
 ```
 
-`bxgem01 ` = `Server Box Item Code`  This box item has to exist in the server `boxItem.dat` But its config will be handled by the script instead
+`bxgem01 ` = `Server Box Item Code`  
+> This box item has to exist in the server `boxItem.dat` But its config will be handled by the script
 
 ```lua
-bxgem01 = {
-	isSameRaceDrop = false -- Type: bool. If true, then items belonged to other race excluded
-	isAllowEmptyBox = false -- Type: bool. If true and no suitable drop found then box consumed else error send to client.
-	boxOutList = {
-		{
-			dropRateUpperMargin = 0.1 -- Type: float. Possible values 1/32768 to 1.0 responsible for group drop rate
-			multiDrop = false -- Type bool. Drop all items from this group?
-			dropGroupData = {
-				{
-					itemCode = "iyyyy01" -- Type string. Item code.
-					durability_or_upgrade = 1 -- Optional. Type: integer or string or table.
-											-- For stackable items - size of stack, for animus/force item - level, for armour/weapon - upgrade,
-											-- siege kit/ammo - durability.
-											-- If table then represents range for random choice. If missing - default value applied.
-											-- See examples below.
-				}, -- <- necessary comma between sections
-				{
-					-- 
-				},
-			}
-		},
-		{
-			--  Next drop group object
-		},
-	}
-}
+local t = {
+bxgem02 = { false, true, -- isSameRaceDrop, isAllowEmptyBox
+{
+	-- 0.5 = chance *see below
+	{ 0.5, true, { {"sklu001"}, {"sklu002"}, {"sklu005", 10000} } },
+	{ 0.5, false, { { "ijccc01", 50 }, { "ijccc02", 50 }, { "ijccc03", 50 }, { "ijccc04", 50 }, } },
+	{ 0.6, false, { { "iyyyy02", { 10, 40 } }, } },
+	-- 1.0 - 0.6 = 0.4 40% of empty box. Empty box have no reward but box consumed.
+}},
+bxgem03 = { false, true,
+{
+	-- Next box
+	{...},
+}},
+},
+
+return t
 ```
 
-## Calculating Lootbox Percentages
+### Calculating Lootbox Percentages
 
 <img style="border:1px solid black" src="img/sirin_boxcalc.png"/>
 
@@ -132,52 +132,7 @@ bxgem02 = { false, true, -- isSameRaceDrop, isAllowEmptyBox
 * 50% chance of getting nothing
 * If row rolled - All items `ipbhp08` and `ipbdx03` are given
 
-### Combined Example (with extra features)
-
-```lua
-bxgem02 = { false, true, {
-	{ 0.5, true, { {"sklu001"}, {"sklu002"}, {"sklu005", 10000} } },
-	{ 0.5, false, { { "ijccc01", 50 }, { "ijccc02", 50 }, { "ijccc03", 50 }, { "ijccc04", 50 }, } },
-	{ 0.6, false, { { "iyyyy02", { 10, 40 } }, } },
-	-- 1.0 - 0.6 = 0.4 40% of empty box. Empty box have no reward but box consumed.
-}},
-```
-
-1) `bxgem02` - Server BoxItem code for the box to be opened
-2) `false` - `isSameRaceDrop` Disabled so items can given from another race
-3) `false` - `isAllowEmptyBox` Send error if no items are given from box (incorrect % rates)
-
-#### 3 Rows
-```lua
-{ 0.5, true, { {"sklu001"}, {"sklu002"}, {"sklu005", 10000} } },
-```
-- `0.5` - Droprate
-- `true` - MultiDrop so give all items in the list  `sklu001` and `sklu002` and `sklu005`
-- `{sklu005, 10000}` - Has some extra data  -> `durability_or_upgrade` as the item is a siege kit, the ammo is modified 10,000 shots
-
-```lua
-{ 0.5, false, { { "ijccc01", 50 }, { "ijccc02", 50 }, { "ijccc03", 50 }, { "ijccc04", 50 }, } },
-```
-- `0.5` - Droprate
-- `false` - MultiDrop disabled, so give  1 item from list randomly
-- `{ "ijccc01", 50 }` - Has some extra data  -> `durability_or_upgrade` as the item is a summon. The level is modified to 50
-```lua
-{ 0.6, false, { { "iyyyy02", { 10, 40 } }, } },
-```
-- `0.6` - Droprate
-- `false` - MultiDrop disabled, so give  1 item from list randomly. As there is only 1 item the same is always given
-- `{ "iyyyy02", { 10, 40 } }` - Has some extra data -> `durability_or_upgrade` For stackable items - size of stack is modified. \
-Randomly a stack of this item between 10 to 40 will be given. 
-
-# Example Results
-Opening this box would give one of the following
-1) Everything from `group 1`  `sklu001` + `sklu002` + `sklu005 (modified with 10k shots)`
-2) One summon reaver from `group 2` `ijccc01 (modified to level 50)`
-3) Between 10 to 40 pieces of iyyyy02 from `group 3`
-
-***
-
-# Advanced (durability_or_upgrade)
+### Extra item data (Stacks / Summons / Upgrades / Ammo)
 
 Every item has optional values for the `durability_or_upgrade` parameter. Depending on the item type the value you assign to it differ
 
@@ -246,6 +201,69 @@ Sets both the upgrade and slot count on the weapon/armour with a range of two up
 | 4  | Hatred  | A  | Glory  |
 
 
+
+### Combined Example (with extra features)
+
+```lua
+bxgem02 = { false, true, {
+	{ 0.5, true, { {"sklu001"}, {"sklu002"}, {"sklu005", 10000} } },
+	{ 0.5, false, { { "ijccc01", 50 }, { "ijccc02", 50 }, { "ijccc03", 50 }, { "ijccc04", 50 }, } },
+	{ 0.6, false, { { "iyyyy02", { 10, 40 } }, } },
+	-- 1.0 - 0.6 = 0.4 40% of empty box. Empty box have no reward but box consumed.
+}},
+```
+
+1) `bxgem02` - Server BoxItem code for the box to be opened
+2) `false` - `isSameRaceDrop` Disabled so items can given from another race
+3) `false` - `isAllowEmptyBox` Send error if no items are given from box (incorrect % rates)
+
+#### 3 Rows
+```lua
+{ 0.5, true, { {"sklu001"}, {"sklu002"}, {"sklu005", 10000} } },
+```
+- `0.5` - Droprate
+- `true` - MultiDrop so give all items in the list  `sklu001` and `sklu002` and `sklu005`
+- `{sklu005, 10000}` - Has some extra data  -> `durability_or_upgrade` as the item is a siege kit, the ammo is modified 10,000 shots
+
+```lua
+{ 0.5, false, { { "ijccc01", 50 }, { "ijccc02", 50 }, { "ijccc03", 50 }, { "ijccc04", 50 }, } },
+```
+- `0.5` - Droprate
+- `false` - MultiDrop disabled, so give  1 item from list randomly
+- `{ "ijccc01", 50 }` - Has some extra data  -> `durability_or_upgrade` as the item is a summon. The level is modified to 50
+```lua
+{ 0.6, false, { { "iyyyy02", { 10, 40 } }, } },
+```
+- `0.6` - Droprate
+- `false` - MultiDrop disabled, so give  1 item from list randomly. As there is only 1 item the same is always given
+- `{ "iyyyy02", { 10, 40 } }` - Has some extra data -> `durability_or_upgrade` For stackable items - size of stack is modified. \
+Randomly a stack of this item between 10 to 40 will be given. 
+
+### Example Results
+Opening this box would give one of the following
+1) Everything from `group 1`  `sklu001` + `sklu002` + `sklu005 (modified with 10k shots)`
+2) One summon reaver from `group 2` `ijccc01 (modified to level 50)`
+3) Between 10 to 40 pieces of iyyyy02 from `group 3`
+
+***
+
+## Adv Operation 
+
+Box items can also be used as a player trigger to execute scripts
+
+> You must decrement the stack of items `pCon` when your custom script is executed to consume the box
+
+* Map teleport item - teleporting whole party?
+* Fully scripted box item result? Offering more logic than a standard box
+
+\+ more options using [Sirin Scripting](lua/threads/MainThread) 
+
+```lua
+-- function execution on box use example.
+boxcode2 = function(pPlayer, pCon, pBoxItemFld) CPlayer, _STORAGE_LIST___db_con, _BoxItem_fld
+	-- you are respoonsible to decrement box stack using pCon pointer
+end,
+```
 
 
 

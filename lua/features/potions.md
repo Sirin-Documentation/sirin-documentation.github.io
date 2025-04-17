@@ -1,7 +1,12 @@
-# Potion Effects
+# Potions
 
+Scripted consumable items that grants temporary effects or instant effects
 
-All files with the `.lua` file extension will be read as `Potion Scripts` in the `sirin-lua\PotionEffect` folder
+***
+
+### Basic Operation
+
+All files with the `.lua` file extension will be read as `Potion Scripts` in the `sirin-lua\threads\main\ReloadableScripts\PotionEffect` folder
 
 >> Potion Effects can be reloaded in game without restarting of the ZoneServer \
 >> Using the GM command `%potion reload`
@@ -39,47 +44,7 @@ Trying to use a potion that is one of these types will result in `Failed to use 
 
 *** 
 
-
-## Scripted Potion Effect Handlers [Sirin 0.29+]
-
-The following potion effects are purely examples - All potion effect handles are defined in `sirin-lua\_init\mgr\potion\potion.lua`
-
-You can expand this and add in your own potion effect handlers to `PotionManager.handlers` - to cover all types of potion effects
-
-```lua
-		---18. Alter action point
-		---@param pActChar CCharacter
-		---@param pTargetChar CCharacter
-		---@param effect AlterActionPointPotionParam
-		---@return boolean
-		---@return integer
-		function (pActChar, pTargetChar, effect)
-			if pTargetChar.m_ObjID.m_byID > 0 or pTargetChar.m_ObjID.m_byKind > 0 then
-				return false, 1
-			end
-
-			if not PlayerMgr.alterActionPoint(Sirin.mainThread.objectToPlayer(pTargetChar), effect[2], effect[1]) then
-				return false, 2
-			end
-
-			return true, 0
-		end,
-        --- Add your own new handlers below
-		--- 19. Example
-		function(pActChar, pTargetChar, effect)
-			if pTargetChar.m_ObjID.m_byID > 0 or pTargetChar.m_ObjID.m_byKind > 0 then
-				return false, 1
-			end
-
-			--- Logic goes here
-		end,
-    },
-```
-
-> Each scripted potion handler uses [Lua Scripting](lua/luascripting.md) to define how the handler functions \
-> View the Lua API to see all available options
-
-## Example Handlers
+## Potion Effect
 
 > add 999 cash potion
 
@@ -246,6 +211,7 @@ config.PotionList = {
 
 ***
 
+
 # Cure Potions
 
 As of update `0.23`  Cure potion have 3 behaviours: 
@@ -284,4 +250,37 @@ Next use when `20 seconds remaining` will do 30 - 10 = 20
 
 > When debuff remain time is less than 0 debuff will be removed
 
+***
+
+# Adv Operation
+
+## Scripted Potions [Sirin 0.40+]
+
+All files with the `.lua` file extension will be read as `Potion Scripts` in the `sirin-lua\threads\main\ReloadableScripts\PotionEffect` folder
+
+As with default potion effects - you can also define your own using [Sirin Scripting](lua/threads/MainThread) 
+
+> This potion changes player race and gender to bellato male and class to Warrior.
+```lua
+---@param pPlayer CPlayer
+---@param byNewRaceSex integer
+---@param strNewClassCode? string
+---@return integer
+function RaceSexClassUpdate(pPlayer, byNewRaceSex, strNewClassCode)
+	local byErrCode = Sirin.mainThread.modRaceSexClassChange.updateRaceSexClass(pPlayer, byNewRaceSex, strNewClassCode)
+
+	if byErrCode == 0 then
+		Sirin.mainThread.modForceLogoutAfterUsePotion.s_bNeedForceLogout = true -- Used with potion only
+	end
+
+	return byErrCode
+end
+
+---@param pActChar CCharacter
+---@param pTargetChar CCharacter
+---@return integer
+ipgld01 = function(pActChar, pTargetChar) -- Potion changes race and gender to bellato male and class to Warrior.
+	return RaceSexClassUpdate(Sirin.mainThread.objectToPlayer(pTargetChar), 0, "BWB0")
+end,
+```
 

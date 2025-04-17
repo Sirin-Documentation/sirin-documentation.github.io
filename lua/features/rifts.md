@@ -1,8 +1,14 @@
 # Rifts
 
-All files with the `.lua` file extension will be read as `Rift Scripts` in the `sirin-lua\Rifts` folder
+Rifts are reloadable scripted portals that can appear and disapear with a number of requirements that can be set for using them
 
 <img style="border:1px solid black" src="img/sirin_rift.jpg"/>
+
+***
+
+All files with the `.lua` file extension will be read as `Rift Scripts` in the `sirin-lua\threads\main\ReloadableScripts\Rifts` folder
+
+
 
 >> rifts can be reloaded in game without restarting of the ZoneServer \
 >> Using the GM command `%rift reload`
@@ -10,59 +16,57 @@ All files with the `.lua` file extension will be read as `Rift Scripts` in the `
 
 
 ```lua
+local t = {
 simpleRift = {
     portalType = 0,
-    srcMap = "NeutralB",
+    srcMap = "NeutralC",
 	srcPos = {
-		{-7277, 622, 5888, 0},
+		{7065, -154, 1169, 0},
 	},
-	dstMap = "NeutralB",
+	dstMap = "NeutralC",
 	dstPos = {
-		{-7098, 622, 5639, 0},
-	},
-
-	buttonName = {
-		default = 'Enter Simple Rift',
-	},
-	description = {
-		default = 'Description line 1\nDescription line 2',
+		{7475, -157, 1306, 0},
 	},
 
     onOpen = function (pLuaRift)
 		local announceMsg = { 
 			default = "Simple Rift just opened",
 		}
-		netMgr.SendGlobalChatData(announceMsg, CHAT_TYPE.System, ANN_TYPE.mid3, nil, 0xFFFF0000) -- ARGB
+		NetMgr.SendGlobalChatData(announceMsg, CHAT_TYPE.System, ANN_TYPE.mid3, nil, 0x00FFFF00)
 	end,
 
     onClose = function (pLuaRift)
 		local announceMsg = { 
 			default = "Simple Rift closed",
 		}
-		netMgr.SendGlobalChatData(announceMsg, CHAT_TYPE.System, ANN_TYPE.mid3, nil, 0xFFFF0000) -- ARGB
+		NetMgr.SendGlobalChatData(announceMsg, CHAT_TYPE.System, ANN_TYPE.mid3, nil, 0x00FFFF00)
 	end,
 
     onCheckUseConditions = function (pLuaRift, pPlayer)
-		return riftMgr:canUseRift(pLuaRift, pPlayer)
+		return RiftMgr.canUseRift(pLuaRift, pPlayer)
 	end,
 
 	onUse = function (pLuaRift, pPlayer)
-		riftMgr:onUse(pLuaRift, pPlayer)
+		RiftMgr.onUse(pLuaRift, pPlayer)
 	end,
 
     openSchedule = {
-        absolute = { -- Open once never close
-			year = 2023,
-			month = 2,
-			day = 18,
-			hour = 2,
-			minute = 13,
-			second = 0,
-		},
+        every = {
+            minute = {
+				val = 3,
+			},
+        }
     },
 
+    closeSchedule = {
+		after = {
+			minute = 1,
+		},
+	},
 },
-}, -- <- necessary comma between rifts
+}
+
+return t
 ```
 
 Above is the minimum required to open a rift,  but many extra options can be added

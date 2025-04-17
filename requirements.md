@@ -8,6 +8,10 @@ You will need a copy of MS SQL Server installed.  https://www.microsoft.com/en-g
 
 > For performance and security use the latest release of MS SQL
 
+> You will need a __basic__ understanding of Microsoft SQL Server and SQL Management Studio
+
+[Video Guide: Microsoft SQL Server (SSMS)](https://www.youtube.com/watch?v=INnGiKbU3FY) 
+
 ### RF Dependencies
 
 You will need the RF Dependencies installed. Run “RF Dependencies.exe” if you have never installed a server before.

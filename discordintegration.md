@@ -2,11 +2,13 @@
 
 Allows players to show gameplay status on discord when playing the server
 
+***
+
 ### Create your Discord App
 
 Create your discord application to obtain your unique Application ID
 
-[https://discord.com/developers/applications](https://discord.com/developers/applications) -> `New Application` 
+[https://discord.com/developers/applications](https://discord.com/developers/applications) → `New Application` 
 
 > The name used for the app will be displayed on the players status info
 

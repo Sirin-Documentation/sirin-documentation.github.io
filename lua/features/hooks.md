@@ -1,87 +1,155 @@
-# Event Hooks
+# User Scripts / Hooks [Sirin 0.40+]
 
-> Event hooks via Lua are recomended for intermediate users
+user scripts are self contained scripts that contain everything needed to listen for `Events` on the server and run custom code
 
-Hooking allows your scripts to `fire` when something specific happens on the server
+> [Full list of usable Hooks](lua/hooks.md)
 
-## Addon.lua
 
-> sirin-lua/_init/MainThread/addon.lua
+#### Where to place scripts
 
-Functions in this file are related to addons/modules specific to Sirin
+Scripts can go anywhere in the `sirin-lua` Folder but to ensure a smooth experience upgrading Sirin to new versions - we recomend using the following locations
 
-* Rifts (open/close/use)
-* Sirin Login Server
+* `sirin-lua/YourScript.lua`
+* `sirin-lua/YourFolderName/YourScript.lua`
+* `sirin-lua/Custom/YourScript.lua`
 
-## Extend.lua
-
-> sirin-lua/_init/MainThread/extend.lua
-
-Functions in this file `extend` the existing functionality of an in-game event
-
-`MainThread.CMonster__Destroy` called when a monster is defeated
+> Below is the default starter template for your own scripts
 
 ```lua
----@param pMonster CMonster
----@param byDestroyCode integer
----@param pAttObj CGameObject
-function MainThread.CMonster__Destroy(pMonster, byDestroyCode, pAttObj)
-	-- Implementation of this function is optional
+local projectName = 'yourproject' -- Example: MyProject
+local moduleName = 'module_unique_name' -- Example: ModuleMgr
 
-	if byDestroyCode == 0 and pAttObj and pAttObj.m_ObjID.m_byID == 0 then
-		-- Announce the death of monster to server
-        NetMgr.monsterLifeStateInform(
-			1,
-			Sirin.mainThread.baseToMonsterCharacter(pMonster.m_pRecordSet), 
+local script = {
+    m_strUUID = projectName .. ".lua." .. moduleName,
+}
+
+-- Hook Hander for CMonster__Destroy
+function script.hookHandler1(pMonster, byDestroyCode, pAttObj) 
+	-- Send annoucement of monster death
+	NetMgr.monsterLifeStateInform(
+            1,
+            Sirin.mainThread.baseToMonsterCharacter(pMonster.m_pRecordSet), 
             pMonster.m_pCurMap, 
             Sirin.mainThread.objectToPlayer(pAttObj)
         )
-	end
 end
-```
 
-`MainThread.CPlayer__pc_NewPosStart` called when a Player first spawns
+function script.onThreadBegin()
+    -- Your optional initialization routine here
+end
+
+function script.onThreadEnd()
+	-- Your optional destructor routine here
+end
+
+local function autoInit()
+    if not _G[moduleName] then -- One time initialization during Lua thread life
+        _G[moduleName] = script -- Bind your script to a global variable. Variable name must be unique.
+
+        table.insert(SirinLua.onThreadBegin, function() _G[moduleName].onThreadBegin() end)
+        table.insert(SirinLua.onThreadEnd, function() _G[moduleName].onThreadEnd() end)
+    end
+
+	-- Release any hooks already set (Used when reloading script)
+    SirinLua.HookMgr.releaseHookByUID(script.m_strUUID)
+
+	-- Example hook for CMonster__Destroy
+    SirinLua.HookMgr.addHook("CMonster__Destroy", HOOK_POS.after_event, script.m_strUUID, script.hookHandler1)
+    
+	-- Additional Hooks
+	-- SirinLua.HookMgr.addHook("hook_fuction_name", HOOK_POS.original, script.m_strUUID, script.hookHandler2)
+
+    -- your optional initialization routine below this line
+end
+
+-- Ensure autoinit() is called
+autoInit()
+```
+## Using Hooks
+Hooks can be found in the [Full list of usable Hooks](lua/hooks.md)
+
+Each hook contains
+
+* Function name  : `CPlayer__pc_NewPosStart`
+* Function parameters : `CPlayer pPlayer`
+
+> Use these parameters to create your hook handler. 
 
 ```lua
+function script.MyHookHandler(pPlayer) 
+{
+	-- pPlayer is the CPlayer object
+}
+```
+
+* Purpose : description of what the hook does
+* Hook Position : When this hook triggers your code. Some hooks have more than one option
+
+	* original
+	* pre_event
+	* after_event
+	* special
+
+> Check the hook you are using to see which hook positions you can use
+
+Use this to construct your hook function and hook handler
+
+```lua
+function script.MyHookHandler(pPlayer)
+{
+	-- Your code that runs when the CPlayer__pc_NewPosStart is triggered
+}
+
+-- Function name = CPlayer__pc_NewPosStart
+-- Hook Position = after_event
+SirinLua.HookMgr.addHook("CPlayer__pc_NewPosStart", HOOK_POS.after_event, script.m_strUUID, script.MyHookHandler)
+```
+
+## Example: Custom Quest objectives
+
+This example uses hooks to add additional custom quest conditions. 
+
+The conditions can be used in your `quest.xlsx` data to add additional quest objectives
+
+|QuestType | ActType | ActSub | Result   |
+|---|---|---|---|
+| 0 (Solo Quest) | 30  | "Sette" | Teleporting to map "Sette" will complete the objective |
+
+```lua
+local projectName = 'sirin' -- example: MyProject
+local moduleName = 'demo_quest_condition' -- name must be unique across all the code.
+
+local script = {
+m_strUUID = projectName .. ".lua." .. moduleName,
+}
+
 ---@param pPlayer CPlayer
-function MainThread.CPlayer__pc_NewPosStart(pPlayer)
-	-- Implementation of this function is optional
+function script.CPlayer__pc_NewPosStart(pPlayer) -- each hook must have own handler
+    -- params: actType, actSub, count towards quest, isParty (Apply to rest of party)
+    pPlayer:Emb_CheckActForQuest(30, pPlayer.m_pCurMap.m_pMapSet.m_strCode, 1, false)
 end
-```
 
-Advanced Example `MainThread.CHolyStoneSystem_SetScene` called when the state of a Chip War changes 
-
-Could be used to run a script when the Chip is broken [pHolySys](lua/classes/CHolyStoneSystem#cholystonesystem) contains data on the player that last hit
-
-```lua
----@param pHolySys CHolyStoneSystem
----@param byNumOfTime integer
----@param nSceneCode integer
----@param nPassTime integer
----@param nChangeReason integer
-function MainThread.CHolyStoneSystem__SetScene(pHolySys, byNumOfTime, nSceneCode, nPassTime, nChangeReason)
-	-- Implementation of this function is optional
+function script.onThreadBegin()
+-- your optional load state routine here
 end
-```
 
-## Replace.lua
-
-> sirin-lua/_init/MainThread/replace.lua
-
-Functions in this file `replace` the existing functionality of an in-game event ignoring any original functionality
-
-Example `MainThread.CPlayer__pc_UpgradeItem` replaces the item upgrade logic with the logic contained in `PlayerMgr.pc_UpgradeItem`
-
-Found at `sirin-lua/_init/mgr/player/player.lua`
-
-```lua
----@param pPlayer CPlayer
----@param pposTalik _STORAGE_POS_INDIV
----@param pposToolItem _STORAGE_POS_INDIV
----@param pposUpgItem _STORAGE_POS_INDIV
----@param jewels table<integer, _STORAGE_POS_INDIV>
-function MainThread.CPlayer__pc_UpgradeItem(pPlayer, pposTalik, pposToolItem, pposUpgItem, jewels)
-	-- Implementation of this function is optional
-	PlayerMgr.pc_UpgradeItem(pPlayer, pposTalik, pposToolItem, pposUpgItem, jewels)
+function script.onThreadEnd()
+-- your optional save state routine here
 end
+
+-- hooks and thread routine must be declared above this line
+
+local function autoInit()
+if not _G[moduleName] then -- one time initialization during Lua thread life
+_G[moduleName] = script -- bind your script to a global variable. Variable name must be unique.
+
+table.insert(SirinLua.onThreadBegin, function() _G[moduleName].onThreadBegin() end)
+table.insert(SirinLua.onThreadEnd, function() _G[moduleName].onThreadEnd() end)
+end
+
+SirinLua.HookMgr.releaseHookByUID(script.m_strUUID)
+SirinLua.HookMgr.addHook("CPlayer__pc_NewPosStart", HOOK_POS.after_event, script.m_strUUID, script.CPlayer__pc_NewPosStart)
+end
+
+autoInit()
 ```

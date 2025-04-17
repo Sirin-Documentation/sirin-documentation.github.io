@@ -3,9 +3,11 @@
 Changing base class, race or appearance of existing characters
 
 >> Can be used across all lua functions
-* [NPC Buttons](npcbuttons.md)
-* [Potions](potions.md)
-* [Event Hooks](eventhooks.md)
+* [NPC Buttons](/lua/features/npcbuttons.md)
+* [Potions](/lua/features/potions.md)
+* [Hooks](/lua/features/hooks.md)
+
+***
 
 ## Base Class Change (Potion | Uses Helper Function)
 
