@@ -14,7 +14,7 @@
  
 > `struct` `_MULTI_BLOCK`* m_pMB
  
-> `const` `struct` `_mon_active`* m_MonAct_get(`int`,`int`)
+> `struct` `_mon_active`* m_MonAct_get(`unsigned __int64`,`unsigned __int64`)
  
 > `unsigned int` m_dwStartActiveTime
  

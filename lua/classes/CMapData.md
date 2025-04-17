@@ -30,7 +30,7 @@
  
 > `int` m_nMapCode
  
-> `struct` [_LAYER_SET](lua/classes/_LAYER_SET.md)* m_ls_get(`int`)
+> `struct` [_LAYER_SET](lua/classes/_LAYER_SET.md)* m_ls_get(`unsigned __int64`)
  
 > `struct` `_MULTI_BLOCK`* m_mb
  

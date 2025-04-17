@@ -92,7 +92,7 @@
  
 > `int` m_nStoragePrice
  
-> `struct` [_GuardTowerItem_fld____material](lua/classes/_GuardTowerItem_fld____material.md)* m_Material_get(`int`)
+> `struct` [_GuardTowerItem_fld____material](lua/classes/_GuardTowerItem_fld____material.md)* m_Material_get(`unsigned __int64`)
  
 > `int` m_bSell
  

@@ -38,5 +38,7 @@
  
 > `unsigned __int64` m_dwLastTradePoint
  
-> `unsigned int` m_dwLastTradeActPoint_get(`int`)
+> `unsigned int` m_dwLastTradeActPoint_get(`unsigned __int64`)
+ 
+> `void` m_dwLastTradeActPoint_set(`unsigned __int64`,`unsigned int`)
  

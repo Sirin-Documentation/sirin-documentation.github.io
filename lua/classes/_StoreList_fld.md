@@ -12,11 +12,15 @@
  
 > `const` `char`* m_strStore_MAPcode
  
+> `int` m_nStore_trade
+ 
 > `int` m_bSet_NPCangle
  
 > `int` m_nStore_NPCangle
  
-> `int` m_nNpc_Class_get(`int`)
+> `int` m_nNpc_Class_get(`unsigned __int64`)
+ 
+> `void` m_nNpc_Class_set(`unsigned __int64`,`int`)
  
 > `int` m_nStore_LISTcount
  
@@ -28,7 +32,9 @@
  
 > `int` m_nItemUpCode
  
-> `const` `char`* m_strItemlist_get(`int`)
+> `const` `char`* m_strItemlist_get(`unsigned __int64`)
  
-> `struct` [sell_info](lua/classes/sell_info.md)* m_sellLimitList_get(`int`)
+> `void` m_strItemlist_set(`unsigned __int64`,`const` `char` *)
+ 
+> `struct` [sell_info](lua/classes/sell_info.md)* m_sellLimitList_get(`unsigned __int64`)
  

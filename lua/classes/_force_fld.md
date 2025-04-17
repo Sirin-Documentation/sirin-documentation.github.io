@@ -46,7 +46,7 @@
  
 > `int` m_nNeedSP
  
-> `struct` [_consume_item_list](lua/classes/_consume_item_list.md)* m_ConsumeItemList_get(`int`)
+> `struct` [_consume_item_list](lua/classes/_consume_item_list.md)* m_ConsumeItemList_get(`unsigned __int64`)
  
 > `float` m_fActDelay
  
@@ -74,17 +74,19 @@
  
 > `int` m_nTempParamCode
  
-> `float` m_fTempValue_get(`int`)
+> `float` m_fTempValue_get(`unsigned __int64`)
+ 
+> `void` m_fTempValue_set(`unsigned __int64`,`float`)
  
 > `int` m_nContEffectType
  
 > `int` m_nContAreaType
  
-> `const` `struct` [_cont_param_list](lua/classes/_cont_param_list.md)* m_ContParamList_get(`int`)
+> `struct` [_cont_param_list](lua/classes/_cont_param_list.md)* m_ContParamList_get(`unsigned __int64`)
  
-> `int` m_nContEffectSec_get(`int`)
+> `int` m_nContEffectSec_get(`unsigned __int64`)
  
-> `void` m_nContEffectSec_set(`int`,`int`)
+> `void` m_nContEffectSec_set(`unsigned __int64`,`int`)
  
 > `int` m_nEffectClass
  

@@ -32,7 +32,9 @@
  
 > `struct` [_Exttrunk_db_load](lua/classes/_Exttrunk_db_load.md) m_dbExtTrunk
  
-> `struct` [_STORAGE_LIST](lua/classes/_STORAGE_LIST.md)* m_pStoragePtr_get(`int`)
+> `struct` [_STORAGE_LIST](lua/classes/_STORAGE_LIST.md)* m_pStoragePtr_get(`unsigned __int64`)
+ 
+> `void` m_pStoragePtr_set(`unsigned __int64`,`struct` [_STORAGE_LIST](lua/classes/_STORAGE_LIST.md) *)
  
 > `struct` [_UNIT_DB_BASE](lua/classes/_UNIT_DB_BASE.md) m_UnitDB
  
@@ -52,19 +54,25 @@
  
 > `struct` [_personal_amine_inven_db_load](lua/classes/_personal_amine_inven_db_load.md) m_dbPersonalAmineInven
  
-> `unsigned short` m_wCuttingResBuffer_get(`int`)
+> `unsigned short` m_wCuttingResBuffer_get(`unsigned __int64`)
+ 
+> `void` m_wCuttingResBuffer_set(`unsigned __int64`,`unsigned short`)
  
 > `unsigned char` m_byNameLen
  
-> `unsigned int` m_dwAlterMastery_get(`int`)
+> `unsigned int` m_dwAlterMastery_get(`unsigned __int64`)
+ 
+> `void` m_dwAlterMastery_set(`unsigned __int64`,`unsigned int`)
  
 > `struct` [_class_fld](lua/classes/_class_fld.md)* m_pClassData
  
-> `struct` [_class_fld](lua/classes/_class_fld.md)* m_pClassHistory_get(`int`)
+> `struct` [_class_fld](lua/classes/_class_fld.md)* m_pClassHistory_get(`unsigned __int64`)
  
-> `struct` [_class_fld](lua/classes/_class_fld.md)* m_ppHistoryEffect_get(`int`)
+> `void` m_pClassHistory_set(`unsigned __int64`,`struct` [_class_fld](lua/classes/_class_fld.md) *)
  
-> `struct` `_quick_link`* m_QLink_get(`int`)
+> `struct` [_class_fld](lua/classes/_class_fld.md)* m_ppHistoryEffect_get(`unsigned __int64`)
+ 
+> `struct` `_quick_link`* m_QLink_get(`unsigned __int64`)
  
 > `class` [CGuild](lua/classes/CGuild.md)* m_pGuild
  

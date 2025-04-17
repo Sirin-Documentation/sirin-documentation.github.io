@@ -8,5 +8,5 @@
  
 > `int` m_nCum
  
-> `struct` [_DELPOST_DB_BASE____list](lua/classes/_DELPOST_DB_BASE____list.md)* m_List_get(`int`)
+> `struct` [_DELPOST_DB_BASE____list](lua/classes/_DELPOST_DB_BASE____list.md)* m_List_get(`unsigned __int64`)
  

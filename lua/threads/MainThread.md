@@ -27,19 +27,69 @@
  
 > `static` `void` WritePrivateProfileStringA(`const` `char` *,`const` `char` *,`const` `char` *,`const` `char` *)
  
+> `static` `class` [VoidPtr](lua/classes/VoidPtr.md)* binaryDataToVoid(`class` [CBinaryData](lua/classes/CBinaryData.md) *)
+ 
 > `static` `class` `luabridge__LuaRef` getFileList(`const` `char` *,`struct` `lua_State` *)
  
-> `static` `class` `std__basic_string<char,struct std__char_traits<char>,class std__allocator<char> >` getUUIDv4(`void`)
+> `static` `int` getUUIDv4(`struct` `lua_State` *)
  
 > `static` `unsigned char` getZoneVersion(`void`)
  
-> `static` `void` processAsyncCallback(`class` `std__basic_string<char`,`struct` `std__char_traits<char>`,`class` `std__allocator<char> >`,`class` `std__basic_string<char`,`struct` `std__char_traits<char>`,`class` `std__allocator<char> >`,`class` `std__basic_string<char`,`struct` `std__char_traits<char>`,`class` `std__allocator<char> >`,`class` `std__basic_string<char`,`struct` `std__char_traits<char>`,`class` `std__allocator<char> >`,`unsigned __int64`)
+> `static` `void` processAsyncCallback(`unsigned __int64`,`const` `char` *,`const` `char` *,`const` `char` *,`unsigned __int64`,`const` `char` *)
+ 
+> `static` `void` processAsyncCallback(`unsigned __int64`,`const` `char` *,`const` `char` *,`const` `char` *,`unsigned __int64`,`unsigned __int64`)
+ 
+> `static` `void` processAsyncCallback(`unsigned __int64`,`const` `char` *,`const` `char` *,`const` `char` *,`unsigned __int64`,`class` [VoidPtr](lua/classes/VoidPtr.md) *)
+ 
+> `static` `void` processAsyncCallback(`unsigned __int64`,`const` `char` *,`const` `char` *,`const` `char` *,`unsigned __int64`,`class` [CSQLResultSet](lua/classes/CSQLResultSet.md) *)
+ 
+> `static` `void` processAsyncCallback(`unsigned __int64`,`const` `char` *,`const` `char` *,`const` `char` *,`unsigned __int64`,`class` [CBinaryData](lua/classes/CBinaryData.md) *)
+ 
+> `static` `void` processAsyncCallback(`unsigned __int64`,`const` `char` *,`const` `char` *,`const` `char` *,`const` `char` *)
+ 
+> `static` `void` processAsyncCallback(`unsigned __int64`,`const` `char` *,`const` `char` *,`const` `char` *,`unsigned __int64`)
+ 
+> `static` `void` processAsyncCallback(`unsigned __int64`,`const` `char` *,`const` `char` *,`const` `char` *,`class` [VoidPtr](lua/classes/VoidPtr.md) *)
+ 
+> `static` `void` processAsyncCallback(`unsigned __int64`,`const` `char` *,`const` `char` *,`const` `char` *,`class` [CSQLResultSet](lua/classes/CSQLResultSet.md) *)
+ 
+> `static` `void` processAsyncCallback(`unsigned __int64`,`const` `char` *,`const` `char` *,`const` `char` *,`class` [CBinaryData](lua/classes/CBinaryData.md) *)
+ 
+> `static` `void` processAsyncPoolCallback(`unsigned __int64`,`unsigned int`,`const` `char` *,`const` `char` *,`const` `char` *,`unsigned __int64`,`const` `char` *)
+ 
+> `static` `void` processAsyncPoolCallback(`unsigned __int64`,`unsigned int`,`const` `char` *,`const` `char` *,`const` `char` *,`unsigned __int64`,`unsigned __int64`)
+ 
+> `static` `void` processAsyncPoolCallback(`unsigned __int64`,`unsigned int`,`const` `char` *,`const` `char` *,`const` `char` *,`unsigned __int64`,`class` [VoidPtr](lua/classes/VoidPtr.md) *)
+ 
+> `static` `void` processAsyncPoolCallback(`unsigned __int64`,`unsigned int`,`const` `char` *,`const` `char` *,`const` `char` *,`unsigned __int64`,`class` [CSQLResultSet](lua/classes/CSQLResultSet.md) *)
+ 
+> `static` `void` processAsyncPoolCallback(`unsigned __int64`,`unsigned int`,`const` `char` *,`const` `char` *,`const` `char` *,`unsigned __int64`,`class` [CBinaryData](lua/classes/CBinaryData.md) *)
+ 
+> `static` `void` processAsyncPoolCallback(`unsigned __int64`,`unsigned int`,`const` `char` *,`const` `char` *,`const` `char` *,`const` `char` *)
+ 
+> `static` `void` processAsyncPoolCallback(`unsigned __int64`,`unsigned int`,`const` `char` *,`const` `char` *,`const` `char` *,`unsigned __int64`)
+ 
+> `static` `void` processAsyncPoolCallback(`unsigned __int64`,`unsigned int`,`const` `char` *,`const` `char` *,`const` `char` *,`class` [VoidPtr](lua/classes/VoidPtr.md) *)
+ 
+> `static` `void` processAsyncPoolCallback(`unsigned __int64`,`unsigned int`,`const` `char` *,`const` `char` *,`const` `char` *,`class` [CSQLResultSet](lua/classes/CSQLResultSet.md) *)
+ 
+> `static` `void` processAsyncPoolCallback(`unsigned __int64`,`unsigned int`,`const` `char` *,`const` `char` *,`const` `char` *,`class` [CBinaryData](lua/classes/CBinaryData.md) *)
+ 
+> `static` `class` [VoidPtr](lua/classes/VoidPtr.md)* sqlResultSetToVoid(`class` [CSQLResultSet](lua/classes/CSQLResultSet.md) *)
+ 
+> `static` `class` [CBinaryData](lua/classes/CBinaryData.md)* voidToBinaryData(`class` [VoidPtr](lua/classes/VoidPtr.md) *)
+ 
+> `static` `class` [CSQLResultSet](lua/classes/CSQLResultSet.md)* voidToSQLResultSet(`class` [VoidPtr](lua/classes/VoidPtr.md) *)
  
 #### Classes
  
 > [CAssetController](lua/classes/CAssetController.md)
  
+> [CBinaryData](lua/classes/CBinaryData.md)
+ 
 > [CLanguageAsset](lua/classes/CLanguageAsset.md)
+ 
+> [CSQLResultSet](lua/classes/CSQLResultSet.md)
  
 > [CTranslationAsset](lua/classes/CTranslationAsset.md)
  
@@ -169,6 +219,8 @@
  
 > `class` [CHolyStoneSystem](lua/classes/CHolyStoneSystem.md)* g_HolySys
  
+> `class` [CHolyKeeper](lua/classes/CHolyKeeper.md)* g_Keeper
+ 
 > `class` [CMainThread](lua/classes/CMainThread.md)* g_Main
  
 > `class` [CMapOperation](lua/classes/CMapOperation.md)* g_MapOper
@@ -179,7 +231,9 @@
  
 > `unsigned int`* g_dwCurTime
  
-> `class` [CAttack](lua/classes/CAttack.md)** g_pAttack
+> `class` [CAttack](lua/classes/CAttack.md)* g_pAttack
+ 
+> `struct` [_quest_check_result](lua/classes/_quest_check_result.md)* s_QuestCKRet
  
 #### Functions
  
@@ -193,7 +247,7 @@
  
 > `static` `class` [CRecordData](lua/classes/CRecordData.md)* CQuestMgr__s_tblQuest(`void`)
  
-> `static` `class` [CRecordData](lua/classes/CRecordData.md)* CQuestMgr__s_tblQuestHappenEvent_get(`class` [CRecordData](lua/classes/CRecordData.md)*(__cdecl *)(int))
+> `static` `class` [CRecordData](lua/classes/CRecordData.md)* CQuestMgr__s_tblQuestHappenEvent_get(`class` [CRecordData](lua/classes/CRecordData.md)*(__cdecl *)(unsigned __int64))
  
 > `static` `int` GetActiveGuildList(`struct` `lua_State` *)
  
@@ -309,6 +363,8 @@
  
 > `static` `struct` [_monster_fld](lua/classes/_monster_fld.md)* baseToMonsterCharacter(`struct` [_base_fld](lua/classes/_base_fld.md) *)
  
+> `static` `struct` [_monster_sp_fld](lua/classes/_monster_sp_fld.md)* baseToMonsterSP(`struct` [_base_fld](lua/classes/_base_fld.md) *)
+ 
 > `static` `struct` [_NPCLink_fld](lua/classes/_NPCLink_fld.md)* baseToNPCLinkItem(`struct` [_base_fld](lua/classes/_base_fld.md) *)
  
 > `static` `struct` [_npc_fld](lua/classes/_npc_fld.md)* baseToNPCharacter(`struct` [_base_fld](lua/classes/_base_fld.md) *)
@@ -373,15 +429,17 @@
  
 > `static` `class` [CMonster](lua/classes/CMonster.md)* createMonster(`class` [CMapData](lua/classes/CMapData.md) *,`unsigned short`,`float`,`float`,`float`,`const` `char` *,`bool`,`bool`,`bool`)
  
-> `static` `class` [CGuild](lua/classes/CGuild.md)* g_Guild_get(`class` [CGuild](lua/classes/CGuild.md)*(__cdecl *)(unsigned int))
+> `static` `class` [CGuild](lua/classes/CGuild.md)* g_Guild_get(`class` [CGuild](lua/classes/CGuild.md)*(__cdecl *)(unsigned __int64))
  
-> `static` `class` [CItemBox](lua/classes/CItemBox.md)* g_ItemBox_get(`class` [CItemBox](lua/classes/CItemBox.md)*(__cdecl *)(int))
+> `static` `class` [CItemBox](lua/classes/CItemBox.md)* g_ItemBox_get(`class` [CItemBox](lua/classes/CItemBox.md)*(__cdecl *)(unsigned __int64))
  
-> `static` `class` [CMonster](lua/classes/CMonster.md)* g_Monster_get(`class` [CMonster](lua/classes/CMonster.md)*(__cdecl *)(unsigned int))
+> `static` `class` [CMonster](lua/classes/CMonster.md)* g_Monster_get(`class` [CMonster](lua/classes/CMonster.md)*(__cdecl *)(unsigned __int64))
  
-> `static` `class` [CPlayer](lua/classes/CPlayer.md)* g_Player_get(`class` [CPlayer](lua/classes/CPlayer.md)*(__cdecl *)(unsigned int))
+> `static` `class` [CPlayer](lua/classes/CPlayer.md)* g_Player_get(`class` [CPlayer](lua/classes/CPlayer.md)*(__cdecl *)(unsigned __int64))
  
-> `static` `class` [CUserDB](lua/classes/CUserDB.md)* g_UserDB_get(`class` [CUserDB](lua/classes/CUserDB.md)*(__cdecl *)(unsigned int))
+> `static` `class` [CHolyStone](lua/classes/CHolyStone.md)* g_Stone_get(`class` [CHolyStone](lua/classes/CHolyStone.md)*(__cdecl *)(unsigned __int64))
+ 
+> `static` `class` [CUserDB](lua/classes/CUserDB.md)* g_UserDB_get(`class` [CUserDB](lua/classes/CUserDB.md)*(__cdecl *)(unsigned __int64))
  
 > `static` `int` getActiveMonsters(`struct` `lua_State` *)
  
@@ -395,7 +453,7 @@
  
 > `static` `class` [CMapData](lua/classes/CMapData.md)* getMapData(`const` `char` *)
  
-> `static` `class` [CMapData](lua/classes/CMapData.md)* getMapData(`unsigned int`)
+> `static` `class` [CMapData](lua/classes/CMapData.md)* getMapData(`unsigned __int64`)
  
 > `static` `class` [CPlayer](lua/classes/CPlayer.md)* getPlayerBySerial(`unsigned int`)
  
@@ -420,6 +478,8 @@
 > `static` `class` [CMonster](lua/classes/CMonster.md)* objectToMonster(`class` [CGameObject](lua/classes/CGameObject.md) *)
  
 > `static` `class` [CNuclearBomb](lua/classes/CNuclearBomb.md)* objectToNuclearBomb(`class` [CGameObject](lua/classes/CGameObject.md) *)
+ 
+> `static` `class` [CParkingUnit](lua/classes/CParkingUnit.md)* objectToParkingUnit(`class` [CGameObject](lua/classes/CGameObject.md) *)
  
 > `static` `class` [CPlayer](lua/classes/CPlayer.md)* objectToPlayer(`class` [CGameObject](lua/classes/CGameObject.md) *)
  
@@ -525,9 +585,15 @@
  
 > [CMonsterAttack](lua/classes/CMonsterAttack.md)
  
+> [CMonsterSkill](lua/classes/CMonsterSkill.md)
+ 
 > [CNuclearBomb](lua/classes/CNuclearBomb.md)
  
+> [CNuclearBombMgr](lua/classes/CNuclearBombMgr.md)
+ 
 > [CObjectList](lua/classes/CObjectList.md)
+ 
+> [CParkingUnit](lua/classes/CParkingUnit.md)
  
 > [CPartyModeKillMonsterExpNotify](lua/classes/CPartyModeKillMonsterExpNotify.md)
  
@@ -881,6 +947,8 @@
  
 > [_effect_parameter](lua/classes/_effect_parameter.md)
  
+> [_effect_parameter____param_data](lua/classes/_effect_parameter____param_data.md)
+ 
 > [_embellish_db_load](lua/classes/_embellish_db_load.md)
  
 > [_equip_db_load](lua/classes/_equip_db_load.md)
@@ -921,11 +989,15 @@
  
 > [_mon_block_fld___dummy_info](lua/classes/_mon_block_fld___dummy_info.md)
  
+> [_monster_create_setdata](lua/classes/_monster_create_setdata.md)
+ 
 > [_monster_fld](lua/classes/_monster_fld.md)
  
 > [_monster_fld___EmotionPresentation](lua/classes/_monster_fld___EmotionPresentation.md)
  
 > [_monster_fld____child_mon](lua/classes/_monster_fld____child_mon.md)
+ 
+> [_monster_sp_fld](lua/classes/_monster_sp_fld.md)
  
 > [_npc_fld](lua/classes/_npc_fld.md)
  
@@ -937,6 +1009,12 @@
  
 > [_object_list_point](lua/classes/_object_list_point.md)
  
+> [_param_cash](lua/classes/_param_cash.md)
+ 
+> [_param_cash_update](lua/classes/_param_cash_update.md)
+ 
+> [_param_cash_update____item](lua/classes/_param_cash_update____item.md)
+ 
 > [_personal_amine_inven_db_load](lua/classes/_personal_amine_inven_db_load.md)
  
 > [_player_fld](lua/classes/_player_fld.md)
@@ -944,6 +1022,10 @@
 > [_portal_dummy](lua/classes/_portal_dummy.md)
  
 > [_portal_fld](lua/classes/_portal_fld.md)
+ 
+> [_quest_check_result](lua/classes/_quest_check_result.md)
+ 
+> [_quest_check_result___node](lua/classes/_quest_check_result___node.md)
  
 > [_quest_fail_condition](lua/classes/_quest_fail_condition.md)
  
@@ -978,8 +1060,6 @@
 > [_worlddb_sf_delay_info___mas_list](lua/classes/_worlddb_sf_delay_info___mas_list.md)
  
 > [cStaticMember_Player](lua/classes/cStaticMember_Player.md)
- 
-> [effect_parameter____param_data](lua/classes/effect_parameter____param_data.md)
  
 > [sell_info](lua/classes/sell_info.md)
  

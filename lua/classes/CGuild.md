@@ -32,13 +32,15 @@
  
 > `int` m_nMemberNum
  
-> `struct` [_guild_member_info](lua/classes/_guild_member_info.md)* m_MemberData_get(`int`)
+> `struct` [_guild_member_info](lua/classes/_guild_member_info.md)* m_MemberData
  
-> `struct` [_guild_member_info](lua/classes/_guild_member_info.md)* m_pGuildCommittee_get(`int`)
+> `struct` [_guild_member_info](lua/classes/_guild_member_info.md)* m_pGuildCommittee_get(`unsigned __int64`)
+ 
+> `void` m_pGuildCommittee_set(`unsigned __int64`,`struct` [_guild_member_info](lua/classes/_guild_member_info.md) *)
  
 > `int` m_nApplierNum
  
-> `struct` [_guild_applier_info](lua/classes/_guild_applier_info.md)* m_ApplierData_get(`int`)
+> `struct` [_guild_applier_info](lua/classes/_guild_applier_info.md)* m_ApplierData_get(`unsigned __int64`)
  
 > `bool` m_bNowProcessSgtMter
  
@@ -70,7 +72,7 @@
  
 > `int` m_nIOMoneyHistoryNum
  
-> `struct` [_io_money_data](lua/classes/_io_money_data.md)* m_IOMoneyHistory_get(`int`)
+> `struct` [_io_money_data](lua/classes/_io_money_data.md)* m_IOMoneyHistory_get(`unsigned __int64`)
  
 > `bool` m_bDBWait
  

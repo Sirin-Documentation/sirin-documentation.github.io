@@ -18,9 +18,9 @@
  
 > `unsigned char` m_byMasterRaceCode
  
-> `int` m_nDefPart_get(`int`)
+> `int` m_nDefPart_get(`unsigned __int64`)
  
-> `void` m_nDefPart_set(`int`,`int`)
+> `void` m_nDefPart_set(`unsigned __int64`,`int`)
  
 > `int` m_nOldRate
  

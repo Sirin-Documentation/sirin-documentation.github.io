@@ -20,7 +20,7 @@
  
 > `int` m_bCompQuestType
  
-> `struct` [_action_node](lua/classes/_action_node.md)* m_ActionNode_get(`int`)
+> `struct` [_action_node](lua/classes/_action_node.md)* m_ActionNode_get(`unsigned __int64`)
  
 > `int` m_nMaxLevel
  
@@ -36,9 +36,9 @@
  
 > `int` m_bSelectConsITMenual
  
-> `struct` [_quest_reward_item](lua/classes/_quest_reward_item.md)* m_RewardItem_get(`int`)
+> `struct` [_quest_reward_item](lua/classes/_quest_reward_item.md)* m_RewardItem_get(`unsigned __int64`)
  
-> `struct` [_quest_reward_mastery](lua/classes/_quest_reward_mastery.md)* m_RewardMastery_get(`int`)
+> `struct` [_quest_reward_mastery](lua/classes/_quest_reward_mastery.md)* m_RewardMastery_get(`unsigned __int64`)
  
 > `const` `char`* m_strConsSkillCode
  
@@ -48,13 +48,15 @@
  
 > `int` m_nConsForceCnt
  
-> `const` `char`* m_strLinkQuest_get(`int`)
+> `const` `char`* m_strLinkQuest_get(`unsigned __int64`)
+ 
+> `void` m_strLinkQuest_set(`unsigned __int64`,`const` `char` *)
  
 > `int` m_nLinkQuestGroupID
  
 > `int` m_bFailCheck
  
-> `struct` [_quest_fail_condition](lua/classes/_quest_fail_condition.md)* m_QuestFailCond_get(`int`)
+> `struct` [_quest_fail_condition](lua/classes/_quest_fail_condition.md)* m_QuestFailCond_get(`unsigned __int64`)
  
 > `const` `char`* m_strFailBriefCode
  

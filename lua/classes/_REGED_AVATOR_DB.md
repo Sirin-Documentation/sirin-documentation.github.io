@@ -20,11 +20,11 @@
  
 > `unsigned int` m_dwBaseShape
  
-> `struct` [_EQUIPKEY](lua/classes/_EQUIPKEY.md)* m_EquipKey_get(`int`)
+> `struct` [_EQUIPKEY](lua/classes/_EQUIPKEY.md)* m_EquipKey_get(`unsigned __int64`)
  
-> `unsigned char` m_byEquipLv_get(`int`)
+> `unsigned char` m_byEquipLv_get(`unsigned __int64`)
  
-> `void` m_byEquipLv_set(`int`,`unsigned char`)
+> `void` m_byEquipLv_set(`unsigned __int64`,`unsigned char`)
  
 > `unsigned int` m_dwLastConnTime
  

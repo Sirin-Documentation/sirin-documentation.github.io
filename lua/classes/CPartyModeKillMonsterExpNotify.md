@@ -8,5 +8,5 @@
  
 > `unsigned char` m_byMemberCnt
  
-> `const` `struct` `CPartyModeKillMonsterExpNotify__CExpInfo`* m_kInfo_get(`int`)
+> `struct` `CPartyModeKillMonsterExpNotify__CExpInfo`* m_kInfo_get(`unsigned __int64`)
  

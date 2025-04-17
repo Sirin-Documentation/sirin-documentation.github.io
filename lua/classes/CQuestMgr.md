@@ -14,6 +14,8 @@
  
 > `bool` _CheckCondition(`struct` [_happen_event_condition_node](lua/classes/_happen_event_condition_node.md) *)
  
+> `bool` DeleteQuestItem(`const` `char` *,`unsigned short`)
+ 
 ## Members
  
 > `class` [CPlayer](lua/classes/CPlayer.md)* m_pMaster
@@ -22,7 +24,7 @@
  
 > `struct` [_happen_event_cont](lua/classes/_happen_event_cont.md) m_LastHappenEvent
  
-> `struct` [_happen_event_cont](lua/classes/_happen_event_cont.md)* m_pTempHappenEvent_get(`int`)
+> `struct` [_happen_event_cont](lua/classes/_happen_event_cont.md)* m_pTempHappenEvent_get(`unsigned __int64`)
  
 > `unsigned int` m_dwOldTimeoutChecktime
  

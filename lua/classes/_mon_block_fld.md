@@ -6,7 +6,7 @@
  
 > `unsigned int` m_dwDummyNum
  
-> `struct` [_mon_block_fld___dummy_info](lua/classes/_mon_block_fld___dummy_info.md)* m_DummyInfo_get(`int`)
+> `struct` [_mon_block_fld___dummy_info](lua/classes/_mon_block_fld___dummy_info.md)* m_DummyInfo_get(`unsigned __int64`)
  
 > `int` m_nMin
  

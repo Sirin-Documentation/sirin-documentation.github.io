@@ -2,7 +2,7 @@
  
 ## Members
  
-> `const` `char`* m_strStore_NPCcode
+> `const` `char`* m_strItemCode
  
 > `int` m_nMaxCount
  

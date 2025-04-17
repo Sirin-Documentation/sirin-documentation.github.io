@@ -14,5 +14,7 @@
  
 > `double` dLeftGold
  
-> `unsigned char` byDate_get(`int`)
+> `unsigned char` byDate_get(`unsigned __int64`)
+ 
+> `void` byDate_set(`unsigned __int64`,`unsigned char`)
  

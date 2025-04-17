@@ -16,9 +16,9 @@
  
 > `double` dPvpCash
  
-> `unsigned int` dwKillerSerial_get(`int`)
+> `unsigned int` dwKillerSerial_get(`unsigned __int64`)
  
-> `void` dwKillerSerial_set(`int`,`unsigned int`)
+> `void` dwKillerSerial_set(`unsigned __int64`,`unsigned int`)
  
 > `unsigned char` byContHaveCash
  

@@ -38,7 +38,9 @@
  
 > `int` m_nPotionLim
  
-> `int` m_nMapCode_get(`int`)
+> `int` m_nMapCode_get(`unsigned __int64`)
+ 
+> `void` m_nMapCode_set(`unsigned __int64`,`int`)
  
 > `int` m_nMoney
  

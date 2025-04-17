@@ -16,7 +16,7 @@
  
 > `int` m_nUpLevelLim
  
-> `struct` [_consume_item_list](lua/classes/_consume_item_list.md)* m_ConsumeItemList_get(`int`)
+> `struct` [_consume_item_list](lua/classes/_consume_item_list.md)* m_ConsumeItemList_get(`unsigned __int64`)
  
 > `int` m_nKind
  

@@ -12,7 +12,7 @@
  
 > `int` m_nDamagedObjNum
  
-> `struct` [_be_damaged_char](lua/classes/_be_damaged_char.md)* m_DamList_get(`int`)
+> `struct` [_be_damaged_char](lua/classes/_be_damaged_char.md)* m_DamList_get(`unsigned __int64`)
  
 > `bool` m_bFailure
  

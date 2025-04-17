@@ -24,15 +24,15 @@
  
 > `int` m_AroundNum
  
-> `class` [CCharacter](lua/classes/CCharacter.md)* m_AroundSlot_get(`int`)
+> `class` [CCharacter](lua/classes/CCharacter.md)* m_AroundSlot_get(`unsigned __int64`)
  
-> `void` m_AroundSlot_set(`int`,`class` [CCharacter](lua/classes/CCharacter.md) *)
+> `void` m_AroundSlot_set(`unsigned __int64`,`class` [CCharacter](lua/classes/CCharacter.md) *)
  
 > `unsigned int` m_dwNextGenAttackTime
  
-> `struct` [_sf_continous](lua/classes/_sf_continous.md)* m_SFCont_get(`int`,`int`)
+> `struct` [_sf_continous](lua/classes/_sf_continous.md)* m_SFCont_get(`unsigned __int64`,`unsigned __int64`)
  
-> `struct` [_sf_continous](lua/classes/_sf_continous.md)* m_SFContAura_get(`int`,`int`)
+> `struct` [_sf_continous](lua/classes/_sf_continous.md)* m_SFContAura_get(`unsigned __int64`,`unsigned __int64`)
  
 > `unsigned int` m_dwEffSerialCounter
  

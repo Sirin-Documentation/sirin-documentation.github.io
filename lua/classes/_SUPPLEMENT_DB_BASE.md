@@ -22,9 +22,9 @@
  
 > `unsigned int` dwLastResetDate
  
-> `unsigned int` dwActionPoint_get(`int`)
+> `unsigned int` dwActionPoint_get(`unsigned __int64`)
  
-> `void` dwActionPoint_set(`int`,`unsigned int`)
+> `void` dwActionPoint_set(`unsigned __int64`,`unsigned int`)
  
 > `unsigned __int64` dwGuildEntryDelay
  

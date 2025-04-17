@@ -1,5 +1,7 @@
 # CLevel
  
+## Functions
+ 
 > `int` GetNextYposForServerFar(`struct` `lua_State` *)
  
 > `int` GetNextYposFarProgress(`struct` `lua_State` *)
@@ -10,7 +12,11 @@
  
 > `const` `char`* mMapName
  
-> `float` mCamPos_get(`int`)
+> `float` mCamPos_x
+ 
+> `float` mCamPos_y
+ 
+> `float` mCamPos_z
  
 > `struct` `D3DXMATRIX` mMatView
  

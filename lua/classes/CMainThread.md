@@ -4,6 +4,8 @@
  
 > `struct` `_SRAND` m_Rand
  
+> `struct` `_WAIT_ENTER_ACCOUNT`* m_WaitEnterAccount_get(`unsigned __int64`)
+ 
 > `class` `CRFWorldDatabase`* m_pWorldDB
  
 > `class` `CFrameRate` m_MainFrameRate
@@ -44,19 +46,15 @@
  
 > `const` `char`* m_wszMainGreetingMsg
  
-> `const` `char`* m_wszRaceGreetingMsg_b
+> `const` `char`* m_wszRaceGreetingMsg_get(`unsigned __int64`)
  
-> `const` `char`* m_wszRaceGreetingMsg_c
- 
-> `const` `char`* m_wszRaceGreetingMsg_a
+> `void` m_wszRaceGreetingMsg_set(`unsigned __int64`,`const` `char` *)
  
 > `const` `char`* m_wszGMName
  
-> `const` `char`* m_wszBossName_b
+> `const` `char`* m_wszBossName_get(`unsigned __int64`)
  
-> `const` `char`* m_wszBossName_c
- 
-> `const` `char`* m_wszBossName_a
+> `void` m_wszBossName_set(`unsigned __int64`,`const` `char` *)
  
 > `bool` m_bAwayPartyConsumeItem
  
@@ -130,11 +128,11 @@
  
 > `class` [CItemUpgradeTable](lua/classes/CItemUpgradeTable.md) m_tblItemUpgrade
  
-> `class` [CRecordData](lua/classes/CRecordData.md)* m_tblItemData_get(`enum TBL_CODE`)
+> `class` [CRecordData](lua/classes/CRecordData.md)* m_tblItemData_get(`unsigned __int64`)
  
-> `class` [CRecordData](lua/classes/CRecordData.md)* m_tblEffectData_get(`enum EFF_CODE`)
+> `class` [CRecordData](lua/classes/CRecordData.md)* m_tblEffectData_get(`unsigned __int64`)
  
-> `class` [CRecordData](lua/classes/CRecordData.md)* m_tblUnitPart_get(`enum UNIT_PART`)
+> `class` [CRecordData](lua/classes/CRecordData.md)* m_tblUnitPart_get(`unsigned __int64`)
  
 > `class` [CRecordData](lua/classes/CRecordData.md) m_tblUnitBullet
  
@@ -234,6 +232,8 @@
  
 > `class` `CMyTimer` m_tmCheckForceClose
  
+> `unsigned int` m_dwStartNPCQuestCnt_get(`unsigned __int64`)
+ 
 > `struct` `_mob_message`* m_MobMessage
  
 > `int` m_nLimitPlayerLevel
@@ -250,9 +250,9 @@
  
 > `unsigned char` m_byPlayerInteg
  
-> `unsigned int` m_dwGuildPower_get(`int`)
+> `unsigned int` m_dwGuildPower_get(`unsigned __int64`)
  
-> `void` m_dwGuildPower_set(`int`,`unsigned int`)
+> `void` m_dwGuildPower_set(`unsigned __int64`,`unsigned int`)
  
 > `unsigned int` m_dwServerResetToken
  

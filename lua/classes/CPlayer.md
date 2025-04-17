@@ -78,7 +78,9 @@
  
 > `void` SendMsg_FanfareItem(`unsigned char`,`struct` [_STORAGE_LIST___db_con](lua/classes/_STORAGE_LIST___db_con.md) *,`class` [CItemBox](lua/classes/CItemBox.md) *)
  
-> `bool` Emb_CheckActForQuest(`class` [CPlayer](lua/classes/CPlayer.md) *,`int`,`const` `char` *,`unsigned short`,`bool`)
+> `bool` Emb_CheckActForQuest(`int`,`const` `char` *,`unsigned short`,`bool`)
+ 
+> `void` Emb_CheckActForQuestParty(`int`,`const` `char` *,`unsigned short`)
  
 > `void` SendMsg_InsertItemInform(`unsigned char`,`struct` [_STORAGE_LIST___db_con](lua/classes/_STORAGE_LIST___db_con.md) *)
  
@@ -340,29 +342,29 @@
  
 > `int` m_nAddDfnMstByClass
  
-> `int` m_nAddPointByClass_get(`int`)
+> `int` m_nAddPointByClass_get(`unsigned __int64`)
  
-> `void` m_nAddPointByClass_set(`int`,`int`)
+> `void` m_nAddPointByClass_set(`unsigned __int64`,`int`)
  
-> `int` m_nMaxPoint_get(`int`)
+> `int` m_nMaxPoint_get(`unsigned __int64`)
  
-> `void` m_nMaxPoint_set(`int`,`int`)
+> `void` m_nMaxPoint_set(`unsigned __int64`,`int`)
  
-> `int` m_nTolValue_get(`int`)
+> `int` m_nTolValue_get(`unsigned __int64`)
  
-> `void` m_nTolValue_set(`int`,`int`)
+> `void` m_nTolValue_set(`unsigned __int64`,`int`)
  
 > `int` m_nMaxDP
  
-> `short` m_zLastTol_get(`int`)
+> `short` m_zLastTol_get(`unsigned __int64`)
  
-> `void` m_zLastTol_set(`int`,`short`)
+> `void` m_zLastTol_set(`unsigned __int64`,`short`)
  
 > `float` m_fEquipSpeed
  
-> `int` m_nOldPoint_get(`int`)
+> `int` m_nOldPoint_get(`unsigned __int64`)
  
-> `void` m_nOldPoint_set(`int`,`int`)
+> `void` m_nOldPoint_set(`unsigned __int64`,`int`)
  
 > `int` m_nOldMaxDP
  
@@ -402,7 +404,7 @@
  
 > `struct` [_UNIT_DB_BASE___LIST](lua/classes/_UNIT_DB_BASE___LIST.md)* m_pUsingUnit
  
-> `class` `CParkingUnit`* m_pParkingUnit
+> `class` [CParkingUnit](lua/classes/CParkingUnit.md)* m_pParkingUnit
  
 > `unsigned char` m_byUsingWeaponPart
  
@@ -438,7 +440,7 @@
  
 > `class` [CMapData](lua/classes/CMapData.md)* m_pBeforeDungeonMap
  
-> `struct` `_MEM_PAST_WHISPER`* m_PastWhiper_get(`int`)
+> `struct` `_MEM_PAST_WHISPER`* m_PastWhiper_get(`unsigned __int64`)
  
 > `unsigned int` m_dwContItemEffEndTime
  
@@ -458,7 +460,9 @@
  
 > `bool` m_bDownCheckEquipEffect
  
-> `unsigned char` m_byEffectEquipCode_get(`int`)
+> `unsigned char` m_byEffectEquipCode_get(`unsigned __int64`)
+ 
+> `void` m_byEffectEquipCode_set(`unsigned __int64`,`unsigned char`)
  
 > `unsigned char` m_byPosRaceTown
  
@@ -470,11 +474,13 @@
  
 > `struct` [CPlayer____target](lua/classes/CPlayer____target.md) m_TargetObject
  
-> `struct` [CPlayer____target](lua/classes/CPlayer____target.md)* m_GroupTargetObject_get(`int`)
+> `struct` [CPlayer____target](lua/classes/CPlayer____target.md)* m_GroupTargetObject_get(`unsigned __int64`)
  
 > `class` `CMyTimer` m_tmrGroupTargeting
  
-> `unsigned short` m_wPointRate_PartySend_get(`int`)
+> `unsigned short` m_wPointRate_PartySend_get(`unsigned __int64`)
+ 
+> `void` m_wPointRate_PartySend_set(`unsigned __int64`,`unsigned short`)
  
 > `bool` m_bMineMode
  
@@ -508,21 +514,21 @@
  
 > `int` m_nCashAmount
  
-> `float` m_fGroupMapPoint_get(`int`,`int`)
+> `float` m_fGroupMapPoint_get(`unsigned __int64`,`unsigned __int64`)
  
-> `void` m_fGroupMapPoint_set(`int`,`int`,`float`)
+> `void` m_fGroupMapPoint_set(`unsigned __int64`,`unsigned __int64`,`float`)
  
-> `unsigned char` m_byGroupMapPointMapCode_get(`int`)
+> `unsigned char` m_byGroupMapPointMapCode_get(`unsigned __int64`)
  
-> `void` m_byGroupMapPointMapCode_set(`int`,`unsigned char`)
+> `void` m_byGroupMapPointMapCode_set(`unsigned __int64`,`unsigned char`)
  
-> `unsigned short` m_wGroupMapPointLayerIndex_get(`int`)
+> `unsigned short` m_wGroupMapPointLayerIndex_get(`unsigned __int64`)
  
-> `void` m_wGroupMapPointLayerIndex_set(`int`,`unsigned short`)
+> `void` m_wGroupMapPointLayerIndex_set(`unsigned __int64`,`unsigned short`)
  
-> `unsigned int` m_dwLastGroupMapPointTime_get(`int`)
+> `unsigned int` m_dwLastGroupMapPointTime_get(`unsigned __int64`)
  
-> `void` m_dwLastGroupMapPointTime_set(`int`,`unsigned int`)
+> `void` m_dwLastGroupMapPointTime_set(`unsigned __int64`,`unsigned int`)
  
 > `class` [CPvpOrderView](lua/classes/CPvpOrderView.md) m_kPvpOrderView
  

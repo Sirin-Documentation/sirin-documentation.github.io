@@ -6,5 +6,7 @@
  
 > `int` m_nContParamIndex
  
-> `float` m_fContValue_get(`int`)
+> `float` m_fContValue_get(`unsigned __int64`)
+ 
+> `void` m_fContValue_set(`unsigned __int64`,`float`)
  

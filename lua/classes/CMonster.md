@@ -2,11 +2,21 @@
 
 ---@class (exact) CMonster: CCharacter
  
+> `unsigned int` m_nMove_State(`const` `class` [CMonster](lua/classes/CMonster.md) *)
+ 
+> `unsigned int` m_nCombat_State(`const` `class` [CMonster](lua/classes/CMonster.md) *)
+ 
+> `unsigned int` m_nEmotion_State(`const` `class` [CMonster](lua/classes/CMonster.md) *)
+ 
 > `int` GetCritical_Exception_Rate(`void`)
  
 > `int` GetViewAngleCap(`struct` `lua_State` *)
  
 > `bool` Destroy(`unsigned char`,`class` [CGameObject](lua/classes/CGameObject.md) *)
+ 
+> `int` UpdateLookAtPos(`struct` `lua_State` *)
+ 
+> `void` UpdateLookAtPos(`void`)
  
 ## Members
  
@@ -56,21 +66,15 @@
  
 > `struct` `MonsterSFContDamageToleracne` m_SFContDamageTolerance
  
-> `unsigned char` m_byCreateDate_get(`int`)
+> `unsigned char` m_byCreateDate_get(`unsigned __int64`)
  
-> `void` m_byCreateDate_set(`int`,`unsigned char`)
+> `void` m_byCreateDate_set(`unsigned __int64`,`unsigned char`)
  
 > `unsigned int` m_LifeMax
  
 > `unsigned int` m_LifeCicle
  
 > `unsigned int` m_nCommonStateChunk
- 
-> `unsigned int` m_nMove_State_get(`const` `class` [CMonster](lua/classes/CMonster.md) *))
- 
-> `unsigned int` m_nCombat_State_get(`const` `class` [CMonster](lua/classes/CMonster.md) *))
- 
-> `unsigned int` m_nEmotion_State_get(`const` `class` [CMonster](lua/classes/CMonster.md) *))
  
 > `struct` `EmotionPresentationChecker` m_EmotionPresentationCheck
  
@@ -92,13 +96,13 @@
  
 > `class` `CMonsterSkillPool` m_MonsterSkillPool
  
-> `int` m_DefPart_get(`int`)
+> `int` m_DefPar_get(`unsigned __int64`)
  
-> `void` m_DefPart_set(`int`,`int`)
+> `void` m_DefPar_set(`unsigned __int64`,`int`)
  
 > `int` m_nEventItemNum
  
-> `struct` `_event_loot_item`* m_eventItem_get(`int`)
+> `struct` `_event_loot_item`* m_eventItem_get(`unsigned __int64`)
  
 > `struct` `_event_respawn`* m_pEventRespawn
  

@@ -8,5 +8,7 @@
  
 > `int` _nMaxLv
  
-> `double` _pLimExp_get(`int`)
+> `double` _pLimExp_get(`unsigned __int64`)
+ 
+> `void` _pLimExp_set(`unsigned __int64`,`double`)
  

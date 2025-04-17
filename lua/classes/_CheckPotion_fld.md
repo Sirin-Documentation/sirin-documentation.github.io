@@ -10,5 +10,5 @@
  
 > `int` m_nContAreaType
  
-> `struct` [_CheckPotion_fld___CheckEffectCode](lua/classes/_CheckPotion_fld___CheckEffectCode.md)* m_CheckEffectCode_get(`int`)
+> `struct` [_CheckPotion_fld___CheckEffectCode](lua/classes/_CheckPotion_fld___CheckEffectCode.md)* m_CheckEffectCode_get(`unsigned __int64`)
  

@@ -12,5 +12,7 @@
  
 > `int` m_nLootListCount
  
-> `const` `char`* m_itmLootCodeKey_get(`int`)
+> `const` `char`* m_itmLootCodeKey_get(`unsigned __int64`)
+ 
+> `void` m_itmLootCodeKey_set(`unsigned __int64`,`const` `char` *)
  

@@ -20,7 +20,9 @@
  
 > `class` [CPartyPlayer](lua/classes/CPartyPlayer.md)* m_pPartyBoss
  
-> `class` [CPartyPlayer](lua/classes/CPartyPlayer.md)* m_pPartyMember_get(`int`)
+> `class` [CPartyPlayer](lua/classes/CPartyPlayer.md)* m_pPartyMember_get(`unsigned __int64`)
+ 
+> `void` m_pPartyMember_set(`unsigned __int64`,`class` [CPartyPlayer](lua/classes/CPartyPlayer.md) *)
  
 > `bool` m_bLock
  

@@ -30,9 +30,9 @@
  
 > `unsigned char` m_byMapCode
  
-> `short` m_zClassHistory_get(`int`)
+> `short` m_zClassHistory_get(`unsigned __int64`)
  
-> `void` m_zClassHistory_set(`int`,`short`)
+> `void` m_zClassHistory_set(`unsigned __int64`,`short`)
  
 > `unsigned int` m_dwClassInitCnt
  
@@ -76,17 +76,17 @@
  
 > `unsigned char` m_byMaxLevel
  
-> `unsigned int` m_dwPunishment_get(`int`)
+> `unsigned int` m_dwPunishment_get(`unsigned __int64`)
  
-> `void` m_dwPunishment_set(`int`,`unsigned int`)
+> `void` m_dwPunishment_set(`unsigned __int64`,`unsigned int`)
  
-> `unsigned int` m_dwElectSerial_get(`int`)
+> `unsigned int` m_dwElectSerial_get(`unsigned __int64`)
  
-> `void` m_dwElectSerial_set(`int`,`unsigned int`)
+> `void` m_dwElectSerial_set(`unsigned __int64`,`unsigned int`)
  
-> `unsigned int` m_dwRaceBattleRecord_get(`int`)
+> `unsigned int` m_dwRaceBattleRecord_get(`unsigned __int64`)
  
-> `void` m_dwRaceBattleRecord_set(`int`,`unsigned int`)
+> `void` m_dwRaceBattleRecord_set(`unsigned __int64`,`unsigned int`)
  
 > `double` m_dPvPPointLeak
  

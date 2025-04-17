@@ -6,5 +6,5 @@
  
 > `unsigned char` m_byUserNode
  
-> `struct` [CLootingMgr___list](lua/classes/CLootingMgr___list.md)* m_AtterList_get(`int`)
+> `struct` [CLootingMgr___list](lua/classes/CLootingMgr___list.md)* m_AtterList_get(`unsigned __int64`)
  

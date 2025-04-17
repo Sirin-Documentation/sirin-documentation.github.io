@@ -32,11 +32,11 @@
  
 > `struct` [__holy_keeper_data](lua/classes/__holy_keeper_data.md) m_HolyKeeperData
  
-> `struct` [__holy_stone_data](lua/classes/__holy_stone_data.md)* m_HolyStoneData_get(`int`)
+> `struct` [__holy_stone_data](lua/classes/__holy_stone_data.md)* m_HolyStoneData_get(`unsigned __int64`)
  
-> `unsigned int` m_dwCheckTime_get(`int`)
+> `unsigned int` m_dwCheckTime_get(`unsigned __int64`)
  
-> `void` m_dwCheckTime_set(`int`,`unsigned int`)
+> `void` m_dwCheckTime_set(`unsigned __int64`,`unsigned int`)
  
 > `class` [CHolyScheduleData](lua/classes/CHolyScheduleData.md) m_ScheculeData
  
@@ -46,7 +46,7 @@
  
 > `const` `char`* m_strHolyMental
  
-> `struct` [_QUEST_CASH](lua/classes/_QUEST_CASH.md)* m_cashQuest_get(`int`)
+> `struct` [_QUEST_CASH](lua/classes/_QUEST_CASH.md)* m_cashQuest_get(`unsigned __int64`)
  
 > `float` m_fKeeperHPRate
  
@@ -54,13 +54,15 @@
  
 > `int` m_nScheduleCodePre
  
-> `struct` [_QUEST_CASH_OTHER](lua/classes/_QUEST_CASH_OTHER.md)* m_cashQuestOther_get(`int`)
+> `struct` [_QUEST_CASH_OTHER](lua/classes/_QUEST_CASH_OTHER.md)* m_cashQuestOther_get(`unsigned __int64`)
  
-> `struct` [_portal_dummy](lua/classes/_portal_dummy.md)* m_pPortalDummy_get(`int`)
+> `struct` [_portal_dummy](lua/classes/_portal_dummy.md)* m_pPortalDummy_get(`unsigned __int64`)
  
-> `int` m_nRaceBattlePoint_get(`int`,`int`)
+> `void` m_pPortalDummy_set(`unsigned __int64`,`struct` [_portal_dummy](lua/classes/_portal_dummy.md) *)
  
-> `void` m_nRaceBattlePoint_set(`int`,`int`,`int`)
+> `int` m_nRaceBattlePoint_get(`unsigned __int64`,`unsigned __int64`)
+ 
+> `void` m_nRaceBattlePoint_set(`unsigned __int64`,`unsigned __int64`,`int`)
  
 > `unsigned char` m_byKeeperDestroyRace
  

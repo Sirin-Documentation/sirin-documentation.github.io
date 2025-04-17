@@ -8,7 +8,7 @@
  
 > `unsigned int` dwMaxUser_Hour
  
-> `const` `struct` [CGameStatistics___map](lua/classes/CGameStatistics___map.md)* MaxHourPerMap_Hour_get(`int`)
+> `struct` [CGameStatistics___map](lua/classes/CGameStatistics___map.md)* MaxHourPerMap_Hour_get(`unsigned __int64`)
  
 > `unsigned int` dwDropStdItem_Evt
  

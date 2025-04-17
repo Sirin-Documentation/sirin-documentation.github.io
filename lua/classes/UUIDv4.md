@@ -12,5 +12,5 @@
  
 > `void` rand(`void`)
  
-> `class` `std__basic_string<char,struct std__char_traits<char>,class std__allocator<char> >` str(`const` `class` [UUIDv4](lua/classes/UUIDv4.md) *)
+> `int` str(`struct` `lua_State` *)
  

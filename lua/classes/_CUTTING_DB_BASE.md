@@ -6,5 +6,5 @@
  
 > `unsigned char` m_byLeftNum
  
-> `struct` [_CUTTING_DB_BASE___LIST](lua/classes/_CUTTING_DB_BASE___LIST.md)* m_List_get(`int`)
+> `struct` [_CUTTING_DB_BASE___LIST](lua/classes/_CUTTING_DB_BASE___LIST.md)* m_List_get(`unsigned __int64`)
  

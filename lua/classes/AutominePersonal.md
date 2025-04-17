@@ -46,9 +46,9 @@
  
 > `struct` `_personal_amine_mineore_zocl` m_changed_packet
  
-> `unsigned int` m_dwMineCount_get(`int`)
+> `unsigned int` m_dwMineCount_get(`unsigned __int64`)
  
-> `void` m_dwMineCount_set(`int`,`unsigned int`)
+> `void` m_dwMineCount_set(`unsigned __int64`,`unsigned int`)
  
 > `struct` `_qry_case_update_mineore` m_update_mineore_old
  

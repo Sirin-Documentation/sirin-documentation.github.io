@@ -36,11 +36,15 @@
  
 > `unsigned char` m_sStartMapCode
  
-> `float` m_fStartPos_get(`int`)
+> `float` m_fStartPos_get(`unsigned __int64`)
+ 
+> `void` m_fStartPos_set(`unsigned __int64`,`float`)
  
 > `unsigned char` m_byDftPart_Face
  
-> `unsigned char` m_byDftPart_get(`int`)
+> `unsigned char` m_byDftPart_get(`unsigned __int64`)
+ 
+> `void` m_byDftPart_set(`unsigned __int64`,`unsigned char`)
  
 > `unsigned char` m_byUseBagNum
  

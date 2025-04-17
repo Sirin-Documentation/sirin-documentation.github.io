@@ -8,9 +8,9 @@
  
 > `unsigned short` wIndex
  
-> `unsigned short` wNum_get(`int`)
+> `unsigned short` wNum_get(`unsigned __int64`)
  
-> `void` wNum_set(`int`,`unsigned short`)
+> `void` wNum_set(`unsigned __int64`,`unsigned short`)
  
 > `unsigned int` dwPassSec
  

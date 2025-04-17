@@ -14,7 +14,9 @@
  
 > `int` m_nUpGradeLv
  
-> `const` `char`* m_strCh_Class_get(`int`)
+> `const` `char`* m_strCh_Class_get(`unsigned __int64`)
+ 
+> `void` m_strCh_Class_set(`unsigned __int64`,`const` `char` *)
  
 > `const` `char`* m_strTemp
  
@@ -24,7 +26,9 @@
  
 > `int` m_nConLim
  
-> `const` `char`* m_strLinkClassSkill_get(`int`)
+> `const` `char`* m_strLinkClassSkill_get(`unsigned __int64`)
+ 
+> `void` m_strLinkClassSkill_set(`unsigned __int64`,`const` `char` *)
  
 > `int` m_bUnitUsable
  
@@ -52,5 +56,5 @@
  
 > `int` m_bSelectRewardItem
  
-> `struct` [_class_fld___bns_item](lua/classes/_class_fld___bns_item.md)* m_DefaultItem_get(`int`)
+> `struct` [_class_fld___bns_item](lua/classes/_class_fld___bns_item.md)* m_DefaultItem_get(`unsigned __int64`)
  

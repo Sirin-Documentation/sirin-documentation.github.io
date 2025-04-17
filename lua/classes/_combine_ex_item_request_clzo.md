@@ -6,7 +6,7 @@
  
 > `unsigned char` byCombineSlotNum
  
-> `struct` [_combine_ex_item_request_clzo___list](lua/classes/_combine_ex_item_request_clzo___list.md)* iCombineSlot_get(`int`)
+> `struct` [_combine_ex_item_request_clzo___list](lua/classes/_combine_ex_item_request_clzo___list.md)* iCombineSlot_get(`unsigned __int64`)
  
 > `int` nUseNpcLink
  

@@ -24,5 +24,7 @@
  
 > `int` m_nPotionLim
  
-> `int` m_nRacePvpUsable_get(`int`)
+> `int` m_nRacePvpUsable_get(`unsigned __int64`)
+ 
+> `void` m_nRacePvpUsable_set(`unsigned __int64`,`int`)
  

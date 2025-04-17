@@ -56,7 +56,7 @@
  
 > `int` m_nEffectDataNum
  
-> `struct` [EffectData](lua/classes/EffectData.md)* m_EffectData_get(`int`)
+> `struct` [EffectData](lua/classes/EffectData.md)* m_EffectData_get(`unsigned __int64`)
  
 > `int` m_bSell
  

@@ -6,5 +6,5 @@
  
 > `int` m_nEevntNo
  
-> `struct` [_happen_event_node](lua/classes/_happen_event_node.md)* m_Node_get(`int`)
+> `struct` [_happen_event_node](lua/classes/_happen_event_node.md)* m_Node_get(`unsigned __int64`)
  

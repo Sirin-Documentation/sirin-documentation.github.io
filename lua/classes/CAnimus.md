@@ -54,15 +54,15 @@
  
 > `float` m_Mightiness
  
-> `int` m_DefPart_get(`int`)
+> `int` m_DefPart_get(`unsigned __int64`)
  
-> `void` m_DefPart_set(`int`,`int`)
+> `void` m_DefPart_set(`unsigned __int64`,`int`)
  
 > `unsigned int` m_dwAIMode
  
 > `class` [CCharacter](lua/classes/CCharacter.md)* m_pTarget
  
-> `class` `CAITimer`* m_AITimer_get(`int`)
+> `class` `CAITimer`* m_AITimer_get(`unsigned __int64`)
  
-> `struct` `SKILL`* m_Skill_get(`int`)
+> `struct` `SKILL`* m_Skill_get(`unsigned __int64`)
  

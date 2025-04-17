@@ -12,9 +12,11 @@
  
 > `bool` m_bIsLive
  
-> `float` m_fDropPos_get(`int`)
+> `float` m_fDropPos_x
  
-> `void` m_fDropPos_set(`int`,`float`)
+> `float` m_fDropPos_y
+ 
+> `float` m_fDropPos_z
  
 > `unsigned int` m_dwStartTime
  
@@ -30,9 +32,9 @@
  
 > `unsigned char` m_byBombState
  
-> `const` `struct` [_be_damaged_player](lua/classes/_be_damaged_player.md)* m_DamList_get(`int`)
+> `struct` [_be_damaged_player](lua/classes/_be_damaged_player.md)* m_DamList_get(`unsigned __int64`)
  
-> `const` `struct` [_be_damaged_char](lua/classes/_be_damaged_char.md)* m_EffList_get(`int`)
+> `struct` [_be_damaged_char](lua/classes/_be_damaged_char.md)* m_EffList_get(`unsigned __int64`)
  
 > `int` m_nDamagedObjNum
  

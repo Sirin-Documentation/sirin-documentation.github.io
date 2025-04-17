@@ -16,7 +16,7 @@
  
 > `unsigned char` m_bySelectItemCount
  
-> `struct` [_ITEMCOMBINE_DB_BASE___LIST](lua/classes/_ITEMCOMBINE_DB_BASE___LIST.md)* m_List_get(`int`)
+> `struct` [_ITEMCOMBINE_DB_BASE___LIST](lua/classes/_ITEMCOMBINE_DB_BASE___LIST.md)* m_List_get(`unsigned __int64`)
  
 > `unsigned int` m_dwResultEffectType
  

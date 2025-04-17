@@ -8,17 +8,17 @@
  
 > `unsigned int` dwGauge
  
-> `unsigned char` byPart_get(`int`)
+> `unsigned char` byPart_get(`unsigned __int64`)
  
-> `void` byPart_set(`int`,`unsigned char`)
+> `void` byPart_set(`unsigned __int64`,`unsigned char`)
  
-> `unsigned int` dwBullet_get(`int`)
+> `unsigned int` dwBullet_get(`unsigned __int64`)
  
-> `void` dwBullet_set(`int`,`unsigned int`)
+> `void` dwBullet_set(`unsigned __int64`,`unsigned int`)
  
-> `unsigned int` dwSpare_get(`int`)
+> `unsigned int` dwSpare_get(`unsigned __int64`)
  
-> `void` dwSpare_set(`int`,`unsigned int`)
+> `void` dwSpare_set(`unsigned __int64`,`unsigned int`)
  
 > `int` nPullingFee
  

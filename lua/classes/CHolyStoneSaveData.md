@@ -32,13 +32,13 @@
  
 > `int` m_eDestroyerState
  
-> `int` m_nStoneHP_Buffer_get(`int`)
+> `int` m_nStoneHP_Buffer_get(`unsigned __int64`)
  
-> `void` m_nStoneHP_Buffer_set(`int`,`int`)
+> `void` m_nStoneHP_Buffer_set(`unsigned __int64`,`int`)
  
-> `unsigned int` m_dwTerm_get(`int`)
+> `unsigned int` m_dwTerm_get(`unsigned __int64`)
  
-> `void` m_dwTerm_set(`int`,`unsigned int`)
+> `void` m_dwTerm_set(`unsigned __int64`,`unsigned int`)
  
 > `unsigned int` m_dwOreRemainAmount
  

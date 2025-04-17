@@ -8,5 +8,5 @@
  
 > `int` m_nResNum
  
-> `unsigned short` m_pwResIndex_get(`int`)
+> `unsigned short` m_pwResIndex_get(`unsigned __int64`)
  

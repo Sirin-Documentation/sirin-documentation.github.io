@@ -14,7 +14,9 @@
  
 > `int` m_nAcepProDen
  
-> `struct` [_happen_event_condition_node](lua/classes/_happen_event_condition_node.md)* m_CondNode_get(`int`)
+> `struct` [_happen_event_condition_node](lua/classes/_happen_event_condition_node.md)* m_CondNode_get(`unsigned __int64`)
  
-> `const` `char`* m_strLinkQuest_get(`int`)
+> `const` `char`* m_strLinkQuest_get(`unsigned __int64`)
+ 
+> `void` m_strLinkQuest_set(`unsigned __int64`,`const` `char` *)
  

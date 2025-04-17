@@ -18,7 +18,7 @@
  
 ## Members
  
-> `struct` `_effect_parameter____param_data`* m_pDataParam
+> `struct` [_effect_parameter____param_data](lua/classes/_effect_parameter____param_data.md)* m_pDataParam
  
 > `bool` m_bLock
  

@@ -100,7 +100,9 @@
  
 > `float` m_fWindTol
  
-> `const` `char`* m_strSPCode_get(`int`)
+> `const` `char`* m_strSPCode_get(`unsigned __int64`)
+ 
+> `void` m_strSPCode_set(`unsigned __int64`,`const` `char` *)
  
 > `float` m_fForceLevel
  
@@ -182,7 +184,7 @@
  
 > `int` m_nAsitType
  
-> `struct` [_monster_fld____child_mon](lua/classes/_monster_fld____child_mon.md)* m_Child_get(`int`)
+> `struct` [_monster_fld____child_mon](lua/classes/_monster_fld____child_mon.md)* m_Child_get(`unsigned __int64`)
  
 > `float` m_fEmoType
  
@@ -240,7 +242,7 @@
  
 > `float` m_fAsitReqSteCopChatProb
  
-> `struct` [_monster_fld___EmotionPresentation](lua/classes/_monster_fld___EmotionPresentation.md)* m_EmotionChecker_get(`int`)
+> `struct` [_monster_fld___EmotionPresentation](lua/classes/_monster_fld___EmotionPresentation.md)* m_EmotionChecker_get(`unsigned __int64`)
  
 > `int` m_nAttEffType
  

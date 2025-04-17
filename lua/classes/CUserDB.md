@@ -54,15 +54,17 @@
  
 > `unsigned char` m_byNameLen
  
-> `const` `struct` [_REGED](lua/classes/_REGED.md)* m_RegedList_get(`int`)
+> `struct` [_REGED](lua/classes/_REGED.md)* m_RegedList_get(`unsigned __int64`)
  
 > `struct` [_AVATOR_DATA](lua/classes/_AVATOR_DATA.md) m_AvatorData
  
 > `struct` [_AVATOR_DATA](lua/classes/_AVATOR_DATA.md) m_AvatorData_bk
  
-> `const` `struct` `_NOT_ARRANGED_AVATOR_DB`* m_NotArrangedChar_get(`int`)
+> `struct` `_NOT_ARRANGED_AVATOR_DB`* m_NotArrangedChar_get(`unsigned __int64`)
  
-> `const` `unsigned int`* m_dwArrangePassCase0_get(`int`)
+> `unsigned int` m_dwArrangePassCase0_get(`unsigned __int64`)
+ 
+> `void` m_dwArrangePassCase0_set(`unsigned __int64`,`unsigned int`)
  
 > `bool` m_bActive
  
