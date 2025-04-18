@@ -48,6 +48,8 @@ local function autoInit()
 
         table.insert(SirinLua.onThreadBegin, function() _G[moduleName].onThreadBegin() end)
         table.insert(SirinLua.onThreadEnd, function() _G[moduleName].onThreadEnd() end)
+    else
+        _G[moduleName] = script -- On reload 
     end
 
 	-- Release any hooks already set (Used when reloading script)
@@ -137,18 +139,21 @@ function script.onThreadEnd()
 -- your optional save state routine here
 end
 
--- hooks and thread routine must be declared above this line
-
 local function autoInit()
-if not _G[moduleName] then -- one time initialization during Lua thread life
-_G[moduleName] = script -- bind your script to a global variable. Variable name must be unique.
+    if not _G[moduleName] then
+        _G[moduleName] = script -- bind your script to a global variable. moduleName name must be unique.
 
-table.insert(SirinLua.onThreadBegin, function() _G[moduleName].onThreadBegin() end)
-table.insert(SirinLua.onThreadEnd, function() _G[moduleName].onThreadEnd() end)
-end
+        table.insert(SirinLua.onThreadBegin, function() _G[moduleName].onThreadBegin() end)
+        table.insert(SirinLua.onThreadEnd, function() _G[moduleName].onThreadEnd() end)
+    else
+        _G[moduleName] = script -- On reload 
+    end
 
-SirinLua.HookMgr.releaseHookByUID(script.m_strUUID)
-SirinLua.HookMgr.addHook("CPlayer__pc_NewPosStart", HOOK_POS.after_event, script.m_strUUID, script.CPlayer__pc_NewPosStart)
+    -- Release Hooks (Used when reloading)
+    SirinLua.HookMgr.releaseHookByUID(script.m_strUUID)
+
+    -- Add hooks
+    SirinLua.HookMgr.addHook("CPlayer__pc_NewPosStart", HOOK_POS.after_event, script.m_strUUID, script.CPlayer__pc_NewPosStart)
 end
 
 autoInit()
