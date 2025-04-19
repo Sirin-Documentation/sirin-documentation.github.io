@@ -63,6 +63,60 @@ function combineData.init()
 
 ***
 
+## Combine Reloading
+
+Combinations can be reloaded either by restarting the lua thread `%restart lua thread sirin.guard.mainThread` or reloading just the combine(s) [Scripted GM Commands](gmcommandsscripted.md#gm-commands-scripted-sirin-040)
+
+Add the following to your GM Commands `sirin-lua\threads\main\ReloadableScripts\GMCommands\SirinCommands.lua`
+
+| Command | FileName | File to Reload |
+|---|---|---|
+| `%combine reload` | "None" | Reloads All Files in `sirin-lua/threads/main/ReloadableScripts/CombineEx/` |
+| `%combine reload socket_extender` | socket_extender | `sirin-lua/threads/main/ReloadableScripts/CombineEx/socket_extender.lua` |
+| `%combine reload skins` | skins | `sirin-lua/threads/main/ReloadableScripts/CombineEx/skins.lua` |
+
+```lua
+{ "combine reload", "111100", "111",
+        function (pPlayer)
+            if Sirin.mainThread.getCheatWordNum() < 1 then
+                return CombineExMgr.loadScripts()
+            else
+                local strCombine = Sirin.mainThread.getCheatWord(0)
+                local f, err = loadfile(".\\sirin-lua\\threads\\main\\ReloadableScripts\\CombineEx\\" .. strCombine .. ".lua")
+
+                if not f then
+                    print(err)
+                    return false
+                end
+
+                local status, ret = pcall(f)
+
+                if not status then
+                    print(ret)
+                    return false
+                end
+
+                if type(ret) == 'table' then
+                    for k, v in pairs(ret) do
+						if v.init then
+						v.init()
+						CombineExMgr.m_Combines[k] = v
+						else
+						return false
+						end
+					end
+                else
+                    return false
+                end
+            end
+
+            return true
+        end
+}, -- dont forget separating comma
+```
+
+***
+
 ## Example (Reskinable Items)
 
 With the example for scripted item combinations, The ability to reskin items was also added

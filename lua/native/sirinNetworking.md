@@ -1,15 +1,15 @@
-# sirinNetworking (netMgr)
+# sirinNetworking (NetMgr)
 ### Functions
  
  ---
 
-> netMgr.privateChatMsg(`pPlayer`, `Msg`, `optMsgType`, `optColor`)
+> NetMgr.privateChatMsg(`pPlayer`, `Msg`, `optMsgType`, `optColor`)
 
  ```lua
 local message = { 
 	default = "Private message",
 }
-netMgr.privateChatMsg(pPlayer, message, CHAT_TYPE.System, 0xFFFF0000)
+NetMgr.privateChatMsg(pPlayer, message, CHAT_TYPE.System, 0xFFFF0000)
 
 ```
 `pPlayer` - Player to send message to \
@@ -30,13 +30,13 @@ netMgr.privateChatMsg(pPlayer, message, CHAT_TYPE.System, 0xFFFF0000)
 
 ---
 
-> netMgr.SendGlobalChatData(`Msg`, `optMsgType`, `optAnnounceType`, `optRace`, `optColor`)
+> NetMgr.SendGlobalChatData(`Msg`, `optMsgType`, `optAnnounceType`, `optRace`, `optColor`)
 
  ```lua
 local announceMsg = { 
 	default = "Global Message",
 }
-netMgr.SendGlobalChatData(announceMsg, CHAT_TYPE.System, ANN_TYPE.mid3, nil, 0xFF00FF00)
+NetMgr.SendGlobalChatData(announceMsg, CHAT_TYPE.System, ANN_TYPE.mid3, nil, 0xFF00FF00)
 
 ```
 
@@ -57,7 +57,7 @@ netMgr.SendGlobalChatData(announceMsg, CHAT_TYPE.System, ANN_TYPE.mid3, nil, 0xF
 
 ---
 
-> netMgr.alterMoneyInform(`pPlayer`, `dwCurrencyType`, `nAlter`)
+> NetMgr.alterMoneyInform(`pPlayer`, `dwCurrencyType`, `nAlter`)
 
 `pPlayer` - Player to send alter currency message \
 `dwCurrencyType` - Currency type to display being altered \
@@ -74,21 +74,21 @@ netMgr.SendGlobalChatData(announceMsg, CHAT_TYPE.System, ANN_TYPE.mid3, nil, 0xF
 
 ### Alias functions
 
-> netMgr.globalChatMsg(Msg, optMsgType)
+> NetMgr.globalChatMsg(Msg, optMsgType)
 
-> netMgr.bellatoChatMsg(Msg, optMsgType)
+> NetMgr.bellatoChatMsg(Msg, optMsgType)
 
-> netMgr.coraChatMsg(Msg, optMsgType)
+> NetMgr.coraChatMsg(Msg, optMsgType)
 
-> netMgr.accretiaChatMsg(Msg, optMsgType)
+> NetMgr.accretiaChatMsg(Msg, optMsgType)
 
-> netMgr.globalAnnounceMsg(Msg, optAnnType)
+> NetMgr.globalAnnounceMsg(Msg, optAnnType)
 
-> netMgr.bellatoAnnounceMsg(Msg, optAnnType)
+> NetMgr.bellatoAnnounceMsg(Msg, optAnnType)
 
-> netMgr.coraAnnounceMsg(Msg, optAnnType)
+> NetMgr.coraAnnounceMsg(Msg, optAnnType)
 
-> netMgr.accretiaAnnounceMsg(Msg, optAnnType)
+> NetMgr.accretiaAnnounceMsg(Msg, optAnnType)
 
 ### Examples
 
@@ -100,7 +100,7 @@ Example using Lua scripted GM commands
         local announceMsg = { 
 		   default = "Test message",
 		}
-		netMgr.SendGlobalChatData(announceMsg, CHAT_TYPE.System, ANN_TYPE.mid3, nil, 0xFF00FF00)
+		NetMgr.SendGlobalChatData(announceMsg, CHAT_TYPE.System, ANN_TYPE.mid3, nil, 0xFF00FF00)
         return true
     end
 }, -- dont forget separating comma
