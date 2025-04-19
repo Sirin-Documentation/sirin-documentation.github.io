@@ -65,6 +65,7 @@
   - [Item Charge](database/features/itemcharge.md)
   - [Item Combine](lua/features/itemcombine.md)
     - [Adv Operation](lua/features/itemcombine.md#adv-operation)
+    - [Combine Reloading](lua/features/itemcombine.md#combine-reloading)
     - [Reskin Items](lua/features/itemcombine.md#example-reskinable-items)
     - [Socket Extender](lua/features/itemcombine.md#example-weapon-armor-socket-extender)
   - [Loot Boxes](lua/features/lootboxes.md)
