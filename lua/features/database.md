@@ -101,7 +101,7 @@ SQL = require('custom.dbtest')
 SirinLua.asyncHandler = SQL.mainThreadAsyncCallbackHandler
 ```
 
-`sirin-lua\threads\userDB\initUserDBThread.lua`
+`sirin-lua\threads\userDB\initWorldDBThread.lua`
 
 ```lua
 -- SQL DB
