@@ -68,6 +68,7 @@
     - [Combine Reloading](lua/features/itemcombine.md#combine-reloading)
     - [Reskin Items](lua/features/itemcombine.md#example-reskinable-items)
     - [Socket Extender](lua/features/itemcombine.md#example-weapon-armor-socket-extender)
+    - [Type C Weapons](lua/features/itemcombine.md#type-c-weapons)
   - [Loot Boxes](lua/features/lootboxes.md)
     - [Basic Operation](lua/features/lootboxes.md#basic-operation)
     - [Calculating Percentages](lua/features/lootboxes.md#calculating-lootbox-percentages)

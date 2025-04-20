@@ -514,3 +514,219 @@ function combineData.combineWorker(pPlayer, ppConMats, pipMats, pSend)
 	return true
 end
 ```
+
+***
+
+## Type C weapons
+
+Uses any matching Intense (Type-B) and Purple (Type-A) weapon and constructs the matching Type-C weapon (If weapon exists in `WeaponItem.xlsx`)
+
+The example requires the following items
+
+| Item | Count | Desc   |
+|---|---|---|
+| `Any Intense Weapon (type-B)` | 1 | `iwaxb50` `Lvl 50 Intense Hora Axe`  |
+| `Any Purple Weapon (type-A)` | 1 | `iwxha50` `Lvl 50 Wind Hora Axe` |
+| `Cost 100 Race Currency` | - | - |
+
+Combine at the hero NPC or using disposable beeper
+
+> Add this to `sirin-lua\threads\main\ReloadableScripts\CombineEx\` and [Reload Combine Scripts](itemcombine.md#combine-reloading)
+
+#### `Type_c_Weapon.lua`
+
+```lua
+local combineData = {}
+
+function combineData.init()
+    combineData.price = 100
+    combineData.showDebug = true
+end
+
+local types = {
+    ["kn"] = true, -- knife
+    ["sw"] = true, -- sword
+    ["ax"] = true, -- axe
+    ["ma"] = true, -- mace
+    ["sp"] = true, -- spear
+    ["bo"] = true, -- bow
+    ["fi"] = true, -- firearm
+    ["lu"] = true, -- launcher
+    ["dk"] = true, -- dagger
+    ["st"] = true, -- staff
+    ["ge"] = true, -- grenade launcher
+}
+
+-- Helper function to check if weapon code is intense weapon (Type B)
+function IsWeaponTypeB(code)
+    local t, g, l = code:match("iw(%a+)(%a)(%d+)")
+    if not t or not g or not l or not types[t] or g ~= 'b' then
+      return false
+    end
+    return true
+end
+
+---@param ppConMats table<integer, _STORAGE_LIST___db_con>
+---@return boolean
+function combineData.combineChecker(ppConMats)
+	repeat
+		if #ppConMats > 2 then
+			break
+		end
+
+        local src = nil
+
+        -- Check inputs are 2 weapons
+		for _,v in ipairs(ppConMats) do
+
+			if v.m_byTableCode ~= 6 then
+				break
+			end
+
+            return true
+		end
+
+	until true
+
+	return false
+end
+
+---@param pPlayer CPlayer
+---@param ppConMats table<integer, _STORAGE_LIST___db_con>
+---@param pipMats table<integer, _combine_ex_item_request_clzo___list>
+---@param pSend _combine_ex_item_result_zocl
+---@param pRecv _combine_ex_item_request_clzo
+---@return boolean
+function combineData.combineWorker(pPlayer, ppConMats, pipMats, pSend, pRecv)
+	---@type _STORAGE_LIST___db_con
+	local pTypeB = nil
+	---@type _STORAGE_LIST___db_con
+	local pTypeA = nil
+	---@type _STORAGE_LIST___db_con
+	local pMaterial = nil
+	local nMatSub = 0
+
+    -- Purple items higher index than intense - store purple as pTypeA
+    -- This means location in the combine UI doesn't matter
+	for k,v in ipairs(ppConMats) do
+		if not pTypeB then
+            pTypeB = v
+        elseif pTypeB.m_wItemIndex > v.m_wItemIndex then
+            pTypeA = pTypeB
+            pTypeB = v
+        else
+            pTypeA = v
+        end
+	end
+
+    -- Get WeaponItem.xlsx Data
+    local pTypeBFld = Sirin.mainThread.baseToWeaponItem(Sirin.mainThread.g_Main:m_tblItemData_get(pTypeB.m_byTableCode):GetRecord(pTypeB.m_wItemIndex))
+	local pTypeAFld = Sirin.mainThread.baseToWeaponItem(Sirin.mainThread.g_Main:m_tblItemData_get(pTypeA.m_byTableCode):GetRecord(pTypeA.m_wItemIndex))
+
+    if combineData.showDebug then
+        print ("Intense item: idx " .. pTypeB.m_wItemIndex .. ", model " .. pTypeBFld.m_strModel)
+        print ("Purple item " .. pTypeA.m_wItemIndex .. ", model " .. pTypeAFld.m_strModel)
+    end
+
+    -- Check TypeB is intense weapon (Box weapons are grade 1 but not intense)
+    -- Check TypeA is purple weapon (Grade)
+    if not IsWeaponTypeB(pTypeBFld.m_strCode) then
+        return false
+    else if pTypeAFld.m_nItemGrade ~= 2 then
+        return false
+    end
+
+    -- Verifiy they match (Level and Mesh)
+    if pTypeBFld.m_strModel ~= pTypeAFld.m_strModel or pTypeBFld.m_nLevelLim ~= pTypeAFld.m_nLevelLim then
+        return false
+    end
+
+    -- Modify item code from Purple weapon to Type C item code
+    local itemCode = pTypeAFld.m_strCode:gsub("^(iw.-)h", "%1j") -- ex: "iwkjg60"
+
+    -- Search for new item by item code
+    local item   = Sirin.mainThread.g_Main:m_tblItemData_get(pTypeB.m_byTableCode):GetRecordByHash(itemCode, 2, 5)
+
+    -- Item not found abort
+    if item == nil then
+        print ("Type C Combine: Did not find " .. itemCode)
+        return false
+    end
+
+    if combineData.showDebug then
+        print ("New item index = " .. item.m_dwIndex)
+    end
+    local newItemFld = Sirin.mainThread.baseToWeaponItem(item)
+
+    if not CombineExMgr.pricePopUp(pPlayer, combineData, pRecv) then
+		return true
+	end
+
+    -- Cost popup if combineData.price is greater than 0  (set in init())
+
+    -- // You need 100's money for combining fees. Would you like to continue?  //
+    -- // [ OK ] [ Cancel ]
+
+	if combineData.price and combineData.price > 0 and combineData.price > pPlayer.m_Param:GetDalant() then
+		return false
+	end
+
+    -- Data to send to client
+    pSend.dwDalant = combineData.price
+
+    pSend.dwCheckKey = (Sirin.mainThread.GetLoopTime() & 0xFFFFFF) >> 8 -- combination check key. do not change. must present.
+	pSend.byDlgType = 1 -- 255 error, 0 success selectable, 1 success non selectable, 2 combination failure
+	pSend.bySelectItemCount = 0 -- 0 if non selectable combination, or how many items allowed to choice
+	pSend.dwResultEffectType = 1 -- not used by client
+	pSend.ItemBuff.byItemListNum = 1 -- how many result items
+	pSend.dwResultEffectMsgCode = 3605 -- text ID
+
+    -- Create reward for UI in slot 0
+    local RewardItem = pSend.ItemBuff:RewardItemList_get(0)
+    RewardItem.Key.byTableCode = 6
+    RewardItem.Key.wItemIndex = newItemFld.m_dwIndex
+    RewardItem.Key.byRewardIndex = 0 -- not used by client
+    RewardItem.dwDur = 0
+    RewardItem.dwUpt = 0xFFFFFFFF
+
+    -- Create reward as item 
+    local pNewCon = Sirin.mainThread._STORAGE_LIST___storage_con()
+	pNewCon.m_byTableCode = 6
+	pNewCon.m_wItemIndex = item.m_dwIndex
+	pNewCon.m_dwDur = 0
+	pNewCon.m_dwLv = 0
+	pNewCon.m_wSerial = pPlayer.m_Param:GetNewItemSerial()
+	pNewCon.m_lnUID = pTypeB.m_lnUID
+	pNewCon.m_byCsMethod = pTypeB.m_byCsMethod
+	pNewCon.m_dwT = pTypeB.m_dwT
+	pNewCon.m_dwLendRegdTime = pTypeB.m_dwLendRegdTime
+
+    -- If inventory full add to Charge Item else add to inventory
+    if pPlayer.m_Param.m_dbInven:GetIndexEmptyCon() == 255 then
+		local pFld = Sirin.mainThread.g_Main:m_tblItemData_get(pNewCon.m_byTableCode):GetRecord(pNewCon.m_wItemIndex)
+
+		if pNewCon.m_byCsMethod == 1 then
+			pNewCon.m_dwT = pNewCon.m_dwT - os.time()
+			pNewCon.m_dwT = pNewCon.m_dwT <= 0 and 1 or pNewCon.m_dwT
+		end
+
+		Sirin.mainThread.modChargeItem.pushChargeItem(pPlayer, pFld.m_strCode, pNewCon.m_dwDur, pNewCon.m_dwLv, pNewCon.m_dwT)
+	else
+		local pCon = pPlayer:Emb_AddStorage(STORAGE_POS.inven, pNewCon, false, true)
+
+		if pCon then
+			pPlayer:SendMsg_TakeNewResult(0, pCon)
+		end
+	end
+
+    -- Remove Items used in combine (pTypeA and pTypeB)
+    pPlayer:Emb_DelStorage(STORAGE_POS.inven, pTypeA.m_byStorageIndex, false, true, "Lua. doTypeCCombination(...)")
+    pPlayer:Emb_DelStorage(STORAGE_POS.inven, pTypeB.m_byStorageIndex, false, true, "Lua. doTypeCCombination(...)")
+
+	return true
+end
+end
+
+return { ["type-c"] = combineData }
+```
+
