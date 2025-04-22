@@ -529,6 +529,8 @@ The example requires the following items
 | `Any Purple Weapon (type-A)` | 1 | `iwxha50` `Lvl 50 Wind Hora Axe` |
 | `Cost 100 Race Currency` | - | - |
 
+>> If using GU (2232) set currency price to 0 as price UI doesn't function and prevents combine (0.40 Hotfix 2)
+
 Combine at the hero NPC or using disposable beeper
 
 > Add this to `sirin-lua\threads\main\ReloadableScripts\CombineEx\` and [Reload Combine Scripts](itemcombine.md#combine-reloading)
@@ -539,7 +541,7 @@ Combine at the hero NPC or using disposable beeper
 local combineData = {}
 
 function combineData.init()
-    combineData.price = 100
+    combineData.price = 0 -- If using GU set currency price to 0
     combineData.showDebug = true
 end
 
