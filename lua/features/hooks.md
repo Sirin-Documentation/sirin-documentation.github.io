@@ -9,7 +9,7 @@ user scripts are self contained scripts that contain everything needed to listen
 
 Scripts can go anywhere in the `sirin-lua` Folder but to ensure a smooth experience upgrading Sirin to new versions - we recomend using the following locations
 
-* `sirin-lua/YourScript.lua`
+* `sirin-lua/threads/main/custom/YourScript.lua`
 * `sirin-lua/YourFolderName/YourScript.lua`
 * `sirin-lua/Custom/YourScript.lua`
 
@@ -106,6 +106,24 @@ function script.MyHookHandler(pPlayer)
 -- Hook Position = after_event
 SirinLua.HookMgr.addHook("CPlayer__pc_NewPosStart", HOOK_POS.after_event, script.m_strUUID, script.MyHookHandler)
 ```
+
+## Initalize your Scripts
+
+Each script needs to be added to one of the `init` files with `require()`
+
+```lua
+-- place here your required files
+
+require('threads.main.custom.YourScript')
+...
+```
+
+Depending on script location use one of the following
+
+* `sirin-lua/threads/main/initMainThread.lua`
+* `sirin-lua/threads/main/custom/init.lua`
+
+***
 
 ## Example: Custom Quest objectives
 
