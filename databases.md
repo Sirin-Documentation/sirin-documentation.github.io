@@ -16,9 +16,19 @@ In the `msql/` folder you will find all the scripts needed to generate the datab
 
 * Run scripts in `01 World_DB (223)/` folder and run the scripts in order `01 -> 06`
 * Run scripts in `02 World_DB (update to 2232)` to upgrade database to support GU
-* _(Optional)_ If running AOP Run the database scripts that came with your server files. To upgrade GU -> AOP
 
-Create the tables for RF_World either restore the RF_World.bak or build the databases using the creation sql scripts recommended.  If you are using AoP 4.15 also run the 2232 → AoP  upgrade script.
+> #### Common Error: 03 tbl_economy_history initial.sql 
+```
+Running the script `03 tbl_economy_history initial.sql` produces an error message
+SQL connection default language has not been set to English
+Set your SQL Login to use  "Default Lnaguage" -> English
+
+Logout - Re-connect then execute your query. Wipe Table and restart if required`
+```
+
+### RF_World AoP _(Optional)_
+
+If running AoP Run the database scripts that came with your server files. To upgrade GU database -> AOP
 
 ### SQL logins to access database 
 Create a new SQL login.  
