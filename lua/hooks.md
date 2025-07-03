@@ -14,7 +14,7 @@
 
    * `integer` serial
 
-* Hook Positions: `after_event`	
+* Hook Positions: `pre_event`	
 
 > ####   enterAccountReport(uuid, serial)
 
@@ -28,7 +28,7 @@
 
    * `integer` serial
 
-* Hook Positions: `after_event`	
+* Hook Positions: `pre_event`	
 
 > ####   isValidPlayerName(pUserDB, pszName)
 
@@ -103,6 +103,24 @@
    * `CPlayer` pPlayer
 
    * `CMonster` pMonster
+
+* Hook Positions: `filter`	
+
+> ####   canDropNuclearBomb(pPlayer, x, y, z)
+
+* Purpose: `additional conditions check for nuclear bomb drop.`
+
+* Function: `canDropNuclearBomb`
+
+* Function parameters:
+
+   * `CPlayer` pPlayer
+
+   * `number` x
+
+   * `number` y
+
+   * `number` z
 
 * Hook Positions: `filter`	
 
@@ -386,6 +404,262 @@
 
 * Hook Positions: `special`	
 
+> ####   SirinWorldDB_UserLoad_Prepare(dwAvatorSerial)
+
+* Purpose: `Prepare avator load notification.`
+
+* Function: `SirinWorldDB_UserLoad_Prepare`
+
+* Function parameters:
+
+   * `integer` dwAvatorSerial
+
+* Hook Positions: `after_event`	
+
+> ####   SirinWorldDB_UserLogout_Prepare(dwAvatorSerial)
+
+* Purpose: `Prepare avator logout notification.`
+
+* Function: `SirinWorldDB_UserLogout_Prepare`
+
+* Function parameters:
+
+   * `integer` dwAvatorSerial
+
+* Hook Positions: `after_event`	
+
+> ####   SirinWorldDB_UserLobby_Prepare(dwAvatorSerial)
+
+* Purpose: `Prepare avator move lobby notification.`
+
+* Function: `SirinWorldDB_UserLobby_Prepare`
+
+* Function parameters:
+
+   * `integer` dwAvatorSerial
+
+* Hook Positions: `after_event`	
+
+> ####   SirinWorldDB_UserUpdate_Prepare(dwAvatorSerial)
+
+* Purpose: `Prepare avator update notification.`
+
+* Function: `SirinWorldDB_UserUpdate_Prepare`
+
+* Function parameters:
+
+   * `integer` dwAvatorSerial
+
+* Hook Positions: `after_event`	
+
+> ####   SirinWorldDB_UserLoad_Complete(bError, byErrCode, dwAvatorSerial)
+
+* Purpose: `Complete avator load notification.`
+
+* Function: `SirinWorldDB_UserLoad_Complete`
+
+* Function parameters:
+
+   * `boolean` bError
+
+   * `integer` byErrCode
+
+   * `integer` dwAvatorSerial
+
+* Hook Positions: `after_event`	
+
+> ####   SirinWorldDB_UserLogout_Complete(bError, bActive, dwAvatorSerial)
+
+* Purpose: `Complete avator logout notification.`
+
+* Function: `SirinWorldDB_UserLogout_Complete`
+
+* Function parameters:
+
+   * `boolean` bError
+
+   * `boolean` bActive
+
+   * `integer` dwAvatorSerial
+
+* Hook Positions: `pre_event`	
+
+> ####   SirinWorldDB_UserLobby_Complete(bError, bActive, dwAvatorSerial)
+
+* Purpose: `Complete avator move lobby notification.`
+
+* Function: `SirinWorldDB_UserLobby_Complete`
+
+* Function parameters:
+
+   * `boolean` bError
+
+   * `boolean` bActive
+
+   * `integer` dwAvatorSerial
+
+* Hook Positions: `pre_event`	
+
+> ####   SirinWorldDB_UserUpdate_Complete(byErrCode, dwAvatorSerial)
+
+* Purpose: `Complete avator update notification.`
+
+* Function: `SirinWorldDB_UserUpdate_Complete`
+
+* Function parameters:
+
+   * `integer` byErrCode
+
+   * `integer` dwAvatorSerial
+
+* Hook Positions: `after_event`	
+
+> ####   customChatHandler(pPlayer, dwID, strData)
+
+* Purpose: `Custom chat commands handler`
+
+* Function: `customChatHandler`
+
+* Function parameters:
+
+   * `CPlayer` pPlayer
+
+   * `integer` dwID
+
+   * `string` strData
+
+* Hook Positions: `original`	
+
+> ####   onPressCustomWindowButton(pPlayer, dwActWindowID, dwActButtonID, dwParentWindowID, dwSelectedID)
+
+* Purpose: `Custom window button press.`
+
+* Function: `onPressCustomWindowButton`
+
+* Function parameters:
+
+   * `CPlayer` pPlayer
+
+   * `integer` dwActWindowID
+
+   * `integer` dwActButtonID
+
+   * `integer` dwParentWindowID
+
+   * `integer` dwSelectedID
+
+* Hook Positions: `pre_event, original, after_event`	
+
+> ####   canUseNPCStoreWithNoBeeper(pPlayer, dwStoreIndex)
+
+* Purpose: `Check for store operation request using mod custom windows.`
+
+* Function: `canUseNPCStoreWithNoBeeper`
+
+* Function parameters:
+
+   * `CPlayer` pPlayer
+
+   * `integer` dwStoreIndex
+
+* Hook Positions: `filter`	
+
+> ####   canUseTrunkWithNoBeeper(pPlayer)
+
+* Purpose: `Check for trunk operation request using mod custom windows.`
+
+* Function: `canUseTrunkWithNoBeeper`
+
+* Function parameters:
+
+   * `CPlayer` pPlayer
+
+* Hook Positions: `filter`	
+
+> ####   canUseAuctionWithNoBeeper(pPlayer, byOperation)
+
+* Purpose: `Check for AH operation request using mod custom windows.`
+
+* Function: `canUseAuctionWithNoBeeper`
+
+* Function parameters:
+
+   * `CPlayer` pPlayer
+
+   * `integer` byOperation
+
+* Hook Positions: `filter`	
+
+> ####   canUseMAUVendorWithNoBeeper(pPlayer, byOperation, byFrameCode)
+
+* Purpose: `Check for MAU operation request using mod custom windows.`
+
+* Function: `canUseMAUVendorWithNoBeeper`
+
+* Function parameters:
+
+   * `CPlayer` pPlayer
+
+   * `integer` byOperation
+
+   * `integer` byFrameCode?
+
+* Hook Positions: `filter`	
+
+> ####   canUseHeroCombineWithNoBeeper(pPlayer)
+
+* Purpose: `Check for hero combine operation request using mod custom windows.`
+
+* Function: `canUseHeroCombineWithNoBeeper`
+
+* Function parameters:
+
+   * `CPlayer` pPlayer
+
+* Hook Positions: `filter`	
+
+> ####   canUseButtonWithNoNPC(pPlayer, wButtonID)
+
+* Purpose: `Check for exchange button request constructed using mod custom windows.`
+
+* Function: `canUseButtonWithNoNPC`
+
+* Function parameters:
+
+   * `CPlayer` pPlayer
+
+   * `integer` wButtonID
+
+* Hook Positions: `filter`	
+
+> ####   canUseExchangeBtnWithNoNPC(pPlayer, wExchangeID)
+
+* Purpose: `Check for exchange button request constructed using mod custom windows.`
+
+* Function: `canUseExchangeBtnWithNoNPC`
+
+* Function parameters:
+
+   * `CPlayer` pPlayer
+
+   * `integer` wExchangeID
+
+* Hook Positions: `filter`	
+
+> ####   canUseWithNoTool(pPlayer, byType)
+
+* Purpose: `Check for talic upgrade operation request using mod custom windows.`
+
+* Function: `canUseWithNoTool`
+
+* Function parameters:
+
+   * `CPlayer` pPlayer
+
+   * `integer` byType
+
+* Hook Positions: `filter`	
+
 # Animus
  --- 
 > ####   CAnimus__CalcAttExp(pAnimus, pAT)
@@ -594,6 +868,20 @@
 
 * Hook Positions: `pre_event`	
 
+> ####   CPlayer__RecvKillMessage(pPlayer, pDier)
+
+* Purpose: `Kill notification to player.`
+
+* Function: `CPlayer__RecvKillMessage`
+
+* Function parameters:
+
+   * `CPlayer` pPlayer
+
+   * `CCharacter` pDier
+
+* Hook Positions: `after_event`	
+
 > ####   CAnimus__Attack(pAnimus, skill)
 
 * Purpose: `Animus attack process.`
@@ -621,6 +909,18 @@
    * `CCharacter` pTarget
 
 * Hook Positions: `original`	
+
+> ####   CNuclearBomb__NuclearDamege(pBomb)
+
+* Purpose: `Nuclear bomb detonation notification.`
+
+* Function: `CNuclearBomb__NuclearDamege`
+
+* Function parameters:
+
+   * `CNuclearBomb` pBomb
+
+* Hook Positions: `pre_event, original`	
 
 > ####   CNuclearBomb__Attack(pNuke, StartNum, Obj_num)
 
@@ -904,6 +1204,24 @@
 
 * Hook Positions: `original`	
 
+# CashShop
+ --- 
+> ####   CashDbWorker___insert_to_inven(pPlayer, pItem, Ret)
+
+* Purpose: `Inform cash shop purchase result.`
+
+* Function: `CashDbWorker___insert_to_inven`
+
+* Function parameters:
+
+   * `CPlayer` pPlayer
+
+   * `_param_cash_update____item` pItem
+
+   * `boolean` Ret
+
+* Hook Positions: `after_event`	
+
 # Crafts
  --- 
 > ####   CPlayer__pc_MakeItem(pPlayer, pipMakeTool, wManualIndex, materials)
@@ -957,6 +1275,22 @@
    * `CHolyStoneSystem` pHolySys
 
    * `integer` byArrive
+
+* Hook Positions: `after_event`	
+
+> ####   CHolyStone__Destroy(pStone, byDestroyCode, pAtter)
+
+* Purpose: `Holy stone destroy notification.`
+
+* Function: `CHolyStone__Destroy`
+
+* Function parameters:
+
+   * `CHolyStone` pStone
+
+   * `integer` byDestroyCode
+
+   * `CCharacter` pAtter
 
 * Hook Positions: `after_event`	
 
@@ -1216,7 +1550,7 @@
 
 * Hook Positions: `after_event`	
 
-> ####   ItemCombineMgr__MakeNewItems(pCombineMgr, pPlayerItemDB, pRecv, pSend)
+> ####   ItemCombineMgr__MakeNewItems(pCombineMgr, pPlayerItemDB, pRecv, Ret)
 
 * Purpose: `Make new items in result of combination.`
 
@@ -1230,23 +1564,9 @@
 
    * `_combine_ex_item_accept_request_clzo` pRecv
 
-   * `_combine_ex_item_accept_result_zocl` pSend
+   * `integer` Ret
 
-* Hook Positions: `original`	
-
-# MainThread
- --- 
-> ####   CMainThread__OnRun(pMain)
-
-* Purpose: `Main loop routine.`
-
-* Function: `CMainThread__OnRun`
-
-* Function parameters:
-
-   * `CMainThread` pMain
-
-* Hook Positions: `after_event`	
+* Hook Positions: `original, after_event`	
 
 # Monster
  --- 
@@ -1680,6 +2000,110 @@
 
 * Hook Positions: `original`	
 
+> ####   CUserDB__Update_User_Action_Point(pUserDB, byActionCode, dwPoint)
+
+* Purpose: `Action point change notification.`
+
+* Function: `CUserDB__Update_User_Action_Point`
+
+* Function parameters:
+
+   * `CUserDB` pUserDB
+
+   * `integer` byActionCode
+
+   * `integer` dwPoint
+
+* Hook Positions: `pre_event`	
+
+> ####   CPlayer__AlterPvPPoint(pPlayer, dAlter, AlterType, dwDstSerial)
+
+* Purpose: `Contribution point change notification.`
+
+* Function: `CPlayer__AlterPvPPoint`
+
+* Function parameters:
+
+   * `CPlayer` pPlayer
+
+   * `number` dAlter
+
+   * `PVP_ALTER_TYPE` AlterType
+
+   * `integer` dwDstSerial
+
+* Hook Positions: `pre_event`	
+
+> ####   CPvpOrderView__Update_PvpTempCash(pOrderView, wIndex, dTempPvpCash)
+
+* Purpose: `Temp PvP Cash point change notification.`
+
+* Function: `CPvpOrderView__Update_PvpTempCash`
+
+* Function parameters:
+
+   * `CPvpOrderView` pOrderView
+
+   * `integer` wIndex
+
+   * `number` dTempPvpCash
+
+* Hook Positions: `pre_event`	
+
+> ####   CPlayer__AlterPvPCashBag(pPlayer, dAlter, IOCode)
+
+* Purpose: `Fixed PvP Cash point change notification.`
+
+* Function: `CPlayer__AlterPvPCashBag`
+
+* Function parameters:
+
+   * `CPlayer` pPlayer
+
+   * `number` dAlter
+
+   * `PVP_MONEY_ALTER_TYPE` IOCode
+
+* Hook Positions: `pre_event`	
+
+> ####   CMapOperation__GetStartMap(pMapOper, byRaceCode)
+
+* Purpose: `Overrides HQ map`
+
+* Function: `CMapOperation__GetStartMap`
+
+* Function parameters:
+
+   * `CMapOperation` pMapOper
+
+   * `number` byRaceCode
+
+* Hook Positions: `original`	
+
+> ####   CPlayer__SetStateFlag(pPlayer)
+
+* Purpose: `Update state flags event.`
+
+* Function: `CPlayer__SetStateFlag`
+
+* Function parameters:
+
+   * `CPlayer` pPlayer
+
+* Hook Positions: `after_event`	
+
+> ####   CPlayer__SetStateFlagEx(pPlayer)
+
+* Purpose: `Update state Ex flags event. AoP Only.`
+
+* Function: `CPlayer__SetStateFlagEx`
+
+* Function parameters:
+
+   * `CPlayer` pPlayer
+
+* Hook Positions: `after_event`	
+
 # PotionEffect
  --- 
 > ####   DE_Potion_Trunk_Extend(pActChar, pTargetChar, fEffectValue)
@@ -1844,6 +2268,68 @@
 
 * Hook Positions: `original`	
 
+> ####   CPlayer__pc_RequestQuestFromNPC(pQuestMgr, pStore, dwNPCQuestIndex)
+
+* Purpose: `Take NPC quest routine.`
+
+* Function: `CPlayer__pc_RequestQuestFromNPC`
+
+* Function parameters:
+
+   * `CQuestMgr` pQuestMgr
+
+   * `CItemStore` pStore?
+
+   * `integer` dwNPCQuestIndex
+
+* Hook Positions: `original`	
+
+> ####   CPlayer__SendMsg_QuestComplete(pPlayer, byQuestDBSlot)
+
+* Purpose: `Quest success complete notification.`
+
+* Function: `CPlayer__SendMsg_QuestComplete`
+
+* Function parameters:
+
+   * `CPlayer` pPlayer
+
+   * `integer` byQuestDBSlot
+
+* Hook Positions: `pre_event`	
+
+> ####   CQuestMgr__CheckReqAct(pQuestMgr, nActCode, pszReqCode, wActCount, bPartyState)
+
+* Purpose: `Quest conditions check routine.`
+
+* Function: `CQuestMgr__CheckReqAct`
+
+* Function parameters:
+
+   * `CQuestMgr` pQuestMgr
+
+   * `integer` nActCode
+
+   * `integer` pszReqCode
+
+   * `integer` wActCount
+
+   * `boolean` bPartyState
+
+* Hook Positions: `original`	
+
+> ####   CQuestMgr__Loop(pQuestMgr)
+
+* Purpose: `Quest one second loop notify.`
+
+* Function: `CQuestMgr__Loop`
+
+* Function parameters:
+
+   * `CQuestMgr` pQuestMgr
+
+* Hook Positions: `pre_event`	
+
 # Store
  --- 
 > ####   CItemStore__IsSell(pStore, pPlayer, offer, fDiscountRate)
@@ -1863,6 +2349,24 @@
    * `number` fDiscountRate
 
 * Hook Positions: `filter`	
+
+> ####   CPlayer__SendMsg_BuyItemStoreResult(pPlayer, pStore, offer, byErrCode)
+
+* Purpose: `NPC store purchase notification.`
+
+* Function: `CPlayer__SendMsg_BuyItemStoreResult`
+
+* Function parameters:
+
+   * `CPlayer` pPlayer
+
+   * `CItemStore` pStore
+
+   * `table<integer,` offer
+
+   * `integer` byErrCode
+
+* Hook Positions: `pre_event`	
 
 # TalikUpgrade
  --- 
