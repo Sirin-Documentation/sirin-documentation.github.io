@@ -174,6 +174,8 @@
  
 > `unsigned int` GetCurSecNum(`void`)
  
+> `void` SendMsg_BreakStop(`void`)
+ 
 ## Members
  
 > `struct` [_base_fld](lua/classes/_base_fld.md)* m_pRecordSet

@@ -12,9 +12,13 @@
  
 > `int` GetFP(`void`)
  
+> `bool` SetFP(`int`,`bool`)
+ 
 > `int` GetMaxSP(`void`)
  
 > `int` GetSP(`void`)
+ 
+> `bool` SetSP(`int`,`bool`)
  
 > `void` ReCalcMaxHFSP(`bool`,`bool`)
  
@@ -123,6 +127,18 @@
 > `void` SendMsg_ExchangeItemResult(`unsigned char`,`struct` [_STORAGE_LIST___db_con](lua/classes/_STORAGE_LIST___db_con.md) *)
  
 > `void` SendMsg_ExchangeLendItemResult(`unsigned char`,`struct` [_STORAGE_LIST___db_con](lua/classes/_STORAGE_LIST___db_con.md) *)
+ 
+> `int` _pre_check_normal_attack(`struct` `lua_State` *)
+ 
+> `int` _pre_check_skill_attack(`struct` `lua_State` *)
+ 
+> `int` _pre_check_force_attack(`struct` `lua_State` *)
+ 
+> `int` _pre_check_unit_attack(`struct` `lua_State` *)
+ 
+> `int` _pre_check_siege_attack(`struct` `lua_State` *)
+ 
+> `void` SenseState(`void`)
  
 ## Members
  
@@ -496,7 +512,7 @@
  
 > `short` m_zMinePos_y
  
-> `struct` `_ATTACK_DELAY_CHECKER` m_AttDelayChker
+> `struct` [_ATTACK_DELAY_CHECKER](lua/classes/_ATTACK_DELAY_CHECKER.md) m_AttDelayChker
  
 > `float` m_fUnitPv_AttFc
  

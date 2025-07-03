@@ -64,5 +64,5 @@
  
 > `class` `CAITimer`* m_AITimer_get(`unsigned __int64`)
  
-> `struct` `SKILL`* m_Skill_get(`unsigned __int64`)
+> `struct` [SKILL](lua/classes/SKILL.md)* m_Skill_get(`unsigned __int64`)
  

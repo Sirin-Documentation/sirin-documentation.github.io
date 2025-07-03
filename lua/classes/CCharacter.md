@@ -8,11 +8,25 @@
  
 > `void` RemoveSFContEffect(`unsigned char`,`unsigned short`,`bool`,`bool`)
  
+> `void` RemoveSFContHelpByEffect(`int`,`int`)
+ 
 > `int` AssistForce(`struct` `lua_State` *)
+ 
+> `bool` AssistForceToOne(`class` [CCharacter](lua/classes/CCharacter.md) *,`struct` [_force_fld](lua/classes/_force_fld.md) *,`int`)
  
 > `int` AssistSkill(`struct` `lua_State` *)
  
+> `bool` AssistSkillToOne(`class` [CCharacter](lua/classes/CCharacter.md) *,`int`,`struct` [_skill_fld](lua/classes/_skill_fld.md) *,`int`)
+ 
 > `bool` GetStealth(`bool`)
+ 
+> `void` BreakStealth(`void`)
+ 
+> `void` Stop(`void`)
+ 
+> `int` FindEffectDst(`struct` `lua_State` *)
+ 
+> `bool` IsEffectableDst(`const` `char` *,`class` [CCharacter](lua/classes/CCharacter.md) *)
  
 ## Members
  

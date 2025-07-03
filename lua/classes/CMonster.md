@@ -18,6 +18,8 @@
  
 > `void` UpdateLookAtPos(`void`)
  
+> `bool` IsViewArea(`class` [CCharacter](lua/classes/CCharacter.md) *)
+ 
 ## Members
  
 > `bool` m_bOper
@@ -94,7 +96,7 @@
  
 > `class` [CCharacter](lua/classes/CCharacter.md)* m_pTargetChar
  
-> `class` `CMonsterSkillPool` m_MonsterSkillPool
+> `class` [CMonsterSkillPool](lua/classes/CMonsterSkillPool.md) m_MonsterSkillPool
  
 > `int` m_DefPar_get(`unsigned __int64`)
  

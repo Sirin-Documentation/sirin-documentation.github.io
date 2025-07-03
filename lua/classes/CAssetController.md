@@ -4,17 +4,13 @@
  
 > `static` `class` [CAssetController](lua/classes/CAssetController.md)* instance(`void`)
  
-> `class` `IBaseAsset`* getAsset(`const` `char` *)
+> `bool` makeAllAssetData(`void`)
  
-> `class` `IBaseAsset`* getAsset(`unsigned int`)
+> `bool` makeAssetData(`const` `char` *)
  
-> `void` addAsset(`const` `char` *,`class` `IBaseAsset` *)
+> `bool` sendAssetData(`const` `char` *)
  
-> `void` addAsset(`unsigned int`,`class` `IBaseAsset` *)
+> `void` sendAllAssetData(`void`)
  
-> `bool` makeAssetData(`void`)
- 
-> `void` sendAssetData(`void`)
- 
-> `void` sendAssetData(`unsigned int`)
+> `void` sendAllAssetData(`unsigned int`)
  

@@ -192,6 +192,7 @@
         - [mainThread.modRaceSexClassChange](lua/threads/MainThread.md#SirinmainThreadmodRaceSexClassChange)
         - [mainThread.modReturnGate](lua/threads/MainThread.md#SirinmainThreadmodReturnGate)
         - [mainThread.modStackExt](lua/threads/MainThread.md#SirinmainThreadmodStackExt)
+        - [mainThread.modWindowExt](lua/threads/MainThread.md#SirinmainThreadmodWindowExt)
   - Classes
     - [AutominePersonal](lua/classes/AutominePersonal.md)
     - [CActionPointSystemMgr](lua/classes/CActionPointSystemMgr.md)
@@ -210,6 +211,7 @@
     - [CGameStatistics___map](lua/classes/CGameStatistics___map.md)
     - [CGuardTower](lua/classes/CGuardTower.md)
     - [CGuild](lua/classes/CGuild.md)
+    - [CGuildRoomSystem](lua/classes/CGuildRoomSystem.md)
     - [CHolyKeeper](lua/classes/CHolyKeeper.md)
     - [CHolyScheduleData](lua/classes/CHolyScheduleData.md)
     - [CHolyScheduleData____HolyScheduleNode](lua/classes/CHolyScheduleData____HolyScheduleNode.md)
@@ -232,6 +234,7 @@
     - [CMonster](lua/classes/CMonster.md)
     - [CMonsterAttack](lua/classes/CMonsterAttack.md)
     - [CMonsterSkill](lua/classes/CMonsterSkill.md)
+    - [CMonsterSkillPool](lua/classes/CMonsterSkillPool.md)
     - [CNuclearBomb](lua/classes/CNuclearBomb.md)
     - [CNuclearBombMgr](lua/classes/CNuclearBombMgr.md)
     - [CObjectList](lua/classes/CObjectList.md)
@@ -259,6 +262,7 @@
     - [EffectData](lua/classes/EffectData.md)
     - [ILuaContext](lua/classes/ILuaContext.md)
     - [ItemCombineMgr](lua/classes/ItemCombineMgr.md)
+    - [SKILL](lua/classes/SKILL.md)
     - [UUIDv4](lua/classes/UUIDv4.md)
     - [VoidPtr](lua/classes/VoidPtr.md)
     - [_100_per_random_table](lua/classes/_100_per_random_table.md)
@@ -269,6 +273,9 @@
     - [_ANIMUSKEY](lua/classes/_ANIMUSKEY.md)
     - [_ANIMUS_DB_BASE](lua/classes/_ANIMUS_DB_BASE.md)
     - [_ANIMUS_DB_BASE___LIST](lua/classes/_ANIMUS_DB_BASE___LIST.md)
+    - [_ATTACK_DELAY_CHECKER](lua/classes/_ATTACK_DELAY_CHECKER.md)
+    - [_ATTACK_DELAY_CHECKER___eff_list](lua/classes/_ATTACK_DELAY_CHECKER___eff_list.md)
+    - [_ATTACK_DELAY_CHECKER___mas_list](lua/classes/_ATTACK_DELAY_CHECKER___mas_list.md)
     - [_AVATOR_DATA](lua/classes/_AVATOR_DATA.md)
     - [_AVATOR_DB_BASE](lua/classes/_AVATOR_DB_BASE.md)
     - [_BUDDY_DB_BASE](lua/classes/_BUDDY_DB_BASE.md)
@@ -479,6 +486,7 @@
     - [_player_fld](lua/classes/_player_fld.md)
     - [_portal_fld](lua/classes/_portal_fld.md)
     - [_skill_fld](lua/classes/_skill_fld.md)
+
 
 
 

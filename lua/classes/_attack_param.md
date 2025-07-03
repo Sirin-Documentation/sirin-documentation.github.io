@@ -2,6 +2,8 @@
  
 ## Functions
  
+> `void` _attack_param(`void`) - Constructor\
+ 
 > `float` fArea_x(`const` `struct` [_attack_param](lua/classes/_attack_param.md) *)
  
 > `float` fArea_y(`const` `struct` [_attack_param](lua/classes/_attack_param.md) *)

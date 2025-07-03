@@ -19,7 +19,7 @@
  
 #### Functions
  
-> `static` `unsigned int` GetPrivateProfileIntA(`const` `char` *,`const` `char` *,`int`,`const` `char` *)
+> `static` `int` GetPrivateProfileIntA(`const` `char` *,`const` `char` *,`int`,`const` `char` *)
  
 > `static` `int` GetPrivateProfileStringA(`struct` `lua_State` *)
  
@@ -35,7 +35,7 @@
  
 > `static` `unsigned char` getZoneVersion(`void`)
  
-> `static` `void` processAsyncCallback(`unsigned __int64`,`const` `char` *,`const` `char` *,`const` `char` *,`unsigned __int64`,`const` `char` *)
+> `static` `void` processAsyncCallback(`unsigned __int64`,`const` `char` *,`const` `char` *,`const` `char` *,`unsigned __int64`,`class` `std__basic_string<char`,`struct` `std__char_traits<char>`,`class` `std__allocator<char> >`)
  
 > `static` `void` processAsyncCallback(`unsigned __int64`,`const` `char` *,`const` `char` *,`const` `char` *,`unsigned __int64`,`unsigned __int64`)
  
@@ -45,7 +45,7 @@
  
 > `static` `void` processAsyncCallback(`unsigned __int64`,`const` `char` *,`const` `char` *,`const` `char` *,`unsigned __int64`,`class` [CBinaryData](lua/classes/CBinaryData.md) *)
  
-> `static` `void` processAsyncCallback(`unsigned __int64`,`const` `char` *,`const` `char` *,`const` `char` *,`const` `char` *)
+> `static` `void` processAsyncCallback(`unsigned __int64`,`const` `char` *,`const` `char` *,`const` `char` *,`class` `std__basic_string<char`,`struct` `std__char_traits<char>`,`class` `std__allocator<char> >`)
  
 > `static` `void` processAsyncCallback(`unsigned __int64`,`const` `char` *,`const` `char` *,`const` `char` *,`unsigned __int64`)
  
@@ -55,7 +55,7 @@
  
 > `static` `void` processAsyncCallback(`unsigned __int64`,`const` `char` *,`const` `char` *,`const` `char` *,`class` [CBinaryData](lua/classes/CBinaryData.md) *)
  
-> `static` `void` processAsyncPoolCallback(`unsigned __int64`,`unsigned int`,`const` `char` *,`const` `char` *,`const` `char` *,`unsigned __int64`,`const` `char` *)
+> `static` `void` processAsyncPoolCallback(`unsigned __int64`,`unsigned int`,`const` `char` *,`const` `char` *,`const` `char` *,`unsigned __int64`,`class` `std__basic_string<char`,`struct` `std__char_traits<char>`,`class` `std__allocator<char> >`)
  
 > `static` `void` processAsyncPoolCallback(`unsigned __int64`,`unsigned int`,`const` `char` *,`const` `char` *,`const` `char` *,`unsigned __int64`,`unsigned __int64`)
  
@@ -65,7 +65,7 @@
  
 > `static` `void` processAsyncPoolCallback(`unsigned __int64`,`unsigned int`,`const` `char` *,`const` `char` *,`const` `char` *,`unsigned __int64`,`class` [CBinaryData](lua/classes/CBinaryData.md) *)
  
-> `static` `void` processAsyncPoolCallback(`unsigned __int64`,`unsigned int`,`const` `char` *,`const` `char` *,`const` `char` *,`const` `char` *)
+> `static` `void` processAsyncPoolCallback(`unsigned __int64`,`unsigned int`,`const` `char` *,`const` `char` *,`const` `char` *,`class` `std__basic_string<char`,`struct` `std__char_traits<char>`,`class` `std__allocator<char> >`)
  
 > `static` `void` processAsyncPoolCallback(`unsigned __int64`,`unsigned int`,`const` `char` *,`const` `char` *,`const` `char` *,`unsigned __int64`)
  
@@ -167,6 +167,8 @@
  
 > [modStackExt](lua/threads/MainThread.md#SirinmainThreadmodStackExt)
  
+> [modWindowExt](lua/threads/MainThread.md#SirinmainThreadmodWindowExt)
+ 
 #### Members
  
 > `float`* ANIMUS_EXP_RATE
@@ -243,7 +245,7 @@
  
 > `static` `void` AddPremSeconds(`class` [CPlayer](lua/classes/CPlayer.md) *,`unsigned int`)
  
-> `static` `void` AlterCashAsync(`unsigned int`,`int`,`const` `char` *)
+> `static` `bool` AlterCashAsync(`unsigned int`,`int`,`const` `char` *)
  
 > `static` `class` [CRecordData](lua/classes/CRecordData.md)* CQuestMgr__s_tblQuest(`void`)
  
@@ -441,6 +443,10 @@
  
 > `static` `class` [CUserDB](lua/classes/CUserDB.md)* g_UserDB_get(`class` [CUserDB](lua/classes/CUserDB.md)*(__cdecl *)(unsigned __int64))
  
+> `static` `int` getAccountBySerial(`struct` `lua_State` *)
+ 
+> `static` `int` getActiveAccounts(`struct` `lua_State` *)
+ 
 > `static` `int` getActiveMonsters(`struct` `lua_State` *)
  
 > `static` `int` getActivePlayers(`struct` `lua_State` *)
@@ -545,6 +551,8 @@
  
 > [CGuild](lua/classes/CGuild.md)
  
+> [CGuildRoomSystem](lua/classes/CGuildRoomSystem.md)
+ 
 > [CHolyKeeper](lua/classes/CHolyKeeper.md)
  
 > [CHolyScheduleData](lua/classes/CHolyScheduleData.md)
@@ -586,6 +594,8 @@
 > [CMonsterAttack](lua/classes/CMonsterAttack.md)
  
 > [CMonsterSkill](lua/classes/CMonsterSkill.md)
+ 
+> [CMonsterSkillPool](lua/classes/CMonsterSkillPool.md)
  
 > [CNuclearBomb](lua/classes/CNuclearBomb.md)
  
@@ -631,6 +641,8 @@
  
 > [ItemCombineMgr](lua/classes/ItemCombineMgr.md)
  
+> [SKILL](lua/classes/SKILL.md)
+ 
 > [_100_per_random_table](lua/classes/_100_per_random_table.md)
  
 > [_AIOC_A_MACRODATA](lua/classes/_AIOC_A_MACRODATA.md)
@@ -646,6 +658,12 @@
 > [_ANIMUS_DB_BASE](lua/classes/_ANIMUS_DB_BASE.md)
  
 > [_ANIMUS_DB_BASE___LIST](lua/classes/_ANIMUS_DB_BASE___LIST.md)
+ 
+> [_ATTACK_DELAY_CHECKER](lua/classes/_ATTACK_DELAY_CHECKER.md)
+ 
+> [_ATTACK_DELAY_CHECKER___eff_list](lua/classes/_ATTACK_DELAY_CHECKER___eff_list.md)
+ 
+> [_ATTACK_DELAY_CHECKER___mas_list](lua/classes/_ATTACK_DELAY_CHECKER___mas_list.md)
  
 > [_AVATOR_DATA](lua/classes/_AVATOR_DATA.md)
  
@@ -1079,6 +1097,8 @@
  
 > `static` `bool` IsBeNearExchangeButton(`class` [CPlayer](lua/classes/CPlayer.md) *,`unsigned short`)
  
+> `static` `bool` RegisterAsset(`void`)
+ 
 > `static` `void` RegisterButtons(`void`)
  
 ---
@@ -1217,4 +1237,11 @@
 #### Functions
  
 > `static` `unsigned int` GetStackSize(`void`)
+ 
+---
+# Sirin.mainThread.modWindowExt
+ 
+#### Functions
+ 
+> `static` `bool` RegisterAsset(`void`)
  

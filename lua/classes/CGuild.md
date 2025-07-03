@@ -32,7 +32,7 @@
  
 > `int` m_nMemberNum
  
-> `struct` [_guild_member_info](lua/classes/_guild_member_info.md)* m_MemberData
+> `struct` [_guild_member_info](lua/classes/_guild_member_info.md)* m_MemberData_get(`unsigned __int64`)
  
 > `struct` [_guild_member_info](lua/classes/_guild_member_info.md)* m_pGuildCommittee_get(`unsigned __int64`)
  

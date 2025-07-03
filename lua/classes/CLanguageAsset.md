@@ -14,5 +14,5 @@
  
 > `bool` makeAssetData(`void`)
  
-> `class` `luabridge__LuaRef` getLanguageTable(`struct` `lua_State` *)
+> `int` getLanguageTable(`struct` `lua_State` *)
  
