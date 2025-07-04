@@ -9,6 +9,8 @@ Sprite Viewer simplifies searching for existing sprites to use in  [Function Men
 
 ### Download
 
+> Requires C++ Redistributable x64 2022  [Download from Microsoft](https://aka.ms/vs/17/release/vc_redist.x64.exe)
+
 Sprite Viewer tool is provided with the [Sirin files Download](../download.md) !Tools -> sirin-sprite-viewer.exe
 
 MD5: 8676A250A8ECD31C03E53FB8B145EB5C
