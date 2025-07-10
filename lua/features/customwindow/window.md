@@ -2,7 +2,7 @@
 
 All files with the `.lua` file extension will be read as `Custom Windows` in the `sirin-lua\threads\main\ReloadableScripts\CustomWindows` folder
 
-<img style="border:1px solid black" src="img/sirin_cw.png"/>
+<img style="border:1px solid black" src="img/sirin_cw.png"/><br> `Example of what can be created adding components together. Example uses: Footer, Item, Text, Text Button`
 
 Custom windows are fully customizable scriptable UI windows. Each window has its own layout and built from a range of display components.
 

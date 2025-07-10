@@ -48,7 +48,7 @@
     - [Custom Window](lua/features/customwindow/window.md)
     - [State Flags](lua/features/customwindow/stateFlags.md)
     - [Data Updates](lua/features/customwindow/dataUpdates.md)
-    - [Misc](lua/features/customwindow/misc.md)
+    - [Open from Scripts](lua/features/customwindow/intergration.md.md)
   - [Database Access](lua/features/database.md#database-access)
   - [Debugging](debugging.md)
     - [Player Data](debugging.md#debugging-player-stats-server-side-data)

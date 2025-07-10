@@ -315,7 +315,7 @@ Used to display Skin data on tooltips. This value is displayed differently depen
 
 #### Countdown Timers
 
-<img style="border:1px solid black" src="img/sirin_funcwindowtimers.png"/>
+<img style="border:1px solid black" src="img/sirin_funcwindowtimers.png"/><br> `Example showing multiple active timers`
 
 ```lua
 buf:PushUInt32(50) -- delay remaining in seconds

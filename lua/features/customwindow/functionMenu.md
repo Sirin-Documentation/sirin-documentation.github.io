@@ -4,7 +4,8 @@ Custom windows added in Sirin 0.42 allows for creating custom client interfaces
 
 All files with the `.lua` file extension will be read as `Custom Windows` in the `sirin-lua\threads\main\ReloadableScripts\CustomWindows` folder
 
-<img style="border:1px solid black" src="img/sirin_funcwindow.png"/>
+<img style="border:1px solid black" src="img/sirin_funcwindow.png"/><br>`Example of what can be created with more icons`
+
 
 Function menu is a scriptable menu where new icons/buttons can be added. Each button/icon can trigger either a clientside action or a request to the server.
 

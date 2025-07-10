@@ -1,6 +1,4 @@
-# Custom Window (Misc)
-
-### Opening Windows from other Scripts
+# Opening Windows from other Scripts
 Custom windows can be opened from any other script
 
 > Can also be used to trigger opening default Client windows directly from any `.lua` scripts
