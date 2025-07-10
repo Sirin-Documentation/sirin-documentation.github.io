@@ -34,8 +34,13 @@ local script = {
 function script.hookHandler1(pPlayer, dwID, strData)
     -- Example: Print to server console text input
     -- dwID is chat command index 1-20
-    -- Write your own custom handler to paste the input
-    print(strData)
+    -- Write your own custom handler to parse the input
+    
+    -- Debug to server console
+    dump(pPlayer, dwID, strData)
+
+    -- Print strData to in game chat to all players
+    NetMgr.SendGlobalChatData(strData, CHAT_TYPE.Normal, nil,nil,  0xFF00FFFF)
 end
 
 function script.onThreadBegin()
