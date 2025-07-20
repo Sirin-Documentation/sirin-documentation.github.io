@@ -404,59 +404,57 @@
 
 * Hook Positions: `special`	
 
-> ####   SirinWorldDB_UserLoad_Prepare(dwAvatorSerial)
-
-* Purpose: `Prepare avator load notification.`
-
-* Function: `SirinWorldDB_UserLoad_Prepare`
-
-* Function parameters:
-
-   * `integer` dwAvatorSerial
-
-* Hook Positions: `after_event`	
-
-> ####   SirinWorldDB_UserLogout_Prepare(dwAvatorSerial)
-
-* Purpose: `Prepare avator logout notification.`
-
-* Function: `SirinWorldDB_UserLogout_Prepare`
-
-* Function parameters:
-
-   * `integer` dwAvatorSerial
-
-* Hook Positions: `after_event`	
-
-> ####   SirinWorldDB_UserLobby_Prepare(dwAvatorSerial)
-
-* Purpose: `Prepare avator move lobby notification.`
-
-* Function: `SirinWorldDB_UserLobby_Prepare`
-
-* Function parameters:
-
-   * `integer` dwAvatorSerial
-
-* Hook Positions: `after_event`	
-
-> ####   SirinWorldDB_UserUpdate_Prepare(dwAvatorSerial)
+> ####   SirinWorldDB_PlayerSave_Prepare(dwAvatorSerial, wClientIndex, byQryCase, multiBinaryData)
 
 * Purpose: `Prepare avator update notification.`
 
-* Function: `SirinWorldDB_UserUpdate_Prepare`
+* Function: `SirinWorldDB_PlayerSave_Prepare`
 
 * Function parameters:
 
    * `integer` dwAvatorSerial
 
+   * `integer` wClientIndex
+
+   * `integer` byQryCase
+
+   * `CMultiBinaryData` multiBinaryData
+
+* Hook Positions: `pre_event`	
+
+> ####   SirinWorldDB_PlayerInsert_Complete(byErrCode, dwAvatorSerial)
+
+* Purpose: `Complete avator insert notification.`
+
+* Function: `SirinWorldDB_PlayerInsert_Complete`
+
+* Function parameters:
+
+   * `integer` byErrCode
+
+   * `integer` dwAvatorSerial
+
 * Hook Positions: `after_event`	
 
-> ####   SirinWorldDB_UserLoad_Complete(bError, byErrCode, dwAvatorSerial)
+> ####   SirinWorldDB_PlayerDelete_Complete(byErrCode, dwAvatorSerial)
+
+* Purpose: `Complete avator delete notification.`
+
+* Function: `SirinWorldDB_PlayerDelete_Complete`
+
+* Function parameters:
+
+   * `integer` byErrCode
+
+   * `integer` dwAvatorSerial
+
+* Hook Positions: `after_event`	
+
+> ####   SirinWorldDB_PlayerLoad_Complete(bError, byErrCode, dwAvatorSerial, wClientIndex, multiSQLResultSet)
 
 * Purpose: `Complete avator load notification.`
 
-* Function: `SirinWorldDB_UserLoad_Complete`
+* Function: `SirinWorldDB_PlayerLoad_Complete`
 
 * Function parameters:
 
@@ -465,14 +463,18 @@
    * `integer` byErrCode
 
    * `integer` dwAvatorSerial
+
+   * `integer` wClientIndex
+
+   * `CMultiSQLResultSet` multiSQLResultSet
 
 * Hook Positions: `after_event`	
 
-> ####   SirinWorldDB_UserLogout_Complete(bError, bActive, dwAvatorSerial)
+> ####   SirinWorldDB_PlayerLogout_Complete(bError, bActive, dwAvatorSerial, wClientIndex)
 
 * Purpose: `Complete avator logout notification.`
 
-* Function: `SirinWorldDB_UserLogout_Complete`
+* Function: `SirinWorldDB_PlayerLogout_Complete`
 
 * Function parameters:
 
@@ -482,13 +484,15 @@
 
    * `integer` dwAvatorSerial
 
+   * `integer` wClientIndex
+
 * Hook Positions: `pre_event`	
 
-> ####   SirinWorldDB_UserLobby_Complete(bError, bActive, dwAvatorSerial)
+> ####   SirinWorldDB_PlayerLobby_Complete(bError, bActive, dwAvatorSerial, wClientIndex)
 
 * Purpose: `Complete avator move lobby notification.`
 
-* Function: `SirinWorldDB_UserLobby_Complete`
+* Function: `SirinWorldDB_PlayerLobby_Complete`
 
 * Function parameters:
 
@@ -498,19 +502,25 @@
 
    * `integer` dwAvatorSerial
 
+   * `integer` wClientIndex
+
 * Hook Positions: `pre_event`	
 
-> ####   SirinWorldDB_UserUpdate_Complete(byErrCode, dwAvatorSerial)
+> ####   SirinWorldDB_PlayerUpdate_Complete(byErrCode, dwAvatorSerial, wClientIndex, multiBinaryData)
 
 * Purpose: `Complete avator update notification.`
 
-* Function: `SirinWorldDB_UserUpdate_Complete`
+* Function: `SirinWorldDB_PlayerUpdate_Complete`
 
 * Function parameters:
 
    * `integer` byErrCode
 
    * `integer` dwAvatorSerial
+
+   * `integer` wClientIndex
+
+   * `CMultiBinaryData` multiBinaryData
 
 * Hook Positions: `after_event`	
 
@@ -689,6 +699,62 @@
    * `integer` nAddExp
 
 * Hook Positions: `special`	
+
+> ####   CAnimus__GetDefGap(pAnimus, nPart)
+
+* Purpose: `DefGap script value return.`
+
+* Function: `CAnimus__GetDefGap`
+
+* Function parameters:
+
+   * `CAnimus` pAnimus
+
+   * `integer` nPart
+
+* Hook Positions: `original`	
+
+> ####   CAnimus__GetDefFacing(pAnimus, nPart)
+
+* Purpose: `DefFacing script value return.`
+
+* Function: `CAnimus__GetDefFacing`
+
+* Function parameters:
+
+   * `CAnimus` pAnimus
+
+   * `integer` nPart
+
+* Hook Positions: `original`	
+
+> ####   CAnimus__GetDefFC(pAnimus, nAttactPart, pAttackerChar)
+
+* Purpose: `DefGap script value return.`
+
+* Function: `CAnimus__GetDefFC`
+
+* Function parameters:
+
+   * `CAnimus` pAnimus
+
+   * `integer` nAttactPart
+
+   * `CCharacter` pAttackerChar
+
+* Hook Positions: `original`	
+
+> ####   CAnimus__GetWeaponAdjust(pAnimus)
+
+* Purpose: `AttGap script value return.`
+
+* Function: `CAnimus__GetWeaponAdjust`
+
+* Function parameters:
+
+   * `CAnimus` pAnimus
+
+* Hook Positions: `original`	
 
 # Attack
  --- 
@@ -887,6 +953,20 @@
 * Purpose: `Animus attack process.`
 
 * Function: `CAnimus__Attack`
+
+* Function parameters:
+
+   * `CAnimus` pAnimus
+
+   * `integer` skill
+
+* Hook Positions: `original`	
+
+> ####   CAnimus__Heal(pAnimus, skill)
+
+* Purpose: `Animus heal process.`
+
+* Function: `CAnimus__Heal`
 
 * Function parameters:
 
@@ -1294,6 +1374,118 @@
 
 * Hook Positions: `after_event`	
 
+> ####   CHolyKeeper__GetDefGap(pKeeper, nPart)
+
+* Purpose: `DefGap script value return.`
+
+* Function: `CHolyKeeper__GetDefGap`
+
+* Function parameters:
+
+   * `CHolyKeeper` pKeeper
+
+   * `integer` nPart
+
+* Hook Positions: `original`	
+
+> ####   CHolyKeeper__GetDefFacing(pKeeper, nPart)
+
+* Purpose: `DefFacing script value return.`
+
+* Function: `CHolyKeeper__GetDefFacing`
+
+* Function parameters:
+
+   * `CHolyKeeper` pKeeper
+
+   * `integer` nPart
+
+* Hook Positions: `original`	
+
+> ####   CHolyKeeper__GetDefFC(pKeeper, nAttactPart, pAttackerChar)
+
+* Purpose: `DefGap script value return.`
+
+* Function: `CHolyKeeper__GetDefFC`
+
+* Function parameters:
+
+   * `CHolyKeeper` pKeeper
+
+   * `integer` nAttactPart
+
+   * `CCharacter` pAttackerChar
+
+* Hook Positions: `original`	
+
+> ####   CHolyKeeper__GetWeaponAdjust(pKeeper)
+
+* Purpose: `AttGap script value return.`
+
+* Function: `CHolyKeeper__GetWeaponAdjust`
+
+* Function parameters:
+
+   * `CHolyKeeper` pKeeper
+
+* Hook Positions: `original`	
+
+> ####   CHolyStone__GetDefGap(pStone, nPart)
+
+* Purpose: `DefGap script value return.`
+
+* Function: `CHolyStone__GetDefGap`
+
+* Function parameters:
+
+   * `CHolyStone` pStone
+
+   * `integer` nPart
+
+* Hook Positions: `original`	
+
+> ####   CHolyStone__GetDefFacing(pStone, nPart)
+
+* Purpose: `DefFacing script value return.`
+
+* Function: `CHolyStone__GetDefFacing`
+
+* Function parameters:
+
+   * `CHolyStone` pStone
+
+   * `integer` nPart
+
+* Hook Positions: `original`	
+
+> ####   CHolyStone__GetDefFC(pStone, nAttactPart, pAttackerChar)
+
+* Purpose: `DefGap script value return.`
+
+* Function: `CHolyStone__GetDefFC`
+
+* Function parameters:
+
+   * `CHolyStone` pStone
+
+   * `integer` nAttactPart
+
+   * `CCharacter` pAttackerChar
+
+* Hook Positions: `original`	
+
+> ####   CHolyStone__GetWeaponAdjust(pStone)
+
+* Purpose: `AttGap script value return.`
+
+* Function: `CHolyStone__GetWeaponAdjust`
+
+* Function parameters:
+
+   * `CHolyStone` pStone
+
+* Hook Positions: `original`	
+
 # DarkHole
  --- 
 > ####   CPlayer__pc_DarkHoleOpenRequest(pPlayer, bOpen, pFld, uuid)
@@ -1313,6 +1505,20 @@
    * `string` uuid
 
 * Hook Positions: `after_event`	
+
+> ####   CDarkHoleChannel__SendMsg_QuestPass(pDarkHoleChannel, strKeyCode)
+
+* Purpose: `Pass dungeon notification.`
+
+* Function: `CDarkHoleChannel__SendMsg_QuestPass`
+
+* Function parameters:
+
+   * `CDarkHoleChannel` pDarkHoleChannel
+
+   * `string` strKeyCode
+
+* Hook Positions: `pre_event`	
 
 > ####   CDarkHoleChannel__SendMsg_ChannelClose(uuid, bSucc)
 
@@ -1347,6 +1553,62 @@
 * Purpose: `Tower target validation routine.`
 
 * Function: `CGuardTower__IsValidTarget`
+
+* Function parameters:
+
+   * `CGuardTower` pTower
+
+* Hook Positions: `original`	
+
+> ####   CGuardTower__GetDefGap(pTower, nPart)
+
+* Purpose: `DefGap script value return.`
+
+* Function: `CGuardTower__GetDefGap`
+
+* Function parameters:
+
+   * `CGuardTower` pTower
+
+   * `integer` nPart
+
+* Hook Positions: `original`	
+
+> ####   CGuardTower__GetDefFacing(pTower, nPart)
+
+* Purpose: `DefFacing script value return.`
+
+* Function: `CGuardTower__GetDefFacing`
+
+* Function parameters:
+
+   * `CGuardTower` pTower
+
+   * `integer` nPart
+
+* Hook Positions: `original`	
+
+> ####   CGuardTower__GetDefFC(pTower, nAttactPart, pAttackerChar)
+
+* Purpose: `DefGap script value return.`
+
+* Function: `CGuardTower__GetDefFC`
+
+* Function parameters:
+
+   * `CGuardTower` pTower
+
+   * `integer` nAttactPart
+
+   * `CCharacter` pAttackerChar
+
+* Hook Positions: `original`	
+
+> ####   CGuardTower__GetWeaponAdjust(pTower)
+
+* Purpose: `AttGap script value return.`
+
+* Function: `CGuardTower__GetWeaponAdjust`
 
 * Function parameters:
 
@@ -1520,6 +1782,20 @@
 
 * Hook Positions: `pre_event`	
 
+> ####   CNormalGuildBattle__JudgeBattle(pGuildBattle, byRet)
+
+* Purpose: `Guild battle result notification.`
+
+* Function: `CNormalGuildBattle__JudgeBattle`
+
+* Function parameters:
+
+   * `CNormalGuildBattle` pGuildBattle
+
+   * `integer` byRet
+
+* Hook Positions: `after_event`	
+
 # HeroCombine
  --- 
 > ####   CPlayer__pc_CombineItemEx(pPlayer, pRecv)
@@ -1627,6 +1903,82 @@
    * `CPlayer` pOwner
 
 * Hook Positions: `original`	
+
+> ####   CMonster__GetDefGap(pMonster, nPart)
+
+* Purpose: `DefGap script value return.`
+
+* Function: `CMonster__GetDefGap`
+
+* Function parameters:
+
+   * `CMonster` pMonster
+
+   * `integer` nPart
+
+* Hook Positions: `original`	
+
+> ####   CMonster__GetDefFacing(pMonster, nPart)
+
+* Purpose: `DefFacing script value return.`
+
+* Function: `CMonster__GetDefFacing`
+
+* Function parameters:
+
+   * `CMonster` pMonster
+
+   * `integer` nPart
+
+* Hook Positions: `original`	
+
+> ####   CMonster__GetDefFC(pMonster, nAttactPart, pAttackerChar)
+
+* Purpose: `DefGap script value return.`
+
+* Function: `CMonster__GetDefFC`
+
+* Function parameters:
+
+   * `CMonster` pMonster
+
+   * `integer` nAttactPart
+
+   * `CCharacter` pAttackerChar
+
+* Hook Positions: `original`	
+
+> ####   CMonster__GetWeaponAdjust(pMonster)
+
+* Purpose: `AttGap script value return.`
+
+* Function: `CMonster__GetWeaponAdjust`
+
+* Function parameters:
+
+   * `CMonster` pMonster
+
+* Hook Positions: `original`	
+
+# PatriarchElect
+ --- 
+> ####   CPvpUserAndGuildRankingSystem__SetUpdateRaceBossSerial(pSystem, byRace, byNth, dwSerial)
+
+* Purpose: `Race boss set/clear by vote or patriarch appoint.`
+
+* Function: `CPvpUserAndGuildRankingSystem__SetUpdateRaceBossSerial`
+
+* Function parameters:
+
+   * `CPvpUserAndGuildRankingSystem` pSystem
+
+   * `integer` byRace
+
+   * `integer` byNth
+
+   * `integer` dwSerial
+
+* Hook Positions: `after_event`	
 
 # Player
  --- 
@@ -1964,7 +2316,7 @@
 
 * Hook Positions: `after_event`	
 
-> ####   CPlayer___CalcMaxHP(pPlayer, byNewLevel)
+> ####   CPlayer___CalcMaxHP(pPlayer)
 
 * Purpose: `Max HP calculation.`
 
@@ -1976,7 +2328,7 @@
 
 * Hook Positions: `original`	
 
-> ####   CPlayer___CalcMaxFP(pPlayer, byNewLevel)
+> ####   CPlayer___CalcMaxFP(pPlayer)
 
 * Purpose: `Max FP calculation.`
 
@@ -1988,7 +2340,7 @@
 
 * Hook Positions: `original`	
 
-> ####   CPlayer___CalcMaxSP(pPlayer, byNewLevel)
+> ####   CPlayer___CalcMaxSP(pPlayer)
 
 * Purpose: `Max SP calculation.`
 
@@ -2103,6 +2455,118 @@
    * `CPlayer` pPlayer
 
 * Hook Positions: `after_event`	
+
+> ####   CPlayer__GetAvoidRate(pPlayer)
+
+* Purpose: `Dodge rate calculation.`
+
+* Function: `CPlayer__GetAvoidRate`
+
+* Function parameters:
+
+   * `CPlayer` pPlayer
+
+* Hook Positions: `original`	
+
+> ####   CPlayer__GetDefGap(pPlayer, nPart)
+
+* Purpose: `DefGap script value return.`
+
+* Function: `CPlayer__GetDefGap`
+
+* Function parameters:
+
+   * `CPlayer` pPlayer
+
+   * `integer` nPart
+
+* Hook Positions: `original`	
+
+> ####   CPlayer__GetDefFacing(pPlayer, nPart)
+
+* Purpose: `DefFacing script value return.`
+
+* Function: `CPlayer__GetDefFacing`
+
+* Function parameters:
+
+   * `CPlayer` pPlayer
+
+   * `integer` nPart
+
+* Hook Positions: `original`	
+
+> ####   CPlayer__GetDefFC(pPlayer, nAttactPart, pAttackerChar)
+
+* Purpose: `DefGap script value return.`
+
+* Function: `CPlayer__GetDefFC`
+
+* Function parameters:
+
+   * `CPlayer` pPlayer
+
+   * `integer` nAttactPart
+
+   * `CCharacter` pAttackerChar
+
+* Hook Positions: `original`	
+
+> ####   CPlayer__GetWeaponAdjust(pPlayer)
+
+* Purpose: `AttGap script value return.`
+
+* Function: `CPlayer__GetWeaponAdjust`
+
+* Function parameters:
+
+   * `CPlayer` pPlayer
+
+* Hook Positions: `original`	
+
+> ####   AutominePersonal__GetDefGap(pAMP, nPart)
+
+* Purpose: `DefGap script value return.`
+
+* Function: `AutominePersonal__GetDefGap`
+
+* Function parameters:
+
+   * `AutominePersonal` pAMP
+
+   * `integer` nPart
+
+* Hook Positions: `original`	
+
+> ####   AutominePersonal__GetDefFacing(pAMP, nPart)
+
+* Purpose: `DefFacing script value return.`
+
+* Function: `AutominePersonal__GetDefFacing`
+
+* Function parameters:
+
+   * `AutominePersonal` pAMP
+
+   * `integer` nPart
+
+* Hook Positions: `original`	
+
+> ####   AutominePersonal__GetDefFC(pAMP, nAttactPart, pAttackerChar)
+
+* Purpose: `DefGap script value return.`
+
+* Function: `AutominePersonal__GetDefFC`
+
+* Function parameters:
+
+   * `AutominePersonal` pAMP
+
+   * `integer` nAttactPart
+
+   * `CCharacter` pAttackerChar
+
+* Hook Positions: `original`	
 
 # PotionEffect
  --- 
@@ -2387,6 +2851,64 @@
    * `_STORAGE_POS_INDIV` pposUpgItem
 
    * `table<integer,` jewels
+
+* Hook Positions: `original`	
+
+# Trap
+ --- 
+> ####   CTrap__GetDefGap(pTrap, nPart)
+
+* Purpose: `DefGap script value return.`
+
+* Function: `CTrap__GetDefGap`
+
+* Function parameters:
+
+   * `CTrap` pTrap
+
+   * `integer` nPart
+
+* Hook Positions: `original`	
+
+> ####   CTrap__GetDefFacing(pTrap, nPart)
+
+* Purpose: `DefFacing script value return.`
+
+* Function: `CTrap__GetDefFacing`
+
+* Function parameters:
+
+   * `CTrap` pTrap
+
+   * `integer` nPart
+
+* Hook Positions: `original`	
+
+> ####   CTrap__GetDefFC(pTrap, nAttactPart, pAttackerChar)
+
+* Purpose: `DefGap script value return.`
+
+* Function: `CTrap__GetDefFC`
+
+* Function parameters:
+
+   * `CTrap` pTrap
+
+   * `integer` nAttactPart
+
+   * `CCharacter` pAttackerChar
+
+* Hook Positions: `original`	
+
+> ####   CTrap__GetWeaponAdjust(pTrap)
+
+* Purpose: `AttGap script value return.`
+
+* Function: `CTrap__GetWeaponAdjust`
+
+* Function parameters:
+
+   * `CTrap` pTrap
 
 * Hook Positions: `original`	
 

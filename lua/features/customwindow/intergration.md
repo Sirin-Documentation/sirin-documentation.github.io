@@ -1,4 +1,4 @@
-# Opening Windows from other Scripts
+# Opening from Scripts
 Custom windows can be opened from any other script
 
 > Can also be used to trigger opening default Client windows directly from any `.lua` scripts
@@ -13,13 +13,13 @@ local function example_openWindow(pPlayer, dwWindowID, byType)
 	buf:PushUInt8(byType) -- 0 default window, 1 custom window
 	buf:PushUInt32(dwWindowID) -- window index
 	buf:PushUInt32(0) -- NPC Code for store and AH buy. in other case 0. Example: tonumber("01234", 16)
-	buf:SendBuffer(pPlayer, 80, 15)
+	buf:SendBuffer(pPlayer, 80, 12)
 end
 ```
 
 > See [Opening Client Window](/lua/features/customwindow/stateFlags.md#open-custom-windows-client-action) For full window list
 
-#### Example
+## Example: Open Auction House from Potion
 
 Opening Auction House with [Scripted Potion](/lua/features/potions.md#scripted-potions-sirin-040) `ipcsa01`
 
@@ -38,7 +38,7 @@ ipcsa01 = function(pActChar, pTargetChar)
 	buf:PushUInt32(tonumber("0A0B1",16)) -- NPC Code for Auction House
 	
 	-- Send packet to player with data in buffer `buf`
-	buf:SendBuffer(pPlayer, 80, 15)
+	buf:SendBuffer(pPlayer, 80, 12)
     return 1
 end,
 ```

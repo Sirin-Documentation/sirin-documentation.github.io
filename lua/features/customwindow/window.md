@@ -98,11 +98,17 @@ If the button [State Flags](/lua/features/customwindow/stateFlags.md) is set - T
 
 
 #### Text Counters
-<img style="border:1px solid black" src="img/sirin_cwcounter.png"/>
+<img style="border:1px solid black" src="img/sirin_cw_counter.png"/>
 
-If the `Durability` / `Durability Max` values are set [State Flags](/lua/features/customwindow/stateFlags.md) - Text becomes a counter
+If the `Counter` / `Counter Max` values are set [State Flags](/lua/features/customwindow/stateFlags.md) - Text becomes a counter
 
 Text entered is placed directly after `3/4`
+
+#### Progress Bars
+
+<img style="border:1px solid black" src="img/sirin_cw_progressbar.png"/>
+
+If the `Delay` / `Delay Max` values are set [State Flags](/lua/features/customwindow/stateFlags.md) - Text becomes a progress bar
 
 ---
 

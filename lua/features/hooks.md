@@ -1,73 +1,4 @@
-# User Scripts / Hooks [Sirin 0.40+]
-
-user scripts are self contained scripts that contain everything needed to listen for `Events` on the server and run custom code
-
-> [Full list of usable Hooks](lua/hooks.md)
-
-
-#### Where to place scripts
-
-Scripts can go anywhere in the `sirin-lua` Folder but to ensure a smooth experience upgrading Sirin to new versions - we recomend using the following locations
-
-* `sirin-lua/threads/main/custom/YourScript.lua`
-* `sirin-lua/YourFolderName/YourScript.lua`
-* `sirin-lua/Custom/YourScript.lua`
-
-> Below is the default starter template for your own scripts
-
-```lua
-local projectName = 'yourproject' -- Example: MyProject
-local moduleName = 'module_unique_name' -- Example: ModuleMgr
-
-local script = {
-    m_strUUID = projectName .. ".lua." .. moduleName,
-}
-
--- Hook Hander for CMonster__Destroy
-function script.hookHandler1(pMonster, byDestroyCode, pAttObj) 
-	-- Send annoucement of monster death
-	NetMgr.monsterLifeStateInform(
-            1,
-            Sirin.mainThread.baseToMonsterCharacter(pMonster.m_pRecordSet), 
-            pMonster.m_pCurMap, 
-            Sirin.mainThread.objectToPlayer(pAttObj)
-        )
-end
-
-function script.onThreadBegin()
-    -- Your optional initialization routine here
-end
-
-function script.onThreadEnd()
-	-- Your optional destructor routine here
-end
-
-local function autoInit()
-    if not _G[moduleName] then -- One time initialization during Lua thread life
-        _G[moduleName] = script -- Bind your script to a global variable. Variable name must be unique.
-
-        table.insert(SirinLua.onThreadBegin, function() _G[moduleName].onThreadBegin() end)
-        table.insert(SirinLua.onThreadEnd, function() _G[moduleName].onThreadEnd() end)
-    else
-        _G[moduleName] = script -- On reload 
-    end
-
-	-- Release any hooks already set (Used when reloading script)
-    SirinLua.HookMgr.releaseHookByUID(script.m_strUUID)
-
-	-- Example hook for CMonster__Destroy
-    SirinLua.HookMgr.addHook("CMonster__Destroy", HOOK_POS.after_event, script.m_strUUID, script.hookHandler1)
-    
-	-- Additional Hooks
-	-- SirinLua.HookMgr.addHook("hook_fuction_name", HOOK_POS.original, script.m_strUUID, script.hookHandler2)
-
-    -- your optional initialization routine below this line
-end
-
--- Ensure autoinit() is called
-autoInit()
-```
-## Using Hooks
+## Hooks
 Hooks can be found in the [Full list of usable Hooks](lua/hooks.md)
 
 Each hook contains
@@ -75,7 +6,7 @@ Each hook contains
 * Function name  : `CPlayer__pc_NewPosStart`
 * Function parameters : `CPlayer pPlayer`
 
-> Use these parameters to create your hook handler. 
+> Use these parameters to create your hook handler in your [Custom Module](/lua/features/module.md)
 
 ```lua
 function script.MyHookHandler(pPlayer) 
@@ -106,24 +37,6 @@ function script.MyHookHandler(pPlayer)
 -- Hook Position = after_event
 SirinLua.HookMgr.addHook("CPlayer__pc_NewPosStart", HOOK_POS.after_event, script.m_strUUID, script.MyHookHandler)
 ```
-
-## Initalize your Scripts
-
-Each script needs to be added to one of the `init` files with `require()`
-
-```lua
--- place here your required files
-
-require('threads.main.custom.YourScript')
-...
-```
-
-Depending on script location use one of the following
-
-* `sirin-lua/threads/main/initMainThread.lua`
-* `sirin-lua/threads/main/custom/init.lua`
-
-***
 
 ## Example: Custom Quest objectives
 

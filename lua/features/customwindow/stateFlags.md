@@ -14,37 +14,46 @@ For this example we will use a [scripted GM command](gmcommandsscripted.md).
 > Send this to any client connecting with values that match what that player should see `Unique data per player`
 
 ```lua
-{
-	-- New Scripted GM Command %funcMenu
-	"funcMenu", "111100", "111",
-	---@param pPlayer CPlayer
-	---@return boolean
-	function (pPlayer)
-		local buf = Sirin.mainThread.CLuaSendBuffer.Instance()
-		buf:Init() -- Create new buffer 'buf' to store the state of all components in Function Menu
-		buf:PushUInt32(1) -- Custom Window Index (Always 1 for Function Menu)
-		buf:PushUInt32(12) -- Number of buttons/components to update
+{ "custom window", "111100", "111",
+        ---@param pPlayer CPlayer
+        ---@return boolean
+        function (pPlayer)
+            local send = {}
+			send.ct = 3 -- operation mode
+			send.data = {}
+			local w = {}
+			table.insert(send.data, w)
+			w.id = 2 -- Custom Window Index (Always 1 for Function Menu)
+			w.data = {}
 
-		for i = 1, 12 do -- Loop through number of components
-			buf:PushUInt32(tonumber("101", 2)) -- set state flag  [IsButton,  Not Disabled, Visible] 
-			buf:PushUInt32(50) -- set delay remaining (seconds)
-			buf:PushUInt32(120) -- set delay total (seconds)
-			buf:PushUInt32(0xFFFFFFFF) -- durability (stack sizes, skins) [Not used in Function Menu]
-			buf:PushUInt32(0xFFFFFFFF) -- durabilityMax (Used to show 4/5) [Not used in Function Menu]
-		end
+			for i = 1, 4 do -- Loop through number of components
+				local data = {}
+				data.id = i -- Object id
+				data.stateFlags = tonumber("101", 2)  -- set state flag  [IsButton,  Not Disabled, Visible]
+				data.overlayFlags = tonumber("1",2) -- overlay flags
+				data.delay = { 1, 1 } -- Delay Remaining / Delay Total
+				data.counter = { -1, -1 } -- Counter Stack sizes, 4/5 and skin data
+				table.insert(w.data, data)
+			end
 
-		-- Send packet to player with data in buffer `buf`
-		buf:SendBuffer(pPlayer, 80, 12)
-		return true
-	end
+			-- Send packet to player with data
+			local netOP = NetOP:new()
+			netOP:SendData(pPlayer, "sirin.proto.customWindows", send, true)
+            return true
+        end
 },
 ```
 
-> You must send enough state flags for every static UI component in your script
+| Operation Mode  | Result   |
+|---|---|
+| 0  | Clear Internal Data (no update) |
+| 1  | Add/Set & Replace |
+| 2  | Delete |
+| 3  | Modify Existing |
 
 ## State Flags
 ```lua
-buf:PushUInt32(tonumber("000101", 2)) -- state flags
+data.stateFlags = tonumber("101", 2) -- state flags
 ```
 State flags are set in binary: Use the helper `tonumber("",2)` to set them \
 Starting from the `Right Side` is `Bit 1`
@@ -64,7 +73,7 @@ Starting from the `Right Side` is `Bit 1`
 ### Visibility / Disabled (Bit 1 & 2)
 
 ```lua
-buf:PushUInt32(tonumber("011", 2)) -- state flags
+data.stateFlags = tonumber("011", 2) -- state flags
 ```
 | Bit (Right to Left) |Value| Action|
 |-------|---|------------------------------|
@@ -82,7 +91,7 @@ buf:PushUInt32(tonumber("011", 2)) -- state flags
 * [Item Buttons](/lua/features/customwindow/window.md#items-and-item-tooltips)
 
 ```lua
-buf:PushUInt32(tonumber("101", 2)) -- state flags
+data.stateFlags = tonumber("101", 2) -- state flags
 ```
 | Bit (Right to Left) |Value| Action|
 |-------|---|------------------------------|
@@ -189,7 +198,7 @@ Opening custom sirin created windows see [CustomWindows](/lua/features/customwin
 ### Sending Server Request (Bit 4) (Client to Server Action)
 
 ```lua
-buf:PushUInt32(tonumber("1101", 2)) -- state flags
+data.stateFlags = tonumber("1101", 2) -- state flags
 ```
 | Bit (Right to Left) |Value| Action|
 |-------|---|------------------------------|
@@ -219,7 +228,7 @@ SirinLua.HookMgr.addHook("onPressCustomWindowButton", HOOK_POS.after_event, scri
 <img style="border:1px solid black" src="img/sirin_cwmodal.png"/>
 
 ```lua
-buf:PushUInt32(tonumber("10101", 2)) -- state flags
+data.stateFlags = tonumber("10101", 2) -- state flags
 ```
 | Bit (Right to Left) |Value| Action|
 |-------|---|------------------------------|
@@ -254,7 +263,7 @@ strModal_Ok = { -- optional.
 <img style="border:1px solid black" src="img/sirin_cwsel.png"/>
 
 ```lua
-buf:PushUInt32(tonumber("100101", 2)) -- state flags
+data.stateFlags = tonumber("100101", 2) -- state flags
 ```
 | Bit (Right to Left) |Value| Action|
 |-------|---|------------------------------|
@@ -280,7 +289,7 @@ On click will switch to a highlighted state. Clicking on any other button with `
 Overlays are sprites layed ontop of existing sprites. Used to show states like __Locked__, __Claimed__,__Accepted__ up to 25 pre-defined overlays can be used per window
 
 ```lua
-buf:PushUInt32(tonumber("01000001", 2)) -- state flags
+data.stateFlags = tonumber("01000001", 2) -- state flags
 ```
 | Bit (Right to Left) |Value| Action|
 |-------|---|------------------------------|
@@ -298,10 +307,9 @@ Overlays set in [Custom Windows](/lua/features/customwindow/window.md#overlays-f
 
 ### Durability (Stack Counters)
 ```lua
-buf:PushUInt32(0) -- durability (stack sizes, skins) [Not used in Function Menu]
-buf:PushUInt32(0) -- durabilityMax (Used to show 4/5) [Not used in Function Menu]
+data.counter = { -1, -1 } -- durability (stack sizes, skins) [Not used in Function Menu]
 ```
-<img style="border:1px solid black" src="img/sirin_cwcounter.png"/>
+<img style="border:1px solid black" src="img/sirin_cw_counter.png"/>
 
 Used to display values in [Text Counters](/lua/features/customwindow/window.md#text-counters)
 
@@ -318,11 +326,16 @@ Used to display Skin data on tooltips. This value is displayed differently depen
 <img style="border:1px solid black" src="img/sirin_funcwindowtimers.png"/><br> `Example showing multiple active timers`
 
 ```lua
-buf:PushUInt32(50) -- delay remaining in seconds
-buf:PushUInt32(120) -- delay total in seconds
+data.delay = { 1, 1 } -- delay remaining in seconds
 ```
 Every icon can display its own countdown timer which can be updated at any time by sending state flag updates  
 Timers prevent interaction if active so can work as cooldowns for buttons
+
+<img style="border:1px solid black" src="img/sirin_cw_progressbar.png"/>
+
+Timers can also be used to show progress bars if delay is set on a text object. 
+
+Any text will be used within the bar.
 
 > If a countdown state was already active on logout track this value and re-apply on reconnect \
 > Setting the remaining and total from when counter first applied
@@ -331,83 +344,16 @@ You manage the data server side and update only the current state on the client
 
 ---
 
-### Updating All State Flags (Custom Windows & Function Menu)
+### Custom Window: Example
 
-> Function Menu _Is always index 1_
+See `threads\main\custom\demo\customWindowDemo.lua` for complete example of a custom window
 
-> Full example `sirin-lua\threads\main\custom\demo\customWindowDemo.lua`
 
-This example responds to clicking the GM button in Function Menu and opens the Custom Window at Index 2
 
-```lua
--- ReloadableScripts/CustomWindodws/default.lua
-{
-	-- BUTTON VISIBLE TO GM ONLY
-	icon = { 4, 13, 3, 0 },
-	customWindow = 2,  -- Index of Custom Window
-	isGM = true
-},
-```
+<img style="border:1px solid black" src="img/sirin_cw_demogm.png"/>
 
-```lua
--- threads\main\custom\demo\customWindowDemo.lua
+> This example is loaded by default on new installs and can be triggered to open using the GM button from the function menu
 
--- Respond to 'onPressCustomWindowButton' hook
--- Action: Clicking the GM button in Function Menu
-function script.onButtonPress(pPlayer, dwActWindowID, dwActButtonID, dwParentWindowID, dwSelectedID)
-    
-    -- Check if component 12 'GM Button' of Function Menu index 1 is pressed
-    if dwActWindowID == 1 and dwActButtonID == 12 then
-        
-        -- Custom Window defined in 'ReloadableScripts/CustomWindodws/default.lua'
-        local buf = Sirin.mainThread.CLuaSendBuffer.Instance()
-        buf:Init() -- Create new buffer 'buf' to store the state of all components in Custom Window
-		buf:PushUInt32(2) -- Index 2+ for Custom Window | Index 1 for Function Menu
-		buf:PushUInt32(4) -- Number of components in Custom Window
+<img style="border:1px solid black" src="img/sirin_cw_demo.png"/>
 
-        -- Loop 4 times
-		for i = 1, 4 do
-			buf:PushUInt32(tonumber("101", 2)) -- set state flag  [IsButton,  Not Disabled, Visible]  
-			buf:PushUInt32(1) -- set delay remaining (seconds)
-			buf:PushUInt32(1) -- set delay total (seconds)
-			buf:PushUInt32(0xFFFFFFFF) -- counter on icon (Disabled with 0xFFFFFFFF)
-			buf:PushUInt32(0xFFFFFFFF) -- counter Max on icon (Disabled with 0xFFFFFFFF)
-		end
-
-        -- Send packet to player with data in buffer `buf`
-		buf:SendBuffer(pPlayer, 80, 12)
-    end
-end
-
--- Add hook to respond to clicks from Custom Window or Function Menu. Call -> onButtonPressed
-SirinLua.HookMgr.addHook("onPressCustomWindowButton", HOOK_POS.after_event, script.m_strUUID, script.onButtonPress)
-```
-
-> Change the `Window ID` to match the custom window index
-
-### Updating Single State Flag
-
-```lua
-{
-	"funcSingle", "111100", "111",
-	---@param pPlayer CPlayer
-	---@return boolean
-	function (pPlayer)
-		local buf = Sirin.mainThread.CLuaSendBuffer.Instance()
-		buf:Init()
-		buf:PushUInt32(1) -- Always 1 for function window
-        buf:PushUInt8(3) -- 3: update state and delay of particular component
-
-        buf:PushUInt32(1) -- Component/button index to update
-		buf:PushUInt32(tonumber("000101", 2)) -- state flags
-		buf:PushUInt32(250) -- delay remain in seconds
-		buf:PushUInt32(2000) -- delay total in seconds
-		buf:PushUInt32(0) -- not used in function menu but must be sent
-		buf:PushUInt32(0) -- not used in function menu but must be sent
-
-		buf:SendBuffer(pPlayer, 80, 14) -- Send the packet
-		return true
-	end
-},
-```
-As well as updating all of the flags in the function menu you can choose to update a single flag with packet `80` `14`
+This uses the [Module Template](/lua/features/module.md) to ensure all logic is contained within the module
