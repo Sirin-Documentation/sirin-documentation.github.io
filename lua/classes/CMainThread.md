@@ -1,12 +1,14 @@
 # CMainThread
  
+> `void` gm_ServerClose(`void`)
+ 
 ## Members
  
 > `struct` `_SRAND` m_Rand
  
 > `struct` `_WAIT_ENTER_ACCOUNT`* m_WaitEnterAccount_get(`unsigned __int64`)
  
-> `class` `CRFWorldDatabase`* m_pWorldDB
+> `class` [CRFWorldDatabase](lua/classes/CRFWorldDatabase.md)* m_pWorldDB
  
 > `class` `CFrameRate` m_MainFrameRate
  

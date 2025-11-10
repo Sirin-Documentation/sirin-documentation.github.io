@@ -4,6 +4,12 @@
  
 > `int` GetGuildApplierList(`struct` `lua_State` *)
  
+> `void` MakeDownMemberPacket(`void`)
+ 
+> `struct` [_guild_member_info](lua/classes/_guild_member_info.md)* GetMemberFromSerial(`unsigned long`)
+ 
+> `void` SendMsg_DownPacket(`unsigned char`,`struct` [_guild_member_info](lua/classes/_guild_member_info.md) *)
+ 
 ## Members
  
 > `int` m_nIndex
@@ -60,7 +66,7 @@
  
 > `unsigned int` m_dwGuildBattleTotLose
  
-> `struct` `_guild_member_download_zocl`* m_DownPacket_Member
+> `struct` [_guild_member_download_zocl](lua/classes/_guild_member_download_zocl.md)* m_DownPacket_Member
  
 > `struct` `_guild_applier_download_zocl`* m_DownPacket_Applier
  

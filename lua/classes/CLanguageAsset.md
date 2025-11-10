@@ -8,6 +8,8 @@
  
 > `void` setDefaultLanguage(`unsigned char`)
  
+> `unsigned char` getDefaultLanguage(`void`)
+ 
 > `unsigned char` getPlayerLanguage(`unsigned int`)
  
 > `const` `char`* getPlayerLanguagePrefix(`unsigned int`)

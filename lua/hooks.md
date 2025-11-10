@@ -670,6 +670,146 @@
 
 * Hook Positions: `filter`	
 
+> ####   initVoteParams()
+
+* Purpose: `Init default constants.`
+
+* Function: `initVoteParams`
+
+* Function parameters:
+
+* Hook Positions: `pre_event`	
+
+> ####   canVote(pPlayer, bVote)
+
+* Purpose: `Checks can player vote or not.`
+
+* Function: `canVote`
+
+* Function parameters:
+
+   * `CPlayer` pPlayer
+
+   * `boolean` bVote
+
+* Hook Positions: `filter`	
+
+> ####   getVoiceWeight(pPlayer)
+
+* Purpose: `Power of player's voice`
+
+* Function: `getVoiceWeight`
+
+* Function parameters:
+
+   * `CPlayer` pPlayer
+
+* Hook Positions: `special`	
+
+> ####   votePatriarch(pPlayer, bAbstain, pCandidate)
+
+* Purpose: `Notification of player did vote.`
+
+* Function: `votePatriarch`
+
+* Function parameters:
+
+   * `CPlayer` pPlayer
+
+   * `boolean` bAbstain
+
+   * `_candidate_info` pCandidate?
+
+* Hook Positions: `after_event`	
+
+> ####   canRegistElection(pPlayer)
+
+* Purpose: `Check if player can register election.`
+
+* Function: `canRegistElection`
+
+* Function parameters:
+
+   * `CPlayer` pPlayer
+
+* Hook Positions: `special`	
+
+> ####   registElection(pPlayer)
+
+* Purpose: `Notification of player did register in election.`
+
+* Function: `registElection`
+
+* Function parameters:
+
+   * `CPlayer` pPlayer
+
+* Hook Positions: `after_event`	
+
+> ####   canAutoAddPatriarchGroup()
+
+* Purpose: `Checks if auto fill race boss list by race rank is enabled.`
+
+* Function: `canAutoAddPatriarchGroup`
+
+* Function parameters:
+
+* Hook Positions: `filter`	
+
+> ####   HonorGuild_SetNextComplete(byErrCode, byRace)
+
+* Purpose: `Honor guild set next complete notification.`
+
+* Function: `HonorGuild_SetNextComplete`
+
+* Function parameters:
+
+   * `integer` byErrCode
+
+   * `integer` byRace
+
+* Hook Positions: `after_event`	
+
+> ####   combineButtonResult(pPlayer, byErrCode, wTmpManualIndex, dwFee, luaMats, pOverlapCon, pNewItem)
+
+* Purpose: `Exchange button result notification.`
+
+* Function: `combineButtonResult`
+
+* Function parameters:
+
+   * `CPlayer` pPlayer
+
+   * `integer` byErrCode
+
+   * `integer` wTmpManualIndex
+
+   * `integer` dwFee
+
+   * `table<integer,` luaMats
+
+   * `_STORAGE_LIST___db_con` pOverlapCon?
+
+   * `_STORAGE_LIST___db_con` pNewItem?
+
+* Hook Positions: `pre_event`	
+
+> ####   PreContEffectInsert(pPlayer, pActPlayer, pCont)
+
+* Purpose: `pre apply continuing effect hook. can change final buff time and level.`
+
+* Function: `PreContEffectInsert`
+
+* Function parameters:
+
+   * `CPlayer` pPlayer
+
+   * `CPlayer` pActPlayer
+
+   * `_sf_continous_ex` pCont
+
+* Hook Positions: `pre_event`	
+
 # Animus
  --- 
 > ####   CAnimus__CalcAttExp(pAnimus, pAT)
@@ -699,6 +839,18 @@
    * `integer` nAddExp
 
 * Hook Positions: `special`	
+
+> ####   CAnimus__IsValidTarget(pAnimus)
+
+* Purpose: `Validation of animus target.`
+
+* Function: `CAnimus__IsValidTarget`
+
+* Function parameters:
+
+   * `CAnimus` pAnimus
+
+* Hook Positions: `original`	
 
 > ####   CAnimus__GetDefGap(pAnimus, nPart)
 
@@ -943,6 +1095,90 @@
 * Function parameters:
 
    * `CPlayer` pPlayer
+
+   * `CCharacter` pDier
+
+* Hook Positions: `after_event`	
+
+> ####   CAnimus__RecvKillMessage(pAnimus, pDier)
+
+* Purpose: `Kill notification to animus.`
+
+* Function: `CAnimus__RecvKillMessage`
+
+* Function parameters:
+
+   * `CAnimus` pAnimus
+
+   * `CCharacter` pDier
+
+* Hook Positions: `after_event`	
+
+> ####   CTrap__RecvKillMessage(pTrap, pDier)
+
+* Purpose: `Kill notification to trap.`
+
+* Function: `CTrap__RecvKillMessage`
+
+* Function parameters:
+
+   * `CTrap` pTrap
+
+   * `CCharacter` pDier
+
+* Hook Positions: `after_event`	
+
+> ####   CGuardTower__RecvKillMessage(pTower, pDier)
+
+* Purpose: `Kill notification to tower.`
+
+* Function: `CGuardTower__RecvKillMessage`
+
+* Function parameters:
+
+   * `CGuardTower` pTower
+
+   * `CCharacter` pDier
+
+* Hook Positions: `after_event`	
+
+> ####   CNuclearBomb__RecvKillMessage(pBomb, pDier)
+
+* Purpose: `Kill notification to nuclear bomb.`
+
+* Function: `CNuclearBomb__RecvKillMessage`
+
+* Function parameters:
+
+   * `CNuclearBomb` pBomb
+
+   * `CCharacter` pDier
+
+* Hook Positions: `after_event`	
+
+> ####   CHolyKeeper__RecvKillMessage(pKeeper, pDier)
+
+* Purpose: `Kill notification to keeper.`
+
+* Function: `CHolyKeeper__RecvKillMessage`
+
+* Function parameters:
+
+   * `CHolyKeeper` pKeeper
+
+   * `CCharacter` pDier
+
+* Hook Positions: `after_event`	
+
+> ####   CMonster__RecvKillMessage(pMonster, pDier)
+
+* Purpose: `Kill notification to monster.`
+
+* Function: `CMonster__RecvKillMessage`
+
+* Function parameters:
+
+   * `CMonster` pMonster
 
    * `CCharacter` pDier
 
@@ -1302,6 +1538,128 @@
 
 * Hook Positions: `after_event`	
 
+# Character
+ --- 
+> ####   CCharacter__AssistForce(pSrcChar, pDstChar, pForceFld, nForceLv, byErrorCode, bUpMty, bRet)
+
+* Purpose: `Apply continuing force effect result notification.`
+
+* Function: `CCharacter__AssistForce`
+
+* Function parameters:
+
+   * `CCharacter` pSrcChar
+
+   * `CCharacter` pDstChar
+
+   * `_force_fld` pForceFld
+
+   * `integer` nForceLv
+
+   * `integer` byErrorCode
+
+   * `boolean` bUpMty
+
+   * `boolean` bRet
+
+* Hook Positions: `after_event`	
+
+> ####   CCharacter__AssistForceToOne(pSrcChar, pDstChar, pForceFld, nForceLv, bRet)
+
+* Purpose: `Apply continuing force effect result notification.`
+
+* Function: `CCharacter__AssistForceToOne`
+
+* Function parameters:
+
+   * `CCharacter` pSrcChar
+
+   * `CCharacter` pDstChar
+
+   * `_force_fld` pForceFld
+
+   * `integer` nForceLv
+
+   * `boolean` bRet
+
+* Hook Positions: `after_event`	
+
+> ####   CCharacter__AssistSkill(pSrcChar, pDstChar, nEffectCode, pSkillFld, nSkillLv, byErrorCode, bUpMty, bRet)
+
+* Purpose: `Apply continuing skill effect result notification.`
+
+* Function: `CCharacter__AssistSkill`
+
+* Function parameters:
+
+   * `CCharacter` pSrcChar
+
+   * `CCharacter` pDstChar
+
+   * `integer` nEffectCode
+
+   * `_skill_fld` pSkillFld
+
+   * `integer` nSkillLv
+
+   * `integer` byErrorCode
+
+   * `boolean` bUpMty
+
+   * `boolean` bRet
+
+* Hook Positions: `after_event`	
+
+> ####   CCharacter__AssistSkillToOne(pSrcChar, pDstChar, nEffectCode, pSkillFld, nSkillLv, bRet)
+
+* Purpose: `Apply continuing skill effect result notification.`
+
+* Function: `CCharacter__AssistSkillToOne`
+
+* Function parameters:
+
+   * `CCharacter` pSrcChar
+
+   * `CCharacter` pDstChar
+
+   * `integer` nEffectCode
+
+   * `_skill_fld` pSkillFld
+
+   * `integer` nSkillLv
+
+   * `boolean` bRet
+
+* Hook Positions: `after_event`	
+
+> ####   CCharacter__InsertSFContEffect(pDstChar, byContCode, byEffectCode, dwEffectIndex, wDurSec, byLv, bUpMty, pSrcChar, byRet)
+
+* Purpose: `apply damage event.`
+
+* Function: `CCharacter__InsertSFContEffect`
+
+* Function parameters:
+
+   * `CCharacter` pDstChar
+
+   * `integer` byContCode
+
+   * `integer` byEffectCode
+
+   * `integer` dwEffectIndex
+
+   * `integer` wDurSec
+
+   * `integer` byLv
+
+   * `boolean` bUpMty
+
+   * `CCharacter` pSrcChar
+
+   * `integer` byRet
+
+* Hook Positions: `after_event`	
+
 # Crafts
  --- 
 > ####   CPlayer__pc_MakeItem(pPlayer, pipMakeTool, wManualIndex, materials)
@@ -1658,6 +2016,50 @@
 
 * Hook Positions: `filter`	
 
+> ####   CPlayer__SendMsg_GuildJoinApplyResult(pPlayer, byErrCode, pApplyGuild)
+
+* Purpose: `Guild apply request result notification.`
+
+* Function: `CPlayer__SendMsg_GuildJoinApplyResult`
+
+* Function parameters:
+
+   * `CPlayer` pPlayer
+
+   * `integer` byErrCode
+
+   * `CGuild` pApplyGuild
+
+* Hook Positions: `pre_event`	
+
+> ####   CGuild__MakeDownApplierPacket(pGuild, pData)
+
+* Purpose: `Make applier list packet.`
+
+* Function: `CGuild__MakeDownApplierPacket`
+
+* Function parameters:
+
+   * `CGuild` pGuild
+
+   * `CBinaryData` pData
+
+* Hook Positions: `original`	
+
+> ####   CGuild__SendMsg_AddJoinApplier(pGuild, pApplierInfo)
+
+* Purpose: `Send new applier data to guild senate.`
+
+* Function: `CGuild__SendMsg_AddJoinApplier`
+
+* Function parameters:
+
+   * `CGuild` pGuild
+
+   * `_guild_applier_info` pApplierInfo
+
+* Hook Positions: `original`	
+
 > ####   CPlayer__SendMsg_GuildJoinApplyCancelResult(pPlayer)
 
 * Purpose: `Guild join cancel notification.`
@@ -1699,6 +2101,22 @@
    * `integer` dwApplierSerial
 
 * Hook Positions: `after_event`	
+
+> ####   CGuild__SendMsg_GuildJoinAcceptInform(pGuild, pNewMember, dwAcceptSerial)
+
+* Purpose: `Guild join result members inform.`
+
+* Function: `CGuild__SendMsg_GuildJoinAcceptInform`
+
+* Function parameters:
+
+   * `CGuild` pGuild
+
+   * `_guild_member_info` pNewMember
+
+   * `integer` dwAcceptSerial
+
+* Hook Positions: `original`	
 
 > ####   CPlayer__pc_GuildSelfLeaveRequest(pPlayer)
 
@@ -1843,6 +2261,20 @@
    * `integer` Ret
 
 * Hook Positions: `original, after_event`	
+
+# MainThread
+ --- 
+> ####   CMainThread__gm_ServerClose(pMain)
+
+* Purpose: `Zone window 'Server close' button reaction.`
+
+* Function: `CMainThread__gm_ServerClose`
+
+* Function parameters:
+
+   * `CMainThread` pMain
+
+* Hook Positions: `original`	
 
 # Monster
  --- 
@@ -2418,6 +2850,24 @@
 
 * Hook Positions: `pre_event`	
 
+> ####   CPvpOrderView__SetPvpOrderView(pOrderView, dPvpPoint, pkInfo, pPlayer)
+
+* Purpose: `Fixed PvP Cash point change on login notification.`
+
+* Function: `CPvpOrderView__SetPvpOrderView`
+
+* Function parameters:
+
+   * `CPvpOrderView` pOrderView
+
+   * `number` dPvpPoint
+
+   * `_PVP_ORDER_VIEW_DB_BASE` pkInfo
+
+   * `CPlayer` pPlayer
+
+* Hook Positions: `after_event`	
+
 > ####   CMapOperation__GetStartMap(pMapOper, byRaceCode)
 
 * Purpose: `Overrides HQ map`
@@ -2567,6 +3017,140 @@
    * `CCharacter` pAttackerChar
 
 * Hook Positions: `original`	
+
+> ####   CPlayer__pc_UnitFrameRepairRequest(pPlayer, bySlotIndex, bUseNPCLinkIntem, bUnitRepairOut)
+
+* Purpose: `Unit repair rutine.`
+
+* Function: `CPlayer__pc_UnitFrameRepairRequest`
+
+* Function parameters:
+
+   * `CPlayer` pPlayer
+
+   * `integer` bySlotIndex
+
+   * `boolean` bUseNPCLinkIntem
+
+   * `boolean` bUnitRepairOut
+
+* Hook Positions: `original`	
+
+> ####   CPlayer__pc_UnitFrameBuyRequest(pPlayer, byFrameCode, bUseNPCLinkIntem)
+
+* Purpose: `Unit purchase rutine.`
+
+* Function: `CPlayer__pc_UnitFrameBuyRequest`
+
+* Function parameters:
+
+   * `CPlayer` pPlayer
+
+   * `integer` byFrameCode
+
+   * `boolean` bUseNPCLinkIntem
+
+* Hook Positions: `original`	
+
+> ####   CPlayer__pc_UnitSellRequest(pPlayer, bySlotIndex, bUseNPCLinkIntem)
+
+* Purpose: `Unit sell rutine.`
+
+* Function: `CPlayer__pc_UnitSellRequest`
+
+* Function parameters:
+
+   * `CPlayer` pPlayer
+
+   * `integer` bySlotIndex
+
+   * `boolean` bUseNPCLinkIntem
+
+* Hook Positions: `original`	
+
+> ####   CPlayer__pc_UnitPartTuningRequest(pPlayer, pMsg, bUseNPCLinkIntem)
+
+* Purpose: `Unit part tuning rutine.`
+
+* Function: `CPlayer__pc_UnitPartTuningRequest`
+
+* Function parameters:
+
+   * `CPlayer` pPlayer
+
+   * `_unit_part_tuning_request_clzo` pMsg
+
+   * `boolean` bUseNPCLinkIntem
+
+* Hook Positions: `original`	
+
+> ####   CPlayer__pc_UnitBulletFillRequest(pPlayer, pMsg, bUseNPCLinkIntem)
+
+* Purpose: `Unit main ammo fill rutine.`
+
+* Function: `CPlayer__pc_UnitBulletFillRequest`
+
+* Function parameters:
+
+   * `CPlayer` pPlayer
+
+   * `_unit_bullet_fill_request_clzo` pMsg
+
+   * `boolean` bUseNPCLinkIntem
+
+* Hook Positions: `original`	
+
+> ####   CPlayer__pc_UnitPackFillRequest(pPlayer, pMsg, bUseNPCLinkIntem)
+
+* Purpose: `Unit spare ammo fill rutine.`
+
+* Function: `CPlayer__pc_UnitPackFillRequest`
+
+* Function parameters:
+
+   * `CPlayer` pPlayer
+
+   * `_unit_pack_fill_request_clzo` pMsg
+
+   * `boolean` bUseNPCLinkIntem
+
+* Hook Positions: `original`	
+
+> ####   CPlayer__SF_TeleportToDestination(pPlayer, pDstObj, bStone)
+
+* Purpose: `Teleport potion filter.`
+
+* Function: `CPlayer__SF_TeleportToDestination`
+
+* Function parameters:
+
+   * `CPlayer` pPlayer
+
+   * `CCharacter` pDstObj
+
+   * `boolean` bStone
+
+* Hook Positions: `filter`	
+
+> ####   CPlayer__pc_MovePortal(pPlayer, nPortalIndex, pConsumeSerial_1, pConsumeSerial_2, pConsumeSerial_3)
+
+* Purpose: `Map teleport filter.`
+
+* Function: `CPlayer__pc_MovePortal`
+
+* Function parameters:
+
+   * `CPlayer` pPlayer
+
+   * `integer` nPortalIndex
+
+   * `integer` pConsumeSerial_1
+
+   * `integer` pConsumeSerial_2
+
+   * `integer` pConsumeSerial_3
+
+* Hook Positions: `filter`	
 
 # PotionEffect
  --- 

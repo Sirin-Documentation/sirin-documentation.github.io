@@ -23,11 +23,13 @@
  
 > `static` `int` GetPrivateProfileStringA(`struct` `lua_State` *)
  
+> `static` `void` SetLoginOpen(`bool`)
+ 
+> `static` `void` ShutdownServer(`void`)
+ 
 > `static` `void` WriteA(`const` `char` *,`const` `char` *,`bool`,`bool`)
  
 > `static` `void` WritePrivateProfileStringA(`const` `char` *,`const` `char` *,`const` `char` *,`const` `char` *)
- 
-> `static` `class` [VoidPtr](lua/classes/VoidPtr.md)* binaryDataToVoid(`class` [CBinaryData](lua/classes/CBinaryData.md) *)
  
 > `static` `class` `luabridge__LuaRef` getFileList(`const` `char` *,`struct` `lua_State` *)
  
@@ -41,9 +43,13 @@
  
 > `static` `void` processAsyncCallback(`unsigned __int64`,`const` `char` *,`const` `char` *,`const` `char` *,`unsigned __int64`,`class` [VoidPtr](lua/classes/VoidPtr.md) *)
  
-> `static` `void` processAsyncCallback(`unsigned __int64`,`const` `char` *,`const` `char` *,`const` `char` *,`unsigned __int64`,`class` [CSQLResultSet](lua/classes/CSQLResultSet.md) *)
+> `static` `void` processAsyncCallback(`unsigned __int64`,`const` `char` *,`const` `char` *,`const` `char` *,`unsigned __int64`,`class` `std__shared_ptr<class CMultiSQLResultSet>`)
  
-> `static` `void` processAsyncCallback(`unsigned __int64`,`const` `char` *,`const` `char` *,`const` `char` *,`unsigned __int64`,`class` [CBinaryData](lua/classes/CBinaryData.md) *)
+> `static` `void` processAsyncCallback(`unsigned __int64`,`const` `char` *,`const` `char` *,`const` `char` *,`unsigned __int64`,`class` `std__shared_ptr<class CSQLResultSet>`)
+ 
+> `static` `void` processAsyncCallback(`unsigned __int64`,`const` `char` *,`const` `char` *,`const` `char` *,`unsigned __int64`,`class` `std__shared_ptr<class CMultiBinaryData>`)
+ 
+> `static` `void` processAsyncCallback(`unsigned __int64`,`const` `char` *,`const` `char` *,`const` `char` *,`unsigned __int64`,`class` `std__shared_ptr<class CBinaryData>`)
  
 > `static` `void` processAsyncCallback(`unsigned __int64`,`const` `char` *,`const` `char` *,`const` `char` *,`class` `std__basic_string<char`,`struct` `std__char_traits<char>`,`class` `std__allocator<char> >`)
  
@@ -51,9 +57,13 @@
  
 > `static` `void` processAsyncCallback(`unsigned __int64`,`const` `char` *,`const` `char` *,`const` `char` *,`class` [VoidPtr](lua/classes/VoidPtr.md) *)
  
-> `static` `void` processAsyncCallback(`unsigned __int64`,`const` `char` *,`const` `char` *,`const` `char` *,`class` [CSQLResultSet](lua/classes/CSQLResultSet.md) *)
+> `static` `void` processAsyncCallback(`unsigned __int64`,`const` `char` *,`const` `char` *,`const` `char` *,`class` `std__shared_ptr<class CMultiSQLResultSet>`)
  
-> `static` `void` processAsyncCallback(`unsigned __int64`,`const` `char` *,`const` `char` *,`const` `char` *,`class` [CBinaryData](lua/classes/CBinaryData.md) *)
+> `static` `void` processAsyncCallback(`unsigned __int64`,`const` `char` *,`const` `char` *,`const` `char` *,`class` `std__shared_ptr<class CSQLResultSet>`)
+ 
+> `static` `void` processAsyncCallback(`unsigned __int64`,`const` `char` *,`const` `char` *,`const` `char` *,`class` `std__shared_ptr<class CMultiBinaryData>`)
+ 
+> `static` `void` processAsyncCallback(`unsigned __int64`,`const` `char` *,`const` `char` *,`const` `char` *,`class` `std__shared_ptr<class CBinaryData>`)
  
 > `static` `void` processAsyncPoolCallback(`unsigned __int64`,`unsigned int`,`const` `char` *,`const` `char` *,`const` `char` *,`unsigned __int64`,`class` `std__basic_string<char`,`struct` `std__char_traits<char>`,`class` `std__allocator<char> >`)
  
@@ -61,9 +71,13 @@
  
 > `static` `void` processAsyncPoolCallback(`unsigned __int64`,`unsigned int`,`const` `char` *,`const` `char` *,`const` `char` *,`unsigned __int64`,`class` [VoidPtr](lua/classes/VoidPtr.md) *)
  
-> `static` `void` processAsyncPoolCallback(`unsigned __int64`,`unsigned int`,`const` `char` *,`const` `char` *,`const` `char` *,`unsigned __int64`,`class` [CSQLResultSet](lua/classes/CSQLResultSet.md) *)
+> `static` `void` processAsyncPoolCallback(`unsigned __int64`,`unsigned int`,`const` `char` *,`const` `char` *,`const` `char` *,`unsigned __int64`,`class` `std__shared_ptr<class CMultiSQLResultSet>`)
  
-> `static` `void` processAsyncPoolCallback(`unsigned __int64`,`unsigned int`,`const` `char` *,`const` `char` *,`const` `char` *,`unsigned __int64`,`class` [CBinaryData](lua/classes/CBinaryData.md) *)
+> `static` `void` processAsyncPoolCallback(`unsigned __int64`,`unsigned int`,`const` `char` *,`const` `char` *,`const` `char` *,`unsigned __int64`,`class` `std__shared_ptr<class CSQLResultSet>`)
+ 
+> `static` `void` processAsyncPoolCallback(`unsigned __int64`,`unsigned int`,`const` `char` *,`const` `char` *,`const` `char` *,`unsigned __int64`,`class` `std__shared_ptr<class CMultiBinaryData>`)
+ 
+> `static` `void` processAsyncPoolCallback(`unsigned __int64`,`unsigned int`,`const` `char` *,`const` `char` *,`const` `char` *,`unsigned __int64`,`class` `std__shared_ptr<class CBinaryData>`)
  
 > `static` `void` processAsyncPoolCallback(`unsigned __int64`,`unsigned int`,`const` `char` *,`const` `char` *,`const` `char` *,`class` `std__basic_string<char`,`struct` `std__char_traits<char>`,`class` `std__allocator<char> >`)
  
@@ -71,15 +85,13 @@
  
 > `static` `void` processAsyncPoolCallback(`unsigned __int64`,`unsigned int`,`const` `char` *,`const` `char` *,`const` `char` *,`class` [VoidPtr](lua/classes/VoidPtr.md) *)
  
-> `static` `void` processAsyncPoolCallback(`unsigned __int64`,`unsigned int`,`const` `char` *,`const` `char` *,`const` `char` *,`class` [CSQLResultSet](lua/classes/CSQLResultSet.md) *)
+> `static` `void` processAsyncPoolCallback(`unsigned __int64`,`unsigned int`,`const` `char` *,`const` `char` *,`const` `char` *,`class` `std__shared_ptr<class CMultiSQLResultSet>`)
  
-> `static` `void` processAsyncPoolCallback(`unsigned __int64`,`unsigned int`,`const` `char` *,`const` `char` *,`const` `char` *,`class` [CBinaryData](lua/classes/CBinaryData.md) *)
+> `static` `void` processAsyncPoolCallback(`unsigned __int64`,`unsigned int`,`const` `char` *,`const` `char` *,`const` `char` *,`class` `std__shared_ptr<class CSQLResultSet>`)
  
-> `static` `class` [VoidPtr](lua/classes/VoidPtr.md)* sqlResultSetToVoid(`class` [CSQLResultSet](lua/classes/CSQLResultSet.md) *)
+> `static` `void` processAsyncPoolCallback(`unsigned __int64`,`unsigned int`,`const` `char` *,`const` `char` *,`const` `char` *,`class` `std__shared_ptr<class CMultiBinaryData>`)
  
-> `static` `class` [CBinaryData](lua/classes/CBinaryData.md)* voidToBinaryData(`class` [VoidPtr](lua/classes/VoidPtr.md) *)
- 
-> `static` `class` [CSQLResultSet](lua/classes/CSQLResultSet.md)* voidToSQLResultSet(`class` [VoidPtr](lua/classes/VoidPtr.md) *)
+> `static` `void` processAsyncPoolCallback(`unsigned __int64`,`unsigned int`,`const` `char` *,`const` `char` *,`const` `char` *,`class` `std__shared_ptr<class CBinaryData>`)
  
 #### Classes
  
@@ -88,6 +100,10 @@
 > [CBinaryData](lua/classes/CBinaryData.md)
  
 > [CLanguageAsset](lua/classes/CLanguageAsset.md)
+ 
+> [CMultiBinaryData](lua/classes/CMultiBinaryData.md)
+ 
+> [CMultiSQLResultSet](lua/classes/CMultiSQLResultSet.md)
  
 > [CSQLResultSet](lua/classes/CSQLResultSet.md)
  
@@ -157,6 +173,8 @@
  
 > [modItemPropertySkin](lua/threads/MainThread.md#SirinmainThreadmodItemPropertySkin)
  
+> [modNetwork](lua/threads/MainThread.md#SirinmainThreadmodNetwork)
+ 
 > [modPotionEffect](lua/threads/MainThread.md#SirinmainThreadmodPotionEffect)
  
 > [modQuestHistory](lua/threads/MainThread.md#SirinmainThreadmodQuestHistory)
@@ -166,8 +184,6 @@
 > [modReturnGate](lua/threads/MainThread.md#SirinmainThreadmodReturnGate)
  
 > [modStackExt](lua/threads/MainThread.md#SirinmainThreadmodStackExt)
- 
-> [modWindowExt](lua/threads/MainThread.md#SirinmainThreadmodWindowExt)
  
 #### Members
  
@@ -250,6 +266,8 @@
 > `static` `class` [CRecordData](lua/classes/CRecordData.md)* CQuestMgr__s_tblQuest(`void`)
  
 > `static` `class` [CRecordData](lua/classes/CRecordData.md)* CQuestMgr__s_tblQuestHappenEvent_get(`class` [CRecordData](lua/classes/CRecordData.md)*(__cdecl *)(unsigned __int64))
+ 
+> `static` `int` CloseConnect(`struct` `lua_State` *)
  
 > `static` `int` GetActiveGuildList(`struct` `lua_State` *)
  
@@ -423,6 +441,8 @@
  
 > `static` `struct` [_WeaponItem_fld](lua/classes/_WeaponItem_fld.md)* baseToWeaponItem(`struct` [_base_fld](lua/classes/_base_fld.md) *)
  
+> `static` `struct` [_quest_check_result](lua/classes/_quest_check_result.md)* cloneQuestResult(`void`)
+ 
 > `static` `class` [CItemBox](lua/classes/CItemBox.md)* createItemBox(`const` `char` *,`unsigned int`,`unsigned __int64`,`unsigned int`,`unsigned char`,`class` [CMapData](lua/classes/CMapData.md) *,`unsigned short`,`float`,`float`,`float`,`unsigned int`,`bool`,`class` [CPlayer](lua/classes/CPlayer.md) *,`bool`,`class` [CCharacter](lua/classes/CCharacter.md) *,`class` [CPlayer](lua/classes/CPlayer.md) *,`unsigned char`,`bool`)
  
 > `static` `int` createItemBoxForAutoLoot(`struct` `lua_State` *)
@@ -430,6 +450,16 @@
 > `static` `class` [CItemBox](lua/classes/CItemBox.md)* createItemBox_Monster(`class` [CItemBox](lua/classes/CItemBox.md) *,`unsigned char`,`struct` [_base_fld](lua/classes/_base_fld.md) *,`unsigned __int64`,`unsigned char`,`class` [CMapData](lua/classes/CMapData.md) *,`unsigned short`,`float`,`float`,`float`,`unsigned int`,`bool`,`unsigned int`,`unsigned short`,`unsigned int`,`unsigned short`,`struct` [_monster_fld](lua/classes/_monster_fld.md) *)
  
 > `static` `class` [CMonster](lua/classes/CMonster.md)* createMonster(`class` [CMapData](lua/classes/CMapData.md) *,`unsigned short`,`float`,`float`,`float`,`const` `char` *,`bool`,`bool`,`bool`)
+ 
+> `static` `float` eGetOreRate(`int`)
+ 
+> `static` `float` eGetTex(`int`)
+ 
+> `static` `unsigned int` eGetTexRate(`int`)
+ 
+> `static` `class` [CandidateRegister](lua/classes/CandidateRegister.md)* electProcessorToCandidateRegister(`class` [ElectProcessor](lua/classes/ElectProcessor.md) *)
+ 
+> `static` `class` [Voter](lua/classes/Voter.md)* electProcessorToVoter(`class` [ElectProcessor](lua/classes/ElectProcessor.md) *)
  
 > `static` `class` [CGuild](lua/classes/CGuild.md)* g_Guild_get(`class` [CGuild](lua/classes/CGuild.md)*(__cdecl *)(unsigned __int64))
  
@@ -533,6 +563,8 @@
  
 > [CCharacter](lua/classes/CCharacter.md)
  
+> [CDarkHoleChannel](lua/classes/CDarkHoleChannel.md)
+ 
 > [CDummyRift](lua/classes/CDummyRift.md)
  
 > [CExpInfo](lua/classes/CExpInfo.md)
@@ -551,6 +583,8 @@
  
 > [CGuild](lua/classes/CGuild.md)
  
+> [CGuildBattle](lua/classes/CGuildBattle.md)
+ 
 > [CGuildRoomSystem](lua/classes/CGuildRoomSystem.md)
  
 > [CHolyKeeper](lua/classes/CHolyKeeper.md)
@@ -564,6 +598,8 @@
 > [CHolyStoneSaveData](lua/classes/CHolyStoneSaveData.md)
  
 > [CHolyStoneSystem](lua/classes/CHolyStoneSystem.md)
+ 
+> [CHonorGuild](lua/classes/CHonorGuild.md)
  
 > [CItemBox](lua/classes/CItemBox.md)
  
@@ -597,6 +633,14 @@
  
 > [CMonsterSkillPool](lua/classes/CMonsterSkillPool.md)
  
+> [CNormalGuildBattle](lua/classes/CNormalGuildBattle.md)
+ 
+> [CNormalGuildBattleGuild](lua/classes/CNormalGuildBattleGuild.md)
+ 
+> [CNormalGuildBattleGuildMember](lua/classes/CNormalGuildBattleGuildMember.md)
+ 
+> [CNormalGuildBattleLogger](lua/classes/CNormalGuildBattleLogger.md)
+ 
 > [CNuclearBomb](lua/classes/CNuclearBomb.md)
  
 > [CNuclearBombMgr](lua/classes/CNuclearBombMgr.md)
@@ -621,6 +665,8 @@
  
 > [CPotionParam](lua/classes/CPotionParam.md)
  
+> [CProtoDataObject](lua/classes/CProtoDataObject.md)
+ 
 > [CPvpOrderView](lua/classes/CPvpOrderView.md)
  
 > [CPvpUserAndGuildRankingSystem](lua/classes/CPvpUserAndGuildRankingSystem.md)
@@ -637,11 +683,23 @@
  
 > [CUserDB](lua/classes/CUserDB.md)
  
+> [CWeeklyGuildRankManager](lua/classes/CWeeklyGuildRankManager.md)
+ 
+> [CandidateMgr](lua/classes/CandidateMgr.md)
+ 
+> [CandidateRegister](lua/classes/CandidateRegister.md)
+ 
 > [EffectData](lua/classes/EffectData.md)
+ 
+> [ElectProcessor](lua/classes/ElectProcessor.md)
  
 > [ItemCombineMgr](lua/classes/ItemCombineMgr.md)
  
+> [PatriarchElectProcessor](lua/classes/PatriarchElectProcessor.md)
+ 
 > [SKILL](lua/classes/SKILL.md)
+ 
+> [Voter](lua/classes/Voter.md)
  
 > [_100_per_random_table](lua/classes/_100_per_random_table.md)
  
@@ -935,6 +993,8 @@
  
 > [_buy_offer](lua/classes/_buy_offer.md)
  
+> [_candidate_info](lua/classes/_candidate_info.md)
+ 
 > [_character_create_setdata](lua/classes/_character_create_setdata.md)
  
 > [_character_db_load](lua/classes/_character_db_load.md)
@@ -961,6 +1021,10 @@
  
 > [_cont_param_list](lua/classes/_cont_param_list.md)
  
+> [_dh_player_mgr](lua/classes/_dh_player_mgr.md)
+ 
+> [_dh_player_mgr___pos](lua/classes/_dh_player_mgr___pos.md)
+ 
 > [_dummy_position](lua/classes/_dummy_position.md)
  
 > [_effect_parameter](lua/classes/_effect_parameter.md)
@@ -979,7 +1043,17 @@
  
 > [_guild_applier_info](lua/classes/_guild_applier_info.md)
  
+> [_guild_honor_list_result_zocl](lua/classes/_guild_honor_list_result_zocl.md)
+ 
+> [_guild_honor_list_result_zocl____list](lua/classes/_guild_honor_list_result_zocl____list.md)
+ 
+> [_guild_honor_set_request_clzo](lua/classes/_guild_honor_set_request_clzo.md)
+ 
+> [_guild_honor_set_request_clzo____list](lua/classes/_guild_honor_set_request_clzo____list.md)
+ 
 > [_guild_master_info](lua/classes/_guild_master_info.md)
+ 
+> [_guild_member_download_zocl](lua/classes/_guild_member_download_zocl.md)
  
 > [_guild_member_info](lua/classes/_guild_member_info.md)
  
@@ -1041,6 +1115,18 @@
  
 > [_portal_fld](lua/classes/_portal_fld.md)
  
+> [_pt_notify_vote_score_zocl](lua/classes/_pt_notify_vote_score_zocl.md)
+ 
+> [_pt_notify_vote_score_zocl____body](lua/classes/_pt_notify_vote_score_zocl____body.md)
+ 
+> [_pt_result_fcandidacy_list_zocl](lua/classes/_pt_result_fcandidacy_list_zocl.md)
+ 
+> [_pt_result_fcandidacy_list_zocl____candi_info](lua/classes/_pt_result_fcandidacy_list_zocl____candi_info.md)
+ 
+> [_pt_trans_votepaper_zocl](lua/classes/_pt_trans_votepaper_zocl.md)
+ 
+> [_pt_trans_votepaper_zocl____body](lua/classes/_pt_trans_votepaper_zocl____body.md)
+ 
 > [_quest_check_result](lua/classes/_quest_check_result.md)
  
 > [_quest_check_result___node](lua/classes/_quest_check_result___node.md)
@@ -1065,11 +1151,25 @@
  
 > [_store_dummy](lua/classes/_store_dummy.md)
  
+> [_total_guild_rank_info](lua/classes/_total_guild_rank_info.md)
+ 
+> [_total_guild_rank_info___list](lua/classes/_total_guild_rank_info___list.md)
+ 
 > [_tower_create_setdata](lua/classes/_tower_create_setdata.md)
  
 > [_trap_create_setdata](lua/classes/_trap_create_setdata.md)
  
 > [_trunk_db_load](lua/classes/_trunk_db_load.md)
+ 
+> [_tuning_data](lua/classes/_tuning_data.md)
+ 
+> [_unit_bullet_fill_request_clzo](lua/classes/_unit_bullet_fill_request_clzo.md)
+ 
+> [_unit_pack_fill_request_clzo](lua/classes/_unit_pack_fill_request_clzo.md)
+ 
+> [_unit_pack_fill_request_clzo____list](lua/classes/_unit_pack_fill_request_clzo____list.md)
+ 
+> [_unit_part_tuning_request_clzo](lua/classes/_unit_part_tuning_request_clzo.md)
  
 > [_worlddb_sf_delay_info](lua/classes/_worlddb_sf_delay_info.md)
  
@@ -1153,6 +1253,8 @@
  
 > `static` `class` [CGuardTower](lua/classes/CGuardTower.md)* createSystemTower(`class` [CMapData](lua/classes/CMapData.md) *,`unsigned short`,`float`,`float`,`float`,`int`,`unsigned char`,`int`)
  
+> `static` `int` getAllTowers(`struct` `lua_State` *)
+ 
 > `static` `class` [CGuardTower](lua/classes/CGuardTower.md)* getTowerByIndex(`int`)
  
 ---
@@ -1178,6 +1280,13 @@
 > `static` `void` updateOwner(`unsigned __int64`,`unsigned int`)
  
 > `static` `void` updateProperty(`unsigned __int64`,`unsigned int`)
+ 
+---
+# Sirin.mainThread.modNetwork
+ 
+#### Functions
+ 
+> `static` `int` getPlayerHWID(`struct` `lua_State` *)
  
 ---
 # Sirin.mainThread.modPotionEffect
@@ -1222,7 +1331,7 @@
  
 > `static` `unsigned char` updateBaseShape(`class` [CPlayer](lua/classes/CPlayer.md) *,`unsigned int`)
  
-> `static` `unsigned char` updateRaceSexClass(`class` [CPlayer](lua/classes/CPlayer.md) *,`unsigned char`,`const` `char` *)
+> `static` `unsigned char` updateRaceSexClass(`struct` `lua_State` *)
  
 ---
 # Sirin.mainThread.modReturnGate
@@ -1237,11 +1346,4 @@
 #### Functions
  
 > `static` `unsigned int` GetStackSize(`void`)
- 
----
-# Sirin.mainThread.modWindowExt
- 
-#### Functions
- 
-> `static` `bool` RegisterAsset(`void`)
  

@@ -46,6 +46,35 @@ Every custom window is constructed in columns. In the layout you define how many
 ```lua
 layout = { 0, 0, 0 }, -- 3 columns, each with 33% width
 ```
+
+### Background Images [Sirin 0.44+]
+
+```lua
+backgroundImage = { 8, 0, 19 }, -- Optional background sprite
+```
+Set background image for window using same sprite setup as [Icon Sprites](/lua/features/customwindow/window.md#icon-sprites) (Optional)
+
+> Requires background image window flag to be set
+
+### Window Flags [Sirin 0.44+]
+
+```lua
+stateFlags = tonumber("11", 2)
+```
+window states (Optional)
+
+| Bit (Right to Left) | Action|
+|-------|------------------------------|
+| 0     | Force fixed window size |
+| 1     | Enable Background Image on window |
+
+### Sprite and Item icon sizes [Sirin 0.44+]
+
+```lua
+iconSize = 40, -- Default 50
+```
+Set size used for Item Sprites and Item Icons (Optional)
+
 ### Header / Footer
 Header/Footer is a link to another custom window - you use its contents to set what is seen in the header/footer. Use the Header/Footer index if you wish to update it with [State Flags](/lua/features/customwindow/stateFlags.md)
 
@@ -135,6 +164,8 @@ Formatting also works for [Text Counters](#text-counters) and [Text Buttons](#te
     },
 },
 ```
+
+> Set sprite / icon size using [Sprite and Icon Size](/lua/features/customwindow/window.md#sprite-and-item-icon-sizes-sirin-044)
 
 If the button [State Flag](/lua/features/customwindow/stateFlags.md) is set sprite functions as a button
 

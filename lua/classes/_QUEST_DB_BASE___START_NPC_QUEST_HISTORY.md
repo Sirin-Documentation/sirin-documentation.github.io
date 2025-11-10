@@ -2,7 +2,7 @@
  
 ## Functions
  
-> `void`* _QUEST_DB_BASE___START_NPC_QUEST_HISTORY(`void`) - Constructor\
+> `void` _QUEST_DB_BASE___START_NPC_QUEST_HISTORY(`void`) - Constructor\
  
 > `int` tmStartTime(`struct` `lua_State` *)
  

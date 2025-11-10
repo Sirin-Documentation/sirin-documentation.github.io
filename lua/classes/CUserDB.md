@@ -26,6 +26,12 @@
  
 > `bool` Lobby_Char_Request(`void`)
  
+> `bool` Update_UnitInsert(`unsigned char`,`struct` [_UNIT_DB_BASE___LIST](lua/classes/_UNIT_DB_BASE___LIST.md) *)
+ 
+> `bool` Update_UnitDelete(`unsigned char`)
+ 
+> `bool` Update_UnitData(`unsigned char`,`struct` [_UNIT_DB_BASE___LIST](lua/classes/_UNIT_DB_BASE___LIST.md) *)
+ 
 ## Members
  
 > `struct` `_GLBID` m_gidGlobal

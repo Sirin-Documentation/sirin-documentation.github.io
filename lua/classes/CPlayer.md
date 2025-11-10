@@ -140,6 +140,14 @@
  
 > `void` SenseState(`void`)
  
+> `void` AddDalant(`unsigned long`,`bool`)
+ 
+> `void` AddGold(`unsigned long`,`bool`)
+ 
+> `void` SubDalant(`unsigned long`)
+ 
+> `void` SubGold(`unsigned long`)
+ 
 ## Members
  
 > `bool` m_bLoad
@@ -278,7 +286,7 @@
  
 > `class` `CSetItemEffect` m_clsSetItem
  
-> `class` `CDarkHoleChannel`* m_pDHChannel
+> `class` [CDarkHoleChannel](lua/classes/CDarkHoleChannel.md)* m_pDHChannel
  
 > `float` m_fTalik_DefencePoint
  

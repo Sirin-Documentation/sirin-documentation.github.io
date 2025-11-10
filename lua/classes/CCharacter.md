@@ -28,6 +28,8 @@
  
 > `bool` IsEffectableDst(`const` `char` *,`class` [CCharacter](lua/classes/CCharacter.md) *)
  
+> `int` GetAttackDamPoint(`int`,`int`,`int`,`class` [CCharacter](lua/classes/CCharacter.md) *,`bool`)
+ 
 ## Members
  
 > `float` m_fTarPos_x

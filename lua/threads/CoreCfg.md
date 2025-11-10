@@ -15,7 +15,9 @@
  
 #### Functions
  
-> `static` `class` [VoidPtr](lua/classes/VoidPtr.md)* binaryDataToVoid(`class` [CBinaryData](lua/classes/CBinaryData.md) *)
+> `static` `void` SetLoginOpen(`bool`)
+ 
+> `static` `void` ShutdownServer(`void`)
  
 > `static` `class` `luabridge__LuaRef` getFileList(`const` `char` *,`struct` `lua_State` *)
  
@@ -27,9 +29,13 @@
  
 > `static` `void` processAsyncCallback(`unsigned __int64`,`const` `char` *,`const` `char` *,`const` `char` *,`unsigned __int64`,`class` [VoidPtr](lua/classes/VoidPtr.md) *)
  
-> `static` `void` processAsyncCallback(`unsigned __int64`,`const` `char` *,`const` `char` *,`const` `char` *,`unsigned __int64`,`class` [CSQLResultSet](lua/classes/CSQLResultSet.md) *)
+> `static` `void` processAsyncCallback(`unsigned __int64`,`const` `char` *,`const` `char` *,`const` `char` *,`unsigned __int64`,`class` `std__shared_ptr<class CMultiSQLResultSet>`)
  
-> `static` `void` processAsyncCallback(`unsigned __int64`,`const` `char` *,`const` `char` *,`const` `char` *,`unsigned __int64`,`class` [CBinaryData](lua/classes/CBinaryData.md) *)
+> `static` `void` processAsyncCallback(`unsigned __int64`,`const` `char` *,`const` `char` *,`const` `char` *,`unsigned __int64`,`class` `std__shared_ptr<class CSQLResultSet>`)
+ 
+> `static` `void` processAsyncCallback(`unsigned __int64`,`const` `char` *,`const` `char` *,`const` `char` *,`unsigned __int64`,`class` `std__shared_ptr<class CMultiBinaryData>`)
+ 
+> `static` `void` processAsyncCallback(`unsigned __int64`,`const` `char` *,`const` `char` *,`const` `char` *,`unsigned __int64`,`class` `std__shared_ptr<class CBinaryData>`)
  
 > `static` `void` processAsyncCallback(`unsigned __int64`,`const` `char` *,`const` `char` *,`const` `char` *,`class` `std__basic_string<char`,`struct` `std__char_traits<char>`,`class` `std__allocator<char> >`)
  
@@ -37,9 +43,13 @@
  
 > `static` `void` processAsyncCallback(`unsigned __int64`,`const` `char` *,`const` `char` *,`const` `char` *,`class` [VoidPtr](lua/classes/VoidPtr.md) *)
  
-> `static` `void` processAsyncCallback(`unsigned __int64`,`const` `char` *,`const` `char` *,`const` `char` *,`class` [CSQLResultSet](lua/classes/CSQLResultSet.md) *)
+> `static` `void` processAsyncCallback(`unsigned __int64`,`const` `char` *,`const` `char` *,`const` `char` *,`class` `std__shared_ptr<class CMultiSQLResultSet>`)
  
-> `static` `void` processAsyncCallback(`unsigned __int64`,`const` `char` *,`const` `char` *,`const` `char` *,`class` [CBinaryData](lua/classes/CBinaryData.md) *)
+> `static` `void` processAsyncCallback(`unsigned __int64`,`const` `char` *,`const` `char` *,`const` `char` *,`class` `std__shared_ptr<class CSQLResultSet>`)
+ 
+> `static` `void` processAsyncCallback(`unsigned __int64`,`const` `char` *,`const` `char` *,`const` `char` *,`class` `std__shared_ptr<class CMultiBinaryData>`)
+ 
+> `static` `void` processAsyncCallback(`unsigned __int64`,`const` `char` *,`const` `char` *,`const` `char` *,`class` `std__shared_ptr<class CBinaryData>`)
  
 > `static` `void` processAsyncPoolCallback(`unsigned __int64`,`unsigned int`,`const` `char` *,`const` `char` *,`const` `char` *,`unsigned __int64`,`class` `std__basic_string<char`,`struct` `std__char_traits<char>`,`class` `std__allocator<char> >`)
  
@@ -47,9 +57,13 @@
  
 > `static` `void` processAsyncPoolCallback(`unsigned __int64`,`unsigned int`,`const` `char` *,`const` `char` *,`const` `char` *,`unsigned __int64`,`class` [VoidPtr](lua/classes/VoidPtr.md) *)
  
-> `static` `void` processAsyncPoolCallback(`unsigned __int64`,`unsigned int`,`const` `char` *,`const` `char` *,`const` `char` *,`unsigned __int64`,`class` [CSQLResultSet](lua/classes/CSQLResultSet.md) *)
+> `static` `void` processAsyncPoolCallback(`unsigned __int64`,`unsigned int`,`const` `char` *,`const` `char` *,`const` `char` *,`unsigned __int64`,`class` `std__shared_ptr<class CMultiSQLResultSet>`)
  
-> `static` `void` processAsyncPoolCallback(`unsigned __int64`,`unsigned int`,`const` `char` *,`const` `char` *,`const` `char` *,`unsigned __int64`,`class` [CBinaryData](lua/classes/CBinaryData.md) *)
+> `static` `void` processAsyncPoolCallback(`unsigned __int64`,`unsigned int`,`const` `char` *,`const` `char` *,`const` `char` *,`unsigned __int64`,`class` `std__shared_ptr<class CSQLResultSet>`)
+ 
+> `static` `void` processAsyncPoolCallback(`unsigned __int64`,`unsigned int`,`const` `char` *,`const` `char` *,`const` `char` *,`unsigned __int64`,`class` `std__shared_ptr<class CMultiBinaryData>`)
+ 
+> `static` `void` processAsyncPoolCallback(`unsigned __int64`,`unsigned int`,`const` `char` *,`const` `char` *,`const` `char` *,`unsigned __int64`,`class` `std__shared_ptr<class CBinaryData>`)
  
 > `static` `void` processAsyncPoolCallback(`unsigned __int64`,`unsigned int`,`const` `char` *,`const` `char` *,`const` `char` *,`class` `std__basic_string<char`,`struct` `std__char_traits<char>`,`class` `std__allocator<char> >`)
  
@@ -57,15 +71,13 @@
  
 > `static` `void` processAsyncPoolCallback(`unsigned __int64`,`unsigned int`,`const` `char` *,`const` `char` *,`const` `char` *,`class` [VoidPtr](lua/classes/VoidPtr.md) *)
  
-> `static` `void` processAsyncPoolCallback(`unsigned __int64`,`unsigned int`,`const` `char` *,`const` `char` *,`const` `char` *,`class` [CSQLResultSet](lua/classes/CSQLResultSet.md) *)
+> `static` `void` processAsyncPoolCallback(`unsigned __int64`,`unsigned int`,`const` `char` *,`const` `char` *,`const` `char` *,`class` `std__shared_ptr<class CMultiSQLResultSet>`)
  
-> `static` `void` processAsyncPoolCallback(`unsigned __int64`,`unsigned int`,`const` `char` *,`const` `char` *,`const` `char` *,`class` [CBinaryData](lua/classes/CBinaryData.md) *)
+> `static` `void` processAsyncPoolCallback(`unsigned __int64`,`unsigned int`,`const` `char` *,`const` `char` *,`const` `char` *,`class` `std__shared_ptr<class CSQLResultSet>`)
  
-> `static` `class` [VoidPtr](lua/classes/VoidPtr.md)* sqlResultSetToVoid(`class` [CSQLResultSet](lua/classes/CSQLResultSet.md) *)
+> `static` `void` processAsyncPoolCallback(`unsigned __int64`,`unsigned int`,`const` `char` *,`const` `char` *,`const` `char` *,`class` `std__shared_ptr<class CMultiBinaryData>`)
  
-> `static` `class` [CBinaryData](lua/classes/CBinaryData.md)* voidToBinaryData(`class` [VoidPtr](lua/classes/VoidPtr.md) *)
- 
-> `static` `class` [CSQLResultSet](lua/classes/CSQLResultSet.md)* voidToSQLResultSet(`class` [VoidPtr](lua/classes/VoidPtr.md) *)
+> `static` `void` processAsyncPoolCallback(`unsigned __int64`,`unsigned int`,`const` `char` *,`const` `char` *,`const` `char` *,`class` `std__shared_ptr<class CBinaryData>`)
  
 #### Classes
  
@@ -74,6 +86,10 @@
 > [CBinaryData](lua/classes/CBinaryData.md)
  
 > [CLanguageAsset](lua/classes/CLanguageAsset.md)
+ 
+> [CMultiBinaryData](lua/classes/CMultiBinaryData.md)
+ 
+> [CMultiSQLResultSet](lua/classes/CMultiSQLResultSet.md)
  
 > [CSQLResultSet](lua/classes/CSQLResultSet.md)
  
