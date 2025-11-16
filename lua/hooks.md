@@ -1,4 +1,4 @@
-# Hooks 
+# Hooks [Main] 
 
 # custom
  --- 
@@ -252,7 +252,7 @@
 
 * Hook Positions: `original`	`after_event`	
 
-> ####   AlterCashComplete(dwRetCode, strParam, nAlterValue, dwCashLeft, pPlayer)
+> ####   AlterCashComplete(dwRetCode, strParam, nAlterValue, dwCashLeft, dwAccountSerial, pPlayer)
 
 * Purpose: `Sirin.mainThread.AlterCashAsync async callback.`
 
@@ -267,6 +267,8 @@
    * `integer` nAlterValue
 
    * `integer` dwCashLeft
+
+   * `integer` dwAccountSerial
 
    * `CPlayer` pPlayer?
 
@@ -3493,6 +3495,320 @@
 * Function parameters:
 
    * `CTrap` pTrap
+
+* Hook Positions: `original`	
+
+# Hooks [worldDB] 
+
+# custom
+ --- 
+> ####   checkDatabase()
+
+* Purpose: `Operations with database on server startup.`
+
+* Function: `checkDatabase`
+
+* Function parameters:
+
+* Hook Positions: `filter`	
+
+> ####   SirinWorldDB_PlayerInsert(dwAvatorSerial)
+
+* Purpose: `Post insert avator routine notification.`
+
+* Function: `SirinWorldDB_PlayerInsert`
+
+* Function parameters:
+
+   * `integer` dwAvatorSerial
+
+* Hook Positions: `after_event`	
+
+> ####   SirinWorldDB_PlayerDelete(dwAvatorSerial)
+
+* Purpose: `Post delete avator routine notification.`
+
+* Function: `SirinWorldDB_PlayerDelete`
+
+* Function parameters:
+
+   * `integer` dwAvatorSerial
+
+* Hook Positions: `after_event`	
+
+> ####   SirinWorldDB_PlayerLoad(dwAvatorSerial, dwAccountSerial, multiSQLResultSet)
+
+* Purpose: `Post load avator routine notification.`
+
+* Function: `SirinWorldDB_PlayerLoad`
+
+* Function parameters:
+
+   * `integer` dwAvatorSerial
+
+   * `integer` dwAccountSerial
+
+   * `CMultiSQLResultSet` multiSQLResultSet
+
+* Hook Positions: `after_event`	
+
+> ####   SirinWorldDB_PlayerLogout(dwAvatorSerial, multiBinaryData)
+
+* Purpose: `Post logout avator routine notification.`
+
+* Function: `SirinWorldDB_PlayerLogout`
+
+* Function parameters:
+
+   * `integer` dwAvatorSerial
+
+   * `CMultiBinaryData` multiBinaryData
+
+* Hook Positions: `after_event`	
+
+> ####   SirinWorldDB_PlayerLobby(dwAvatorSerial, multiBinaryData)
+
+* Purpose: `Post lobby move avator routine notification.`
+
+* Function: `SirinWorldDB_PlayerLobby`
+
+* Function parameters:
+
+   * `integer` dwAvatorSerial
+
+   * `CMultiBinaryData` multiBinaryData
+
+* Hook Positions: `after_event`	
+
+> ####   SirinWorldDB_PlayerUpdate(dwAvatorSerial, multiBinaryData)
+
+* Purpose: `Post update avator routine notification.`
+
+* Function: `SirinWorldDB_PlayerUpdate`
+
+* Function parameters:
+
+   * `integer` dwAvatorSerial
+
+   * `CMultiBinaryData` multiBinaryData
+
+* Hook Positions: `after_event`	
+
+# native
+ --- 
+> ####   CRFWorldDatabase__Update_GuildRank_Step1(pWorldDatabase, szDate)
+
+* Purpose: `Guild ranking.`
+
+* Function: `CRFWorldDatabase__Update_GuildRank_Step1`
+
+* Function parameters:
+
+   * `CRFWorldDatabase` pWorldDatabase
+
+   * `string` szDate
+
+* Hook Positions: `original`	
+
+> ####   CRFWorldDatabase__Update_RankInGuild_Step1(pWorldDatabase, dwGuildSerial)
+
+* Purpose: `Rank in guild.`
+
+* Function: `CRFWorldDatabase__Update_RankInGuild_Step1`
+
+* Function parameters:
+
+   * `CRFWorldDatabase` pWorldDatabase
+
+   * `integer` dwGuildSerial
+
+* Hook Positions: `original`	
+
+> ####   CRFWorldDatabase__Update_GuildRank(pWorldDatabase, szDate)
+
+* Purpose: `Guild rank on server startup.`
+
+* Function: `CRFWorldDatabase__Update_GuildRank`
+
+* Function parameters:
+
+   * `CRFWorldDatabase` pWorldDatabase
+
+   * `string` szDate
+
+* Hook Positions: `original`	
+
+> ####   CRFWorldDatabase__Select_GuildMemberData(pWorldDatabase, wMaxMember, dwGuildSerial, pGuildMemberInfo)
+
+* Purpose: `Loading guild mambers.`
+
+* Function: `CRFWorldDatabase__Select_GuildMemberData`
+
+* Function parameters:
+
+   * `CRFWorldDatabase` pWorldDatabase
+
+   * `integer` wMaxMember
+
+   * `integer` dwGuildSerial
+
+   * `_worlddb_guild_member_info` pGuildMemberInfo
+
+* Hook Positions: `original`	
+
+> ####   CRFWorldDatabase__Select_WeeklyGuildRankOwnerGuild(pWorldDatabase, szDate, byRace, byLimitCnt, pkInfo)
+
+* Purpose: `Settlement owner decision.`
+
+* Function: `CRFWorldDatabase__Select_WeeklyGuildRankOwnerGuild`
+
+* Function parameters:
+
+   * `CRFWorldDatabase` pWorldDatabase
+
+   * `string` szDate
+
+   * `integer` byRace
+
+   * `integer` byLimitCnt
+
+   * `_weeklyguildrank_owner_info` pkInfo
+
+* Hook Positions: `original`	
+
+> ####   CRFWorldDatabase__Update_IncreaseWeeklyGuildKillPvpPointSum(pWorldDatabase, dwSerial, dPvpPoint)
+
+* Purpose: `Weekly pvp/kill point update on logout.`
+
+* Function: `CRFWorldDatabase__Update_IncreaseWeeklyGuildKillPvpPointSum`
+
+* Function parameters:
+
+   * `CRFWorldDatabase` pWorldDatabase
+
+   * `integer` dwSerial
+
+   * `number` dPvpPoint
+
+* Hook Positions: `original`	
+
+> ####   CRFWorldDatabase__Update_IncreaseWeeklyGuildGuildBattlePvpPointSum(pWorldDatabase, dwSerial, dPvpPoint)
+
+* Purpose: `Weekly guild battle point update.`
+
+* Function: `CRFWorldDatabase__Update_IncreaseWeeklyGuildGuildBattlePvpPointSum`
+
+* Function parameters:
+
+   * `CRFWorldDatabase` pWorldDatabase
+
+   * `integer` dwSerial
+
+   * `number` dPvpPoint
+
+* Hook Positions: `original`	
+
+> ####   CRFWorldDatabase__Update_PvpPointGuildRankSumLv(pWorldDatabase, szDate, byRace, byLimitCnt, byLimitGrade)
+
+* Purpose: `Additional criteria for Settlement owner apply.`
+
+* Function: `CRFWorldDatabase__Update_PvpPointGuildRankSumLv`
+
+* Function parameters:
+
+   * `CRFWorldDatabase` pWorldDatabase
+
+   * `string` szDate
+
+   * `integer` byRace
+
+   * `integer` byLimitCnt
+
+   * `integer` byLimitGrade
+
+* Hook Positions: `original`	
+
+> ####   CRFWorldDatabase__select_atrade_taxrate(pWorldDatabase, byRace)
+
+* Purpose: `AH tax loading on server startup.`
+
+* Function: `CRFWorldDatabase__select_atrade_taxrate`
+
+* Function parameters:
+
+   * `CRFWorldDatabase` pWorldDatabase
+
+   * `integer` byRace
+
+* Hook Positions: `original`	
+
+> ####   CRFWorldDatabase__Update_RaceRank(pWorldDatabase, szDate)
+
+* Purpose: `Race rank on server startup (all steps).`
+
+* Function: `CRFWorldDatabase__Update_RaceRank`
+
+* Function parameters:
+
+   * `CRFWorldDatabase` pWorldDatabase
+
+   * `string` szDate
+
+* Hook Positions: `original`	
+
+> ####   CRFWorldDatabase__Update_RaceRank_Step1(pWorldDatabase, szDate)
+
+* Purpose: `Race rank temp table Bellato (daily ranking).`
+
+* Function: `CRFWorldDatabase__Update_RaceRank_Step1`
+
+* Function parameters:
+
+   * `CRFWorldDatabase` pWorldDatabase
+
+   * `string` szDate
+
+* Hook Positions: `original`	
+
+> ####   CRFWorldDatabase__Update_RaceRank_Step2(pWorldDatabase, szDate)
+
+* Purpose: `Race rank temp table Cora (daily ranking).`
+
+* Function: `CRFWorldDatabase__Update_RaceRank_Step2`
+
+* Function parameters:
+
+   * `CRFWorldDatabase` pWorldDatabase
+
+   * `string` szDate
+
+* Hook Positions: `original`	
+
+> ####   CRFWorldDatabase__Update_RaceRank_Step3(pWorldDatabase, szDate)
+
+* Purpose: `Race rank temp table Accretia (daily ranking).`
+
+* Function: `CRFWorldDatabase__Update_RaceRank_Step3`
+
+* Function parameters:
+
+   * `CRFWorldDatabase` pWorldDatabase
+
+   * `string` szDate
+
+* Hook Positions: `original`	
+
+> ####   CRFWorldDatabase__Update_RaceRank_Step5(pWorldDatabase, szDate)
+
+* Purpose: `Race rank pvp rank decision (daily ranking).`
+
+* Function: `CRFWorldDatabase__Update_RaceRank_Step5`
+
+* Function parameters:
+
+   * `CRFWorldDatabase` pWorldDatabase
+
+   * `string` szDate
 
 * Hook Positions: `original`	
 

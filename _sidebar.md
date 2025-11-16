@@ -137,6 +137,7 @@
     - [Store](lua/hooks.md#Store)
     - [TalikUpgrade](lua/hooks.md#TalikUpgrade)
     - [Trap](lua/hooks.md#Trap)
+    - [WorldDB](lua/hooks.md#hooks-worlddb)
   - Native
     - [NetMgr](lua/native/sirinNetworking.md)
   - Threads
