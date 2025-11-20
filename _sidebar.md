@@ -31,6 +31,7 @@
   - [Two Factor Verification](loginserver/loginserver.md#two-factor-verification)
   - [User Database (3rd Party)](loginserver/loginserver.md#sirin-rf_user-database-3rd-party-use)
   - [Stored Procedures (3rd Party)](loginserver/loginserver.md#rf_user-stored-procedues-3rd-party-use)
+  - [Game CP (3rd Party)](loginserver/gamecp.md)
 
 - Server Console
   - [Commands](consolebasics.md)
@@ -110,6 +111,7 @@
 - Lua (Info)
   - [Lua Scripting](lua/luascripting.md)
   - [Code Highlighting/Completion](lua/luacodehighlight.md)
+  - [Common Enums](lua/enums.md)
   - [Common Formulas](lua/formulas.md)
     - [Upgrade String](lua/formulas.md#upgrade-value)
     - [Durability Value](lua/formulas.md#durability-value)
