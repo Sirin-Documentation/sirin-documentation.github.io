@@ -14,7 +14,7 @@ Sirin Item Search simplifies the task of searching for items and codes required 
 
 Item Search tool is provided with the [Sirin files Download](../download.md) !Tools -> sirin-item-search.exe
 
-MD5: FF70139BE982A29041C4CE555ACA171A
+MD5: 7D2CCC1B4274D0E82D5B083CA5BB2254
 
 ## Usage
 
