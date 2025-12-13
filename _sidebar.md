@@ -56,6 +56,7 @@
     - [Debug Menu](debugging.md#debug-menu-ui)
     - [Error Logs](debugging.md#error-logs)
   - [Discord Integration](discordintegration.md)
+  - [Gates (Sirin Gates)](gate.md)
   - [GM Commands (Default)](gmcommands.md)
     - [Modding Gm Commands](gmcommands.md#modding-gm-commands)
   - [Draw Text](lua/features/drawtext.md)
