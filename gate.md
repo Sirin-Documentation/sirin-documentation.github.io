@@ -1,5 +1,5 @@
 # Sirin Gate [0.48+]
-
+ 
 > Introduced with update 0.48, Sirin gates provide a way to improve connection latency between clients and protect against targeted server attacks.
 
 <img style="border:1px solid grey" src="img/sirin_gate.png"/>
