@@ -50,7 +50,7 @@ layout = { 0, 0, 0 }, -- 3 columns, each with 33% width
 ### Background Images [Sirin 0.44+]
 
 ```lua
-backgroundImage = { 8, 0, 19 }, -- Optional background sprite
+backgroundImage = { 8, 0, 19, 0 }, -- Optional background sprite
 ```
 Set background image for window using same sprite setup as [Icon Sprites](/lua/features/customwindow/window.md#icon-sprites) (Optional)
 
